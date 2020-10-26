@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.source            = { :git => "https://github.com/AI-HELP/unity-example.git", :tag => "#{s.version}" }
   s.source_files = 'AIHelpUnitySDK/*.{h,m}'
   s.private_header_files = 'AIHelpUnitySDK/*.h'
+  s.dependency 'AIHelpSDK', '~> 2.1.0'
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
 end
