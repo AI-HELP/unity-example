@@ -2,15 +2,15 @@
 
 
 
-# AIHelp Unity SDK Sample
+# AIHelp Unity SDK Example
 
 
 
-[![Download](https://api.bintray.com/packages/ai-help/maven/android-aihelp-aar/images/download.svg?version=2.1.0)](https://bintray.com/ai-help/maven/android-aihelp-aar/2.1.0/link) [![API](https://img.shields.io/badge/MinSdk-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16) [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Download](https://api.bintray.com/packages/ai-help/maven/android-aihelp-aar/images/download.svg?version=2.1.2)](https://bintray.com/ai-help/maven/android-aihelp-aar/2.1.0/link) [![API](https://img.shields.io/badge/MinSdk-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16) [![License](https://img.shields.io/badge/License%20-Apache%202-337ab7.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 
 
-This repository contains all code examples of Unity project integrating with AIHelp SDK v2.1.1.
+This repository contains all code examples of Unity project integrating with AIHelp latest SDK.
 
 With this sample project, you can learn how to integrated AIHelp into a real project.
 
