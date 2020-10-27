@@ -33,7 +33,6 @@ With this sample project, you can learn how to integrated AIHelp into a real pro
 
 
 
-
 ## License
 
 ```
