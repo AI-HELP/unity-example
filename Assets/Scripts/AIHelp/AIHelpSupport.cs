@@ -4,7 +4,7 @@ using static AIHelpDefine;
 public class AIHelpSupport{
 
     public static void Init(string appKey, string domain, string appId, string language) {
-         AIHelpCore.getInstance().Init(appId, domain, appId, language);
+         AIHelpCore.getInstance().Init(appKey, domain, appId, language);
     }
 
     public static void Init(string appKey, string domain, string appId) {
