@@ -70,12 +70,14 @@ extern "C" {
     
     void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage) {
         AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
-        if (conversationMoment == 1) {
-            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
-        }else if (conversationMoment == 2) {
+        if (conversationMoment == 1002) {
             faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAlways;
-        }else if (conversationMoment == 3) {
+        }else if (conversationMoment == 1004) {
             faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
+        } else if (conversationMoment == 1003) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
+        } else {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
         }
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
