@@ -43,6 +43,9 @@ extern "C" void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMa
 extern "C" void unity_setSDKAppearanceMode (int mode);
 extern "C" void unity_setSDKEdgeInsets (float top, float bottom, bool enable);
 extern "C" void unity_setSDKEdgeColor (float red, float green, float blue, float alpha);
+extern "C" void unity_showUrl (const char* url);
+extern "C" void unity_runAccelerationForChina();
+extern "C" void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack);
 
 
 #endif

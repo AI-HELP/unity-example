@@ -241,6 +241,18 @@ extern "C" {
         [AIHelpSupportSDK setSDKEdgeColorWithRed:red green:green blue:blue alpha:alpha];
     }
     
+    void unity_showUrl (const char* url) {
+        [AIHelpSupportSDK showUrl:charToNSString(url)];
+    }
+
+    void unity_runAccelerationForChina() {
+        [AIHelpSupportSDK runAccelerationForChina];
+    }
+
+    void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack) {
+        [AIHelpSupportSDK setOnSpecificFormSubmittedCallback:callBack];
+    }
+    
 #if defined(__cplusplus)
 }
 #endif
