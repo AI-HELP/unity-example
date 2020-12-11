@@ -6,17 +6,20 @@ using System.Runtime.InteropServices;
 using AOT;
 using UnityEngine;
 using UnityEngine.UI;
-
+using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
     private string appKey = "THIS IS YOUR APP KEY";
-    private string domain = "THIS IS YOUR DOMAIN";
-    private string appId = "THIS IS YOUR APP ID"; 
+    private string domain = "aihelp.net";
+    private string appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0"; 
 
     private void Awake()
     {
-        AIHelpSupport.Init(appKey, domain, appId);
+        AIHelpSupport.Init(appKey, domain, appId,"");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
+        AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
+        AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
+        AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
     }
 
     private void Start()
@@ -37,7 +40,9 @@ public class TestBehaviourScript : MonoBehaviour
             { "Canvas/netWorkCheck",netWorkCheckClick },
             { "Canvas/uploadLog",upLoadLogClick },
             { "Canvas/enableLogging",enableLoggingClick },
-            { "Canvas/SDKVersion",SDKVersionClick }
+            { "Canvas/SDKVersion",SDKVersionClick },
+            { "Canvas/showUrl",showUrlClick },
+            { "Canvas/runAcceleration",runAccelerationClick }
         };
 
         dic.All(keyval=> {
@@ -77,11 +82,17 @@ public class TestBehaviourScript : MonoBehaviour
             .SetStoryNode("")
             .build();
         AIHelpSupport.ShowConversation();
+
     }
 
     void allSectionClick()
     {
-        AIHelpSupport.ShowAllFAQSections();
+        FaqConfig.Builder faqBuilder = new FaqConfig.Builder();
+        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
+        faqBuilder.SetShowConversationMoment(ConversationMoment.ALWAYS);
+        conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
+        faqBuilder.SetConversationConfig(conversationBuilder.build());
+        AIHelpSupport.ShowAllFAQSections(faqBuilder.build());
 
     }
     void singleSectionClick()
@@ -155,4 +166,28 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.GetSDKVersion();
     }
 
+    void showUrlClick()
+    {
+        AIHelpSupport.ShowUrl("https://www.baidu.com");
+    }
+
+    void runAccelerationClick()
+    {
+        AIHelpSupport.RunAccelerationForChina();
+    }
+
+    public void OnSpecificFormSubmittedCallback()
+    {
+        Console.Write("______OnSpecificFormSubmittedCallback_________");
+    }
+
+    public void OnOpenCallBack()
+    {
+        Console.Write("AIHelp OnOpenCallBack");
+    }
+
+    public void OnCloseCallBack()
+    {
+        Console.Write("AIHelp OnCloseCallBack");
+    }
 }

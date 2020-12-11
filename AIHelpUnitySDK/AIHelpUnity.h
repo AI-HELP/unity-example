@@ -46,6 +46,9 @@ extern "C" void unity_setSDKEdgeColor (float red, float green, float blue, float
 extern "C" void unity_showUrl (const char* url);
 extern "C" void unity_runAccelerationForChina();
 extern "C" void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack);
+extern "C" void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack);
+extern "C" void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack);
+
 
 
 #endif
