@@ -366,14 +366,14 @@ namespace AIHelp
 
         public void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback)
         {
-            //_iOSSessionOpenCallback = callback;
-            //unity_setOnSessionOpenCallback(iOSSessionOpenSubmit);
+            _iOSSessionOpenCallback = callback;
+            unity_setOnSessionOpenCallback(iOSSessionOpenSubmit);
         }
 
         public void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback)
         {
-            //_iOSSessionCloseCallback = callback;
-            //unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
+            _iOSSessionCloseCallback = callback;
+            unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
         }
     }
 
