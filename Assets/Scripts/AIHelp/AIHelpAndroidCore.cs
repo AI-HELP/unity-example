@@ -193,8 +193,8 @@ namespace AIHelp
             private readonly AIHelpDefine.OnMessageCountArrivedCallback msgCountCallback;
             private readonly AIHelpDefine.OnNetworkCheckResultCallback netCheckCallback;
             private readonly AIHelpDefine.OnSpecificFormSubmittedCallback submittedCallback;
-            private readonly AIHelpDefine.OnAIHelpSessionOpenCallback SessionOpenCallback;
-            private readonly AIHelpDefine.OnAIHelpSessionCloseCallback SessionCloseCallback;
+            private readonly AIHelpDefine.OnAIHelpSessionOpenCallback sessionOpenCallback;
+            private readonly AIHelpDefine.OnAIHelpSessionCloseCallback sessionCloseCallback;
 
             public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedCallback")
             {
@@ -216,6 +216,16 @@ namespace AIHelp
                 this.submittedCallback = callback;
             }
 
+            public ListenerAdapter(AIHelpDefine.OnAIHelpSessionOpenCallback callback) : base("net.aihelp.ui.listener.OnAIHelpSessionOpenCallback")
+            {
+                this.sessionOpenCallback = callback;
+            }
+
+            public ListenerAdapter(AIHelpDefine.OnAIHelpSessionCloseCallback callback) : base("net.aihelp.ui.listener.OnAIHelpSessionCloseCallback")
+            {
+                this.sessionCloseCallback = callback;
+            }
+
             void onAIHelpInitialized()
             {
                 initCallback();
@@ -234,6 +244,16 @@ namespace AIHelp
             void onFormSubmitted()
             {
                 submittedCallback();
+            }
+
+            void onAIHelpSessionOpened()
+            {
+                sessionOpenCallback();
+            }
+
+            void onAIHelpSessionClosed()
+            {
+                sessionCloseCallback();
             }
 
         }
@@ -257,13 +277,15 @@ namespace AIHelp
         {
             javaSupport.CallStatic("setOnSpecificFormSubmittedCallback", listener == null ? null : new ListenerAdapter(listener));
         }
+
         public void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback listener)
         {
-
+            javaSupport.CallStatic("setOnAIHelpSessionOpenCallback", listener == null ? null : new ListenerAdapter(listener));
         }
+
         public void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback listener)
         {
-
+            javaSupport.CallStatic("setOnAIHelpSessionCloseCallback", listener == null ? null : new ListenerAdapter(listener));
         }
 
         public void ShowUrl(string url)
