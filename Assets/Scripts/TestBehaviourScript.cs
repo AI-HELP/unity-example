@@ -11,15 +11,15 @@ public class TestBehaviourScript : MonoBehaviour
 {
     private string appKey = "THIS IS YOUR APP KEY";
     private string domain = "aihelp.net";
-    private string appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0"; 
+    private string appId = ""; 
 
     private void Awake()
     {
-        AIHelpSupport.Init(appKey, domain, appId,"");
+        AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
-        AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
+        //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
+        //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
     }
 
     private void Start()
@@ -64,10 +64,9 @@ public class TestBehaviourScript : MonoBehaviour
     void robotClick()
     {
         ConversationConfig config = new ConversationConfig.Builder()
-            .setWelcomeMessage("You can configure special welcome message for your end users at here.")
             .SetAlwaysShowHumanSupportButtonInBotPage(true)
             .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
-            .SetStoryNode("")
+            .SetStoryNode("rate message")
             .build();
 
         AIHelpSupport.ShowConversation(config);
@@ -107,7 +106,16 @@ public class TestBehaviourScript : MonoBehaviour
 
     void operationClick()
     {
-        AIHelpSupport.ShowOperation();
+        
+        ConversationConfig config = new ConversationConfig.Builder()
+            .SetAlwaysShowHumanSupportButtonInBotPage(true)
+            .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
+            .SetStoryNode("rate message")
+            .build();
+        OperationConfig.Builder opConfig = new OperationConfig.Builder();
+        opConfig.SetConversationConfig(config);
+
+        AIHelpSupport.ShowOperation(opConfig.build());
     }
 
     void updateUserInfoClick()

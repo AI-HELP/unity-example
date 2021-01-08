@@ -45,25 +45,25 @@ namespace AIHelp
         private static extern void unity_showAllFAQSections();
 
         [DllImport("__Internal")]
-        private static extern void unity_showAllFAQSectionsConfig(int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string welcomeMessage);
+        private static extern void unity_showAllFAQSectionsConfig(int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string storyNode, string welcomeMessage);
 
         [DllImport("__Internal")]
         private static extern void unity_showFAQSection(string sectionId);
 
         [DllImport("__Internal")]
-        private static extern void unity_showFAQSectionConfig(string sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string welcomeMessage);
+        private static extern void unity_showFAQSectionConfig(string sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string storyNode, string welcomeMessage);
 
         [DllImport("__Internal")]
         private static extern void unity_showSingleFAQ(string faqId);
 
         [DllImport("__Internal")]
-        private static extern void unity_showSingleFAQConfig(string faqId, int conversationMoment, int conversationIntent, bool contactUsAlwaysOnline, string welcomeMessage);
+        private static extern void unity_showSingleFAQConfig(string faqId, int conversationMoment, int conversationIntent, bool contactUsAlwaysOnline, string storyNode, string welcomeMessage);
 
         [DllImport("__Internal")]
         private static extern void unity_showOperation();
 
         [DllImport("__Internal")]
-        private static extern void unity_showOperationConfig(int selectIndex, string conversationTitle, int conversationIntent, bool contactUsAlwaysOnline, string welcomeMessage);
+        private static extern void unity_showOperationConfig(int selectIndex, string conversationTitle, int conversationIntent, bool contactUsAlwaysOnline, string storyNode, string welcomeMessage);
 
         [DllImport("__Internal")]
         private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo);
@@ -214,6 +214,7 @@ namespace AIHelp
             unity_showAllFAQSectionsConfig(config.GetShowConversationMoment(),
                                  config.GetConversationConfig().GetConversationIntent(),
                                  config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
+                                 config.GetConversationConfig().GetStoryNode(),
                                  config.GetConversationConfig().GetWelcomeMessage());
         }
 
@@ -227,6 +228,7 @@ namespace AIHelp
             unity_showFAQSectionConfig(sectionId, config.GetShowConversationMoment(),
                                  config.GetConversationConfig().GetConversationIntent(),
                                  config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
+                                 config.GetConversationConfig().GetStoryNode(),
                                  config.GetConversationConfig().GetWelcomeMessage());
         }
 
@@ -240,6 +242,7 @@ namespace AIHelp
             unity_showSingleFAQConfig(faqId, config.GetShowConversationMoment(),
                                  config.GetConversationConfig().GetConversationIntent(),
                                  config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
+                                 config.GetConversationConfig().GetStoryNode(),
                                  config.GetConversationConfig().GetWelcomeMessage());
         }
 
@@ -254,6 +257,7 @@ namespace AIHelp
                                       config.GetConversationTitle(),
                                       config.GetConversationConfig().GetConversationIntent(),
                                       config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
+                                      config.GetConversationConfig().GetStoryNode(),
                                       config.GetConversationConfig().GetWelcomeMessage());
         }
 

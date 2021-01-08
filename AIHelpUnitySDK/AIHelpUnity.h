@@ -19,14 +19,14 @@ extern "C" void unity_showConversation ();
 extern "C" void unity_showConversationConfig (int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage, const char* storyNode);
 
 extern "C" void unity_showAllFAQSections ();
-extern "C" void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage);
+extern "C" void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage);
 extern "C" void unity_showFAQSection (const char* sectionId);
-extern "C" void unity_showFAQSectionConfig (const char* sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage);
+extern "C" void unity_showFAQSectionConfig (const char* sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage);
 extern "C" void unity_showSingleFAQ (const char* faqId);
-extern "C" void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage);
+extern "C" void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage);
 
 extern "C" void unity_showOperation ();
-extern "C" void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage);
+extern "C" void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage);
 
 extern "C" void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo);
 extern "C" void unity_resetUserInfo ();

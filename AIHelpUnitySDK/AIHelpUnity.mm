@@ -68,7 +68,7 @@ extern "C" {
         [AIHelpSupportSDK showAllFAQSections];
     }
     
-    void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage) {
+    void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage,const char* storyNode, const char* welcomeMessage) {
         AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
         if (conversationMoment == 1002) {
             faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAlways;
@@ -82,6 +82,7 @@ extern "C" {
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
         conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
         conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
         faqBuilder.conversationConfig = conversationBuilder.build;
         [AIHelpSupportSDK showAllFAQSections:faqBuilder.build];
@@ -91,7 +92,7 @@ extern "C" {
         [AIHelpSupportSDK showFAQSection:charToNSString(sectionId)];
     }
 
-    void unity_showFAQSectionConfig (const char* sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage) {
+    void unity_showFAQSectionConfig (const char* sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
         AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
         if (conversationMoment == 1) {
             faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
@@ -103,6 +104,7 @@ extern "C" {
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
         conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
         conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
         faqBuilder.conversationConfig = conversationBuilder.build;
         [AIHelpSupportSDK showFAQSection:charToNSString(sectionId) config:faqBuilder.build];
@@ -112,7 +114,7 @@ extern "C" {
         [AIHelpSupportSDK showFAQSection:charToNSString(faqId)];
     }
 
-    void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage) {
+    void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
         AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
         if (conversationMoment == 1) {
             faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
@@ -124,6 +126,7 @@ extern "C" {
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
         conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
         conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
         faqBuilder.conversationConfig = conversationBuilder.build;
         [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) config:faqBuilder.build];
@@ -133,13 +136,14 @@ extern "C" {
         [AIHelpSupportSDK showOperation];
     }
     
-    void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage) {
+    void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
         AIHelpOperationConfigBuilder *operationBuiler = [[AIHelpOperationConfigBuilder alloc] init];
         operationBuiler.selectIndex = selectIndex;
         operationBuiler.conversationTitle = charToNSString(conversationTitle);
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
         conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
         conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
         operationBuiler.conversationConfig = conversationBuilder.build;
         [AIHelpSupportSDK showOperation:operationBuiler.build];
