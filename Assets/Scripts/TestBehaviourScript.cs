@@ -18,8 +18,8 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
-        //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
+        AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
+        AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
     }
 
     private void Start()

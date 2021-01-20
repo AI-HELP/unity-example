@@ -257,12 +257,12 @@ extern "C" {
         [AIHelpSupportSDK setOnSpecificFormSubmittedCallback:callBack];
     }
 
-//    void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack) {
-//        [AIHelpSupportSDK setOnAIHelpSessionOpenCallback:callBack];
-//    }
-//    void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
-//        [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
-//    }
+    void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionOpenCallback:callBack];
+    }
+    void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
+    }
     
 #if defined(__cplusplus)
 }
