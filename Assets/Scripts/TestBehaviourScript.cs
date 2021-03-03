@@ -11,15 +11,15 @@ public class TestBehaviourScript : MonoBehaviour
 {
     private string appKey = "THIS IS YOUR APP KEY";
     private string domain = "aihelp.net";
-    private string appId = ""; 
+    private string appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0"; 
 
     private void Awake()
     {
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
-        AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
+        //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
+        //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
     }
 
     private void Start()
@@ -90,6 +90,7 @@ public class TestBehaviourScript : MonoBehaviour
         ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
         faqBuilder.SetShowConversationMoment(ConversationMoment.ALWAYS);
         conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
+        conversationBuilder.setWelcomeMessage("");
         faqBuilder.SetConversationConfig(conversationBuilder.build());
         AIHelpSupport.ShowAllFAQSections(faqBuilder.build());
 
