@@ -20,7 +20,7 @@ namespace AIHelp
         {
             if (javaSupport != null && currentActivity != null)
             {
-                javaSupport.CallStatic("init", currentActivity, appKey, domain, appId);
+                javaSupport.CallStatic("init", currentActivity, appKey, domain, appId, language);
             }
         }
 
