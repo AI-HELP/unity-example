@@ -164,7 +164,7 @@ extern "C" {
         userBuilder.serverId = charToNSString(serverId);
         userBuilder.isSyncCrmInfo = isSyncCrmInfo;
         
-        if ([_userTags containsString:@","] && [_userTags componentsSeparatedByString:@","]) {
+        if ([_userTags componentsSeparatedByString:@","]) {
             userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
         }
         if (_customData && _customData.length) {
