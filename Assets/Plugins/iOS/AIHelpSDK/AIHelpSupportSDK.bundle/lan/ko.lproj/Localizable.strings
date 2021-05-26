@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="확인";
+"aihelp_no"="취소";
+"aihelp_chat_hint"="메시지를 입력하십시오";
+"aihelp_data_not_found_msg"="죄송합니다. 관련 데이터가 없습니다.";
+"aihelp_faq_search_hint"="문제 설명";
+"aihelp_faq_fetching_faqs"="답을 얻는 중…";
+"aihelp_faq_feedback_suggest"="제안";
+"aihelp_rate_satisfied"="좋아";
+"aihelp_rate_dissatisfied"="싫어";
+"aihelp_rate_request"="우리의 서비스를 평가하십시오.";
+"aihelp_rate_finished"="우리를 평가 해 주셔서 감사합니다.";
+"aihelp_rate_app_hint"="이 앱처럼 평가 하시겠습니까?";
+"aihelp_rate_button"="평가하기";
+"aihelp_rate_additional_feedback_message"="다른 의견 (선택 사항)";
+"aihelp_faq_feedback"="의견을 입력하십시오";
+"aihelp_faq_feedback_thanks"="의견 주셔서 감사합니다.";
+"aihelp_faq_search_empty"="FAQ가 없습니다.";
+"aihelp_network_error_msg"="죄송합니다! 문제가 발생했습니다";
+"aihelp_network_upload_log_title"="네트워크 연결 불량";
+"aihelp_network_check_poor"="네트워크 상태를 보내 주시면 네트워크 연결 품질을 개선하는 데 도움이됩니다.";
+"aihelp_network_check_fine"="확인 후 네트워크가 정상입니다";
+"aihelp_network_no_connect"="네트워크 연결을 확인하십시오.";
+"aihelp_media_upload_err_size"="파일 크기가 한도를 초과했습니다. %dM 보다 작은 파일을 업로드하십시오.";
+"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
+"aihelp_media_upload_err_format"="지원되지 않는 파일. 현재 업로드시 mp4, png, jpg, jpeg 만 사용할 수 있습니다.";
+"aihelp_network_check_in_progress"="네트워크 확인이 진행 중입니다. 지금 종료하면 확인이 중단됩니다.";
+"aihelp_permission_denied"="이미지를 업로드하려면 저장소 액세스 권한이 필요합니다.";
+"aihelp_permission_ignored"="이미지 업로드 기능을 사용하려면 설정> 권한> 저장소를 활성화하세요.";
+"aihelp_permission_settings"="설정";
+"aihelp_ticket_closed"="현재 고객 불만 티켓이 마감되었습니다.";
+"aihelp_network_checking"="네트워크 확인이 진행 중입니다.";
+"aihelp_view_details"="자세히보다";
+"aihelp_yesterday"="어제";
+"aihelp_sunday"="일요일";
+"aihelp_monday"="월요일";
+"aihelp_tuesday"="화요일";
+"aihelp_wednesday"="수요일";
+"aihelp_thursday"="목요일";
+"aihelp_friday"="금요일";
+"aihelp_saturday"="토요일";
+
+

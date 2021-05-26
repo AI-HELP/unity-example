@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="تعیین کردن";
+"aihelp_no"="لغو کردن";
+"aihelp_chat_hint"="پیام خود را وارد کنید";
+"aihelp_data_not_found_msg"="پیام خود را وارد کنید";
+"aihelp_faq_search_hint"="مشکل خود را شرح دهید";
+"aihelp_faq_fetching_faqs"="دریافت پاسخهای شما …";
+"aihelp_faq_feedback_suggest"="پیشنهادات";
+"aihelp_rate_satisfied"="دوست داشت";
+"aihelp_rate_dissatisfied"="آن را دوست نداشت";
+"aihelp_rate_request"="لطفا خدمات ما را ارزیابی کنید";
+"aihelp_rate_finished"="با تشکر از شما برای رتبه بندی ما.";
+"aihelp_rate_app_hint"="با تشکر از شما برای رتبه بندی ما.";
+"aihelp_rate_button"="برای امتیاز دادن";
+"aihelp_rate_additional_feedback_message"="هر گونه بازخورد دیگر (اختیاری)";
+"aihelp_faq_feedback"="لطفا نظرات خود را وارد کنید";
+"aihelp_faq_feedback_thanks"="از بازخورد شما سپاسگذاریم.";
+"aihelp_faq_search_empty"="سوالات متداول یافت نشد.";
+"aihelp_network_error_msg"="اوه! مشکلی پیش آمد";
+"aihelp_network_upload_log_title"="اتصال شبکه ضعیف";
+"aihelp_network_check_poor"="لطفاً تأیید کنید که شرایط شبکه را برای ما ارسال کنید ، این به ما در بهبود کیفیت اتصال شبکه شما کمک می کند.";
+"aihelp_network_check_fine"="بعد از بررسی ، شبکه شما خوب است";
+"aihelp_network_no_connect"="لطفاً اتصال شبکه خود را بررسی کنید.";
+"aihelp_media_upload_err_size"="اندازه پرونده از حد مجاز بیشتر است ، لطفا پرونده را کوچکتر از %dM  بارگذاری کنید.";
+"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
+"aihelp_media_upload_err_format"="پرونده های پشتیبانی نشده در حال حاضر ، فقط بارگیری mp4 ، png ، jpg ، jpeg در دسترس است.";
+"aihelp_network_check_in_progress"="بررسی شبکه در حال انجام است و اگر اکنون خارج شوید ، بررسی قطع می شود.";
+"aihelp_permission_ignored"="طفاً برای استفاده از عملکرد تصویر بارگذاری ، تنظیمات> مجوزها> ذخیره سازی را فعال کنید.";
+"aihelp_permission_denied"="آپلود تصویر به مجوز دسترسی به فضای ذخیره نیاز دارد.";
+"aihelp_permission_settings"="تنظیمات";
+"aihelp_ticket_closed"="بلیط فعلی شکایت مشتری بسته شده است.";
+"aihelp_network_checking"="بررسی شبکه در حال انجام است";
+"aihelp_view_details"="جزییات را ببینید";
+"aihelp_yesterday"="دیروز";
+"aihelp_sunday"="یکشنبه";
+"aihelp_monday"="دوشنبه";
+"aihelp_tuesday"="سهشنبه";
+"aihelp_wednesday"="چهار شنبه";
+"aihelp_thursday"="پنج شنبه";
+"aihelp_friday"="جمعه";
+"aihelp_saturday"="شنبه";
+
+

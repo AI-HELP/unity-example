@@ -1,0 +1,44 @@
+
+"aihelp_yes"="לְאַשֵׁר";
+"aihelp_op_cs"="HELP";
+"aihelp_no"="לְבַטֵל";
+"aihelp_view_details"="הצג פרטים";
+"aihelp_chat_hint"="הזן את ההודעה שלך";
+"aihelp_data_not_found_msg"="אופס, לא נמצאו נתונים רלוונטיים.";
+"aihelp_faq_search_hint"="תאר את הבעיה שלך";
+"aihelp_faq_fetching_faqs"="מקבל את התשובות שלך …";
+"aihelp_faq_feedback_suggest"="הצעות";
+"aihelp_rate_satisfied"="אהבתי את זה";
+"aihelp_rate_dissatisfied"="לא אהב את זה";
+"aihelp_rate_request"="אנא דרג את השירות שלנו";
+"aihelp_rate_finished"="תודה שדרגת אותנו.";
+"aihelp_rate_app_hint"="האם ברצונך לבדוק את האפליקציה?";
+"aihelp_rate_button"="ציון";
+"aihelp_rate_additional_feedback_message"="כל משוב אחר (אופציונלי)";
+"aihelp_faq_feedback"="אנא הזן את המשוב שלך";
+"aihelp_faq_feedback_thanks"="תודה לך על המשוב.";
+"aihelp_faq_search_empty"="לא נמצאו שאלות נפוצות.";
+"aihelp_network_error_msg"="אופס! משהו השתבש";
+"aihelp_network_upload_log_title"="חיבור רשת לקוי";
+"aihelp_network_check_poor"="אנא אשר לשלוח לנו תנאי רשת, שיעזרו לנו לשפר את איכות חיבור הרשת שלך.";
+"aihelp_network_check_fine"="לאחר הבדיקה, הרשת שלך בסדר";
+"aihelp_network_no_connect"="אנא בדוק את חיבור הרשת שלך.";
+"aihelp_media_upload_err_size"="גודל הקובץ חורג מהמגבלה, אנא העלה את הקובץ קטן מ-%dM";
+"aihelp_media_upload_err_net"="תם הזמן הקצוב להעברה, העלאת הקבצים נכשלה.";
+"aihelp_media_upload_err_format"="קבצים שאינם נתמכים. נכון לעכשיו, רק mp4, png, jpg, jpeg avail זמין בעת ​​ההעלאה.";
+"aihelp_network_check_in_progress"="בדיקת רשת מתבצעת. אם תצא עכשיו, הבדיקה תיפסק.";
+"aihelp_permission_denied"="העלאת תמונה מחייבת הרשאת גישה לאחסון.";
+"aihelp_permission_ignored"="אנא הפעל הגדרות> הרשאות> אחסון לשימוש בפונקציית העלאת תמונה.";
+"aihelp_permission_settings"="הגדרות";
+"aihelp_network_checking"="בדיקת הרשת בעיצומה";
+"aihelp_ticket_closed"="כרטיס התלונה הנוכחי של הלקוח נסגר.";
+"aihelp_yesterday"="אתמול";
+"aihelp_sunday"="יוֹם רִאשׁוֹן";
+"aihelp_monday"="יוֹם שֵׁנִי";
+"aihelp_tuesday"="יוֹם שְׁלִישִׁי";
+"aihelp_wednesday"="יום רביעי";
+"aihelp_thursday"="יוֹם חֲמִישִׁי";
+"aihelp_friday"="יוֹם שִׁישִׁי";
+"aihelp_saturday"="יום שבת";
+
+
