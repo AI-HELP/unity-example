@@ -220,6 +220,8 @@ namespace AIHelp
         private string userTags;
         private string customData;
         private bool isSyncCrmInfo;
+        private string pushToken;
+        private PushPlatform pushPlatform;
 
         public class Builder
         {
@@ -229,6 +231,8 @@ namespace AIHelp
             private string userTags = "";
             private string customData = "";
             private bool isSyncCrmInfo;
+            private string pushToken = "";
+            private PushPlatform pushPlatform = 0;
 
             public Builder SetUserId(string userId)
             {
@@ -266,9 +270,21 @@ namespace AIHelp
                 return this;
             }
 
+            public Builder SetPushToken(string pushToken)
+            {
+                this.pushToken = pushToken;
+                return this;
+            }
+
+            public Builder setPushPlatform(PushPlatform pushPlatform)
+            {
+                this.pushPlatform = pushPlatform;
+                return this;
+            }
+
             public UserConfig build()
             {
-                return new UserConfig(userId, userName, serverId, userTags, customData, isSyncCrmInfo);
+                return new UserConfig(userId, userName, serverId, userTags, customData, isSyncCrmInfo, pushToken, pushPlatform);
             }
 
         }
@@ -303,7 +319,17 @@ namespace AIHelp
             return customData;
         }
 
-        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo)
+        public string GetPushToken()
+        {
+            return pushToken;
+        }
+
+        public PushPlatform GetPushPlatform()
+        {
+            return pushPlatform;
+        }
+
+        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo, string pushToken, PushPlatform pushPlatform)
         {
             this.userId = userId;
             this.userName = userName;
@@ -311,6 +337,8 @@ namespace AIHelp
             this.userTags = userTags;
             this.customData = customData;
             this.isSyncCrmInfo = isSyncCrmInfo;
+            this.pushToken = pushToken;
+            this.pushPlatform = pushPlatform;
         }
 
     }

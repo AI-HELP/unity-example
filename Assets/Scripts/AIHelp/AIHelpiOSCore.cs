@@ -265,7 +265,8 @@ namespace AIHelp
         {
             unity_updateUserInfo(userConfig.GetUserId(), userConfig.GetUserName(),
                                  userConfig.GetServerId(), userConfig.GetUserTags(),
-                                 userConfig.GetCustomData(), userConfig.GetWhetherSyncCrmInfo());
+                                 userConfig.GetCustomData(), userConfig.GetWhetherSyncCrmInfo(),
+                                 userConfig.GetPushToken(), userConfig.GetPushPlatform());
         }
 
         public void ResetUserInfo()
