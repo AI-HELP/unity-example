@@ -28,7 +28,7 @@ extern "C" void unity_showSingleFAQConfig (const char* faqId, int conversationMo
 extern "C" void unity_showOperation ();
 extern "C" void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage);
 
-extern "C" void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo);
+extern "C" void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo, const char* pushToken, int pushPlatform);
 extern "C" void unity_resetUserInfo ();
 
 extern "C" void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack);

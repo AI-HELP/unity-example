@@ -56,8 +56,7 @@ namespace AIHelp
             builder.Call<AndroidJavaObject>("setCustomData", config.GetCustomData());
             builder.Call<AndroidJavaObject>("setSyncCrmInfo", config.GetWhetherSyncCrmInfo());
             builder.Call<AndroidJavaObject>("setPushToken", config.GetPushToken());
-            builder.Call<AndroidJavaObject>("setPushPlatform", config.GetPushPlatform());
-
+            builder.Call<AndroidJavaObject>("setPushPlatform", getPushPlatform(config.GetPushPlatform()));
             return builder.Call<AndroidJavaObject>("build");
         }
 

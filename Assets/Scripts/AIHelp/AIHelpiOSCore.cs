@@ -66,7 +66,7 @@ namespace AIHelp
         private static extern void unity_showOperationConfig(int selectIndex, string conversationTitle, int conversationIntent, bool contactUsAlwaysOnline, string storyNode, string welcomeMessage);
 
         [DllImport("__Internal")]
-        private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo);
+        private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo, string pushToken, int pushPlatform);
 
         [DllImport("__Internal")]
         private static extern void unity_resetUserInfo();
@@ -266,7 +266,7 @@ namespace AIHelp
             unity_updateUserInfo(userConfig.GetUserId(), userConfig.GetUserName(),
                                  userConfig.GetServerId(), userConfig.GetUserTags(),
                                  userConfig.GetCustomData(), userConfig.GetWhetherSyncCrmInfo(),
-                                 userConfig.GetPushToken(), userConfig.GetPushPlatform());
+                                 userConfig.GetPushToken(), getPushPlatform(userConfig.GetPushPlatform()));
         }
 
         public void ResetUserInfo()
@@ -291,24 +291,7 @@ namespace AIHelp
 
         public void SetPushTokenAndPlatform(string pushToken, PushPlatform platform)
         {
-            int tempPlatform = 1;
-            if (platform == PushPlatform.APNS)
-            {
-                tempPlatform = 1;
-            }
-            else if (platform == PushPlatform.FIREBASE)
-            {
-                tempPlatform = 2;
-            }
-            else if (platform == PushPlatform.JIGUANG)
-            {
-                tempPlatform = 3;
-            }
-            else if (platform == PushPlatform.GETUI)
-            {
-                tempPlatform = 4;
-            }
-            unity_setPushTokenAndPlatform(pushToken, tempPlatform);
+            unity_setPushTokenAndPlatform(pushToken, getPushPlatform(platform));
         }
 
         public void SetNetworkCheckHostAddress(string address, AIHelpDefine.OnNetworkCheckResultCallback callback)
@@ -380,6 +363,29 @@ namespace AIHelp
             _iOSSessionCloseCallback = callback;
             unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
         }
+
+        
+        private int getPushPlatform(PushPlatform platform){
+            int tempPlatform = 2;
+            if (platform == PushPlatform.APNS)
+            {
+                tempPlatform = 1;
+            }
+            else if (platform == PushPlatform.FIREBASE)
+            {
+                tempPlatform = 2;
+            }
+            else if (platform == PushPlatform.JIGUANG)
+            {
+                tempPlatform = 3;
+            }
+            else if (platform == PushPlatform.GETUI)
+            {
+                tempPlatform = 4;
+            }
+            return tempPlatform;
+        }
+
     }
 
 #endif

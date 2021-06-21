@@ -232,7 +232,7 @@ namespace AIHelp
             private string customData = "";
             private bool isSyncCrmInfo;
             private string pushToken = "";
-            private PushPlatform pushPlatform = 0;
+            private PushPlatform pushPlatform = PushPlatform.FIREBASE;
 
             public Builder SetUserId(string userId)
             {
@@ -276,7 +276,7 @@ namespace AIHelp
                 return this;
             }
 
-            public Builder setPushPlatform(PushPlatform pushPlatform)
+            public Builder SetPushPlatform(PushPlatform pushPlatform)
             {
                 this.pushPlatform = pushPlatform;
                 return this;

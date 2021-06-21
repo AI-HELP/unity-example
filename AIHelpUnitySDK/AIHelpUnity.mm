@@ -153,7 +153,7 @@ extern "C" {
         [AIHelpSupportSDK showOperation:operationBuiler.build];
     }
 
-    void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo) {
+    void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo, const char* pushToken, int pushPlatform) {
         
         NSString *_userTags = charToNSString(userTags);
         NSString *_customData = charToNSString(customData);
@@ -163,7 +163,26 @@ extern "C" {
         userBuilder.userName = charToNSString(userName);
         userBuilder.serverId = charToNSString(serverId);
         userBuilder.isSyncCrmInfo = isSyncCrmInfo;
+        userBuilder.pushToken = charToNSString(pushToken);
         
+        switch (pushPlatform) {
+            case 1:
+                userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
+                break;
+            case 2:
+                userBuilder.pushPlatform = AIHelpTokenPlatformFirebase;
+                break;
+            case 3:
+                userBuilder.pushPlatform = AIHelpTokenPlatformJpush;
+                break;
+            case 4:
+                userBuilder.pushPlatform = AIHelpTokenPlatformGeTui;
+                break;
+            default:
+                userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
+                break;
+        }
+                
         if ([_userTags componentsSeparatedByString:@","]) {
             userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
         }
