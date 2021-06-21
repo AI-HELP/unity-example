@@ -319,7 +319,17 @@ namespace AIHelp
             return customData;
         }
 
-        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo)
+        public string GetPushToken()
+        {
+            return pushToken;
+        }
+
+        public PushPlatform GetPushPlatform()
+        {
+            return pushPlatform;
+        }
+
+        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo, string pushToken, PushPlatform pushPlatform)
         {
             this.userId = userId;
             this.userName = userName;
@@ -327,6 +337,8 @@ namespace AIHelp
             this.userTags = userTags;
             this.customData = customData;
             this.isSyncCrmInfo = isSyncCrmInfo;
+            this.pushToken = pushToken;
+            this.pushPlatform = pushPlatform;
         }
 
     }
