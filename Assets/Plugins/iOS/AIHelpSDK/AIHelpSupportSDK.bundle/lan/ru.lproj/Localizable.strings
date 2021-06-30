@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="определить";
+"aihelp_no"="Отмена";
+"aihelp_chat_hint"="Введите сообщение";
+"aihelp_data_not_found_msg"="К сожалению, соответствующие данные не найдены.";
+"aihelp_faq_search_hint"="Опишите свою проблему";
+"aihelp_faq_fetching_faqs"="Получение ваших ответов…";
+"aihelp_faq_feedback"="Предложения";
+"aihelp_media_upload_err_format"="Неподдерживаемые файлы. В настоящее время при загрузке доступны только mp4, png, jpg, jpeg.";
+"aihelp_media_upload_err_size"="Размер файла превышает лимит, пожалуйста, загрузите файл меньше, чем %dM.";
+"aihelp_network_no_connect"="Пожалуйста, проверьте ваше сетевое соединение.";
+"aihelp_network_check_fine"="После проверки ваша сеть в порядке";
+"aihelp_network_check_poor"="Пожалуйста, подтвердите, чтобы отправить нам условия сети, которые помогут нам улучшить качество вашего сетевого подключения.";
+"aihelp_network_upload_log_title"="Плохое сетевое соединение";
+"aihelp_network_error_msg"="К сожалению! Что-то пошло не так";
+"aihelp_faq_search_empty"="Часто задаваемые вопросы не найдены.";
+"aihelp_faq_feedback_thanks"="Спасибо за ваш отзыв!";
+"aihelp_faq_feedback_suggest"="Предложения";
+"aihelp_rate_request"="Пожалуйста, оцените наш сервис.";
+"aihelp_rate_finished"="Спасибо за оценку нас.";
+"aihelp_rate_app_hint"="Любите это приложение и оцените его?";
+"aihelp_rate_button"="Гол";
+"aihelp_rate_additional_feedback_message"="Любой другой отзыв (необязательно)";
+"aihelp_rate_satisfied"="Понравилось";
+"aihelp_rate_dissatisfied"="Не понравилось";
+"aihelp_network_check_in_progress"="Идет тестирование сети, если вы выйдете сейчас, тестирование будет прервано";
+"aihelp_media_upload_err_net"="Истекло время передачи по сети, не удалось загрузить файл";
+"aihelp_permission_denied"="Для загрузки изображения требуется разрешение на доступ к хранилищу.";
+"aihelp_permission_ignored"="Пожалуйста, включите Настройки> Разрешения> Хранилище, чтобы использовать функцию загрузки изображения.";
+"aihelp_permission_settings"="Настройки";
+"aihelp_ticket_closed"="Текущая жалоба клиентов закрыта.";
+"aihelp_network_checking"="Идет проверка сети";
+"aihelp_view_details"="смотрите подробности";
+"aihelp_yesterday"="Вчерашний день";
+"aihelp_sunday"="Воскресенье";
+"aihelp_monday"="понедельник";
+"aihelp_tuesday"="вторник";
+"aihelp_wednesday"="Среда";
+"aihelp_thursday"="Четверг";
+"aihelp_friday"="Пятница";
+"aihelp_saturday"="суббота";
+
+

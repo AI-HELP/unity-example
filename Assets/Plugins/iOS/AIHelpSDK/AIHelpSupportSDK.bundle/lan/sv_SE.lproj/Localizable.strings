@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="bestämma";
+"aihelp_no"="annullera";
+"aihelp_chat_hint"="Ange ditt meddelande";
+"aihelp_data_not_found_msg"="Oj, inga relevanta data hittades.";
+"aihelp_faq_search_hint"="Beskriv ditt problem";
+"aihelp_faq_fetching_faqs"="Får dina svar ...";
+"aihelp_faq_feedback_suggest"="Förslag";
+"aihelp_rate_satisfied"="Gillade det";
+"aihelp_rate_dissatisfied"="Gillade det inte";
+"aihelp_rate_request"="Vänligen betygsätt vår tjänst.";
+"aihelp_rate_finished"="Tack för att du betygsatt oss.";
+"aihelp_rate_app_hint"="Gilla den här appen, betygsätta den?";
+"aihelp_rate_button"="Att betygsätta";
+"aihelp_rate_additional_feedback_message"="Annan feedback (valfritt)";
+"aihelp_faq_feedback"="Ange din feedback";
+"aihelp_faq_feedback_thanks"="Tack för feedbacken.";
+"aihelp_faq_search_empty"="Inga vanliga frågor hittades.";
+"aihelp_network_error_msg"="hoppsan! Något gick fel";
+"aihelp_network_upload_log_title"="Dålig nätverksanslutning";
+"aihelp_network_check_poor"="Bekräfta att skicka oss nätverksvillkor, vilket hjälper oss att förbättra kvaliteten på din nätverksanslutning.";
+"aihelp_network_check_fine"="Efter att ha kontrollerat är ditt nätverk bra";
+"aihelp_network_no_connect"="Kontrollera din nätverksanslutning.";
+"aihelp_media_upload_err_size"="Filstorleken överskrider gränsen, ladda upp filen mindre än %dM.";
+"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
+"aihelp_media_upload_err_format"="Ostödda filer. För närvarande är det bara mp4, png, jpg, jpeg tillgängliga vid uppladdning.";
+"aihelp_network_check_in_progress"="Nätverkskontroll pågår. Om du lämnar nu avbryts kontrollen.";
+"aihelp_permission_ignored"="Aktivera Inställningar> Behörigheter> Lagring för att använda uppladdningsfunktionen.";
+"aihelp_permission_denied"="Uppladdningsbild kräver tillåtelse för åtkomst till lagring.";
+"aihelp_permission_settings"="inställningar";
+"aihelp_ticket_closed"="Den nuvarande kundanmälningsbiljetten har stängts.";
+"aihelp_network_checking"="Nätverkskontroll pågår";
+"aihelp_view_details"="se detaljer";
+"aihelp_yesterday"="I går";
+"aihelp_sunday"="Söndag";
+"aihelp_monday"="Måndag";
+"aihelp_tuesday"="Tisdag";
+"aihelp_wednesday"="Onsdag";
+"aihelp_thursday"="Torsdag";
+"aihelp_friday"="fredag";
+"aihelp_saturday"="Lördag";
+
+

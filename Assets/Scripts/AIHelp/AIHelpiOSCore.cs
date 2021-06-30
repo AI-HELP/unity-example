@@ -133,7 +133,7 @@ namespace AIHelp
         private static extern void unity_showUrl(string url);
 
         [DllImport("__Internal")]
-        private static extern void unity_runAccelerationForChina();
+        private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);
 
         public delegate void iOSOnAIHelpSpecificFormSubmit();
         [MonoPInvokeCallback(typeof(iOSOnAIHelpSpecificFormSubmit))]
@@ -341,9 +341,9 @@ namespace AIHelp
             unity_showUrl(url);
         }
 
-        public void RunAccelerationForChina()
+        public void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
-            unity_runAccelerationForChina();
+            unity_additionalSupportFor(countryOrRegion);
         }
 
         public void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback)

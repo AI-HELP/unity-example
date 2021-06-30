@@ -15,6 +15,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     private void Awake()
     {
+        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.IN);
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
@@ -193,7 +194,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     void runAccelerationClick()
     {
-        AIHelpSupport.RunAccelerationForChina();
+        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
     }
 
     public void OnSpecificFormSubmittedCallback()

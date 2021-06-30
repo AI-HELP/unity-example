@@ -18,6 +18,11 @@ namespace AIHelp
         BOT_SUPPORT = 1, HUMAN_SUPPORT = 2
     }
 
+    public enum PublishCountryOrRegion
+    {
+        CN = 1, IN = 2
+    };
+
     public class ConversationConfig
     {
 

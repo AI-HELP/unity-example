@@ -272,8 +272,15 @@ extern "C" {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
     }
 
-    void unity_runAccelerationForChina() {
-        [AIHelpSupportSDK runAccelerationForChina];
+    void unity_additionalSupportFor(int countryOrRegion) {
+        AIHelpPublishCountryOrRegion tmpCountryOrRegion = AIHelpCN;
+        if (countryOrRegion == 1) {
+            tmpCountryOrRegion = AIHelpCN;
+        }
+        if (countryOrRegion == 2) {
+            tmpCountryOrRegion = AIHelpIN;
+        }
+        [AIHelpSupportSDK additionalSupportFor:tmpCountryOrRegion];
     }
 
     void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack) {

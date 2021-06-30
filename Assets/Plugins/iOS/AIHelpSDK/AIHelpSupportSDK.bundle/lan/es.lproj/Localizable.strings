@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="determinar";
+"aihelp_no"="cancelar";
+"aihelp_chat_hint"="Ingrese su mensaje";
+"aihelp_data_not_found_msg"="Vaya, no se encontraron datos relevantes.";
+"aihelp_faq_search_hint"="Describe tu problema";
+"aihelp_faq_fetching_faqs"="Obteniendo sus respuestas ...";
+"aihelp_faq_feedback_suggest"="Sugerencias";
+"aihelp_rate_satisfied"="Sugerencias";
+"aihelp_rate_dissatisfied"="No me gustó";
+"aihelp_rate_request"="Por favor califique nuestro servicio.";
+"aihelp_rate_finished"="Por favor califique nuestro servicio.";
+"aihelp_rate_app_hint"="Por favor califique nuestro servicio.";
+"aihelp_rate_button"="Puntuación";
+"aihelp_rate_additional_feedback_message"="Cualquier otro comentario (opcional)";
+"aihelp_faq_feedback"="Por favor ingrese sus comentarios";
+"aihelp_faq_feedback_thanks"="Gracias por los comentarios.";
+"aihelp_faq_search_empty"="No se encontraron preguntas frecuentes.";
+"aihelp_network_error_msg"="¡Uy! Algo salió mal";
+"aihelp_network_upload_log_title"="Mala conexión de red";
+"aihelp_network_check_poor"="Confirme que nos envíe las condiciones de red, lo que nos ayudará a mejorar la calidad de su conexión de red.";
+"aihelp_network_check_fine"="Después de verificar, su red está bien";
+"aihelp_network_no_connect"="Después de verificar, su red está bien";
+"aihelp_media_upload_err_size"="El tamaño del archivo excede el límite, cargue el archivo más pequeño que %dM.";
+"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
+"aihelp_media_upload_err_format"="Archivos no compatibles Actualmente, solo mp4, png, jpg, jpeg están disponibles al cargar.";
+"aihelp_network_check_in_progress"="La comprobación de la red está en curso. Si sale ahora, la comprobación se interrumpirá.";
+"aihelp_permission_ignored"="Habilite Configuración> Permisos> Almacenamiento para usar la función de carga de imágenes.";
+"aihelp_permission_denied"="La imagen para cargar requiere permiso para acceder al almacenamiento.";
+"aihelp_permission_settings"="Configuraciones";
+"aihelp_network_checking"="La verificación de la red está en curso";
+"aihelp_ticket_closed"="Se ha cerrado el ticket de queja actual del cliente.";
+"aihelp_view_details"="Ver detalles";
+"aihelp_yesterday"="Ayer";
+"aihelp_sunday"="domingo";
+"aihelp_monday"="lunes";
+"aihelp_tuesday"="martes";
+"aihelp_wednesday"="miércoles";
+"aihelp_thursday"="jueves";
+"aihelp_friday"="viernes";
+"aihelp_saturday"="sábado";
+
+

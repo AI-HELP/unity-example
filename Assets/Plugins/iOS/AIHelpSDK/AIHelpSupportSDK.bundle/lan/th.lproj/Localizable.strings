@@ -1,0 +1,45 @@
+
+
+"aihelp_op_cs"="HELP";
+"aihelp_yes"="ใช่";
+"aihelp_no"="ยกเลิก";
+"aihelp_chat_hint"="ป้อนข้อความของคุณ";
+"aihelp_data_not_found_msg"="โอ๊ะโอไม่พบข้อมูลที่เกี่ยวข้อง";
+"aihelp_faq_search_hint"="อธิบายปัญหาของคุณ";
+"aihelp_faq_fetching_faqs"="รับคำตอบของคุณ ...";
+"aihelp_faq_feedback_suggest"="ข้อเสนอแนะ";
+"aihelp_rate_satisfied"="ชอบมัน";
+"aihelp_rate_dissatisfied"="ไม่ชอบมัน";
+"aihelp_rate_request"="กรุณาให้คะแนนบริการของเรา";
+"aihelp_rate_finished"="ขอขอบคุณที่ให้คะแนนเรา";
+"aihelp_rate_app_hint"="ชอบแอปนี้ให้คะแนนไหม";
+"aihelp_rate_button"="ให้คะแนน";
+"aihelp_rate_additional_feedback_message"="ข้อเสนอแนะอื่น ๆ (ไม่จำเป็น)";
+"aihelp_faq_feedback"="โปรดป้อนความคิดเห็นของคุณ";
+"aihelp_faq_feedback_thanks"="ขอบคุณสำหรับความคิดเห็น";
+"aihelp_faq_search_empty"="ไม่พบคำถามที่พบบ่อย";
+"aihelp_network_error_msg"="อ๊ะ! บางอย่างผิดพลาด";
+"aihelp_network_upload_log_title"="การเชื่อมต่อเครือข่ายไม่ดี";
+"aihelp_network_check_poor"="โปรดยืนยันเพื่อส่งเงื่อนไขเครือข่ายให้เราซึ่งจะช่วยให้เราปรับปรุงคุณภาพการเชื่อมต่อเครือข่ายของคุณ";
+"aihelp_network_check_fine"="หลังจากตรวจสอบแล้วเครือข่ายของคุณก็ใช้ได้";
+"aihelp_network_no_connect"="โปรดตรวจสอบการเชื่อมต่อเครือข่ายของคุณ";
+"aihelp_media_upload_err_size"="ขนาดไฟล์เกินขีด จำกัด โปรดอัปโหลดไฟล์ที่มีขนาดเล็กกว่า %dM";
+"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
+"aihelp_media_upload_err_format"="ไฟล์ที่ไม่รองรับ ปัจจุบันมีเฉพาะ mp4, png, jpg, jpeg เท่านั้นที่สามารถอัปโหลดได้";
+"aihelp_network_check_in_progress"="กำลังดำเนินการตรวจสอบเครือข่ายหากคุณออกตอนนี้การตรวจสอบจะหยุดชะงัก";
+"aihelp_permission_ignored"="โปรดเปิดใช้งานการตั้งค่า> สิทธิ์> ที่เก็บข้อมูลเพื่อใช้ฟังก์ชั่นอัพโหลดรูปภาพ";
+"aihelp_permission_denied"="การอัปโหลดรูปภาพต้องได้รับอนุญาตในการเข้าถึงที่เก็บข้อมูล";
+"aihelp_permission_settings"="การตั้งค่า";
+"aihelp_ticket_closed"="ตั๋วการร้องเรียนของลูกค้าปัจจุบันถูกปิดแล้ว";
+"aihelp_network_checking"="กำลังดำเนินการตรวจสอบเครือข่าย";
+"aihelp_view_details"="ดูรายละเอียด";
+"aihelp_yesterday"="เมื่อวานนี้";
+"aihelp_sunday"="วันอาทิตย์";
+"aihelp_monday"="วันจันทร์";
+"aihelp_tuesday"="วันอังคาร";
+"aihelp_wednesday"="วันพุธ";
+"aihelp_thursday"="วันพฤหัสบดี";
+"aihelp_friday"="วันศุกร์";
+"aihelp_saturday"="วันเสาร์";
+
+

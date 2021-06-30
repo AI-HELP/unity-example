@@ -130,9 +130,9 @@ namespace AIHelp
             AIHelpCore.getInstance().ShowUrl(url);
         }
 
-        public static void RunAccelerationForChina()
+        public static void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
-            AIHelpCore.getInstance().RunAccelerationForChina();
+            AIHelpCore.getInstance().AdditionalSupportFor(countryOrRegion);
         }
 
         public static void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback)

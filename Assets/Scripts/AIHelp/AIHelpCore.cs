@@ -188,10 +188,10 @@ namespace AIHelp
             helpCore.ShowUrl(url);
         }
 
-        public void RunAccelerationForChina()
+        public void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.RunAccelerationForChina();
+            helpCore.AdditionalSupportFor(countryOrRegion);
         }
 
         public void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback)

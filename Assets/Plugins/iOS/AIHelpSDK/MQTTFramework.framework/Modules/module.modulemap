@@ -1,0 +1,6 @@
+framework module MQTTFramework {
+  umbrella header "MQTTFramework.h"
+
+  export *
+  module * { export * }
+}

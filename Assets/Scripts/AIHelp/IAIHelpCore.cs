@@ -21,8 +21,7 @@ namespace AIHelp
     {
         void Init(string appKey, string domain, string appId, string language);
         void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback callback);
-
-
+        
         void ShowConversation();
         void ShowConversation(ConversationConfig config);
 
@@ -52,7 +51,7 @@ namespace AIHelp
         bool IsAIHelpShowing();
         void EnableLogging(bool enable);
         void ShowUrl(string url);
-        void RunAccelerationForChina();
+        void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion);
         void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback);
         void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback);
         void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback);

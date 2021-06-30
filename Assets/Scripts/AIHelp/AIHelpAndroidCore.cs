@@ -60,6 +60,12 @@ namespace AIHelp
             return builder.Call<AndroidJavaObject>("build");
         }
 
+        private AndroidJavaObject getPublishCountryOrRegion(PublishCountryOrRegion countryOrRegion)
+        {
+            AndroidJavaClass clz = new AndroidJavaClass("net.aihelp.config.enums.PublishCountryOrRegion");
+            return clz.CallStatic<AndroidJavaObject>("fromValue", (int)countryOrRegion);
+        }
+
         private AndroidJavaObject getPushPlatform(PushPlatform platform)
         {
             AndroidJavaClass clz = new AndroidJavaClass("net.aihelp.config.enums.PushPlatform");
@@ -298,11 +304,11 @@ namespace AIHelp
             }
         }
 
-        public void RunAccelerationForChina()
+        public void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
             if (javaSupport != null)
             {
-                javaSupport.CallStatic("runAccelerationForChina");
+                javaSupport.CallStatic("additionalSupportFor", getPublishCountryOrRegion(countryOrRegion));
             }
         }
 
