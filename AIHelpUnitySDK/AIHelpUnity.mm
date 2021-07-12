@@ -113,7 +113,7 @@ extern "C" {
     }
 
     void unity_showSingleFAQ (const char* faqId) {
-        [AIHelpSupportSDK showFAQSection:charToNSString(faqId)];
+        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId)];
     }
 
     void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
