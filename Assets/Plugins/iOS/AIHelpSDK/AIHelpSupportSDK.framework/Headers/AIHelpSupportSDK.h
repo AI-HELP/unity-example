@@ -15,6 +15,7 @@ typedef void (*AISupportPingCallBack)(const NSString * log);
 typedef void (*AISupportIsSpecificFormCallBack)(void);
 typedef void (*AISupportOpenSDKCallBack)(void);
 typedef void (*AISupportCloseSDKCallBack)(void);
+typedef void (*AISupportOperationUnReadCallBack)(const BOOL hasUnreadArticles);
 
 @interface AIHelpSupportSDK : NSObject
 
@@ -246,8 +247,6 @@ typedef void (*AISupportCloseSDKCallBack)(void);
  */
 + (void)additionalSupportFor:(AIHelpPublishCountryOrRegion)countryOrRegion;
 
-
-
 + (void)showUrl:(NSString *)url;
 
 
@@ -256,6 +255,8 @@ typedef void (*AISupportCloseSDKCallBack)(void);
 + (void)setOnAIHelpSessionCloseCallback:(AISupportCloseSDKCallBack)callback;
 
 + (void)setOnSpecificFormSubmittedCallback:(AISupportIsSpecificFormCallBack)callBack;
+
++ (void)setOnOperationUnreadChangedCallback:(AISupportOperationUnReadCallBack)callback;
 
 + (void)setSDKEdgeInsetsWithTop:(float)top bottom:(float)bottom enable:(BOOL)enable;
 + (void)setSDKEdgeColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;

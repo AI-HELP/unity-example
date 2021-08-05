@@ -203,6 +203,7 @@ namespace AIHelp
             private readonly AIHelpDefine.OnSpecificFormSubmittedCallback submittedCallback;
             private readonly AIHelpDefine.OnAIHelpSessionOpenCallback sessionOpenCallback;
             private readonly AIHelpDefine.OnAIHelpSessionCloseCallback sessionCloseCallback;
+            private readonly AIHelpDefine.OnOperationUnreadChangedCallback unreadChangedCallback;
 
             public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedCallback")
             {
@@ -232,6 +233,11 @@ namespace AIHelp
             public ListenerAdapter(AIHelpDefine.OnAIHelpSessionCloseCallback callback) : base("net.aihelp.ui.listener.OnAIHelpSessionCloseCallback")
             {
                 this.sessionCloseCallback = callback;
+            }
+
+            public ListenerAdapter(AIHelpDefine.OnOperationUnreadChangedCallback callback) : base("net.aihelp.ui.listener.OnOperationUnreadChangedCallback")
+            {
+                this.unreadChangedCallback = callback;
             }
 
             void onAIHelpInitialized()
@@ -264,6 +270,11 @@ namespace AIHelp
                 sessionCloseCallback();
             }
 
+            void onOperationUnreadChanged(bool hasUnreadArticles)
+            {
+                unreadChangedCallback(hasUnreadArticles);
+            }
+
         }
 
         public void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback listener)
@@ -294,6 +305,11 @@ namespace AIHelp
         public void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback listener)
         {
             javaSupport.CallStatic("setOnAIHelpSessionCloseCallback", listener == null ? null : new ListenerAdapter(listener));
+        }
+
+        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback listener)
+        {
+            javaSupport.CallStatic("setOnOperationUnreadChangedCallback", listener == null ? null : new ListenerAdapter(listener));
         }
 
         public void ShowUrl(string url)

@@ -15,6 +15,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     private void Awake()
     {
+        AIHelpSupport.SetOnOperationUnreadChangedCallback(OnOperationUnreadChangedCallback);
         AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.IN);
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId,"en");
@@ -61,7 +62,13 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnAIHelpInitializedCallback() {  
         Console.Write("AIHelp init success");
+        
     }
+
+    public void OnOperationUnreadChangedCallback(bool hasUnreadArticles) {
+        Console.Write("测试_______回调");
+    }
+
 
     void robotClick()
     {
@@ -127,7 +134,7 @@ public class TestBehaviourScript : MonoBehaviour
             .SetUserId("123456789")
             .SetUserName("AIHelp")
             .SetUserTags("VIP1")
-            .SetCustomData("")
+            .SetCustomData("{''}")
             .SetPushToken("pushToken")
             .SetPushPlatform(PushPlatform.JIGUANG)
             .SetSyncCrmInfo(true)
@@ -184,7 +191,8 @@ public class TestBehaviourScript : MonoBehaviour
     
     void SDKVersionClick()
     {
-        AIHelpSupport.GetSDKVersion();
+        Console.Write("测试Test______SetOnOperationUnreadChangedCallback_________");
+        
     }
 
     void showUrlClick()

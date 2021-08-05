@@ -113,7 +113,7 @@ extern "C" {
     }
 
     void unity_showSingleFAQ (const char* faqId) {
-        [AIHelpSupportSDK showFAQSection:charToNSString(faqId)];
+        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId)];
     }
 
     void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
@@ -292,6 +292,10 @@ extern "C" {
     }
     void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
         [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
+    }
+    void unity_setOnOperationUnreadChangedCallback(AISupportOperationUnReadCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnOperationUnreadChangedCallback:callBack];
     }
     
 #if defined(__cplusplus)

@@ -1,6 +1,7 @@
 ﻿// We need this one for importing our IOS functions
 using System.Runtime.InteropServices;
 using AOT;
+using System;
 namespace AIHelp
 {
 
@@ -15,6 +16,7 @@ namespace AIHelp
         static event AIHelpDefine.OnSpecificFormSubmittedCallback _iOSSpecificFormCallback;
         static event AIHelpDefine.OnAIHelpSessionOpenCallback _iOSSessionOpenCallback;
         static event AIHelpDefine.OnAIHelpSessionCloseCallback _iOSSessionCloseCallback;
+        static event AIHelpDefine.OnOperationUnreadChangedCallback _iOSOperationUnreadChangedCallback;
 
         [DllImport("__Internal")]
         private static extern void unity_init(string apiKey, string domainName, string appId);
@@ -176,6 +178,20 @@ namespace AIHelp
         }
         [DllImport("__Internal")]
         private static extern void unity_setOnSessionCloseCallback(iOSOnAIHelpSessionCloseSubmit callBack);
+
+
+        public delegate void iOSOnOperationUnreadChangedSubmit(bool hasUnreadArticles);
+        [MonoPInvokeCallback(typeof(iOSOnOperationUnreadChangedSubmit))]
+        private static void iOSOperationUnreadSubmit(bool hasUnreadArticles)
+        {
+            if (_iOSOperationUnreadChangedCallback != null)
+            {
+                _iOSOperationUnreadChangedCallback(hasUnreadArticles);
+
+            }
+        }
+        [DllImport("__Internal")]
+        private static extern void unity_setOnOperationUnreadChangedCallback(iOSOnOperationUnreadChangedSubmit callBack);
 
 
         public void Init(string appKey, string domain, string appId)
@@ -364,7 +380,14 @@ namespace AIHelp
             unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
         }
 
-        
+        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
+        {
+            _iOSOperationUnreadChangedCallback = callback;
+            Console.Write("测试ioscore______SetOnOperationUnreadChangedCallback_________");
+            unity_setOnOperationUnreadChangedCallback(iOSOperationUnreadSubmit);
+        }
+
+
         private int getPushPlatform(PushPlatform platform){
             int tempPlatform = 2;
             if (platform == PushPlatform.APNS)

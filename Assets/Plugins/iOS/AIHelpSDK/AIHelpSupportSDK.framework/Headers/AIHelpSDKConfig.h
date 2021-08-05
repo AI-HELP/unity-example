@@ -31,8 +31,6 @@ typedef NS_ENUM(int,AIHelpPublishCountryOrRegion) {
     AIHelpIN
 };
 
-
-
 #pragma mark - ECServiceUserConfig
 
 @interface AIHelpUserConfig : NSObject

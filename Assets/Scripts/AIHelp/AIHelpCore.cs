@@ -212,6 +212,13 @@ namespace AIHelp
             helpCore.SetOnAIHelpSessionCloseCallback(callback);
         }
 
+        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
+        {
+            if (!IsHelpCorePrepared()) return;
+            Console.Write("测试core______SetOnOperationUnreadChangedCallback_________");
+            helpCore.SetOnOperationUnreadChangedCallback(callback);
+        }
+
 
 
 #if UNITY_IOS

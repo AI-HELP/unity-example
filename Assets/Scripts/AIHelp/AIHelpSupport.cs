@@ -1,4 +1,5 @@
 ﻿
+using System;
 namespace AIHelp
 {
 
@@ -148,6 +149,13 @@ namespace AIHelp
         public static void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback)
         {
             AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
+        }
+
+        public static void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
+        {
+            Console.Write("测试Support______SetOnOperationUnreadChangedCallback_________");
+
+            AIHelpCore.getInstance().SetOnOperationUnreadChangedCallback(callback);
         }
 
 
