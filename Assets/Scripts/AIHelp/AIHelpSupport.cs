@@ -153,8 +153,6 @@ namespace AIHelp
 
         public static void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
         {
-            Console.Write("测试Support______SetOnOperationUnreadChangedCallback_________");
-
             AIHelpCore.getInstance().SetOnOperationUnreadChangedCallback(callback);
         }
 

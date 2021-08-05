@@ -15,12 +15,13 @@ public class TestBehaviourScript : MonoBehaviour
 
     private void Awake()
     {
-        AIHelpSupport.SetOnOperationUnreadChangedCallback(OnOperationUnreadChangedCallback);
+     
         AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.IN);
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
+        AIHelpSupport.SetOnOperationUnreadChangedCallback(OnOperationUnreadChangedCallback);
         //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
         //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
     }
@@ -67,6 +68,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnOperationUnreadChangedCallback(bool hasUnreadArticles) {
         Console.Write("测试_______回调");
+        robotClick();
     }
 
 
@@ -85,11 +87,12 @@ public class TestBehaviourScript : MonoBehaviour
     {
         ConversationConfig config = new ConversationConfig.Builder()
             .setWelcomeMessage("You can configure special welcome message for your end users at here.")
+            .setWelcomeMessage(AIHelpSupport.GetSDKVersion())
             .SetAlwaysShowHumanSupportButtonInBotPage(false)
             .SetConversationIntent(ConversationIntent.HUMAN_SUPPORT)
             .SetStoryNode("")
             .build();
-        AIHelpSupport.ShowConversation();
+        AIHelpSupport.ShowConversation(config);
 
     }
 

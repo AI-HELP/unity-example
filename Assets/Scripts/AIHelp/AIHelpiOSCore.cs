@@ -383,7 +383,6 @@ namespace AIHelp
         public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
         {
             _iOSOperationUnreadChangedCallback = callback;
-            Console.Write("测试ioscore______SetOnOperationUnreadChangedCallback_________");
             unity_setOnOperationUnreadChangedCallback(iOSOperationUnreadSubmit);
         }
 

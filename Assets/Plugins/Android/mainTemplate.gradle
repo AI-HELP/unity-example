@@ -3,6 +3,9 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
     }
 
     dependencies {
@@ -14,6 +17,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+         maven {
+                    url 'https://oss.sonatype.org/content/repositories/snapshots'
+                }
         flatDir {
             dirs 'libs'
         }
@@ -25,9 +31,9 @@ apply plugin: 'com.android.application'
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
- 
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'net.aihelp:android-aihelp-aar:2.4.+'
+    implementation 'net.aihelp:android-aihelp-aar:2.5.0.2-SNAPSHOT'
 
 // Android Resolver Dependencies End
 **DEPS**
@@ -39,9 +45,9 @@ configurations {
 
 // Android Resolver Exclusions Start
 android {
- 
+
   packagingOptions {
-      /* 
+      /*
       exclude ('/lib/arm64-v8a/*' + '*')
       exclude ('/lib/armeabi/*' + '*')
       exclude ('/lib/mips/*' + '*')
@@ -57,7 +63,7 @@ android {
 	buildToolsVersion '**BUILDTOOLS**'
 	compileSdkVersion **APIVERSION**
 	buildToolsVersion '**BUILDTOOLS**'
- 
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -101,7 +107,7 @@ android {
     dependencies {
         implementation 'com.android.support:multidex:1.0.3'
     }
-    
+
     dexOptions {
         javaMaxHeapSize "4g"
     }
