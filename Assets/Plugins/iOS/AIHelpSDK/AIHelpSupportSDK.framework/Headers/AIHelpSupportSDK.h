@@ -15,7 +15,7 @@ typedef void (*AISupportPingCallBack)(const NSString * log);
 typedef void (*AISupportIsSpecificFormCallBack)(void);
 typedef void (*AISupportOpenSDKCallBack)(void);
 typedef void (*AISupportCloseSDKCallBack)(void);
-typedef void (*AISupportOperationUnReadCallBack)(const BOOL hasUnreadArticles);
+typedef void (*AISupportOperationUnReadCallBack)(const bool hasUnreadArticles);
 
 @interface AIHelpSupportSDK : NSObject
 

@@ -10,8 +10,8 @@ using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
     private string appKey = "THIS IS YOUR APP KEY";
-    private string domain = "a.aihelp.net";
-    private string appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0"; 
+    private string domain = "THIS IS YOUR APP DOMAIN";
+    private string appId = "THIS IS YOUR APP ID"; 
 
     private void Awake()
     {
