@@ -249,6 +249,7 @@ typedef void (*AISupportOperationUnReadCallBack)(const bool hasUnreadArticles);
 
 + (void)showUrl:(NSString *)url;
 
++ (void)setKeyWindow:(UIWindow *)keyWin;
 
 + (void)setOnAIHelpSessionOpenCallback:(AISupportOpenSDKCallBack)callback;
 
