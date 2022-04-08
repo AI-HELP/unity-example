@@ -60,3 +60,15 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# IntelliJ
+*.iml
+.idea/
+
+# Version control
+vcs.xml
+
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
