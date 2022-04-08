@@ -26,7 +26,6 @@
 "aihelp_media_upload_err_size"="ファイルサイズが制限を超えています。%dM より小さいファイルをアップロードしてください。";
 "aihelp_media_upload_err_format"="サポートされていないファイル。 現在、アップロード時に使用できるのはmp4、png、jpg、jpegのみです。";
 "aihelp_network_check_in_progress"=" ネットワークチェックが進行中です。ここで終了すると、チェックが中断されます。";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_permission_ignored"="画像のアップロード機能を使用するには、[設定]> [権限]> [ストレージ]を有効にしてください。";
 "aihelp_permission_denied"="画像をアップロードするには、ストレージへのアクセス許可が必要です。";
 "aihelp_permission_settings"="設定";
@@ -41,5 +40,9 @@
 "aihelp_saturday"="土曜日";
 "aihelp_sunday"="日曜日";
 "aihelp_yesterday"="昨日";
-
+"aihelp_saturday_data_acquisition_failed"="データ取得に失敗しました";
+"aihelp_send"="发信";
+"aihelp_resolution_request"="あなたの問題は解決されましたか？";
+"aihelp_resolution_yes"="解決済み";
+"aihelp_resolution_no"="未解決";
 

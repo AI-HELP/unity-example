@@ -18,7 +18,6 @@
 
 "aihelp_media_upload_err_format"="Unsupported files. Currently, only mp4, png, jpg, jpeg available when uploading.";
 "aihelp_media_upload_err_size"="The file size exceeds the limit, please upload the file smaller than %dM";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 
 "aihelp_network_error_msg"="Oops! Something went wrong";
 "aihelp_network_upload_log_title"="Poor network connection";
@@ -48,6 +47,9 @@
 "aihelp_thursday"="Thursday";
 "aihelp_friday"="Friday";
 "aihelp_saturday"="Saturday";
-
-
+"aihelp_saturday_data_acquisition_failed"="Data acquisition failed";
+"aihelp_send"="Send";
+"aihelp_resolution_request"="Is your problem solved?";
+"aihelp_resolution_yes"="Solved";
+"aihelp_resolution_no"="Unsolved";
 

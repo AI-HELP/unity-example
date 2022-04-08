@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="తనిఖీ చేసిన తర్వాత, మీ నెట్‌వర్క్ బాగానే ఉంది";
 "aihelp_network_no_connect"="దయచేసి మీ నెట్‌వర్క్ కనెక్షన్‌ను తనిఖీ చేయండి.";
 "aihelp_media_upload_err_size"="ఫైల్ పరిమాణం పరిమితిని మించిపోయింది, దయచేసి ఫైల్‌ను %dM కన్నా చిన్నదిగా అప్‌లోడ్ చేయండి.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="మద్దతు లేని ఫైల్‌లు. ప్రస్తుతం, అప్‌లోడ్ చేసేటప్పుడు mp4, png, jpg, jpeg మాత్రమే అందుబాటులో ఉన్నాయి.";
 "aihelp_network_check_in_progress"="నెట్‌వర్క్ తనిఖీ పురోగతిలో ఉంది. మీరు ఇప్పుడు నిష్క్రమించినట్లయితే, తనిఖీకి అంతరాయం కలుగుతుంది.";
 "aihelp_permission_denied"="అప్‌లోడ్ చిత్రానికి నిల్వను యాక్సెస్ చేయడానికి అనుమతి అవసరం.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="గురువారం";
 "aihelp_friday"="శుక్రవారం";
 "aihelp_saturday"="శనివారం";
-
-
+"aihelp_saturday_data_acquisition_failed"="డేటా సేకరణ విఫలమైంది";
+"aihelp_send"="పంపండి";
+"aihelp_resolution_request"="మీ సమస్య పరిష్కరించబడిందా?";
+"aihelp_resolution_yes"="పరిష్కరించబడింది";
+"aihelp_resolution_no"="పరిష్కరించబడలేదు";

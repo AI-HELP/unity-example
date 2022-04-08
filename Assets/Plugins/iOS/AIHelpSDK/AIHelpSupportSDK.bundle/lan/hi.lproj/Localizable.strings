@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="जाँच करने के बाद, आपका नेटवर्क ठीक है";
 "aihelp_network_no_connect"="कृपया अपना नेटवर्क कनेक्शन जांचें।";
 "aihelp_media_upload_err_size"="फ़ाइल का आकार सीमा से अधिक है, कृपया फ़ाइल को %dM से छोटा अपलोड करें।";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="असमर्थित फ़ाइलें। अपलोड करते समय वर्तमान में केवल mp4, png, jpg, jpeg उपलब्ध है।";
 "aihelp_network_check_in_progress"="नेटवर्क जाँच जारी है। यदि आप अभी बाहर निकलते हैं, तो जाँच बाधित हो जाएगी।";
 "aihelp_permission_denied"="अपलोड छवि को भंडारण तक पहुंचने की अनुमति की आवश्यकता है।";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="गुरूवार";
 "aihelp_friday"="शुक्रवार";
 "aihelp_saturday"="शनिवार";
-
-
+"aihelp_saturday_data_acquisition_failed"="डाटा अधिग्रहण विफल";
+"aihelp_send"="भेजना";
+"aihelp_resolution_request"="क्या आपकी समस्या का समाधान हो गया है?";
+"aihelp_resolution_yes"="हल किया";
+"aihelp_resolution_no"="न सुलझा हुआ";

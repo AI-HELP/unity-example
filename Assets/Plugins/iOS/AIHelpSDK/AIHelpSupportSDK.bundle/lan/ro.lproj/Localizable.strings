@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="După verificare, rețeaua dvs. este în regulă";
 "aihelp_network_no_connect"="Verificați conexiunea la rețea.";
 "aihelp_media_upload_err_size"="Mărimea fișierului depășește limita, vă rugăm să încărcați fișierul mai mic decât %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Fișiere neacceptate. În prezent, numai la încărcare, mp4, png, jpg, jpeg sunt disponibile.";
 "aihelp_network_check_in_progress"="Verificarea rețelei este în curs. Dacă ieșiți acum, verificarea va fi întreruptă.";
 "aihelp_permission_ignored"="Vă rugăm să activați Setări> Permisiuni> Stocare pentru a utiliza funcția de încărcare a imaginii.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="joi";
 "aihelp_friday"="vineri";
 "aihelp_saturday"="sâmbătă";
-
-
+"aihelp_saturday_data_acquisition_failed"="Achiziționarea datelor nu a reușit";
+"aihelp_send"="trimite";
+"aihelp_resolution_request"="S-a rezolvat problema ta?";
+"aihelp_resolution_yes"="Rezolvat";
+"aihelp_resolution_no"="Nerezolvată";

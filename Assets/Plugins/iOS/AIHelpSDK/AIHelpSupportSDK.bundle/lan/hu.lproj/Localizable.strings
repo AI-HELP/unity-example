@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Az ellenőrzés után a hálózat rendben van";
 "aihelp_network_no_connect"="Kérjük, ellenőrizze a hálózati kapcsolatot.";
 "aihelp_media_upload_err_size"="A fájlméret meghaladja a korlátot, kérjük, töltse fel a (z) %dM -nél kisebb fájlt.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Nem támogatott fájlok. Jelenleg csak mp4, png, jpg, jpeg érhető el feltöltéskor.";
 "aihelp_network_check_in_progress"="A hálózat ellenőrzése folyamatban van. Ha most kilép, az ellenőrzést megszakítják.";
 "aihelp_permission_denied"="A kép feltöltéséhez engedély szükséges a tárhely eléréséhez.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="csütörtök";
 "aihelp_friday"="péntek";
 "aihelp_saturday"="szombat";
-
-
+"aihelp_saturday_data_acquisition_failed"="Az adatgyűjtés sikertelen";
+"aihelp_send"="Küld";
+"aihelp_resolution_request"="Megoldódott a problémád?";
+"aihelp_resolution_yes"="Megoldva";
+"aihelp_resolution_no"="Megoldatlan";

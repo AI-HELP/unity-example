@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Kontrol ettikten sonra ağınız iyi durumda";
 "aihelp_network_no_connect"="Lütfen ağ bağlantınızı kontrol edin.";
 "aihelp_media_upload_err_size"="Dosya boyutu sınırı aşıyor, lütfen %dM\'den küçük dosyayı yükleyin.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Desteklenmeyen dosyalar. Şu anda, yükleme sırasında sadece mp4, png, jpg, jpeg kullanılabilir.";
 "aihelp_network_check_in_progress"="Ağ denetimi devam ediyor. Şimdi çıkarsanız kontrol kesintiye uğrayacaktır.";
 "aihelp_permission_denied"="Resim yükle, depolamaya erişim izni gerektirir.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Perşembe";
 "aihelp_friday"="Cuma";
 "aihelp_saturday"="Cumartesi";
-
-
+"aihelp_saturday_data_acquisition_failed"="Veri toplama başarısız oldu";
+"aihelp_send"="göndermek";
+"aihelp_resolution_request"="Sorununuz çözüldü mü?";
+"aihelp_resolution_yes"="Çözüldü";
+"aihelp_resolution_no"="çözülmemiş";

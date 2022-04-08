@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="بعد از بررسی ، شبکه شما خوب است";
 "aihelp_network_no_connect"="لطفاً اتصال شبکه خود را بررسی کنید.";
 "aihelp_media_upload_err_size"="اندازه پرونده از حد مجاز بیشتر است ، لطفا پرونده را کوچکتر از %dM  بارگذاری کنید.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="پرونده های پشتیبانی نشده در حال حاضر ، فقط بارگیری mp4 ، png ، jpg ، jpeg در دسترس است.";
 "aihelp_network_check_in_progress"="بررسی شبکه در حال انجام است و اگر اکنون خارج شوید ، بررسی قطع می شود.";
 "aihelp_permission_ignored"="طفاً برای استفاده از عملکرد تصویر بارگذاری ، تنظیمات> مجوزها> ذخیره سازی را فعال کنید.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="پنج شنبه";
 "aihelp_friday"="جمعه";
 "aihelp_saturday"="شنبه";
-
-
+"aihelp_saturday_data_acquisition_failed"="جمع آوری اطلاعات ناموفق بود";
+"aihelp_send"="ارسال";
+"aihelp_resolution_request"="مشکل شما حل شد؟";
+"aihelp_resolution_yes"="حل کرد";
+"aihelp_resolution_no"="حل نشده";

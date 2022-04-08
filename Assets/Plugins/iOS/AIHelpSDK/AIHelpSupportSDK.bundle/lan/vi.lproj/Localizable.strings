@@ -24,10 +24,9 @@
 "aihelp_network_check_fine"="Sau khi kiểm tra, mạng của bạn vẫn ổn";
 "aihelp_network_no_connect"="Vui lòng kiểm tra kết nối mạng của bạn.";
 "aihelp_media_upload_err_size"="Kích thước tệp vượt quá giới hạn, vui lòng tải lên tệp nhỏ hơn %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Các tập tin không được hỗ trợ. Hiện tại, chỉ có mp4, png, jpg, jpeg có sẵn khi tải lên.";
 "aihelp_network_check_in_progress"="Đang kiểm tra mạng. Nếu bạn thoát ngay bây giờ, việc kiểm tra sẽ bị gián đoạn.";
-"aihelp_permission_ignored"="Vui lòng bật Cài đặt> Quyền> Bộ nhớ để sử dụng chức năng tải ảnh lên.";
+"aihelp_permission_ignored"="Vui lòngr bật Cài đặt> Quyền> Bộ nhớ để sử dụng chức năng tải ảnh lên.";
 "aihelp_permission_denied"="Tải lên hình ảnh yêu cầu quyền truy cập bộ nhớ.";
 "aihelp_permission_settings"="Cài đặt";
 "aihelp_network_checking"="Đang kiểm tra mạng";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Thứ năm";
 "aihelp_friday"="Thứ sáu";
 "aihelp_saturday"="ngày thứ bảy";
-
-
+"aihelp_saturday_data_acquisition_failed"="Thu thập dữ liệu không thành công";
+"aihelp_send"="gửi";
+"aihelp_resolution_request"="Vấn đề của bạn đã được giải quyết chưa?";
+"aihelp_resolution_yes"="Đã giải quyết";
+"aihelp_resolution_no"="Chưa giải quyết";

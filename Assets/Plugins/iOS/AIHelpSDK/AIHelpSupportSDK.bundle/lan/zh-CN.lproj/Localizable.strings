@@ -15,7 +15,7 @@
 "aihelp_rate_request"="请对我们的服务进行评价";
 "aihelp_rate_finished"="感谢您为我们评价！";
 "aihelp_rate_app_hint"="喜欢这个应用，给它打分？";
-"aihelp_rate_button"="去打分";
+"aihelp_rate_button"="去评价";
 "aihelp_rate_additional_feedback_message"="其他意见或建议吗（可选）";
 "aihelp_faq_feedback"="请对我们提出宝贵建议";
 "aihelp_faq_feedback_thanks"="感谢您的反馈！";
@@ -26,7 +26,6 @@
 "aihelp_network_check_fine"="当前网络状态良好";
 "aihelp_network_no_connect"="请检查网络连接及网络管理软件相关设置";
 "aihelp_media_upload_err_size"="文件大小超过限制，请上传小于 %dM 的文件";
-"aihelp_media_upload_err_net"="网络传输超时，文件上传失败";
 "aihelp_media_upload_err_format"="文件格式不支持，目前只能上传 mp4, png, jpg, jpeg 格式的文件";
 "aihelp_network_check_in_progress"="正在进行网络检测，如果现在退出将中断检测";
 "aihelp_permission_denied"="此应用需要获取读取设备存储权限，才能提供上传图片功能。";
@@ -42,6 +41,10 @@
 "aihelp_thursday"="周四";
 "aihelp_friday"="周五";
 "aihelp_saturday"="周六";
-
+"aihelp_saturday_data_acquisition_failed"="数据获取失败";
+"aihelp_send"="发送";
+"aihelp_resolution_request"="您的问题解决了吗？";
+"aihelp_resolution_yes"="已解决";
+"aihelp_resolution_no"="未解决";
 
 

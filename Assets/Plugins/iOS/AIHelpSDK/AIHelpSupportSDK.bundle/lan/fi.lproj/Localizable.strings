@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Tarkistuksen jälkeen verkko on kunnossa";
 "aihelp_network_no_connect"="Tarkista verkkoyhteytesi.";
 "aihelp_media_upload_err_size"="Tiedoston koko ylittää rajan. Lataa tiedosto, joka on pienempi kuin%dM";
-"aihelp_media_upload_err_net"="Lähetys aikakatkaistiin, tiedoston lataaminen epäonnistui.";
 "aihelp_media_upload_err_format"="Tiedostot, joita ei tueta. Tällä hetkellä vain mp4, png, jpg, jpegavailable saatavilla ladattaessa.";
 "aihelp_network_check_in_progress"="Verkon tarkistus on käynnissä. Jos poistut nyt, tarkistus keskeytetään.";
 "aihelp_permission_denied"="Kuvan lataaminen edellyttää lupa käyttää tallennustilaa.";
@@ -40,5 +39,8 @@
 "aihelp_thursday"="torstai";
 "aihelp_friday"="perjantai";
 "aihelp_saturday"="Lauantai";
-
-
+"aihelp_saturday_data_acquisition_failed"="Tietojen hankinta epäonnistui";
+"aihelp_send"="lähettää";
+"aihelp_resolution_request"="Onko ongelmasi ratkennut?";
+"aihelp_resolution_yes"="Ratkaistu";
+"aihelp_resolution_no"="Ratkaisematon";

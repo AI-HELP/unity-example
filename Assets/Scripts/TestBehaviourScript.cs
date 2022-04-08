@@ -9,14 +9,12 @@ using UnityEngine.UI;
 using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "THIS IS YOUR APP KEY";
-    private string domain = "THIS IS YOUR APP DOMAIN";
-    private string appId = "THIS IS YOUR APP ID"; 
+    private string appKey = "123";
+    private string domain = "xxx.aihelp.net";
+    private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
 
     private void Awake()
     {
-     
-        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.IN);
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
@@ -24,6 +22,7 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.SetOnOperationUnreadChangedCallback(OnOperationUnreadChangedCallback);
         //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
         //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
+
     }
 
     private void Start()
@@ -63,24 +62,22 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnAIHelpInitializedCallback() {  
         Console.Write("AIHelp init success");
-        
     }
 
     public void OnOperationUnreadChangedCallback(bool hasUnreadArticles) {
-        Console.Write("测试_______回调");
-        robotClick();
+
     }
 
 
     void robotClick()
     {
-        ConversationConfig config = new ConversationConfig.Builder()
+       ConversationConfig config = new ConversationConfig.Builder()
             .SetAlwaysShowHumanSupportButtonInBotPage(true)
             .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
             .SetStoryNode("rate message")
             .build();
 
-        AIHelpSupport.ShowConversation(config);
+       AIHelpSupport.ShowConversation(config);
     }
 
     void manualClick()
@@ -119,7 +116,6 @@ public class TestBehaviourScript : MonoBehaviour
 
     void operationClick()
     {
-        
         ConversationConfig config = new ConversationConfig.Builder()
             .SetAlwaysShowHumanSupportButtonInBotPage(true)
             .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
@@ -147,14 +143,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     void updateSDKLanguageClick()
     {
-        //AIHelpSupport.UpdateSDKLanguage("en");
-        UserConfig config = new UserConfig.Builder()
-            .SetUserId("123456789")
-            .SetUserName("AIHelp")
-            .SetUserTags("VIP1")
-            .SetCustomData("")
-            .build();
-        AIHelpSupport.UpdateUserInfo(config);
+        AIHelpSupport.UpdateSDKLanguage("en");
     }
 
     void isHelpShowClick()
@@ -194,13 +183,12 @@ public class TestBehaviourScript : MonoBehaviour
     
     void SDKVersionClick()
     {
-        Console.Write("测试Test______SetOnOperationUnreadChangedCallback_________");
-        
+        Console.Write("SDKVersionClick");
     }
 
     void showUrlClick()
     {
-        AIHelpSupport.ShowUrl("https://www.baidu.com");
+        AIHelpSupport.ShowUrl("https://www.aihelp.net");
     }
 
     void runAccelerationClick()
@@ -210,7 +198,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnSpecificFormSubmittedCallback()
     {
-        Console.Write("______OnSpecificFormSubmittedCallback_________");
+        Console.Write("OnSpecificFormSubmittedCallback");
     }
 
     public void OnOpenCallBack()

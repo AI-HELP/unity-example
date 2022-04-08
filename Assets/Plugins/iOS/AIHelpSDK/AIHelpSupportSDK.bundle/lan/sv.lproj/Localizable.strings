@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Efter att ha kontrollerat är ditt nätverk bra";
 "aihelp_network_no_connect"="Kontrollera din nätverksanslutning.";
 "aihelp_media_upload_err_size"="Filstorleken överskrider gränsen, ladda upp filen mindre än %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Ostödda filer. För närvarande är det bara mp4, png, jpg, jpeg tillgängliga vid uppladdning.";
 "aihelp_network_check_in_progress"="Nätverkskontroll pågår. Om du lämnar nu avbryts kontrollen.";
 "aihelp_permission_ignored"="Aktivera Inställningar> Behörigheter> Lagring för att använda uppladdningsfunktionen.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Torsdag";
 "aihelp_friday"="fredag";
 "aihelp_saturday"="Lördag";
-
-
+"aihelp_saturday_data_acquisition_failed"="Datainsamling misslyckades";
+"aihelp_send"="skicka";
+"aihelp_resolution_request"="Har ditt problem lösts?";
+"aihelp_resolution_yes"="Lösta";
+"aihelp_resolution_no"="Olösta";

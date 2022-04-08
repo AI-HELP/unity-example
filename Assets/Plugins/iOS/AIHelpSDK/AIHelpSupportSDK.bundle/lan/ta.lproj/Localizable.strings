@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="சரிபார்த்த பிறகு, உங்கள் பிணையம் நன்றாக உள்ளது";
 "aihelp_network_no_connect"="உங்கள் பிணைய இணைப்பைச் சரிபார்க்கவும்.";
 "aihelp_media_upload_err_size"="கோப்பு அளவு வரம்பை மீறுகிறது, தயவுசெய்து கோப்பை %dM ஐ விட சிறியதாக பதிவேற்றவும்.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="ஆதரிக்கப்படாத கோப்புகள். தற்போது, பதிவேற்றும்போது mp4, png, jpg, jpeg மட்டுமே கிடைக்கிறது.";
 "aihelp_network_check_in_progress"="பிணைய சோதனை செயலில் உள்ளது. நீங்கள் இப்போது வெளியேறினால், சோதனை தடைபடும்.";
 "aihelp_permission_ignored"="பதிவேற்ற பட செயல்பாட்டைப் பயன்படுத்த அமைப்புகள்> அனுமதிகள்> சேமிப்பிடத்தை இயக்கவும்.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="வியாழக்கிழமை";
 "aihelp_friday"="வெள்ளி";
 "aihelp_saturday"="சனிக்கிழமை";
-
-
+"aihelp_saturday_data_acquisition_failed"="தரவு கையகப்படுத்தல் தோல்வியடைந்தது";
+"aihelp_send"="அனுப்பு";
+"aihelp_resolution_request"="உங்கள் பிரச்சனை தீர்க்கப்பட்டதா?";
+"aihelp_resolution_yes"="தீர்க்கப்பட்டது";
+"aihelp_resolution_no"="தீர்க்கப்படாதது";

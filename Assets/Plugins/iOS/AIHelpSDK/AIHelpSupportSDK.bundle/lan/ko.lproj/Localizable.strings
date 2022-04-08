@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="확인 후 네트워크가 정상입니다";
 "aihelp_network_no_connect"="네트워크 연결을 확인하십시오.";
 "aihelp_media_upload_err_size"="파일 크기가 한도를 초과했습니다. %dM 보다 작은 파일을 업로드하십시오.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="지원되지 않는 파일. 현재 업로드시 mp4, png, jpg, jpeg 만 사용할 수 있습니다.";
 "aihelp_network_check_in_progress"="네트워크 확인이 진행 중입니다. 지금 종료하면 확인이 중단됩니다.";
 "aihelp_permission_denied"="이미지를 업로드하려면 저장소 액세스 권한이 필요합니다.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="목요일";
 "aihelp_friday"="금요일";
 "aihelp_saturday"="토요일";
-
-
+"aihelp_saturday_data_acquisition_failed"="데이터 수집 실패";
+"aihelp_send"="보내다";
+"aihelp_resolution_request"="문제가 해결되었습니까?";
+"aihelp_resolution_yes"="해결";
+"aihelp_resolution_no"="미해결";

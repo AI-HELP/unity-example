@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="បន្ទាប់ពីពិនិត្យមើលបណ្តាញរបស់អ្នកគឺល្អ";
 "aihelp_network_no_connect"="សូមពិនិត្យការភ្ជាប់បណ្តាញរបស់អ្នក។";
 "aihelp_media_upload_err_size"="ទំហំឯកសារលើសពីដែនកំណត់សូមផ្ទុកឯកសារតូចជាង %dM ។";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="ឯកសារដែលមិនបានគាំទ្រ។ បច្ចុប្បន្នមានតែ mp4, png, jpg, jpeg ដែលអាចប្រើបាននៅពេលផ្ទុកឡើង។";
 "aihelp_network_check_in_progress"="ការត្រួតពិនិត្យបណ្តាញកំពុងដំណើរការប្រសិនបើអ្នកចាកចេញឥឡូវនេះការត្រួតពិនិត្យនឹងត្រូវបានរំខាន។";
 "aihelp_permission_ignored"="សូមបើកការកំណត់> សិទ្ធិអនុញ្ញាត> ឧបករណ៍ផ្ទុកដើម្បីប្រើមុខងារផ្ទុករូបភាពឡើង។";
@@ -41,5 +40,9 @@
 "aihelp_thursday"="ថ្ងៃព្រហស្បតិ៍";
 "aihelp_friday"="ថ្ងៃសុក្";
 "aihelp_saturday"="ថ្ងៃសៅរ៍";
-
+"aihelp_saturday_data_acquisition_failed"="ការទទួលយកទិន្នន័យបានបរាជ័យ";
+"aihelp_send"="ផ្ញើ";
+"aihelp_resolution_request"="តើបញ្ហារបស់អ្នកត្រូវបានដោះស្រាយទេ?";
+"aihelp_resolution_yes"="ដោះស្រាយ";
+"aihelp_resolution_no"="មិនទាន់ដោះស្រាយ";
 

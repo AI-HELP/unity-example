@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Po kontrole je vaše síť v pořádku";
 "aihelp_network_no_connect"="Zkontrolujte připojení k síti.";
 "aihelp_media_upload_err_size"="Velikost souboru přesahuje limit, nahrajte prosím soubor menší než %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Nepodporované soubory. V současné době jsou při nahrávání k dispozici pouze mp4, png, jpg, jpeg.";
 "aihelp_network_check_in_progress"="Probíhá kontrola sítě. Pokud nyní ukončíte, bude kontrola přerušena.";
 "aihelp_permission_denied"="Nahrávání obrázku vyžaduje povolení přístupu k úložišti.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Čtvrtek";
 "aihelp_friday"="pátek";
 "aihelp_saturday"="sobota";
-
-
+"aihelp_saturday_data_acquisition_failed"="Sběr dat se nezdařil";
+"aihelp_send"="poslat";
+"aihelp_resolution_request"="Byl váš problém vyřešen?";
+"aihelp_resolution_yes"="Vyřešeno";
+"aihelp_resolution_no"="Nevyřešeno";

@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Potwierdź, aby przesłać nam warunki sieciowe, które pomogą nam poprawić jakość twojego połączenia sieciowego.";
 "aihelp_network_no_connect"="Sprawdź połączenie sieciowe.";
 "aihelp_media_upload_err_size"="Rozmiar pliku przekracza limit, prześlij plik mniejszy niż %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Nieobsługiwane pliki. Obecnie tylko mp4, png, jpg, jpeg są dostępne podczas przesyłania.";
 "aihelp_network_check_in_progress"="Trwa sprawdzanie sieci. Jeśli teraz zakończysz, sprawdzanie zostanie przerwane.";
 "aihelp_permission_ignored"="Włącz Ustawienia> Uprawnienia> Pamięć, aby użyć funkcji przesyłania obrazu.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="czwartek";
 "aihelp_friday"="piątek";
 "aihelp_saturday"="sobota";
-
-
+"aihelp_saturday_data_acquisition_failed"="Akwizycja danych nie powiodła się";
+"aihelp_send"="wysłać";
+"aihelp_resolution_request"="Czy Twój problem został rozwiązany?";
+"aihelp_resolution_yes"="Rozwiązany";
+"aihelp_resolution_no"="Nierozwiązany";

@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Matapos suriin, maayos ang iyong network";
 "aihelp_network_no_connect"="Mangyaring suriin ang iyong koneksyon sa network.";
 "aihelp_media_upload_err_size"="Ang laki ng file ay lumampas sa limitasyon, mangyaring mag-upload ng file na mas maliit kaysa sa %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Hindi suportadong mga file. Sa kasalukuyan, tanging mp4, png, jpg, jpeg na magagamit kapag nag-upload.";
 "aihelp_network_check_in_progress"="Nagsisimula ang pagsuri sa network.Kung lumabas ka ngayon, magambala ang pagsuri.";
 "aihelp_permission_denied"="Ang pag-upload ng imahe ay nangangailangan ng pahintulot ng pag-access sa imbakan.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Huwebes";
 "aihelp_friday"="Biyernes";
 "aihelp_saturday"="Sabado";
-
-
+"aihelp_saturday_data_acquisition_failed"="Nabigo ang pagkuha ng data";
+"aihelp_send"="magpadala";
+"aihelp_resolution_request"="Nalutas na ba ang iyong problema?";
+"aihelp_resolution_yes"="Nalutas";
+"aihelp_resolution_no"="Hindi nalutas";

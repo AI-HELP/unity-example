@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Harap konfirmasi untuk mengirimkan kepada kami kondisi jaringan, yang akan membantu kami meningkatkan kualitas koneksi jaringan Anda.";
 "aihelp_network_no_connect"="Silakan periksa koneksi jaringan Anda.";
 "aihelp_media_upload_err_size"="Ukuran file melebihi batas, harap unggah file lebih kecil dari %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="File tidak didukung. Saat ini, hanya mp4, png, jpg, jpeg tersedia saat mengunggah.";
 "aihelp_network_check_in_progress"="Pemeriksaan jaringan sedang berlangsung. Jika Anda keluar sekarang, pemeriksaan akan terhenti.";
 "aihelp_permission_ignored"="Harap aktifkan Pengaturan> Izin> Penyimpanan untuk menggunakan fungsi unggah gambar.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Kamis";
 "aihelp_friday"="Jumat";
 "aihelp_saturday"="Sabtu";
-
-
+"aihelp_saturday_data_acquisition_failed"="Akuisisi data gagal";
+"aihelp_send"="mengirim";
+"aihelp_resolution_request"="Apakah masalah Anda sudah terpecahkan?";
+"aihelp_resolution_yes"="Terselesaikan";
+"aihelp_resolution_no"="Belum terpecahkan";

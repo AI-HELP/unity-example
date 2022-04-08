@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Después de verificar, su red está bien";
 "aihelp_network_no_connect"="Después de verificar, su red está bien";
 "aihelp_media_upload_err_size"="El tamaño del archivo excede el límite, cargue el archivo más pequeño que %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Archivos no compatibles Actualmente, solo mp4, png, jpg, jpeg están disponibles al cargar.";
 "aihelp_network_check_in_progress"="La comprobación de la red está en curso. Si sale ahora, la comprobación se interrumpirá.";
 "aihelp_permission_ignored"="Habilite Configuración> Permisos> Almacenamiento para usar la función de carga de imágenes.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="jueves";
 "aihelp_friday"="viernes";
 "aihelp_saturday"="sábado";
-
-
+"aihelp_saturday_data_acquisition_failed"="Falló la adquisición de datos";
+"aihelp_send"="enviar";
+"aihelp_resolution_request"="¿Se ha resuelto su problema?";
+"aihelp_resolution_yes"="Resuelto";
+"aihelp_resolution_no"="Sin resolver";

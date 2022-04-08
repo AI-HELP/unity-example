@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="চেক করার পরে, আপনার নেটওয়ার্ক ঠিক আছে";
 "aihelp_network_no_connect"="আপনার নেটওয়ার্ক সংযোগ পরীক্ষা করুন।";
 "aihelp_media_upload_err_size"="ফাইলের আকার সীমা ছাড়িয়ে গেছে, দয়া করে ফাইলটি %dM এম এর চেয়ে ছোট আপলোড করুন";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="অসমর্থিত ফাইল। বর্তমানে আপলোড করার সময় কেবল এমপি 4, পিএনজি, জেপিজি, জেপিগ পাওয়া যায়।";
 "aihelp_network_check_in_progress"="নেটওয়ার্ক চেকিং চলছে। আপনি যদি এখনই প্রস্থান করেন তবে চেকিং বাধাগ্রস্ত হবে।";
 "aihelp_permission_ignored"="আপলোড চিত্রের ফাংশনটি ব্যবহার করতে দয়া করে সেটিংস> অনুমতি> স্টোরেজ সক্ষম করুন।";
@@ -41,5 +40,9 @@
 "aihelp_thursday"="বৃহস্পতিবার";
 "aihelp_friday"="শুক্রবার";
 "aihelp_saturday"="শনিবার";
-
+"aihelp_saturday_data_acquisition_failed"="ডেটা অর্জন ব্যর্থ হয়েছে";
+"aihelp_send"="পাঠান";
+"aihelp_resolution_request"="আপনার সমস্যার সমাধান হয়েছে?";
+"aihelp_resolution_yes"="সমাধান করা হয়েছে";
+"aihelp_resolution_no"="অমীমাংসিত";
 

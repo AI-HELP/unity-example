@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="စစ်ဆေးပြီးသည်နှင့်သင်၏ကွန်ယက်အဆင်ပြေသည်";
 "aihelp_network_no_connect"="ကျေးဇူးပြု၍ သင်၏ကွန်ရက်ချိတ်ဆက်မှုကိုစစ်ဆေးပါ။";
 "aihelp_media_upload_err_size"="ဖိုင်အရွယ်အစားသည်ကန့်သတ်ချက်ထက်ကျော်လွန်ပြီးဖိုင် %dM မ်ထက်နည်းသောဖိုင်ကိုပို့ပါ။";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="မထောက်ပံ့သောဖိုင်များ။ လောလောဆယ်တင်ပို့စဉ် mp4, png, jpg, jpeg သာရရှိနိုင်သည်။";
 "aihelp_network_check_in_progress"="ကွန်ယက်ကိုစစ်ဆေးနေသည်။ သင်ယခုထွက်သွားပါကစစ်ဆေးမှုကိုရပ်တန့်သွားလိမ့်မည်။";
 "aihelp_permission_denied"="တင်ထားသောပုံသည်သိုလှောင်မှုကိုရယူရန်ခွင့်ပြုချက်လိုအပ်သည်။";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="ကြာသပတေးနေ့";
 "aihelp_friday"="သောကြာနေ့";
 "aihelp_saturday"="စနေနေ့";
-
-
+"aihelp_saturday_data_acquisition_failed"="ဒေတာရယူမှုမအောင်မြင်ပါ";
+"aihelp_send"="ပို့ပါ";
+"aihelp_resolution_request"="သင့်ပြဿနာကို ဖြေရှင်းပြီးပြီလား။";
+"aihelp_resolution_yes"="ဖြေရှင်း";
+"aihelp_resolution_no"="မဖြေရှင်းနိုင်";

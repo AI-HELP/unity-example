@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Μετά τον έλεγχο, το δίκτυό σας είναι εντάξει";
 "aihelp_network_no_connect"="Ελέγξτε τη σύνδεση δικτύου σας.";
 "aihelp_media_upload_err_size"="Το μέγεθος του αρχείου υπερβαίνει το όριο, μεταφορτώστε το αρχείο μικρότερο από %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Μη υποστηριζόμενα αρχεία. Προς το παρόν, μόνο τα mp4, png, jpg, jpeg είναι διαθέσιμα κατά τη μεταφόρτωση.";
 "aihelp_network_check_in_progress"="Ο έλεγχος δικτύου βρίσκεται σε εξέλιξη. Εάν βγείτε τώρα, ο έλεγχος θα διακοπεί.";
 "aihelp_permission_denied"="Η μεταφόρτωση εικόνας απαιτεί άδεια πρόσβασης στον αποθηκευτικό χώρο.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Πέμπτη";
 "aihelp_friday"="Παρασκευή";
 "aihelp_saturday"="Σάββατο";
-
-
+"aihelp_saturday_data_acquisition_failed"="Η απόκτηση δεδομένων απέτυχε";
+"aihelp_send"="στείλετε";
+"aihelp_resolution_request"="Έχει λυθεί το πρόβλημά σας;";
+"aihelp_resolution_yes"="Λυμένο";
+"aihelp_resolution_no"="Άλυτο";

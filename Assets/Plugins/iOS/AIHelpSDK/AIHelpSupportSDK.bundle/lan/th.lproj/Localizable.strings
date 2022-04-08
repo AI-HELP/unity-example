@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="หลังจากตรวจสอบแล้วเครือข่ายของคุณก็ใช้ได้";
 "aihelp_network_no_connect"="โปรดตรวจสอบการเชื่อมต่อเครือข่ายของคุณ";
 "aihelp_media_upload_err_size"="ขนาดไฟล์เกินขีด จำกัด โปรดอัปโหลดไฟล์ที่มีขนาดเล็กกว่า %dM";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="ไฟล์ที่ไม่รองรับ ปัจจุบันมีเฉพาะ mp4, png, jpg, jpeg เท่านั้นที่สามารถอัปโหลดได้";
 "aihelp_network_check_in_progress"="กำลังดำเนินการตรวจสอบเครือข่ายหากคุณออกตอนนี้การตรวจสอบจะหยุดชะงัก";
 "aihelp_permission_ignored"="โปรดเปิดใช้งานการตั้งค่า> สิทธิ์> ที่เก็บข้อมูลเพื่อใช้ฟังก์ชั่นอัพโหลดรูปภาพ";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="วันพฤหัสบดี";
 "aihelp_friday"="วันศุกร์";
 "aihelp_saturday"="วันเสาร์";
-
-
+"aihelp_saturday_data_acquisition_failed"="การรับข้อมูลล้มเหลว";
+"aihelp_send"="ส่ง";
+"aihelp_resolution_request"="ปัญหาของคุณได้รับการแก้ไขแล้วหรือยัง?";
+"aihelp_resolution_yes"="แก้ไขแล้ว";
+"aihelp_resolution_no"="ยังไม่แก้";

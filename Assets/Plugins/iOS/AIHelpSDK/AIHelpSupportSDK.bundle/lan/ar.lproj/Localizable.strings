@@ -23,7 +23,6 @@
 "aihelp_network_check_fine"="بعد التحقق ، شبكتك على ما يرام";
 "aihelp_network_no_connect"="يرجى التحقق من اتصال الشبكة.";
 "aihelp_media_upload_err_size"="يتجاوز حجم الملف الحد ، يرجى تحميل الملف أصغر من %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="ملفات غير مدعومة. حاليا ، فقط mp4 ، png ، jpg ، jpeg متاح عند التحميل.";
 "aihelp_network_check_in_progress"="فحص الشبكة قيد التقدم. إذا خرجت الآن ، فستتم مقاطعة عملية التحقق.";
 "aihelp_permission_denied"="Η μεταφόρτωση εικόνας απαιτεί άδεια πρόσβασης στον αποθηκευτικό χώρο.";
@@ -40,5 +39,9 @@
 "aihelp_thursday"="الخميس";
 "aihelp_friday"="يوم الجمعة";
 "aihelp_saturday"="يوم السبت";
-
+"aihelp_saturday_data_acquisition_failed"="فشل الحصول على البيانات";
+"aihelp_send"="يرسل";
+"aihelp_resolution_request"="هل تم حل مشكلتك؟";
+"aihelp_resolution_yes"="تم حلها";
+"aihelp_resolution_no"="غير محلول";
 

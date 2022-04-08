@@ -26,7 +26,6 @@
 "aihelp_network_no_connect"="Bitte überprüfen Sie Ihre Netzwerkverbindung.";
 "aihelp_media_upload_err_size"="Die Dateigröße überschreitet den Grenzwert. Bitte laden Sie die Datei hoch, die kleiner als %dM ist.";
 "aihelp_media_upload_err_format"="Nicht unterstützte Dateien. Derzeit sind beim Hochladen nur mp4, png, jpg, jpeg verfügbar.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_network_check_in_progress"="Die Netzwerkprüfung wird durchgeführt. Wenn Sie jetzt beenden, wird die Überprüfung unterbrochen.";
 "aihelp_permission_denied"="Le téléchargement de l\'image nécessite l\'autorisation d\'accéder au stockage.";
 "aihelp_permission_ignored"="Bitte aktivieren Sie Einstellungen> Berechtigungen> Speicher, um die Funktion zum Hochladen von Bildern zu verwenden.";
@@ -42,5 +41,8 @@
 "aihelp_thursday"="Donnerstag";
 "aihelp_friday"="Freitag";
 "aihelp_saturday"="Samstag";
-
-
+"aihelp_saturday_data_acquisition_failed"="Datenerfassung fehlgeschlagen";
+"aihelp_send"="senden";
+"aihelp_resolution_request"="Wurde Ihr Problem gelöst?";
+"aihelp_resolution_yes"="Gelöst";
+"aihelp_resolution_no"="Ungelöst";

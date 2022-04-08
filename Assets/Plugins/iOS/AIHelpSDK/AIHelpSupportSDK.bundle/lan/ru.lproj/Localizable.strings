@@ -26,7 +26,6 @@
 "aihelp_rate_satisfied"="Понравилось";
 "aihelp_rate_dissatisfied"="Не понравилось";
 "aihelp_network_check_in_progress"="Идет тестирование сети, если вы выйдете сейчас, тестирование будет прервано";
-"aihelp_media_upload_err_net"="Истекло время передачи по сети, не удалось загрузить файл";
 "aihelp_permission_denied"="Для загрузки изображения требуется разрешение на доступ к хранилищу.";
 "aihelp_permission_ignored"="Пожалуйста, включите Настройки> Разрешения> Хранилище, чтобы использовать функцию загрузки изображения.";
 "aihelp_permission_settings"="Настройки";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Четверг";
 "aihelp_friday"="Пятница";
 "aihelp_saturday"="суббота";
-
-
+"aihelp_saturday_data_acquisition_failed"="Не удалось получить данные";
+"aihelp_send"="Отправить";
+"aihelp_resolution_request"="Решена ли ваша проблема?";
+"aihelp_resolution_yes"="Решено";
+"aihelp_resolution_no"="Не решена";

@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Setelah memeriksa, rangkaian anda baik-baik saja";
 "aihelp_network_no_connect"="Sila periksa sambungan rangkaian anda.";
 "aihelp_media_upload_err_size"="Ukuran fail melebihi had, muat naik fail lebih kecil daripada %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Fail yang tidak disokong. Pada masa ini, hanya mp4, png, jpg, jpeg yang tersedia semasa memuat naik.";
 "aihelp_network_check_in_progress"="Pemeriksaan rangkaian sedang berlangsung. Jika anda keluar sekarang, pemeriksaan akan terganggu.";
 "aihelp_permission_ignored"="Sila aktifkan Tetapan> Kebenaran> Penyimpanan untuk menggunakan fungsi memuat naik gambar.";
@@ -41,5 +40,9 @@
 "aihelp_thursday"="Khamis";
 "aihelp_friday"="Jumaat";
 "aihelp_saturday"="Sabtu";
+"aihelp_saturday_data_acquisition_failed"="Pemerolehan data gagal";
+"aihelp_send"="hantar";
 
-
+"aihelp_resolution_request"="Adakah masalah anda telah selesai?";
+"aihelp_resolution_yes"="Selesai";
+"aihelp_resolution_no"="Belum selesai";

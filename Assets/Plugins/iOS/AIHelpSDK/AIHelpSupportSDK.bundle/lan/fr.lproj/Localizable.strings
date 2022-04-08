@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Après vérification, votre réseau fonctionne bien";
 "aihelp_network_no_connect"="Veuillez vérifier votre connexion réseau.";
 "aihelp_media_upload_err_size"="La taille du fichier dépasse la limite, veuillez télécharger le fichier inférieur à %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Fichiers non pris en charge. Actuellement, seuls mp4, png, jpg, jpeg sont disponibles lors du téléchargement.";
 "aihelp_network_check_in_progress"="La vérification du réseau est en cours. Si vous quittez maintenant, la vérification sera interrompue.";
 "aihelp_permission_denied"="Le téléchargement de l\'image nécessite l\'autorisation d\'accéder au stockage.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="Jeudi";
 "aihelp_friday"="Vendredi";
 "aihelp_saturday"="samedi";
-
-
+"aihelp_saturday_data_acquisition_failed"="Échec de l'acquisition des données";
+"aihelp_send"="envoyer";
+"aihelp_resolution_request"="Votre problème a-t-il été résolu ?";
+"aihelp_resolution_yes"="Résolu";
+"aihelp_resolution_no"="Non résolu";

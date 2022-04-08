@@ -11,11 +11,12 @@
 
 typedef void (*AISupportInitCallBack)(void);
 typedef void (*AISupportMessageCallBack)(const int unreadCount);
-typedef void (*AISupportPingCallBack)(const NSString * log);
+typedef void (*AISupportPingCallBack)(const char * log);
 typedef void (*AISupportIsSpecificFormCallBack)(void);
 typedef void (*AISupportOpenSDKCallBack)(void);
 typedef void (*AISupportCloseSDKCallBack)(void);
 typedef void (*AISupportOperationUnReadCallBack)(const bool hasUnreadArticles);
+typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
 
 @interface AIHelpSupportSDK : NSObject
 
@@ -258,6 +259,8 @@ typedef void (*AISupportOperationUnReadCallBack)(const bool hasUnreadArticles);
 + (void)setOnSpecificFormSubmittedCallback:(AISupportIsSpecificFormCallBack)callBack;
 
 + (void)setOnOperationUnreadChangedCallback:(AISupportOperationUnReadCallBack)callback;
+
++ (void)setOnSpecificUrlClickedCallback:(AISupportSpecificUrlClickedCallBack)callback;
 
 + (void)setSDKEdgeInsetsWithTop:(float)top bottom:(float)bottom enable:(BOOL)enable;
 + (void)setSDKEdgeColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;

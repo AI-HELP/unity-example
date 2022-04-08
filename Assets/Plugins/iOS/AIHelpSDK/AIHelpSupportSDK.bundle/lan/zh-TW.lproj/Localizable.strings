@@ -11,10 +11,10 @@
 "aihelp_faq_feedback_suggest"="提建議";
 "aihelp_rate_satisfied"="非常滿意";
 "aihelp_rate_dissatisfied"="很不滿意";
-"aihelp_rate_request"="請對我們的服務進行評估";
-"aihelp_rate_finished"="感謝您為我們評估！";
+"aihelp_rate_request"="請對我們的服務進行評價";
+"aihelp_rate_finished"="感謝您為我們評價！";
 "aihelp_rate_app_hint"="喜歡這個應用，給它打分？";
-"aihelp_rate_button"="去打分";
+"aihelp_rate_button"="去評價";
 "aihelp_rate_additional_feedback_message"="其他意見或建議嗎（可選）";
 "aihelp_faq_feedback"="請對我們提出寶貴建議";
 "aihelp_faq_feedback_thanks"="感謝您的迴響！";
@@ -25,7 +25,6 @@
 "aihelp_network_check_fine"="當前網絡狀態良好";
 "aihelp_network_no_connect"="請檢查網絡連接及網路管理軟件相關設定";
 "aihelp_media_upload_err_size"="文件大小超過限制，請上傳小於 %dM 的檔案";
-"aihelp_media_upload_err_net"="網絡傳輸超時，文件上傳失敗";
 "aihelp_media_upload_err_format"="檔案格式不支持，現時只能上傳mp4，png，jpg，jpeg格式的檔案";
 "aihelp_network_check_in_progress"="正在進行網絡檢測，如果現在退出將中斷檢測";
 "aihelp_permission_denied"="此應用需要獲取讀取設備存儲權限，才能提供上傳圖片功能。";
@@ -42,5 +41,8 @@
 "aihelp_saturday"="週六";
 "aihelp_sunday"="週日";
 "aihelp_yesterday"="昨天";
-
-
+"aihelp_saturday_data_acquisition_failed"="數據獲取失敗";
+"aihelp_send"="發送";
+"aihelp_resolution_request"="您的問題解決了嗎？";
+"aihelp_resolution_yes"="已解決";
+"aihelp_resolution_no"="未解決";

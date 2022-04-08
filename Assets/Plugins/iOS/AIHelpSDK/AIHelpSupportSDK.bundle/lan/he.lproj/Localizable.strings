@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="לאחר הבדיקה, הרשת שלך בסדר";
 "aihelp_network_no_connect"="אנא בדוק את חיבור הרשת שלך.";
 "aihelp_media_upload_err_size"="גודל הקובץ חורג מהמגבלה, אנא העלה את הקובץ קטן מ-%dM";
-"aihelp_media_upload_err_net"="תם הזמן הקצוב להעברה, העלאת הקבצים נכשלה.";
 "aihelp_media_upload_err_format"="קבצים שאינם נתמכים. נכון לעכשיו, רק mp4, png, jpg, jpeg avail זמין בעת ​​ההעלאה.";
 "aihelp_network_check_in_progress"="בדיקת רשת מתבצעת. אם תצא עכשיו, הבדיקה תיפסק.";
 "aihelp_permission_denied"="העלאת תמונה מחייבת הרשאת גישה לאחסון.";
@@ -40,5 +39,8 @@
 "aihelp_thursday"="יוֹם חֲמִישִׁי";
 "aihelp_friday"="יוֹם שִׁישִׁי";
 "aihelp_saturday"="יום שבת";
-
-
+"aihelp_saturday_data_acquisition_failed"="רכישת הנתונים נכשלה";
+"aihelp_send"="לִשְׁלוֹחַ";
+"aihelp_resolution_request"="האם הבעיה שלך נפתרה?";
+"aihelp_resolution_yes"="נפתר";
+"aihelp_resolution_no"="לא פתור";

@@ -24,7 +24,6 @@
 "aihelp_network_check_fine"="Na controle is uw netwerk in orde";
 "aihelp_network_no_connect"="Controleer uw netwerkverbinding.";
 "aihelp_media_upload_err_size"="De bestandsgrootte overschrijdt de limiet, upload het bestand kleiner dan %dM.";
-"aihelp_media_upload_err_net"="Transmission timed out, file uploading failed.";
 "aihelp_media_upload_err_format"="Niet-ondersteunde bestanden. Momenteel zijn alleen mp4, png, jpg, jpeg beschikbaar bij het uploaden.";
 "aihelp_network_check_in_progress"="De netwerkcontrole wordt uitgevoerd. Als u nu afsluit, wordt de controle onderbroken.";
 "aihelp_permission_ignored"="Schakel Instellingen> Machtigingen> Opslag in om de functie voor het uploaden van afbeeldingen te gebruiken.";
@@ -41,5 +40,8 @@
 "aihelp_thursday"="donderdag";
 "aihelp_friday"="vrijdag";
 "aihelp_saturday"="zaterdag";
-
-
+"aihelp_saturday_data_acquisition_failed"="Gegevensverzameling mislukt";
+"aihelp_send"="versturen";
+"aihelp_resolution_request"="Is uw probleem opgelost?";
+"aihelp_resolution_yes"="Opgelost";
+"aihelp_resolution_no"="Onopgelost";
