@@ -9,9 +9,9 @@ using UnityEngine.UI;
 using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "123";
-    private string domain = "xxx.aihelp.net";
-    private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+    private string appKey = "";
+    private string domain = "";
+    private string appId = "";
 
     private void Awake()
     {
@@ -19,7 +19,6 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        AIHelpSupport.SetOnOperationUnreadChangedCallback(OnOperationUnreadChangedCallback);
         //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
         //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
 
@@ -34,7 +33,6 @@ public class TestBehaviourScript : MonoBehaviour
             { "Canvas/allSection",allSectionClick },
             { "Canvas/singleSection",singleSectionClick },
             { "Canvas/singleFAQ",singleFAQClick },
-            { "Canvas/Operation",operationClick },
             { "Canvas/updateUserInfo",updateUserInfoClick },
             { "Canvas/updateSDKLanguage",updateSDKLanguageClick },
             { "Canvas/isHelpShow",isHelpShowClick },
@@ -64,67 +62,32 @@ public class TestBehaviourScript : MonoBehaviour
         Console.Write("AIHelp init success");
     }
 
-    public void OnOperationUnreadChangedCallback(bool hasUnreadArticles) {
-
-    }
-
-
     void robotClick()
     {
-       ConversationConfig config = new ConversationConfig.Builder()
-            .SetAlwaysShowHumanSupportButtonInBotPage(true)
-            .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
-            .SetStoryNode("rate message")
-            .build();
-
-       AIHelpSupport.ShowConversation(config);
+        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
+        conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
+        AIHelpSupport.ShowConversation(conversationBuilder.build());
     }
 
     void manualClick()
     {
-        ConversationConfig config = new ConversationConfig.Builder()
-            .setWelcomeMessage("You can configure special welcome message for your end users at here.")
-            .setWelcomeMessage(AIHelpSupport.GetSDKVersion())
-            .SetAlwaysShowHumanSupportButtonInBotPage(false)
-            .SetConversationIntent(ConversationIntent.HUMAN_SUPPORT)
-            .SetStoryNode("")
-            .build();
-        AIHelpSupport.ShowConversation(config);
-
+        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
+        conversationBuilder.SetConversationIntent(ConversationIntent.HUMAN_SUPPORT);
+        AIHelpSupport.ShowConversation(conversationBuilder.build());
     }
 
     void allSectionClick()
     {
-        FaqConfig.Builder faqBuilder = new FaqConfig.Builder();
-        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
-        faqBuilder.SetShowConversationMoment(ConversationMoment.ALWAYS);
-        conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
-        conversationBuilder.setWelcomeMessage("");
-        faqBuilder.SetConversationConfig(conversationBuilder.build());
-        AIHelpSupport.ShowAllFAQSections(faqBuilder.build());
-
+        AIHelpSupport.ShowAllFAQSections();
     }
     void singleSectionClick()
     {
-        AIHelpSupport.ShowFAQSection("YOUR SECTIONID");
+        AIHelpSupport.ShowFAQSection("SECTION ID");
     }
 
     void singleFAQClick()
     {
-       AIHelpSupport.ShowSingleFAQ("YOUR FAQID");
-    }
-
-    void operationClick()
-    {
-        ConversationConfig config = new ConversationConfig.Builder()
-            .SetAlwaysShowHumanSupportButtonInBotPage(true)
-            .SetConversationIntent(ConversationIntent.BOT_SUPPORT)
-            .SetStoryNode("rate message")
-            .build();
-        OperationConfig.Builder opConfig = new OperationConfig.Builder();
-        opConfig.SetConversationConfig(config);
-
-        AIHelpSupport.ShowOperation(opConfig.build());
+        AIHelpSupport.ShowSingleFAQ("FAQ ID");
     }
 
     void updateUserInfoClick()

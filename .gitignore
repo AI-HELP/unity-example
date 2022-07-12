@@ -63,6 +63,7 @@ crashlytics-build.properties
 # IntelliJ
 *.iml
 .idea/
+.vscode/
 
 # Version control
 vcs.xml

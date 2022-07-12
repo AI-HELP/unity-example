@@ -12,7 +12,7 @@
 #if defined(__cplusplus)
 extern "C" {
 #endif
-    
+
     NSString* charToNSString (const char* string)
     {
         if (string){
@@ -31,7 +31,7 @@ extern "C" {
         }
     }
 
-    
+
     void unity_init (const char* apiKey, const char* domainName, const char* appId) {
         NSString *_apiKey = charToNSString(apiKey);
         NSString *_domainName = charToNSString(domainName);
@@ -46,7 +46,7 @@ extern "C" {
         NSString *_language = charToNSString(language);
         [AIHelpSupportSDK initWithApiKey:_apiKey domainName:_domainName appId:_appId language:_language];
     }
-    
+
     void unity_setOnInitializedCallback (AISupportInitCallBack callBack) {
         [AIHelpSupportSDK setOnInitializedCallback:callBack];
     }
@@ -54,7 +54,7 @@ extern "C" {
     void unity_showConversation () {
         [AIHelpSupportSDK showConversation];
     }
-    
+
     void unity_showConversationConfig (int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage, const char* storyNode) {
         AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
         conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
@@ -67,7 +67,7 @@ extern "C" {
     void unity_showAllFAQSections () {
         [AIHelpSupportSDK showAllFAQSections];
     }
-    
+
     void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage,const char* storyNode, const char* welcomeMessage) {
         AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
         if (conversationMoment == 1002) {
@@ -139,7 +139,7 @@ extern "C" {
     void unity_showOperation () {
         [AIHelpSupportSDK showOperation];
     }
-    
+
     void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
         AIHelpOperationConfigBuilder *operationBuiler = [[AIHelpOperationConfigBuilder alloc] init];
         operationBuiler.selectIndex = selectIndex;
@@ -154,17 +154,17 @@ extern "C" {
     }
 
     void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo, const char* pushToken, int pushPlatform) {
-        
+
         NSString *_userTags = charToNSString(userTags);
         NSString *_customData = charToNSString(customData);
-        
+
         AIHelpUserConfigBuilder *userBuilder = [[AIHelpUserConfigBuilder alloc] init];
         userBuilder.userId = charToNSString(userId);
         userBuilder.userName = charToNSString(userName);
         userBuilder.serverId = charToNSString(serverId);
         userBuilder.isSyncCrmInfo = isSyncCrmInfo;
         userBuilder.pushToken = charToNSString(pushToken);
-        
+
         switch (pushPlatform) {
             case 1:
                 userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
@@ -182,7 +182,7 @@ extern "C" {
                 userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
                 break;
         }
-                
+
         if ([_userTags componentsSeparatedByString:@","]) {
             userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
         }
@@ -216,7 +216,7 @@ extern "C" {
     void unity_setUploadLogPath (const char* path) {
         [AIHelpSupportSDK setUploadLogPath:charToNSString(path)];
     }
-    
+
     void unity_setPushTokenAndPlatform (const char* pushToken, int pushPlatform) {
         AIHelpTokenPlatform ePlatform;
         switch (pushPlatform) {
@@ -247,7 +247,7 @@ extern "C" {
     bool unity_isAIHelpShowing () {
         return [AIHelpSupportSDK isAIHelpShowing];
     }
-    
+
     void unity_enableLogging (bool enable) {
         [AIHelpSupportSDK enableLogging:enable];
     }
@@ -255,7 +255,7 @@ extern "C" {
     void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
         [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
     }
-    
+
     void unity_setSDKAppearanceMode (int mode) {
         [AIHelpSupportSDK setSDKAppearanceMode:mode];
     }
@@ -267,7 +267,7 @@ extern "C" {
     void unity_setSDKEdgeColor (float red, float green, float blue, float alpha) {
         [AIHelpSupportSDK setSDKEdgeColorWithRed:red green:green blue:blue alpha:alpha];
     }
-    
+
     void unity_showUrl (const char* url) {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
     }
@@ -297,7 +297,11 @@ extern "C" {
     {
         [AIHelpSupportSDK setOnOperationUnreadChangedCallback:callBack];
     }
-    
+    void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnSpecificUrlClickedCallback:callBack];
+    }
+
 #if defined(__cplusplus)
 }
 #endif
