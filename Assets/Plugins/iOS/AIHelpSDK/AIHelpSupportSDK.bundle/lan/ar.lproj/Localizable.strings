@@ -1,7 +1,8 @@
-
-"aihelp_op_cs"="HELP";
+"aihelp_send"="يرسل";
+"aihelp_op_cs"="مساعدة";
 "aihelp_yes"="تحديد";
 "aihelp_no"="إلغاء";
+"aihelp_view_details"="انظر التفاصيل";
 "aihelp_chat_hint"="أدخل رسالتك";
 "aihelp_data_not_found_msg"="عفوًا ، لم يتم العثور على بيانات ذات صلة.";
 "aihelp_faq_search_hint"="صف مشكلتك";
@@ -11,7 +12,7 @@
 "aihelp_rate_dissatisfied"="لم يعجبه";
 "aihelp_rate_request"="يرجى تقييم خدمتنا.";
 "aihelp_rate_finished"="شكرا لتصنيفنا.";
-"aihelp_rate_app_hint"="أحب هذا التطبيق وصنفه؟";
+"aihelp_rate_app_hint"="هل ترغب في تقييم التطبيق؟";
 "aihelp_rate_button"="أحرز هدفا";
 "aihelp_rate_additional_feedback_message"="أي ملاحظات أخرى (اختياري)";
 "aihelp_faq_feedback"="يرجى إدخال ملاحظاتك";
@@ -23,14 +24,14 @@
 "aihelp_network_check_fine"="بعد التحقق ، شبكتك على ما يرام";
 "aihelp_network_no_connect"="يرجى التحقق من اتصال الشبكة.";
 "aihelp_media_upload_err_size"="يتجاوز حجم الملف الحد ، يرجى تحميل الملف أصغر من %dM.";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
 "aihelp_media_upload_err_format"="ملفات غير مدعومة. حاليا ، فقط mp4 ، png ، jpg ، jpeg متاح عند التحميل.";
 "aihelp_network_check_in_progress"="فحص الشبكة قيد التقدم. إذا خرجت الآن ، فستتم مقاطعة عملية التحقق.";
 "aihelp_permission_denied"="Η μεταφόρτωση εικόνας απαιτεί άδεια πρόσβασης στον αποθηκευτικό χώρο.";
 "aihelp_permission_ignored"="يرجى تمكين الإعدادات> الأذونات> التخزين لاستخدام وظيفة تحميل الصورة.";
 "aihelp_permission_settings"="الإعدادات";
-"aihelp_ticket_closed"="تم إغلاق تذكرة شكوى العملاء الحالية.";
 "aihelp_network_checking"="فحص الشبكة قيد التقدم";
-"aihelp_view_details"="انظر التفاصيل";
+"aihelp_ticket_closed"="تم إغلاق تذكرة شكوى العملاء الحالية.";
 "aihelp_yesterday"="في الامس";
 "aihelp_sunday"="الأحد";
 "aihelp_monday"="الإثنين";
@@ -39,9 +40,18 @@
 "aihelp_thursday"="الخميس";
 "aihelp_friday"="يوم الجمعة";
 "aihelp_saturday"="يوم السبت";
-"aihelp_saturday_data_acquisition_failed"="فشل الحصول على البيانات";
-"aihelp_send"="يرسل";
 "aihelp_resolution_request"="هل تم حل مشكلتك؟";
 "aihelp_resolution_yes"="تم حلها";
 "aihelp_resolution_no"="غير محلول";
-
+"aihelp_enter_content"="الرجاء إدخال المحتوى";
+"aihelp_select_option"="الرجاء تحديد خيار";
+"aihelp_select_date"="الرجاء تحديد تاريخ";
+"aihelp_fill_in"="أملأ";
+"aihelp_is_Answer_helpful"="هل الجواب أدناه يساعد";
+"aihelp_new_conversation"="محادثة جديدة";
+"aihelp_enter_email_address"="الرجاء إدخال البريد الإلكتروني الخاص بك";
+"aihelp_enter_number"="الرجاء إدخال الرقم";
+"aihelp_upload_attachment"="تحميل المرفق";
+"aihelp_faq_helpful"="نافع";
+"aihelp_faq_unhelpful"="غير مفيد";
+"aihelp_form_hint"="املأ النموذج للاتصال بالخدمة اليدوية";

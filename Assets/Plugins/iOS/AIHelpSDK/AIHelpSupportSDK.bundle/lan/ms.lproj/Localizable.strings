@@ -1,10 +1,10 @@
-
-
+"aihelp_send"="hantar";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="menentukan";
 "aihelp_no"="membatalkan";
+"aihelp_view_details"="lihat butiran";
 "aihelp_chat_hint"="Masukkan mesej anda";
-"aihelp_data_not_found_msg"="Op, tidak ada data yang berkaitan.";
+"aihelp_data_not_found_msg"="Op; tidak ada data yang berkaitan.";
 "aihelp_faq_search_hint"="Huraikan masalah anda";
 "aihelp_faq_fetching_faqs"="Mendapatkan jawapan anda …";
 "aihelp_faq_feedback_suggest"="Cadangan";
@@ -12,7 +12,7 @@
 "aihelp_rate_dissatisfied"="Tidak suka";
 "aihelp_rate_request"="Sila nilaikan perkhidmatan kami.";
 "aihelp_rate_finished"="Terima kasih kerana memberi penilaian kepada kami.";
-"aihelp_rate_app_hint"="Suka aplikasi ini, nilaikan?";
+"aihelp_rate_app_hint"="Adakah anda ingin menilai Apl?";
 "aihelp_rate_button"="Untuk menilai";
 "aihelp_rate_additional_feedback_message"="Sebarang maklum balas lain (pilihan)";
 "aihelp_faq_feedback"="Sila masukkan maklum balas anda";
@@ -20,18 +20,18 @@
 "aihelp_faq_search_empty"="Soalan Lazim tidak dijumpai.";
 "aihelp_network_error_msg"="Alamak! Ada yang tidak kena";
 "aihelp_network_upload_log_title"="Sambungan rangkaian lemah";
-"aihelp_network_check_poor"="Sila sahkan untuk menghantar kami keadaan rangkaian, yang akan membantu kami meningkatkan kualiti sambungan rangkaian anda.";
-"aihelp_network_check_fine"="Setelah memeriksa, rangkaian anda baik-baik saja";
+"aihelp_network_check_poor"="Sila sahkan untuk menghantar kami keadaan rangkaian; yang akan membantu kami meningkatkan kualiti sambungan rangkaian anda.";
+"aihelp_network_check_fine"="Setelah memeriksa; rangkaian anda baik-baik saja";
 "aihelp_network_no_connect"="Sila periksa sambungan rangkaian anda.";
-"aihelp_media_upload_err_size"="Ukuran fail melebihi had, muat naik fail lebih kecil daripada %dM.";
-"aihelp_media_upload_err_format"="Fail yang tidak disokong. Pada masa ini, hanya mp4, png, jpg, jpeg yang tersedia semasa memuat naik.";
-"aihelp_network_check_in_progress"="Pemeriksaan rangkaian sedang berlangsung. Jika anda keluar sekarang, pemeriksaan akan terganggu.";
-"aihelp_permission_ignored"="Sila aktifkan Tetapan> Kebenaran> Penyimpanan untuk menggunakan fungsi memuat naik gambar.";
+"aihelp_media_upload_err_size"="Ukuran fail melebihi had; muat naik fail lebih kecil daripada %dM.";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="Fail yang tidak disokong. Pada masa ini; hanya mp4; png; jpg; jpeg yang tersedia semasa memuat naik.";
+"aihelp_network_check_in_progress"="Pemeriksaan rangkaian sedang berlangsung. Jika anda keluar sekarang; pemeriksaan akan terganggu.";
 "aihelp_permission_denied"="Muat naik gambar memerlukan kebenaran mengakses storan.";
+"aihelp_permission_ignored"="Sila aktifkan Tetapan> Kebenaran> Penyimpanan untuk menggunakan fungsi memuat naik gambar.";
 "aihelp_permission_settings"="Tetapan";
 "aihelp_network_checking"="Pemeriksaan rangkaian sedang dijalankan";
 "aihelp_ticket_closed"="Tiket aduan pelanggan semasa telah ditutup.";
-"aihelp_view_details"="lihat butiran";
 "aihelp_yesterday"="Semalam";
 "aihelp_sunday"="Ahad";
 "aihelp_monday"="Isnin";
@@ -40,9 +40,18 @@
 "aihelp_thursday"="Khamis";
 "aihelp_friday"="Jumaat";
 "aihelp_saturday"="Sabtu";
-"aihelp_saturday_data_acquisition_failed"="Pemerolehan data gagal";
-"aihelp_send"="hantar";
-
 "aihelp_resolution_request"="Adakah masalah anda telah selesai?";
 "aihelp_resolution_yes"="Selesai";
 "aihelp_resolution_no"="Belum selesai";
+"aihelp_enter_content"="Sila masukkan kandungan";
+"aihelp_select_option"="Sila pilih satu pilihan";
+"aihelp_select_date"="Sila pilih tarikh";
+"aihelp_fill_in"="isi";
+"aihelp_is_Answer_helpful"="Adakah jawapan di bawah membantu";
+"aihelp_new_conversation"="perbualan baru";
+"aihelp_enter_email_address"="sila masukkan email anda";
+"aihelp_enter_number"="Sila masukkan nombor";
+"aihelp_upload_attachment"="Muat Naik Lampiran";
+"aihelp_faq_helpful"="Bermanfaat";
+"aihelp_faq_unhelpful"="Tidak membantu";
+"aihelp_form_hint"="Isi borang untuk menghubungi perkhidmatan manual";

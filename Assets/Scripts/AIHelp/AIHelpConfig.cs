@@ -8,74 +8,43 @@ namespace AIHelp
         APNS = 1, FIREBASE = 2, JIGUANG = 3, GETUI = 4
     }
 
-    public enum ConversationMoment
-    {
-        NEVER = 1001, ALWAYS = 1002, ONLY_IN_ANSWER_PAGE = 1003, AFTER_MARKING_UNHELPFUL = 1004
-    }
-
-    public enum ConversationIntent
-    {
-        BOT_SUPPORT = 1, HUMAN_SUPPORT = 2
-    }
-
     public enum PublishCountryOrRegion
     {
         CN = 1, IN = 2
     };
 
-    public class ConversationConfig
+    public class ApiConfig
     {
-
-        private int conversationIntent;
-        private bool alwaysShowHumanSupportButtonInBotPage;
+        private string entranceId;
         private string welcomeMessage;
-        private string storyNode;
 
         public class Builder
         {
-            private int conversationIntent = (int)ConversationIntent.BOT_SUPPORT;
-            private bool alwaysShowHumanSupportButtonInBotPage;
+            private string entranceId;
             private string welcomeMessage;
-            private string storyNode;
 
-            public Builder SetConversationIntent(ConversationIntent conversationIntent)
+            public Builder SetEntranceId(string entranceId)
             {
-                this.conversationIntent = (int)conversationIntent;
+                this.entranceId = entranceId;
                 return this;
             }
 
-            public Builder SetAlwaysShowHumanSupportButtonInBotPage(bool alwaysShowHumanSupportButtonInBotPage)
-            {
-                this.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
-                return this;
-            }
-
-            public Builder setWelcomeMessage(string welcomeMessage)
+            public Builder SetWelcomeMessage(string welcomeMessage)
             {
                 this.welcomeMessage = welcomeMessage;
                 return this;
             }
 
-            public Builder SetStoryNode(string storyNode)
+            public ApiConfig build()
             {
-                this.storyNode = storyNode;
-                return this;
+                return new ApiConfig(entranceId, welcomeMessage);
             }
 
-            public ConversationConfig build()
-            {
-                return new ConversationConfig(conversationIntent, alwaysShowHumanSupportButtonInBotPage, welcomeMessage, storyNode);
-            }
         }
 
-        public int GetConversationIntent()
+        public string GetEntranceId()
         {
-            return conversationIntent;
-        }
-
-        public bool IsAlwaysShowHumanSupportButtonInBotPage()
-        {
-            return alwaysShowHumanSupportButtonInBotPage;
+            return entranceId;
         }
 
         public string GetWelcomeMessage()
@@ -83,138 +52,13 @@ namespace AIHelp
             return welcomeMessage;
         }
 
-        public string GetStoryNode()
+        private ApiConfig(string entranceId, string welcomeMessage)
         {
-            return storyNode;
-        }
-
-        private ConversationConfig(int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string welcomeMessage, string storyNode)
-        {
-            this.conversationIntent = conversationIntent;
-            this.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+            this.entranceId = entranceId;
             this.welcomeMessage = welcomeMessage;
-            this.storyNode = storyNode;
         }
 
     }
-
-
-
-    public class FaqConfig
-    {
-
-        private int showConversationMoment;
-        private ConversationConfig conversationConfig;
-
-        public class Builder
-        {
-
-            private int showConversationMoment = (int)ConversationMoment.NEVER;
-            private ConversationConfig conversationConfig = new ConversationConfig.Builder().build();
-
-            public Builder SetShowConversationMoment(ConversationMoment showConversationMoment)
-            {
-                this.showConversationMoment = (int)showConversationMoment;
-                return this;
-            }
-
-            public Builder SetConversationConfig(ConversationConfig conversationConfig)
-            {
-                if (conversationConfig != null)
-                {
-                    this.conversationConfig = conversationConfig;
-                }
-                return this;
-            }
-
-            public FaqConfig build()
-            {
-                return new FaqConfig(showConversationMoment, conversationConfig);
-            }
-        }
-
-        public int GetShowConversationMoment()
-        {
-            return showConversationMoment;
-        }
-
-        public ConversationConfig GetConversationConfig()
-        {
-            return conversationConfig;
-        }
-
-        private FaqConfig(int showConversationMoment, ConversationConfig conversationConfig)
-        {
-            this.showConversationMoment = showConversationMoment;
-            this.conversationConfig = conversationConfig;
-        }
-
-    }
-
-    public class OperationConfig
-    {
-
-        private int selectIndex;
-        private string conversationTitle;
-        private ConversationConfig conversationConfig;
-
-        public class Builder
-        {
-
-            private int selectIndex = 10000;
-            private string conversationTitle = "HELP";
-            private ConversationConfig conversationConfig = new ConversationConfig.Builder().build();
-
-            public Builder setSelectIndex(int selectIndex)
-            {
-                if (selectIndex < 0) selectIndex = 10000;
-                this.selectIndex = selectIndex;
-                return this;
-            }
-
-            public Builder SetConversationTitle(string conversationTitle)
-            {
-                this.conversationTitle = conversationTitle;
-                return this;
-            }
-
-            public Builder SetConversationConfig(ConversationConfig conversationConfig)
-            {
-                this.conversationConfig = conversationConfig;
-                return this;
-            }
-
-            public OperationConfig build()
-            {
-                return new OperationConfig(selectIndex, conversationTitle, conversationConfig);
-            }
-        }
-
-
-        public int GetSelectIndex()
-        {
-            return selectIndex;
-        }
-
-        public string GetConversationTitle()
-        {
-            return conversationTitle;
-        }
-
-        public ConversationConfig GetConversationConfig()
-        {
-            return conversationConfig;
-        }
-
-        private OperationConfig(int selectIndex, string conversationTitle, ConversationConfig conversationConfig)
-        {
-            this.selectIndex = selectIndex;
-            this.conversationTitle = conversationTitle;
-            this.conversationConfig = conversationConfig;
-        }
-
-    }
-
 
     public class UserConfig
     {
@@ -225,8 +69,6 @@ namespace AIHelp
         private string userTags;
         private string customData;
         private bool isSyncCrmInfo;
-        private string pushToken;
-        private PushPlatform pushPlatform;
 
         public class Builder
         {
@@ -236,8 +78,6 @@ namespace AIHelp
             private string userTags = "";
             private string customData = "";
             private bool isSyncCrmInfo;
-            private string pushToken = "";
-            private PushPlatform pushPlatform = PushPlatform.FIREBASE;
 
             public Builder SetUserId(string userId)
             {
@@ -275,21 +115,9 @@ namespace AIHelp
                 return this;
             }
 
-            public Builder SetPushToken(string pushToken)
-            {
-                this.pushToken = pushToken;
-                return this;
-            }
-
-            public Builder SetPushPlatform(PushPlatform pushPlatform)
-            {
-                this.pushPlatform = pushPlatform;
-                return this;
-            }
-
             public UserConfig build()
             {
-                return new UserConfig(userId, userName, serverId, userTags, customData, isSyncCrmInfo, pushToken, pushPlatform);
+                return new UserConfig(userId, userName, serverId, userTags, customData, isSyncCrmInfo);
             }
 
         }
@@ -324,17 +152,7 @@ namespace AIHelp
             return customData;
         }
 
-        public string GetPushToken()
-        {
-            return pushToken;
-        }
-
-        public PushPlatform GetPushPlatform()
-        {
-            return pushPlatform;
-        }
-
-        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo, string pushToken, PushPlatform pushPlatform)
+        private UserConfig(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo)
         {
             this.userId = userId;
             this.userName = userName;
@@ -342,8 +160,6 @@ namespace AIHelp
             this.userTags = userTags;
             this.customData = customData;
             this.isSyncCrmInfo = isSyncCrmInfo;
-            this.pushToken = pushToken;
-            this.pushPlatform = pushPlatform;
         }
 
     }

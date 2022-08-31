@@ -16,7 +16,6 @@ namespace AIHelp
         static event AIHelpDefine.OnSpecificFormSubmittedCallback _iOSSpecificFormCallback;
         static event AIHelpDefine.OnAIHelpSessionOpenCallback _iOSSessionOpenCallback;
         static event AIHelpDefine.OnAIHelpSessionCloseCallback _iOSSessionCloseCallback;
-        static event AIHelpDefine.OnOperationUnreadChangedCallback _iOSOperationUnreadChangedCallback;
 
         [DllImport("__Internal")]
         private static extern void unity_init(string apiKey, string domainName, string appId);
@@ -38,37 +37,10 @@ namespace AIHelp
         private static extern void unity_setOnInitializedCallback(iOSOnAIHelpInitialized callBack);
 
         [DllImport("__Internal")]
-        private static extern void unity_showConversation();
+        private static extern bool unity_show(string entranceId, string welcomeMessage);
 
         [DllImport("__Internal")]
-        private static extern void unity_showConversationConfig(int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string welcomeMessage, string storyNode);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showAllFAQSections();
-
-        [DllImport("__Internal")]
-        private static extern void unity_showAllFAQSectionsConfig(int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string storyNode, string welcomeMessage);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showFAQSection(string sectionId);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showFAQSectionConfig(string sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, string storyNode, string welcomeMessage);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showSingleFAQ(string faqId);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showSingleFAQConfig(string faqId, int conversationMoment, int conversationIntent, bool contactUsAlwaysOnline, string storyNode, string welcomeMessage);
-
-        [DllImport("__Internal")]
-        private static extern void unity_showOperation();
-
-        [DllImport("__Internal")]
-        private static extern void unity_showOperationConfig(int selectIndex, string conversationTitle, int conversationIntent, bool contactUsAlwaysOnline, string storyNode, string welcomeMessage);
-
-        [DllImport("__Internal")]
-        private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo, string pushToken, int pushPlatform);
+        private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo);
 
         [DllImport("__Internal")]
         private static extern void unity_resetUserInfo();
@@ -179,21 +151,6 @@ namespace AIHelp
         [DllImport("__Internal")]
         private static extern void unity_setOnSessionCloseCallback(iOSOnAIHelpSessionCloseSubmit callBack);
 
-
-        public delegate void iOSOnOperationUnreadChangedSubmit(bool hasUnreadArticles);
-        [MonoPInvokeCallback(typeof(iOSOnOperationUnreadChangedSubmit))]
-        private static void iOSOperationUnreadSubmit(bool hasUnreadArticles)
-        {
-            if (_iOSOperationUnreadChangedCallback != null)
-            {
-                _iOSOperationUnreadChangedCallback(hasUnreadArticles);
-
-            }
-        }
-        [DllImport("__Internal")]
-        private static extern void unity_setOnOperationUnreadChangedCallback(iOSOnOperationUnreadChangedSubmit callBack);
-
-
         public void Init(string appKey, string domain, string appId)
         {
             unity_init(appKey, domain, appId);
@@ -210,79 +167,21 @@ namespace AIHelp
             unity_setOnInitializedCallback(iOSInitCallback);
         }
 
-        public void ShowConversation()
+        public bool Show(string entranceId) 
         {
-            unity_showConversation();
+            return unity_show(entranceId, "");
         }
 
-        public void ShowConversation(ConversationConfig config)
+        public bool Show(ApiConfig apiConfig) 
         {
-            unity_showConversationConfig(config.GetConversationIntent(), config.IsAlwaysShowHumanSupportButtonInBotPage(), config.GetWelcomeMessage(), config.GetStoryNode());
-        }
-
-        public void ShowAllFAQSections()
-        {
-            unity_showAllFAQSections();
-        }
-
-        public void ShowAllFAQSections(FaqConfig config)
-        {
-            unity_showAllFAQSectionsConfig(config.GetShowConversationMoment(),
-                                 config.GetConversationConfig().GetConversationIntent(),
-                                 config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
-                                 config.GetConversationConfig().GetStoryNode(),
-                                 config.GetConversationConfig().GetWelcomeMessage());
-        }
-
-        public void ShowFAQSection(string sectionId)
-        {
-            unity_showFAQSection(sectionId);
-        }
-
-        public void ShowFAQSection(string sectionId, FaqConfig config)
-        {
-            unity_showFAQSectionConfig(sectionId, config.GetShowConversationMoment(),
-                                 config.GetConversationConfig().GetConversationIntent(),
-                                 config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
-                                 config.GetConversationConfig().GetStoryNode(),
-                                 config.GetConversationConfig().GetWelcomeMessage());
-        }
-
-        public void ShowSingleFAQ(string faqId)
-        {
-            unity_showSingleFAQ(faqId);
-        }
-
-        public void ShowSingleFAQ(string faqId, FaqConfig config)
-        {
-            unity_showSingleFAQConfig(faqId, config.GetShowConversationMoment(),
-                                 config.GetConversationConfig().GetConversationIntent(),
-                                 config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
-                                 config.GetConversationConfig().GetStoryNode(),
-                                 config.GetConversationConfig().GetWelcomeMessage());
-        }
-
-        public void ShowOperation()
-        {
-            unity_showOperation();
-        }
-
-        public void ShowOperation(OperationConfig config)
-        {
-            unity_showOperationConfig(config.GetSelectIndex(),
-                                      config.GetConversationTitle(),
-                                      config.GetConversationConfig().GetConversationIntent(),
-                                      config.GetConversationConfig().IsAlwaysShowHumanSupportButtonInBotPage(),
-                                      config.GetConversationConfig().GetStoryNode(),
-                                      config.GetConversationConfig().GetWelcomeMessage());
+            return unity_show(apiConfig.GetEntranceId(), apiConfig.GetWelcomeMessage());
         }
 
         public void UpdateUserInfo(UserConfig userConfig)
         {
             unity_updateUserInfo(userConfig.GetUserId(), userConfig.GetUserName(),
                                  userConfig.GetServerId(), userConfig.GetUserTags(),
-                                 userConfig.GetCustomData(), userConfig.GetWhetherSyncCrmInfo(),
-                                 userConfig.GetPushToken(), getPushPlatform(userConfig.GetPushPlatform()));
+                                 userConfig.GetCustomData(), userConfig.GetWhetherSyncCrmInfo());
         }
 
         public void ResetUserInfo()
@@ -379,13 +278,6 @@ namespace AIHelp
             _iOSSessionCloseCallback = callback;
             unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
         }
-
-        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
-        {
-            _iOSOperationUnreadChangedCallback = callback;
-            unity_setOnOperationUnreadChangedCallback(iOSOperationUnreadSubmit);
-        }
-
 
         private int getPushPlatform(PushPlatform platform){
             int tempPlatform = 2;

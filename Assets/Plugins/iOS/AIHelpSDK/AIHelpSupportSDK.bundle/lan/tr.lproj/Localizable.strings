@@ -1,8 +1,8 @@
-
-
+"aihelp_send"="göndermek";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="belirlemek";
 "aihelp_no"="iptal etmek";
+"aihelp_view_details"="ayrıntılara bakınız";
 "aihelp_chat_hint"="Mesajınızı giriniz";
 "aihelp_data_not_found_msg"="Hata! Alakalı veri bulunamadı.";
 "aihelp_faq_search_hint"="Sorununuzu açıklayın";
@@ -12,8 +12,8 @@
 "aihelp_rate_dissatisfied"="Beğenmedim";
 "aihelp_rate_request"="Lütfen servisimizi değerlendirin.";
 "aihelp_rate_finished"="Bize oy verdiğiniz için teşekkür ederiz.";
-"aihelp_rate_app_hint"="Bu uygulama gibi, oy?";
-"aihelp_rate_button"="Oylamaya";
+"aihelp_rate_app_hint"="Uygulamayı derecelendirmek ister misiniz?";
+"aihelp_rate_button"="Değerlendir'e git";
 "aihelp_rate_additional_feedback_message"="Diğer geri bildirimler (isteğe bağlı)";
 "aihelp_faq_feedback"="Lütfen geri bildiriminizi girin";
 "aihelp_faq_feedback_thanks"="Geri bildirim için teşekkürler.";
@@ -23,15 +23,15 @@
 "aihelp_network_check_poor"="Lütfen ağ bağlantınızın kalitesini artırmamıza yardımcı olacak ağ koşullarını bize göndermeyi onaylayın.";
 "aihelp_network_check_fine"="Kontrol ettikten sonra ağınız iyi durumda";
 "aihelp_network_no_connect"="Lütfen ağ bağlantınızı kontrol edin.";
-"aihelp_media_upload_err_size"="Dosya boyutu sınırı aşıyor, lütfen %dM\'den küçük dosyayı yükleyin.";
-"aihelp_media_upload_err_format"="Desteklenmeyen dosyalar. Şu anda, yükleme sırasında sadece mp4, png, jpg, jpeg kullanılabilir.";
+"aihelp_media_upload_err_size"="Dosya boyutu sınırı aşıyor; lütfen %dM\'den küçük dosyayı yükleyin.";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="Desteklenmeyen dosyalar. Şu anda; yükleme sırasında yalnızca mp4; png; jpg; jpeg kullanılabilir.";
 "aihelp_network_check_in_progress"="Ağ denetimi devam ediyor. Şimdi çıkarsanız kontrol kesintiye uğrayacaktır.";
-"aihelp_permission_denied"="Resim yükle, depolamaya erişim izni gerektirir.";
+"aihelp_permission_denied"="Resim yükle; depolamaya erişim izni gerektirir.";
 "aihelp_permission_ignored"="Görüntü yükleme işlevini kullanmak için lütfen Ayarlar> İzinler> Depolama\'yı etkinleştirin.";
 "aihelp_permission_settings"="Ayarlar";
 "aihelp_network_checking"="Ağ kontrolü devam ediyor";
 "aihelp_ticket_closed"="Mevcut müşteri şikayet fişi kapatıldı.";
-"aihelp_view_details"="ayrıntılara bakınız";
 "aihelp_yesterday"="Dün";
 "aihelp_sunday"="Pazar";
 "aihelp_monday"="Pazartesi";
@@ -40,8 +40,18 @@
 "aihelp_thursday"="Perşembe";
 "aihelp_friday"="Cuma";
 "aihelp_saturday"="Cumartesi";
-"aihelp_saturday_data_acquisition_failed"="Veri toplama başarısız oldu";
-"aihelp_send"="göndermek";
 "aihelp_resolution_request"="Sorununuz çözüldü mü?";
 "aihelp_resolution_yes"="Çözüldü";
 "aihelp_resolution_no"="çözülmemiş";
+"aihelp_enter_content"="Lütfen içerik girin";
+"aihelp_select_option"="Lütfen bir seçenek seçin";
+"aihelp_select_date"="Lütfen bir tarih seçin";
+"aihelp_fill_in"="doldurun";
+"aihelp_is_Answer_helpful"="Aşağıdaki cevap yardımcı oldu mu";
+"aihelp_new_conversation"="yeni konuşma";
+"aihelp_enter_email_address"="lütfen e-postanızı girin";
+"aihelp_enter_number"="Lütfen numarayı girin";
+"aihelp_upload_attachment"="Ek Yükle";
+"aihelp_faq_helpful"="Yardımsever";
+"aihelp_faq_unhelpful"="yararsız";
+"aihelp_form_hint"="Manuel servis ile iletişime geçmek için formu doldurun";

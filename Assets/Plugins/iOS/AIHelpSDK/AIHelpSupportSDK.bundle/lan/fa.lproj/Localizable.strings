@@ -1,8 +1,8 @@
-
-
+"aihelp_send"="ارسال";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="تعیین کردن";
 "aihelp_no"="لغو کردن";
+"aihelp_view_details"="جزییات را ببینید";
 "aihelp_chat_hint"="پیام خود را وارد کنید";
 "aihelp_data_not_found_msg"="پیام خود را وارد کنید";
 "aihelp_faq_search_hint"="مشکل خود را شرح دهید";
@@ -12,8 +12,8 @@
 "aihelp_rate_dissatisfied"="آن را دوست نداشت";
 "aihelp_rate_request"="لطفا خدمات ما را ارزیابی کنید";
 "aihelp_rate_finished"="با تشکر از شما برای رتبه بندی ما.";
-"aihelp_rate_app_hint"="با تشکر از شما برای رتبه بندی ما.";
-"aihelp_rate_button"="برای امتیاز دادن";
+"aihelp_rate_app_hint"="آیا می خواهید به برنامه امتیاز دهید؟";
+"aihelp_rate_button"="به ارزیابی بروید";
 "aihelp_rate_additional_feedback_message"="هر گونه بازخورد دیگر (اختیاری)";
 "aihelp_faq_feedback"="لطفا نظرات خود را وارد کنید";
 "aihelp_faq_feedback_thanks"="از بازخورد شما سپاسگذاریم.";
@@ -24,14 +24,14 @@
 "aihelp_network_check_fine"="بعد از بررسی ، شبکه شما خوب است";
 "aihelp_network_no_connect"="لطفاً اتصال شبکه خود را بررسی کنید.";
 "aihelp_media_upload_err_size"="اندازه پرونده از حد مجاز بیشتر است ، لطفا پرونده را کوچکتر از %dM  بارگذاری کنید.";
-"aihelp_media_upload_err_format"="پرونده های پشتیبانی نشده در حال حاضر ، فقط بارگیری mp4 ، png ، jpg ، jpeg در دسترس است.";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="فایل های پشتیبانی نشده در حال حاضر ، فقط mp4 ، png ، jpg ، jpeg هنگام بارگذاری در دسترس است.";
 "aihelp_network_check_in_progress"="بررسی شبکه در حال انجام است و اگر اکنون خارج شوید ، بررسی قطع می شود.";
-"aihelp_permission_ignored"="طفاً برای استفاده از عملکرد تصویر بارگذاری ، تنظیمات> مجوزها> ذخیره سازی را فعال کنید.";
 "aihelp_permission_denied"="آپلود تصویر به مجوز دسترسی به فضای ذخیره نیاز دارد.";
+"aihelp_permission_ignored"="طفاً برای استفاده از عملکرد تصویر بارگذاری ، تنظیمات> مجوزها> ذخیره سازی را فعال کنید.";
 "aihelp_permission_settings"="تنظیمات";
-"aihelp_ticket_closed"="بلیط فعلی شکایت مشتری بسته شده است.";
 "aihelp_network_checking"="بررسی شبکه در حال انجام است";
-"aihelp_view_details"="جزییات را ببینید";
+"aihelp_ticket_closed"="بلیط فعلی شکایت مشتری بسته شده است.";
 "aihelp_yesterday"="دیروز";
 "aihelp_sunday"="یکشنبه";
 "aihelp_monday"="دوشنبه";
@@ -40,8 +40,18 @@
 "aihelp_thursday"="پنج شنبه";
 "aihelp_friday"="جمعه";
 "aihelp_saturday"="شنبه";
-"aihelp_saturday_data_acquisition_failed"="جمع آوری اطلاعات ناموفق بود";
-"aihelp_send"="ارسال";
 "aihelp_resolution_request"="مشکل شما حل شد؟";
 "aihelp_resolution_yes"="حل کرد";
 "aihelp_resolution_no"="حل نشده";
+"aihelp_enter_content"="لطفا محتوا را وارد کنید";
+"aihelp_select_option"="لطفا یک گزینه را انتخاب کنید";
+"aihelp_select_date"="لطفا تاریخ را انتخاب کنید";
+"aihelp_fill_in"="پرکردن";
+"aihelp_is_Answer_helpful"="آیا پاسخ زیر کمکی کرد؟";
+"aihelp_new_conversation"="مکالمه جدید";
+"aihelp_enter_email_address"="لطفا ایمیل خود را وارد کنید";
+"aihelp_enter_number"="لطفا شماره را وارد کنید";
+"aihelp_upload_attachment"="آپلود پیوست";
+"aihelp_faq_helpful"="مفید";
+"aihelp_faq_unhelpful"="بی فایده";
+"aihelp_form_hint"="برای تماس با خدمات دستی فرم را پر کنید";

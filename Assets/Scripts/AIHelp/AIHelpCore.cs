@@ -57,64 +57,15 @@ namespace AIHelp
             helpCore.SetOnAIHelpInitializedCallback(callback);
         }
 
-        public void ShowConversation()
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowConversation();
+        public bool Show(string entranceId) {
+            if (!IsHelpCorePrepared()) return false;
+            return helpCore.Show(entranceId);
         }
 
-        public void ShowConversation(ConversationConfig config)
+        public bool Show(ApiConfig apiConfig) 
         {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowConversation(config);
-        }
-
-        public void ShowAllFAQSections()
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowAllFAQSections();
-        }
-
-        public void ShowAllFAQSections(FaqConfig config)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowAllFAQSections(config);
-        }
-
-        public void ShowFAQSection(string sectionId)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowFAQSection(sectionId);
-        }
-
-        public void ShowFAQSection(string sectionId, FaqConfig config)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowFAQSection(sectionId, config);
-        }
-
-        public void ShowSingleFAQ(string faqId)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowSingleFAQ(faqId);
-        }
-
-        public void ShowSingleFAQ(string faqId, FaqConfig config)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowSingleFAQ(faqId, config);
-        }
-
-        public void ShowOperation()
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowOperation();
-        }
-
-        public void ShowOperation(OperationConfig config)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.ShowOperation(config);
+            if (!IsHelpCorePrepared()) return false;
+            return helpCore.Show(apiConfig);
         }
 
         public void UpdateUserInfo(UserConfig userConfig)
@@ -211,14 +162,6 @@ namespace AIHelp
             if (!IsHelpCorePrepared()) return;
             helpCore.SetOnAIHelpSessionCloseCallback(callback);
         }
-
-        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnOperationUnreadChangedCallback(callback);
-        }
-
-
 
 #if UNITY_IOS
 

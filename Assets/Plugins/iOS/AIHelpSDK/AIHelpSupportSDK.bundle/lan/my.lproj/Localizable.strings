@@ -1,8 +1,8 @@
-
-
+"aihelp_send"="ပို့ပါ";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="ဆုံးဖြတ်ရန်";
 "aihelp_no"="ပယ်ဖျက်";
+"aihelp_view_details"="အသေးစိတ်ကြည့်ရှုပါ";
 "aihelp_chat_hint"="သင့်စာကိုရေးထည့်ပါ";
 "aihelp_data_not_found_msg"="အိုးမသက်ဆိုင်သောအချက်အလက်များကိုရှာမတွေ့ပါ။";
 "aihelp_faq_search_hint"="သင်၏ပြproblemနာကိုဖော်ပြပါ";
@@ -12,7 +12,7 @@
 "aihelp_rate_dissatisfied"="ဒါကိုမကြိုက်ဘူး";
 "aihelp_rate_request"="ကျေးဇူးပြု၍ ကျွန်ုပ်တို့၏ဝန်ဆောင်မှုကို";
 "aihelp_rate_finished"="ကျွန်တော်တို့ကိုအဆင့်သတ်မှတ်ချက်အတွက်ကျေးဇူးတင်ပါတယ်။";
-"aihelp_rate_app_hint"="ဒီ app လိုပဲ၊";
+"aihelp_rate_app_hint"="အက်ပ်ကို အဆင့်သတ်မှတ်လိုပါသလား။";
 "aihelp_rate_button"="အဆင့်သတ်မှတ်ရန်";
 "aihelp_rate_additional_feedback_message"="အခြားတုံ့ပြန်ချက်များ (optional)";
 "aihelp_faq_feedback"="ကျေးဇူးပြု၍ သင့်ထင်မြင်ချက်ကိုဖြည့်သွင်းပါ";
@@ -24,14 +24,14 @@
 "aihelp_network_check_fine"="စစ်ဆေးပြီးသည်နှင့်သင်၏ကွန်ယက်အဆင်ပြေသည်";
 "aihelp_network_no_connect"="ကျေးဇူးပြု၍ သင်၏ကွန်ရက်ချိတ်ဆက်မှုကိုစစ်ဆေးပါ။";
 "aihelp_media_upload_err_size"="ဖိုင်အရွယ်အစားသည်ကန့်သတ်ချက်ထက်ကျော်လွန်ပြီးဖိုင် %dM မ်ထက်နည်းသောဖိုင်ကိုပို့ပါ။";
-"aihelp_media_upload_err_format"="မထောက်ပံ့သောဖိုင်များ။ လောလောဆယ်တင်ပို့စဉ် mp4, png, jpg, jpeg သာရရှိနိုင်သည်။";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="မထောက်ပံ့သောဖိုင်များ။ လောလောဆယ်တင်ပို့စဉ် mp4; png; jpg; jpeg သာရရှိနိုင်သည်။";
 "aihelp_network_check_in_progress"="ကွန်ယက်ကိုစစ်ဆေးနေသည်။ သင်ယခုထွက်သွားပါကစစ်ဆေးမှုကိုရပ်တန့်သွားလိမ့်မည်။";
 "aihelp_permission_denied"="တင်ထားသောပုံသည်သိုလှောင်မှုကိုရယူရန်ခွင့်ပြုချက်လိုအပ်သည်။";
 "aihelp_permission_ignored"="ကျေးဇူးပြု၍ Setting> Permissions> Storage ကို upload image function ကိုသုံးနိုင်ပါတယ်။";
 "aihelp_permission_settings"="ချိန်ညှိချက်များ";
 "aihelp_network_checking"="ကွန်ယက်ကိုစစ်ဆေးနေသည်";
 "aihelp_ticket_closed"="လက်ရှိဖောက်သည်တိုင်ကြားချက်လက်မှတ်ကိုပိတ်လိုက်ပါပြီ";
-"aihelp_view_details"="အသေးစိတ်ကြည့်ရှုပါ";
 "aihelp_yesterday"="မနေ့က";
 "aihelp_sunday"="တနင်္ဂနွေနေ့";
 "aihelp_monday"="တနင်္လာနေ့";
@@ -40,8 +40,18 @@
 "aihelp_thursday"="ကြာသပတေးနေ့";
 "aihelp_friday"="သောကြာနေ့";
 "aihelp_saturday"="စနေနေ့";
-"aihelp_saturday_data_acquisition_failed"="ဒေတာရယူမှုမအောင်မြင်ပါ";
-"aihelp_send"="ပို့ပါ";
 "aihelp_resolution_request"="သင့်ပြဿနာကို ဖြေရှင်းပြီးပြီလား။";
 "aihelp_resolution_yes"="ဖြေရှင်း";
 "aihelp_resolution_no"="မဖြေရှင်းနိုင်";
+"aihelp_enter_content"="အကြောင်းအရာကို ထည့်သွင်းပါ။";
+"aihelp_select_option"="ကျေးဇူးပြု၍ ရွေးချယ်မှုတစ်ခုကို ရွေးချယ်ပါ။";
+"aihelp_select_date"="ရက်စွဲတစ်ခုကို ရွေးပါ။";
+"aihelp_fill_in"="ဖြည့်သွင်းပါ";
+"aihelp_is_Answer_helpful"="အောက်ပါအဖြေက အထောက်အကူဖြစ်ပါသလား။";
+"aihelp_new_conversation"="စကားဝိုင်းအသစ်";
+"aihelp_enter_email_address"="ကျေးဇူးပြု၍ သင့်အီးမေးလ်ကို ထည့်သွင်းပါ။";
+"aihelp_enter_number"="ကျေးဇူးပြု၍ နံပါတ်ထည့်ပါ။";
+"aihelp_upload_attachment"="ပူးတွဲပါဖိုင်ကို တင်ပါ။";
+"aihelp_faq_helpful"="အထောက်အကူဖြစ်စေသည်။";
+"aihelp_faq_unhelpful"="အကူအညီမဖြစ်ပါ။";
+"aihelp_form_hint"="လူကိုယ်တိုင် ဝန်ဆောင်မှုကို ဆက်သွယ်ရန် ဖောင်ဖြည့်ပါ။";

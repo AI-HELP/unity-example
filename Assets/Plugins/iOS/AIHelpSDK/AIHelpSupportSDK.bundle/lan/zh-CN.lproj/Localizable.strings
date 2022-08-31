@@ -1,7 +1,6 @@
-
-
-
+"aihelp_send"="发送";
 "aihelp_op_cs"="HELP";
+"aihelp_enter_number"="请输入数字";
 "aihelp_yes"="确定";
 "aihelp_no"="取消";
 "aihelp_view_details"="查看详情";
@@ -26,7 +25,8 @@
 "aihelp_network_check_fine"="当前网络状态良好";
 "aihelp_network_no_connect"="请检查网络连接及网络管理软件相关设置";
 "aihelp_media_upload_err_size"="文件大小超过限制，请上传小于 %dM 的文件";
-"aihelp_media_upload_err_format"="文件格式不支持，目前只能上传 mp4, png, jpg, jpeg 格式的文件";
+"aihelp_media_upload_err_net"="网络传输超时，文件上传失败";
+"aihelp_media_upload_err_format"="文件格式不支持，请上传 mp4; png; jpg; jpeg 格式的文件";
 "aihelp_network_check_in_progress"="正在进行网络检测，如果现在退出将中断检测";
 "aihelp_permission_denied"="此应用需要获取读取设备存储权限，才能提供上传图片功能。";
 "aihelp_permission_ignored"="要使用上传图片功能，请依次启用“设置”>“权限”>“存储”。";
@@ -41,10 +41,17 @@
 "aihelp_thursday"="周四";
 "aihelp_friday"="周五";
 "aihelp_saturday"="周六";
-"aihelp_saturday_data_acquisition_failed"="数据获取失败";
-"aihelp_send"="发送";
 "aihelp_resolution_request"="您的问题解决了吗？";
 "aihelp_resolution_yes"="已解决";
 "aihelp_resolution_no"="未解决";
-
-
+"aihelp_enter_content"="请输入内容";
+"aihelp_select_option"="请选择选项";
+"aihelp_select_date"="请选择日期";
+"aihelp_fill_in"="填写";
+"aihelp_is_Answer_helpful"="下方的答案是否有帮助";
+"aihelp_new_conversation"="新对话";
+"aihelp_enter_email_address"="请输入邮箱";
+"aihelp_upload_attachment"="上传附件";
+"aihelp_faq_helpful"="有帮助";
+"aihelp_faq_unhelpful"="没有帮助";
+"aihelp_form_hint"="填写表单联系人工客服";

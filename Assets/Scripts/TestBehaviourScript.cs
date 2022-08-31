@@ -19,14 +19,10 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
-        //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
-
     }
 
     private void Start()
     {
-
         Dictionary<string, Action> dic = new Dictionary<string, Action>() {
             { "Canvas/robot",robotClick },
             { "Canvas/manual",manualClick },
@@ -64,30 +60,32 @@ public class TestBehaviourScript : MonoBehaviour
 
     void robotClick()
     {
-        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
-        conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
-        AIHelpSupport.ShowConversation(conversationBuilder.build());
+        // ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
+        // conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
+        // AIHelpSupport.ShowConversation(conversationBuilder.build());
+        AIHelpSupport.Show("test002");
     }
 
     void manualClick()
     {
-        ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
-        conversationBuilder.SetConversationIntent(ConversationIntent.HUMAN_SUPPORT);
-        AIHelpSupport.ShowConversation(conversationBuilder.build());
+        // ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
+        // conversationBuilder.SetConversationIntent(ConversationIntent.HUMAN_SUPPORT);
+        // AIHelpSupport.ShowConversation(conversationBuilder.build());
+        AIHelpSupport.Show("test001");
     }
 
     void allSectionClick()
     {
-        AIHelpSupport.ShowAllFAQSections();
+        // AIHelpSupport.ShowAllFAQSections();
     }
     void singleSectionClick()
     {
-        AIHelpSupport.ShowFAQSection("SECTION ID");
+        // AIHelpSupport.ShowFAQSection("SECTION ID");
     }
 
     void singleFAQClick()
     {
-        AIHelpSupport.ShowSingleFAQ("FAQ ID");
+        // AIHelpSupport.ShowSingleFAQ("FAQ ID");
     }
 
     void updateUserInfoClick()
@@ -97,8 +95,6 @@ public class TestBehaviourScript : MonoBehaviour
             .SetUserName("AIHelp")
             .SetUserTags("VIP1")
             .SetCustomData("{''}")
-            .SetPushToken("pushToken")
-            .SetPushPlatform(PushPlatform.JIGUANG)
             .SetSyncCrmInfo(true)
             .build();
         AIHelpSupport.UpdateUserInfo(config);

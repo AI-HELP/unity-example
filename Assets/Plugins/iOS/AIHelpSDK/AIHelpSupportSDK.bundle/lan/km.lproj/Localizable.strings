@@ -1,19 +1,19 @@
-
-
+"aihelp_send"="ផ្ញើ";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="កំណត់";
 "aihelp_no"="បោះបង់";
+"aihelp_view_details"="មើលព័ត៌មានលម្អិត";
 "aihelp_chat_hint"="បញ្ចូលសាររបស់អ្នក";
 "aihelp_data_not_found_msg"="បញ្ចូលសាររបស់អ្នក";
-"aihelp_faq_fetching_faqs"="ទទួលបានចម្លើយរបស់អ្នក…";
 "aihelp_faq_search_hint"="ពិពណ៌នាអំពីបញ្ហារបស់អ្នក";
+"aihelp_faq_fetching_faqs"="ទទួលបានចម្លើយរបស់អ្នក…";
 "aihelp_faq_feedback_suggest"="ការផ្តល់យោបល់";
 "aihelp_rate_satisfied"="ចូលចិត្តវា";
 "aihelp_rate_dissatisfied"="មិនចូលចិត្តវា";
 "aihelp_rate_request"="សូមវាយតម្លៃសេវាកម្មរបស់យើង។";
 "aihelp_rate_finished"="សូមអរគុណសម្រាប់ការវាយតម្លៃពួកយើង។";
-"aihelp_rate_app_hint"="ចូលចិត្តកម្មវិធីនេះវាយតម្លៃវាទេ?";
-"aihelp_rate_button"="ពិន្ទុ";
+"aihelp_rate_app_hint"="តើអ្នកចង់វាយតម្លៃកម្មវិធីទេ?";
+"aihelp_rate_button"="ចូលទៅវាយតម្លៃ";
 "aihelp_rate_additional_feedback_message"="មតិប្រតិកម្មផ្សេងទៀត (ស្រេចចិត្ត)";
 "aihelp_faq_feedback"="សូមបញ្ចូលមតិរបស់អ្នក";
 "aihelp_faq_feedback_thanks"="សូមអរគុណសម្រាប់ការឆ្លើយតប។";
@@ -24,14 +24,14 @@
 "aihelp_network_check_fine"="បន្ទាប់ពីពិនិត្យមើលបណ្តាញរបស់អ្នកគឺល្អ";
 "aihelp_network_no_connect"="សូមពិនិត្យការភ្ជាប់បណ្តាញរបស់អ្នក។";
 "aihelp_media_upload_err_size"="ទំហំឯកសារលើសពីដែនកំណត់សូមផ្ទុកឯកសារតូចជាង %dM ។";
-"aihelp_media_upload_err_format"="ឯកសារដែលមិនបានគាំទ្រ។ បច្ចុប្បន្នមានតែ mp4, png, jpg, jpeg ដែលអាចប្រើបាននៅពេលផ្ទុកឡើង។";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="ឯកសារដែលមិនគាំទ្រ។ បច្ចុប្បន្នមានតែ mp4; png; jpg; jpeg ប៉ុណ្ណោះដែលអាចប្រើបាននៅពេលផ្ទុកឡើង។";
 "aihelp_network_check_in_progress"="ការត្រួតពិនិត្យបណ្តាញកំពុងដំណើរការប្រសិនបើអ្នកចាកចេញឥឡូវនេះការត្រួតពិនិត្យនឹងត្រូវបានរំខាន។";
-"aihelp_permission_ignored"="សូមបើកការកំណត់> សិទ្ធិអនុញ្ញាត> ឧបករណ៍ផ្ទុកដើម្បីប្រើមុខងារផ្ទុករូបភាពឡើង។";
 "aihelp_permission_denied"="ផ្ទុកឡើងរូបភាពទាមទារការអនុញ្ញាតឱ្យចូលទៅកាន់កន្លែងផ្ទុក។";
+"aihelp_permission_ignored"="សូមបើកការកំណត់> សិទ្ធិអនុញ្ញាត> ឧបករណ៍ផ្ទុកដើម្បីប្រើមុខងារផ្ទុករូបភាពឡើង។";
 "aihelp_permission_settings"="ការកំណត់";
 "aihelp_network_checking"="ការត្រួតពិនិត្យបណ្តាញកំពុងដំណើរការ";
 "aihelp_ticket_closed"="សំបុត្របណ្តឹងរបស់អតិថិជនបច្ចុប្បន្នត្រូវបានបិទ។";
-"aihelp_view_details"="មើលព័ត៌មានលម្អិត";
 "aihelp_yesterday"="ម្សិលមិញ";
 "aihelp_sunday"="ថ្ងៃអាទិត្";
 "aihelp_monday"="ថ្ងៃច័ន្ទ";
@@ -40,9 +40,18 @@
 "aihelp_thursday"="ថ្ងៃព្រហស្បតិ៍";
 "aihelp_friday"="ថ្ងៃសុក្";
 "aihelp_saturday"="ថ្ងៃសៅរ៍";
-"aihelp_saturday_data_acquisition_failed"="ការទទួលយកទិន្នន័យបានបរាជ័យ";
-"aihelp_send"="ផ្ញើ";
 "aihelp_resolution_request"="តើបញ្ហារបស់អ្នកត្រូវបានដោះស្រាយទេ?";
 "aihelp_resolution_yes"="ដោះស្រាយ";
 "aihelp_resolution_no"="មិនទាន់ដោះស្រាយ";
-
+"aihelp_enter_content"="សូមបញ្ចូលខ្លឹមសារ";
+"aihelp_select_option"="សូមជ្រើសរើសជម្រើសមួយ។";
+"aihelp_select_date"="សូមជ្រើសរើសកាលបរិច្ឆេទ";
+"aihelp_fill_in"="បំពេញ​ក្នុង";
+"aihelp_is_Answer_helpful"="តើចម្លើយខាងក្រោមបានជួយទេ។";
+"aihelp_new_conversation"="ការសន្ទនាថ្មី។";
+"aihelp_enter_email_address"="សូមបញ្ចូលអ៊ីមែលរបស់អ្នក។";
+"aihelp_enter_number"="សូមបញ្ចូលលេខ";
+"aihelp_upload_attachment"="ផ្ទុកឯកសារភ្ជាប់";
+"aihelp_faq_helpful"="មានប្រយោជន៍";
+"aihelp_faq_unhelpful"="គ្មានប្រយោជន៍";
+"aihelp_form_hint"="បំពេញទម្រង់ដើម្បីទាក់ទងសេវាដោយដៃ";

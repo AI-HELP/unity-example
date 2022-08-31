@@ -1,8 +1,8 @@
-
-
+"aihelp_send"="trimite";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="a determina";
 "aihelp_no"="Anulare";
+"aihelp_view_details"="Vezi detalii";
 "aihelp_chat_hint"="Introduceți-vă mesajul";
 "aihelp_data_not_found_msg"="Nu am găsit date relevante.";
 "aihelp_faq_search_hint"="Descrieți problema dvs.";
@@ -12,7 +12,7 @@
 "aihelp_rate_dissatisfied"="Nu i-a plăcut";
 "aihelp_rate_request"="Vă rugăm să evaluați serviciul nostru.";
 "aihelp_rate_finished"="Vă mulțumim că ne-ați evaluat.";
-"aihelp_rate_app_hint"="Vă place această aplicație, evaluați-o?";
+"aihelp_rate_app_hint"="Doriți să evaluați aplicația?";
 "aihelp_rate_button"="A evalua";
 "aihelp_rate_additional_feedback_message"="Orice alt feedback (opțional)";
 "aihelp_faq_feedback"="Vă rugăm să introduceți feedback";
@@ -20,18 +20,18 @@
 "aihelp_faq_search_empty"="Nu au fost găsite întrebări frecvente.";
 "aihelp_network_error_msg"="Hopa! Ceva n-a mers bine";
 "aihelp_network_upload_log_title"="Conexiune de rețea slabă";
-"aihelp_network_check_poor"="Vă rugăm să confirmați să ne trimiteți condițiile de rețea, ceea ce ne va ajuta să îmbunătățim calitatea conexiunii dvs. de rețea.";
-"aihelp_network_check_fine"="După verificare, rețeaua dvs. este în regulă";
+"aihelp_network_check_poor"="Vă rugăm să confirmați să ne trimiteți condițiile de rețea; ceea ce ne va ajuta să îmbunătățim calitatea conexiunii dvs. de rețea.";
+"aihelp_network_check_fine"="După verificare; rețeaua dvs. este în regulă";
 "aihelp_network_no_connect"="Verificați conexiunea la rețea.";
-"aihelp_media_upload_err_size"="Mărimea fișierului depășește limita, vă rugăm să încărcați fișierul mai mic decât %dM.";
-"aihelp_media_upload_err_format"="Fișiere neacceptate. În prezent, numai la încărcare, mp4, png, jpg, jpeg sunt disponibile.";
-"aihelp_network_check_in_progress"="Verificarea rețelei este în curs. Dacă ieșiți acum, verificarea va fi întreruptă.";
-"aihelp_permission_ignored"="Vă rugăm să activați Setări> Permisiuni> Stocare pentru a utiliza funcția de încărcare a imaginii.";
+"aihelp_media_upload_err_size"="Mărimea fișierului depășește limita; vă rugăm să încărcați fișierul mai mic decât %dM.";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="Formatul de fișier nu este acceptat; vă rugăm să încărcați fișiere în format mp4; png; jpg; jpeg";
+"aihelp_network_check_in_progress"="Verificarea rețelei este în curs. Dacă ieșiți acum; verificarea va fi întreruptă.";
 "aihelp_permission_denied"="Încărcarea imaginii necesită permisiunea accesării stocării.";
+"aihelp_permission_ignored"="Vă rugăm să activați Setări> Permisiuni> Stocare pentru a utiliza funcția de încărcare a imaginii.";
 "aihelp_permission_settings"="Setări";
 "aihelp_network_checking"="Verificarea rețelei este în curs";
 "aihelp_ticket_closed"="Biletul actual de reclamație a clienților a fost închis.";
-"aihelp_view_details"="Vezi detalii";
 "aihelp_yesterday"="Ieri";
 "aihelp_sunday"="duminică";
 "aihelp_monday"="luni";
@@ -40,8 +40,18 @@
 "aihelp_thursday"="joi";
 "aihelp_friday"="vineri";
 "aihelp_saturday"="sâmbătă";
-"aihelp_saturday_data_acquisition_failed"="Achiziționarea datelor nu a reușit";
-"aihelp_send"="trimite";
 "aihelp_resolution_request"="S-a rezolvat problema ta?";
 "aihelp_resolution_yes"="Rezolvat";
 "aihelp_resolution_no"="Nerezolvată";
+"aihelp_enter_content"="Vă rugăm să introduceți conținutul";
+"aihelp_select_option"="Vă rugăm să selectați o opțiune";
+"aihelp_select_date"="Vă rugăm să selectați o dată";
+"aihelp_fill_in"="Completați";
+"aihelp_is_Answer_helpful"="Sunt utile răspunsurile de mai jos";
+"aihelp_new_conversation"="Dialog nou";
+"aihelp_enter_email_address"="Vă rugăm să introduceți adresa dvs. de e-mail";
+"aihelp_enter_number"="Vă rugăm să introduceți un număr";
+"aihelp_upload_attachment"="Încărcați atașamentul";
+"aihelp_faq_helpful"="Util";
+"aihelp_faq_unhelpful"="Nefolositor";
+"aihelp_form_hint"="Completați formularul pentru a contacta serviciul manual";

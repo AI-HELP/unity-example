@@ -1,5 +1,3 @@
-
-
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="bestämma";
 "aihelp_no"="annullera";
@@ -45,3 +43,15 @@
 "aihelp_resolution_request"="Har ditt problem lösts?";
 "aihelp_resolution_yes"="Lösta";
 "aihelp_resolution_no"="Olösta";
+"aihelp_new_conversation"="ny konversation";
+"aihelp_enter_content"="Vänligen ange innehåll";
+"aihelp_enter_email_address"="Ange din e-postadress";
+"aihelp_enter_number"="Ange ett nummer";
+"aihelp_select_option"="Var god välj ett alternativ";
+"aihelp_select_date"="Välj ett datum";
+"aihelp_fill_in"="Fyll i";
+"aihelp_upload_attachment"="Ladda upp bilaga";
+"aihelp_is_Answer_helpful"="Hjälpte svaret nedan";
+"aihelp_faq_helpful"="Hjälpsam";
+"aihelp_faq_unhelpful"="Ohjälpsam";
+"aihelp_form_hint"="Fyll i formuläret för att kontakta manuell service";

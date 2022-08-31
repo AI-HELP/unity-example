@@ -3,9 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots'
-        }
+        mavenCentral()
     }
 
     dependencies {
@@ -17,9 +15,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-         maven {
-                    url 'https://oss.sonatype.org/content/repositories/snapshots'
-                }
+        mavenCentral()
         flatDir {
             dirs 'libs'
         }
@@ -33,7 +29,7 @@ dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'net.aihelp:android-aihelp-aar:3.2.+'
+    implementation 'net.aihelp:android-aihelp-aar:4.1.+'
 
 // Android Resolver Dependencies End
 **DEPS**

@@ -16,7 +16,6 @@ namespace AIHelp
 
         public delegate void OnAIHelpSessionCloseCallback();
 
-        public delegate void OnOperationUnreadChangedCallback(bool hasUnreadArticles);
     }
 
     public interface IAIHelpCore
@@ -24,20 +23,8 @@ namespace AIHelp
         void Init(string appKey, string domain, string appId, string language);
         void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback callback);
         
-        void ShowConversation();
-        void ShowConversation(ConversationConfig config);
-
-        void ShowAllFAQSections();
-        void ShowAllFAQSections(FaqConfig config);
-
-        void ShowFAQSection(string sectionId);
-        void ShowFAQSection(string sectionId, FaqConfig config);
-
-        void ShowSingleFAQ(string faqId);
-        void ShowSingleFAQ(string faqId, FaqConfig config);
-
-        void ShowOperation();
-        void ShowOperation(OperationConfig config);
+        bool Show(string entranceId);
+        bool Show(ApiConfig apiConfig);
 
         void UpdateUserInfo(UserConfig userConfig);
         void ResetUserInfo();
@@ -57,7 +44,6 @@ namespace AIHelp
         void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback);
         void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback);
         void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback);
-        void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback);
 
 #if UNITY_IOS
         void SetRequestedOrientation(int requestedOrientation);     // ios only

@@ -24,26 +24,10 @@ namespace AIHelp
             }
         }
 
-        private AndroidJavaObject getSupportConfig(ConversationConfig config)
+        private AndroidJavaObject getApiConfig(ApiConfig config)
         {
-            AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.ConversationConfig$Builder");
-            return builder.Call<AndroidJavaObject>("build", config.GetConversationIntent(),
-            config.IsAlwaysShowHumanSupportButtonInBotPage(), config.GetWelcomeMessage(), config.GetStoryNode());
-        }
-
-        private AndroidJavaObject getFaqConfig(FaqConfig config)
-        {
-            AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.FaqConfig$Builder");
-            return builder.Call<AndroidJavaObject>("build", config.GetShowConversationMoment(), getSupportConfig(config.GetConversationConfig()));
-        }
-
-        private AndroidJavaObject getOperationConfig(OperationConfig config)
-        {
-            AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.OperationConfig$Builder");
-            builder.Call<AndroidJavaObject>("setSelectIndex", config.GetSelectIndex());
-            builder.Call<AndroidJavaObject>("setConversationTitle", config.GetConversationTitle());
-            builder.Call<AndroidJavaObject>("setConversationConfig", getSupportConfig(config.GetConversationConfig()));
-            return builder.Call<AndroidJavaObject>("build");
+            AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.ApiConfig$Builder");
+            return builder.Call<AndroidJavaObject>("build", config.GetEntranceId(), config.GetWelcomeMessage());
         }
 
         private AndroidJavaObject getUserConfig(UserConfig config)
@@ -55,8 +39,6 @@ namespace AIHelp
             builder.Call<AndroidJavaObject>("setUserTags", config.GetUserTags());
             builder.Call<AndroidJavaObject>("setCustomData", config.GetCustomData());
             builder.Call<AndroidJavaObject>("setSyncCrmInfo", config.GetWhetherSyncCrmInfo());
-            builder.Call<AndroidJavaObject>("setPushToken", config.GetPushToken());
-            builder.Call<AndroidJavaObject>("setPushPlatform", getPushPlatform(config.GetPushPlatform()));
             return builder.Call<AndroidJavaObject>("build");
         }
 
@@ -72,85 +54,22 @@ namespace AIHelp
             return clz.CallStatic<AndroidJavaObject>("fromValue", (int)platform);
         }
 
-        public void ShowConversation()
+        public bool Show(string entranceId)
         {
             if (javaSupport != null && currentActivity != null)
             {
-                javaSupport.CallStatic("showConversation");
+                return javaSupport.CallStatic<bool>("show", entranceId);
             }
+            return false;
         }
 
-        public void ShowConversation(ConversationConfig config)
+        public bool Show(ApiConfig apiConfig)
         {
             if (javaSupport != null && currentActivity != null)
             {
-                javaSupport.CallStatic("showConversation", getSupportConfig(config));
+                return javaSupport.CallStatic<bool>("show", getApiConfig(apiConfig));
             }
-        }
-
-        public void ShowAllFAQSections()
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showAllFAQSections");
-            }
-        }
-
-        public void ShowAllFAQSections(FaqConfig config)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showAllFAQSections", getFaqConfig(config));
-            }
-        }
-
-        public void ShowFAQSection(string sectionId)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showFAQSection", sectionId);
-            }
-        }
-
-        public void ShowFAQSection(string sectionId, FaqConfig config)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showFAQSection", sectionId, getFaqConfig(config));
-            }
-        }
-
-
-        public void ShowSingleFAQ(string faqId)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showSingleFAQ", faqId);
-            }
-        }
-
-        public void ShowSingleFAQ(string faqId, FaqConfig config)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showSingleFAQ", faqId, getFaqConfig(config));
-            }
-        }
-
-        public void ShowOperation()
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showOperation");
-            }
-        }
-
-        public void ShowOperation(OperationConfig config)
-        {
-            if (javaSupport != null && currentActivity != null)
-            {
-                javaSupport.CallStatic("showOperation", getOperationConfig(config));
-            }
+            return false;
         }
 
         public void UpdateUserInfo(UserConfig config)
@@ -203,7 +122,6 @@ namespace AIHelp
             private readonly AIHelpDefine.OnSpecificFormSubmittedCallback submittedCallback;
             private readonly AIHelpDefine.OnAIHelpSessionOpenCallback sessionOpenCallback;
             private readonly AIHelpDefine.OnAIHelpSessionCloseCallback sessionCloseCallback;
-            private readonly AIHelpDefine.OnOperationUnreadChangedCallback unreadChangedCallback;
 
             public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedCallback")
             {
@@ -233,11 +151,6 @@ namespace AIHelp
             public ListenerAdapter(AIHelpDefine.OnAIHelpSessionCloseCallback callback) : base("net.aihelp.ui.listener.OnAIHelpSessionCloseCallback")
             {
                 this.sessionCloseCallback = callback;
-            }
-
-            public ListenerAdapter(AIHelpDefine.OnOperationUnreadChangedCallback callback) : base("net.aihelp.ui.listener.OnOperationUnreadChangedCallback")
-            {
-                this.unreadChangedCallback = callback;
             }
 
             void onAIHelpInitialized()
@@ -270,11 +183,6 @@ namespace AIHelp
                 sessionCloseCallback();
             }
 
-            void onOperationUnreadChanged(bool hasUnreadArticles)
-            {
-                unreadChangedCallback(hasUnreadArticles);
-            }
-
         }
 
         public void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback listener)
@@ -305,11 +213,6 @@ namespace AIHelp
         public void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback listener)
         {
             javaSupport.CallStatic("setOnAIHelpSessionCloseCallback", listener == null ? null : new ListenerAdapter(listener));
-        }
-
-        public void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback listener)
-        {
-            javaSupport.CallStatic("setOnOperationUnreadChangedCallback", listener == null ? null : new ListenerAdapter(listener));
         }
 
         public void ShowUrl(string url)

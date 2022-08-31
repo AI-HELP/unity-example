@@ -1,8 +1,8 @@
-
-
+"aihelp_send"="ส่ง";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="ใช่";
 "aihelp_no"="ยกเลิก";
+"aihelp_view_details"="ดูรายละเอียด";
 "aihelp_chat_hint"="ป้อนข้อความของคุณ";
 "aihelp_data_not_found_msg"="โอ๊ะโอไม่พบข้อมูลที่เกี่ยวข้อง";
 "aihelp_faq_search_hint"="อธิบายปัญหาของคุณ";
@@ -12,7 +12,7 @@
 "aihelp_rate_dissatisfied"="ไม่ชอบมัน";
 "aihelp_rate_request"="กรุณาให้คะแนนบริการของเรา";
 "aihelp_rate_finished"="ขอขอบคุณที่ให้คะแนนเรา";
-"aihelp_rate_app_hint"="ชอบแอปนี้ให้คะแนนไหม";
+"aihelp_rate_app_hint"="คุณต้องการที่จะให้คะแนน App?";
 "aihelp_rate_button"="ให้คะแนน";
 "aihelp_rate_additional_feedback_message"="ข้อเสนอแนะอื่น ๆ (ไม่จำเป็น)";
 "aihelp_faq_feedback"="โปรดป้อนความคิดเห็นของคุณ";
@@ -24,14 +24,14 @@
 "aihelp_network_check_fine"="หลังจากตรวจสอบแล้วเครือข่ายของคุณก็ใช้ได้";
 "aihelp_network_no_connect"="โปรดตรวจสอบการเชื่อมต่อเครือข่ายของคุณ";
 "aihelp_media_upload_err_size"="ขนาดไฟล์เกินขีด จำกัด โปรดอัปโหลดไฟล์ที่มีขนาดเล็กกว่า %dM";
-"aihelp_media_upload_err_format"="ไฟล์ที่ไม่รองรับ ปัจจุบันมีเฉพาะ mp4, png, jpg, jpeg เท่านั้นที่สามารถอัปโหลดได้";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="ไฟล์ที่ไม่รองรับ ปัจจุบันมีเฉพาะ mp4; png; jpg; jpeg เท่านั้นที่สามารถอัปโหลดได้";
 "aihelp_network_check_in_progress"="กำลังดำเนินการตรวจสอบเครือข่ายหากคุณออกตอนนี้การตรวจสอบจะหยุดชะงัก";
-"aihelp_permission_ignored"="โปรดเปิดใช้งานการตั้งค่า> สิทธิ์> ที่เก็บข้อมูลเพื่อใช้ฟังก์ชั่นอัพโหลดรูปภาพ";
 "aihelp_permission_denied"="การอัปโหลดรูปภาพต้องได้รับอนุญาตในการเข้าถึงที่เก็บข้อมูล";
+"aihelp_permission_ignored"="โปรดเปิดใช้งานการตั้งค่า> สิทธิ์> ที่เก็บข้อมูลเพื่อใช้ฟังก์ชั่นอัพโหลดรูปภาพ";
 "aihelp_permission_settings"="การตั้งค่า";
-"aihelp_ticket_closed"="ตั๋วการร้องเรียนของลูกค้าปัจจุบันถูกปิดแล้ว";
 "aihelp_network_checking"="กำลังดำเนินการตรวจสอบเครือข่าย";
-"aihelp_view_details"="ดูรายละเอียด";
+"aihelp_ticket_closed"="ตั๋วการร้องเรียนของลูกค้าปัจจุบันถูกปิดแล้ว";
 "aihelp_yesterday"="เมื่อวานนี้";
 "aihelp_sunday"="วันอาทิตย์";
 "aihelp_monday"="วันจันทร์";
@@ -40,8 +40,18 @@
 "aihelp_thursday"="วันพฤหัสบดี";
 "aihelp_friday"="วันศุกร์";
 "aihelp_saturday"="วันเสาร์";
-"aihelp_saturday_data_acquisition_failed"="การรับข้อมูลล้มเหลว";
-"aihelp_send"="ส่ง";
 "aihelp_resolution_request"="ปัญหาของคุณได้รับการแก้ไขแล้วหรือยัง?";
 "aihelp_resolution_yes"="แก้ไขแล้ว";
 "aihelp_resolution_no"="ยังไม่แก้";
+"aihelp_enter_content"="กรุณาใส่เนื้อหา";
+"aihelp_select_option"="โปรดเลือกตัวเลือก";
+"aihelp_select_date"="กรุณาเลือกวันที่";
+"aihelp_fill_in"="กรอก";
+"aihelp_is_Answer_helpful"="คำตอบด้านล่างช่วยได้ไหม";
+"aihelp_new_conversation"="บทสนทนาใหม่";
+"aihelp_enter_email_address"="กรุณากรอกอีเมล์ของคุณ";
+"aihelp_enter_number"="กรุณากรอกหมายเลข";
+"aihelp_upload_attachment"="อัพโหลดไฟล์แนบ";
+"aihelp_faq_helpful"="มีประโยชน์";
+"aihelp_faq_unhelpful"="ไม่ช่วยเหลือ";
+"aihelp_form_hint"="กรอกแบบฟอร์มเพื่อติดต่อบริการด้วยตนเอง";

@@ -1,44 +1,37 @@
-
-
-
+"aihelp_send"="Send";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="Confirm";
 "aihelp_no"="Cancel";
 "aihelp_view_details"="View Details";
-
 "aihelp_chat_hint"="Enter your message";
-"aihelp_data_not_found_msg"="Oops, no relevant data were found.";
-
+"aihelp_data_not_found_msg"="Oops; no relevant data were found.";
 "aihelp_faq_search_hint"="Describe your problem";
 "aihelp_faq_fetching_faqs"="Getting your answers…";
-"aihelp_faq_feedback"="Please input your feedback";
-"aihelp_faq_feedback_thanks"="Thank you for the feedback.";
 "aihelp_faq_feedback_suggest"="Suggestions";
-"aihelp_faq_search_empty"="No FAQs found.";
-
-"aihelp_media_upload_err_format"="Unsupported files. Currently, only mp4, png, jpg, jpeg available when uploading.";
-"aihelp_media_upload_err_size"="The file size exceeds the limit, please upload the file smaller than %dM";
-
-"aihelp_network_error_msg"="Oops! Something went wrong";
-"aihelp_network_upload_log_title"="Poor network connection";
-"aihelp_network_no_connect"="Please check your network connection.";
-"aihelp_network_check_poor"="Please confirm to send us network conditions, which will help us improve the quality of your network connection.";
-"aihelp_network_check_fine"="After checking, your network is fine";
-
-"aihelp_rate_request"="Please rate our service";
-"aihelp_rate_finished"="Thanks for rating us.";
-"aihelp_rate_app_hint"="Would you like to review the App?";
-"aihelp_rate_button"="Rate";
-"aihelp_rate_additional_feedback_message"="Any other feedback (optional)";
 "aihelp_rate_satisfied"="Liked it";
 "aihelp_rate_dissatisfied"="Disliked it";
-"aihelp_network_check_in_progress"="Network checking is in progress. If you exit now, the checking will be interrupted.";
-"aihelp_permission_ignored"="Please enable Settings > Permissions > Storage to use upload image function.";
+"aihelp_rate_request"="Please rate our service";
+"aihelp_rate_finished"="Thanks for rating us.";
+"aihelp_rate_app_hint"="Would you like to rate the App?";
+"aihelp_rate_button"="Go to rate";
+"aihelp_rate_additional_feedback_message"="Any other feedback (optional)";
+"aihelp_faq_feedback"="Please input your feedback";
+"aihelp_faq_feedback_thanks"="Thank you for the feedback.";
+"aihelp_faq_search_empty"="No FAQs found.";
+"aihelp_network_error_msg"="Oops! Something went wrong";
+"aihelp_network_upload_log_title"="Poor network connection";
+"aihelp_network_check_poor"="Please confirm to send us network conditions; which will help us improve the quality of your network connection.";
+"aihelp_network_check_fine"="After checking; your network is fine";
+"aihelp_network_no_connect"="Please check your network connection.";
+"aihelp_media_upload_err_size"="The file size exceeds the limit; please upload the file smaller than %dM";
+"aihelp_media_upload_err_net"="Transmission timed out; file uploading failed.";
+"aihelp_media_upload_err_format"="Unsupported files. Currently; only mp4; png; jpg; jpeg available when uploading.";
+"aihelp_network_check_in_progress"="Network checking is in progress. If you exit now; the checking will be interrupted.";
 "aihelp_permission_denied"="Upload image requires permission of accessing storage.";
+"aihelp_permission_ignored"="Please enable Settings > Permissions > Storage to use upload image function.";
 "aihelp_permission_settings"="Settings";
 "aihelp_network_checking"="Network check is in progress";
-"aihelp_ticket_closed"="The current customer complaint ticket has been closed.";
-
+"aihelp_ticket_closed"="The current ticket has been closed.";
 "aihelp_yesterday"="Yesterday";
 "aihelp_sunday"="Sunday";
 "aihelp_monday"="Monday";
@@ -47,9 +40,18 @@
 "aihelp_thursday"="Thursday";
 "aihelp_friday"="Friday";
 "aihelp_saturday"="Saturday";
-"aihelp_saturday_data_acquisition_failed"="Data acquisition failed";
-"aihelp_send"="Send";
-"aihelp_resolution_request"="Is your problem solved?";
+"aihelp_resolution_request"="Has your problem been solved?";
 "aihelp_resolution_yes"="Solved";
 "aihelp_resolution_no"="Unsolved";
-
+"aihelp_enter_content"="Input the content";
+"aihelp_select_option"="Select an option";
+"aihelp_select_date"="Select a date";
+"aihelp_fill_in"="Fill in";
+"aihelp_is_Answer_helpful"="Are these answers helpful?";
+"aihelp_new_conversation"="New conversation";
+"aihelp_enter_email_address"="Input the email address";
+"aihelp_enter_number"="Input the number";
+"aihelp_upload_attachment"="Upload attachment";
+"aihelp_faq_helpful"="Helpful";
+"aihelp_faq_unhelpful"="Unhelpful";
+"aihelp_form_hint"="Fill out the form to contact manual service";

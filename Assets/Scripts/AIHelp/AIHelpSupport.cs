@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 namespace AIHelp
 {
 
@@ -21,54 +20,14 @@ namespace AIHelp
             AIHelpCore.getInstance().SetOnAIHelpInitializedCallback(callback);
         }
 
-        public static void ShowConversation()
+        public static bool Show(string entranceId)
         {
-            AIHelpCore.getInstance().ShowConversation();
+            return AIHelpCore.getInstance().Show(entranceId);
         }
 
-        public static void ShowConversation(ConversationConfig config)
+        public static bool Show(ApiConfig apiConfig)
         {
-            AIHelpCore.getInstance().ShowConversation(config);
-        }
-
-        public static void ShowAllFAQSections()
-        {
-            AIHelpCore.getInstance().ShowAllFAQSections();
-        }
-
-        public static void ShowAllFAQSections(FaqConfig config)
-        {
-            AIHelpCore.getInstance().ShowAllFAQSections(config);
-        }
-
-        public static void ShowFAQSection(string sectionId)
-        {
-            AIHelpCore.getInstance().ShowFAQSection(sectionId);
-        }
-
-        public static void ShowFAQSection(string sectionId, FaqConfig config)
-        {
-            AIHelpCore.getInstance().ShowFAQSection(sectionId, config);
-        }
-
-        public static void ShowSingleFAQ(string faqId)
-        {
-            AIHelpCore.getInstance().ShowSingleFAQ(faqId);
-        }
-
-        public static void ShowSingleFAQ(string faqId, FaqConfig config)
-        {
-            AIHelpCore.getInstance().ShowSingleFAQ(faqId, config);
-        }
-
-        public static void ShowOperation()
-        {
-            AIHelpCore.getInstance().ShowOperation();
-        }
-
-        public static void ShowOperation(OperationConfig config)
-        {
-            AIHelpCore.getInstance().ShowOperation(config);
+            return AIHelpCore.getInstance().Show(apiConfig);
         }
 
         public static void UpdateUserInfo(UserConfig userConfig)
@@ -150,12 +109,6 @@ namespace AIHelp
         {
             AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
         }
-
-        public static void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
-        {
-            AIHelpCore.getInstance().SetOnOperationUnreadChangedCallback(callback);
-        }
-
 
 
 #if UNITY_IOS
