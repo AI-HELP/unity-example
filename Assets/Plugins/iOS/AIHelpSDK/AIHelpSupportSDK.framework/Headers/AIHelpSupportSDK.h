@@ -46,7 +46,7 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
  *
  * If you want to custom your welcome message, please check next method for more information.
  */
-+ (BOOL)showWithEnranceId:(NSString *)entranceId;
++ (BOOL)showWithEntranceId:(NSString *)entranceId;
 
 /**
  Show the AIHelp conversation screen.

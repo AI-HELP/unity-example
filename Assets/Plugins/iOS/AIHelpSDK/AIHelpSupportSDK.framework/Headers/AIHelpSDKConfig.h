@@ -12,6 +12,7 @@ typedef NS_ENUM(int,AIHelpTokenPlatform) {                    /* PushTokenPlatfo
     AIHelpTokenPlatformFirebase           = 2,                // firebase-FCM
     AIHelpTokenPlatformJpush              = 3,                // Jpush
     AIHelpTokenPlatformGeTui              = 4,                // GeTui
+    AIHelpTokenPlatformHUAWEI             = 6,                // HUAWEI
 };
 
 typedef NS_ENUM(int,AIHelpConversationIntent) {                    /* ConversationIntent enum */
