@@ -64,6 +64,9 @@ namespace AIHelp
         private static extern void unity_enableLogging(bool enable);
 
         [DllImport("__Internal")]
+        private static extern void unity_close();
+
+        [DllImport("__Internal")]
         private static extern void unity_setSDKInterfaceOrientationMask(int interfaceOrientationMask);
 
         [DllImport("__Internal")]
@@ -277,6 +280,10 @@ namespace AIHelp
         {
             _iOSSessionCloseCallback = callback;
             unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
+        }
+
+        public void Close() {
+            unity_close();
         }
 
         private int getPushPlatform(PushPlatform platform){

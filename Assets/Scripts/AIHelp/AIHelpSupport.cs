@@ -110,6 +110,9 @@ namespace AIHelp
             AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
         }
 
+        public static void Close() {
+            AIHelpCore.getInstance().Close();
+        }
 
 #if UNITY_IOS
 

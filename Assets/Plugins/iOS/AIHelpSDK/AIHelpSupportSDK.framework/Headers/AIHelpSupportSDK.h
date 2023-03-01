@@ -188,5 +188,6 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
 + (void)setSDKEdgeInsetsWithTop:(float)top bottom:(float)bottom enable:(BOOL)enable;
 + (void)setSDKEdgeColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
++ (void)close;
 
 @end

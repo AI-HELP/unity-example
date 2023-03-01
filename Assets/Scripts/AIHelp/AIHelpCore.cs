@@ -163,6 +163,11 @@ namespace AIHelp
             helpCore.SetOnAIHelpSessionCloseCallback(callback);
         }
 
+        public void Close() {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.Close();
+        }
+
 #if UNITY_IOS
 
         public void SetRequestedOrientation(int requestedOrientation)

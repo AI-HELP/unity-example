@@ -182,6 +182,10 @@ extern "C" {
     void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
         [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
     }
+
+    void unity_close() {
+        [AIHelpSupportSDK close];
+    }
     
 #if defined(__cplusplus)
 }

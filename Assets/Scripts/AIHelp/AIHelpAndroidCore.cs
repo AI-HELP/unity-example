@@ -257,6 +257,14 @@ namespace AIHelp
             }
         }
 
+        public void Close() 
+        {
+            if (javaSupport != null)
+            {
+                javaSupport.CallStatic("close");
+            }
+        }
+
     }
 #endif
 }

@@ -38,4 +38,6 @@ extern "C" void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFor
 extern "C" void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack);
 extern "C" void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack);
 
+extern "C" void unity_close();
+
 #endif

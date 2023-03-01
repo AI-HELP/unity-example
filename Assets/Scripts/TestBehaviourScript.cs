@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
@@ -7,11 +9,13 @@ using AOT;
 using UnityEngine;
 using UnityEngine.UI;
 using AIHelp;
+
 public class TestBehaviourScript : MonoBehaviour
 {
     private string appKey = "";
     private string domain = "";
     private string appId = "";
+
 
     private void Awake()
     {
@@ -52,6 +56,7 @@ public class TestBehaviourScript : MonoBehaviour
 
             return true;
         });
+
     }
 
     public void OnAIHelpInitializedCallback() {  
@@ -63,7 +68,7 @@ public class TestBehaviourScript : MonoBehaviour
         // ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
         // conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
         // AIHelpSupport.ShowConversation(conversationBuilder.build());
-        AIHelpSupport.Show("test002");
+        AIHelpSupport.Show("test004");
     }
 
     void manualClick()

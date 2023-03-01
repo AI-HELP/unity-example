@@ -45,6 +45,8 @@ namespace AIHelp
         void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback);
         void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback);
 
+        void Close();
+
 #if UNITY_IOS
         void SetRequestedOrientation(int requestedOrientation);     // ios only
         void SetSDKAppearanceMode(int mode);    // iOS only  0: follow the system  1: light mode  2： dark mode

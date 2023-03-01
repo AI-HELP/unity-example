@@ -4,6 +4,9 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
     }
 
     dependencies {
@@ -19,6 +22,9 @@ allprojects {
         flatDir {
             dirs 'libs'
         }
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
     }
 }
 
@@ -27,9 +33,6 @@ apply plugin: 'com.android.application'
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'net.aihelp:android-aihelp-aar:4.2.+'
 
 // Android Resolver Dependencies End
 **DEPS**
@@ -102,6 +105,8 @@ android {
 **BUILT_APK_LOCATION**
     dependencies {
         implementation 'com.android.support:multidex:1.0.3'
+        implementation 'androidx.appcompat:appcompat:1.1.0'
+        implementation 'net.aihelp:android-aihelp-aar:4.2.6.2-SNAPSHOT'
     }
 
     dexOptions {
