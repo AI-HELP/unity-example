@@ -12,6 +12,7 @@ typedef NS_ENUM(int,AIHelpTokenPlatform) {                    /* PushTokenPlatfo
     AIHelpTokenPlatformFirebase           = 2,                // firebase-FCM
     AIHelpTokenPlatformJpush              = 3,                // Jpush
     AIHelpTokenPlatformGeTui              = 4,                // GeTui
+    AIHelpTokenPlatformHUAWEI             = 6,                // HUAWEI
 };
 
 typedef NS_ENUM(int,AIHelpConversationIntent) {                    /* ConversationIntent enum */
@@ -29,6 +30,13 @@ typedef NS_ENUM(int,AIHelpFAQShowConversationMoment) {             /* Conversati
 typedef NS_ENUM(int,AIHelpPublishCountryOrRegion) {
     AIHelpCN = 1,
     AIHelpIN
+};
+
+typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
+    AIHelpFAQSupportEntranceHomePage = 1,
+    AIHelpFAQSupportEntranceQuestionList = 2,
+    AIHelpFAQSupportEntranceAnswerPage = 3,
+    AIHelpFAQSupportEntranceAfterMarkingUnhelpful = 4
 };
 
 #pragma mark - ECServiceUserConfig

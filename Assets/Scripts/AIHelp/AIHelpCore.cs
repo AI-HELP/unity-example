@@ -43,7 +43,7 @@ namespace AIHelp
         public void Init(string appKey, string domain, string appId, string language)
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.Init(appId, domain, appId, language);
+            helpCore.Init(appKey, domain, appId, language);
         }
 
         public void Init(string appKey, string domain, string appId)
