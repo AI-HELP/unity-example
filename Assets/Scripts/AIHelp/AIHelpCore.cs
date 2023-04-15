@@ -169,6 +169,12 @@ namespace AIHelp
             helpCore.SetOnAIHelpSessionCloseCallback(callback);
         }
 
+        public void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.SetOnSpecificUrlClickedCallback(callback);
+        }
+
         public void Close() {
             if (!IsHelpCorePrepared()) return;
             helpCore.Close();

@@ -16,6 +16,7 @@ extern "C" void unity_initLan (const char* apiKey, const char* domainName, const
 extern "C" void unity_setOnInitializedCallback (AISupportInitCallBack callBack);
 
 extern "C" bool unity_show(const char* entranceId, const char* welcomeMessage);
+extern "C" void unity_showSingleFAQ(const char* faqId, int conversationMoment);
 
 extern "C" void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo);
 extern "C" void unity_resetUserInfo ();

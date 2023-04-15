@@ -16,6 +16,8 @@ namespace AIHelp
 
         public delegate void OnAIHelpSessionCloseCallback();
 
+         public delegate void OnSpecificUrlClickedCallback(string url);
+
     }
 
     public interface IAIHelpCore
@@ -45,6 +47,7 @@ namespace AIHelp
         void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback);
         void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback);
         void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback);
+        void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback);
 
         void Close();
 

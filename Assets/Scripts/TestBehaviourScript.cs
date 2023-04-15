@@ -22,7 +22,6 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId);
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
-        AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
     }
 
     private void Start()
@@ -164,4 +163,10 @@ public class TestBehaviourScript : MonoBehaviour
     {
         Console.Write("AIHelp OnCloseCallBack");
     }
+
+    public void OnSpecialUrlClickedCallBack(string url)
+    {
+        Console.Write("AIHelp OnSpecialUrlClickedCallBack: " + url);
+    }
+
 }

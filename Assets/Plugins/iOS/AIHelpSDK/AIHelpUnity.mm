@@ -204,6 +204,11 @@ extern "C" {
         [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
     }
 
+    void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnSpecificUrlClickedCallback:callBack];
+    }
+
     void unity_close() {
         [AIHelpSupportSDK close];
     }

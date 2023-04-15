@@ -136,6 +136,7 @@ namespace AIHelp
             private readonly AIHelpDefine.OnSpecificFormSubmittedCallback submittedCallback;
             private readonly AIHelpDefine.OnAIHelpSessionOpenCallback sessionOpenCallback;
             private readonly AIHelpDefine.OnAIHelpSessionCloseCallback sessionCloseCallback;
+            private readonly AIHelpDefine.OnSpecificUrlClickedCallback urlClickedCallback;
 
             public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedCallback")
             {
@@ -165,6 +166,11 @@ namespace AIHelp
             public ListenerAdapter(AIHelpDefine.OnAIHelpSessionCloseCallback callback) : base("net.aihelp.ui.listener.OnAIHelpSessionCloseCallback")
             {
                 this.sessionCloseCallback = callback;
+            }
+
+            public ListenerAdapter(AIHelpDefine.OnSpecificUrlClickedCallback callback) : base("net.aihelp.ui.listener.OnSpecificUrlClickedCallback")
+            {
+                this.urlClickedCallback = callback;
             }
 
             void onAIHelpInitialized(bool isSuccess, string message)
@@ -197,6 +203,11 @@ namespace AIHelp
                 sessionCloseCallback();
             }
 
+            void onSpecificUrlClicked(string url)
+            {
+                urlClickedCallback(url);
+            }
+
         }
 
         public void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback listener)
@@ -227,6 +238,11 @@ namespace AIHelp
         public void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback listener)
         {
             javaSupport.CallStatic("setOnAIHelpSessionCloseCallback", listener == null ? null : new ListenerAdapter(listener));
+        }
+
+        public void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback listener)
+        {
+            javaSupport.CallStatic("setOnSpecificUrlClickedCallback", listener == null ? null : new ListenerAdapter(listener));
         }
 
         public void ShowUrl(string url)

@@ -38,6 +38,7 @@ extern "C" void unity_additionalSupportFor(int countryOrRegion);
 extern "C" void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack);
 extern "C" void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack);
 extern "C" void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack);
+extern "C" void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack);
 
 extern "C" void unity_close();
 

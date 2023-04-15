@@ -16,6 +16,7 @@ namespace AIHelp
         static event AIHelpDefine.OnSpecificFormSubmittedCallback _iOSSpecificFormCallback;
         static event AIHelpDefine.OnAIHelpSessionOpenCallback _iOSSessionOpenCallback;
         static event AIHelpDefine.OnAIHelpSessionCloseCallback _iOSSessionCloseCallback;
+        static event AIHelpDefine.OnSpecificUrlClickedCallback _iOSSpecificUrlClickedCallback;
 
         [DllImport("__Internal")]
         private static extern void unity_init(string apiKey, string domainName, string appId);
@@ -157,6 +158,18 @@ namespace AIHelp
         [DllImport("__Internal")]
         private static extern void unity_setOnSessionCloseCallback(iOSOnAIHelpSessionCloseSubmit callBack);
 
+        public delegate void iOSSpecificUrlClickedCallback(string url);
+        [MonoPInvokeCallback(typeof(iOSSpecificUrlClickedCallback))]
+        private static void iOSSpecificUrlClicked(string url)
+        {
+            if (_iOSSpecificUrlClickedCallback != null)
+            {
+                _iOSSpecificUrlClickedCallback(url);
+            }
+        }
+        [DllImport("__Internal")]
+        private static extern void unity_setOnSpecificUrlClickedCallback(iOSSpecificUrlClickedCallback callback);
+
         public void Init(string appKey, string domain, string appId)
         {
             unity_init(appKey, domain, appId);
@@ -288,6 +301,12 @@ namespace AIHelp
         {
             _iOSSessionCloseCallback = callback;
             unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
+        }
+
+        public void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            _iOSSpecificUrlClickedCallback = callback;
+            unity_setOnSpecificUrlClickedCallback(iOSSpecificUrlClicked);
         }
 
         public void Close() {

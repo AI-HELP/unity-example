@@ -115,6 +115,11 @@ namespace AIHelp
             AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
         }
 
+        public static void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnSpecificUrlClickedCallback(callback);
+        }
+
         public static void Close() {
             AIHelpCore.getInstance().Close();
         }
