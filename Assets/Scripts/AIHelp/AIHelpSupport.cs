@@ -156,6 +156,11 @@ namespace AIHelp
             AIHelpCore.getInstance().SetOnOperationUnreadChangedCallback(callback);
         }
 
+        public static void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnSpecificUrlClickedCallback(callback);
+        }
+
 
 
 #if UNITY_IOS

@@ -9,19 +9,17 @@ using UnityEngine.UI;
 using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "";
-    private string domain = "";
-    private string appId = "";
+    private string appKey = "THIS IS YOUR APP KEY";
+    private string domain = "release.aihelp.net";
+    private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+
 
     private void Awake()
     {
         AIHelpSupport.enableLogging(true);
         AIHelpSupport.Init(appKey, domain, appId,"en");
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
-        AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
-        //AIHelpSupport.SetOnAIHelpSessionOpenCallback(OnOpenCallBack);
-        //AIHelpSupport.SetOnAIHelpSessionCloseCallback(OnCloseCallBack);
-
+        AIHelpSupport.SetOnSpecificUrlClickedCallback(OnSpecialUrlClickedCallBack);
     }
 
     private void Start()
@@ -173,4 +171,10 @@ public class TestBehaviourScript : MonoBehaviour
     {
         Console.Write("AIHelp OnCloseCallBack");
     }
+
+    public void OnSpecialUrlClickedCallBack(string url)
+    {
+        Console.Write("AIHelp OnSpecialUrlClickedCallBack: " + url);
+    }
+
 }

@@ -17,6 +17,8 @@ namespace AIHelp
         public delegate void OnAIHelpSessionCloseCallback();
 
         public delegate void OnOperationUnreadChangedCallback(bool hasUnreadArticles);
+
+		public delegate void OnSpecificUrlClickedCallback(string url);
     }
 
     public interface IAIHelpCore
@@ -58,6 +60,7 @@ namespace AIHelp
         void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback);
         void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback);
         void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback);
+		void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback);
 
 #if UNITY_IOS
         void SetRequestedOrientation(int requestedOrientation);     // ios only

@@ -17,6 +17,7 @@ namespace AIHelp
         static event AIHelpDefine.OnAIHelpSessionOpenCallback _iOSSessionOpenCallback;
         static event AIHelpDefine.OnAIHelpSessionCloseCallback _iOSSessionCloseCallback;
         static event AIHelpDefine.OnOperationUnreadChangedCallback _iOSOperationUnreadChangedCallback;
+        static event AIHelpDefine.OnSpecificUrlClickedCallback _iOSSpecificUrlClickedCallback;
 
         [DllImport("__Internal")]
         private static extern void unity_init(string apiKey, string domainName, string appId);
@@ -192,6 +193,19 @@ namespace AIHelp
         }
         [DllImport("__Internal")]
         private static extern void unity_setOnOperationUnreadChangedCallback(iOSOnOperationUnreadChangedSubmit callBack);
+
+
+        public delegate void iOSSpecificUrlClickedCallback(string url);
+        [MonoPInvokeCallback(typeof(iOSSpecificUrlClickedCallback))]
+        private static void iOSSpecificUrlClicked(string url)
+        {
+            if (_iOSSpecificUrlClickedCallback != null)
+            {
+                _iOSSpecificUrlClickedCallback(url);
+            }
+        }
+        [DllImport("__Internal")]
+        private static extern void unity_setOnSpecificUrlClickedCallback(iOSSpecificUrlClickedCallback callback);
 
 
         public void Init(string appKey, string domain, string appId)
@@ -386,6 +400,11 @@ namespace AIHelp
             unity_setOnOperationUnreadChangedCallback(iOSOperationUnreadSubmit);
         }
 
+        public void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            _iOSSpecificUrlClickedCallback = callback;
+            unity_setOnSpecificUrlClickedCallback(iOSSpecificUrlClicked);
+        }
 
         private int getPushPlatform(PushPlatform platform){
             int tempPlatform = 2;

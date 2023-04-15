@@ -218,6 +218,11 @@ namespace AIHelp
             helpCore.SetOnOperationUnreadChangedCallback(callback);
         }
 
+        public void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.SetOnSpecificUrlClickedCallback(callback);
+        }
 
 
 #if UNITY_IOS
