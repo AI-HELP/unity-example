@@ -67,6 +67,12 @@ namespace AIHelp
             if (!IsHelpCorePrepared()) return false;
             return helpCore.Show(apiConfig);
         }
+        
+        public void ShowSingleFAQ(string faqId, ConversationMoment moment) 
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.ShowSingleFAQ(faqId, moment);
+        }
 
         public void UpdateUserInfo(UserConfig userConfig)
         {

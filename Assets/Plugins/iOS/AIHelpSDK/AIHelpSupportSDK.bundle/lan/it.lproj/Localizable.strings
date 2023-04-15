@@ -1,4 +1,3 @@
-"aihelp_send"="Inviare";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="determinare";
 "aihelp_no"="Annulla";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Utile";
 "aihelp_faq_unhelpful"="Inutile";
 "aihelp_form_hint"="Compila il form per contattare il servizio manuale";
+"aihelp_send"="Inviare";
+"aihelp_albums"="Album";
+"aihelp_file"="File";
+"aihelp_save_seccessfully"="Salvato con successo";
+"aihelp_save_failed"="Impossibile salvare";
+"aihelp_select_photo"="Seleziona foto";
+"aihelp_select"="Selezionare";
+"aihelp_image_format_unsupport"="Questo formato immagine non è supportato";
+"aihelp_video_format_unsupport"="Il formato video non è supportato";
+"aihelp_click_copy"="Clicca per copiare";
+"aihelp_open_browser"="Apri nel tuo browser per scaricare";

@@ -1,4 +1,3 @@
-"aihelp_send"="wysłać";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="określać";
 "aihelp_no"="Anuluj";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Pomocny";
 "aihelp_faq_unhelpful"="Nieprzydatny";
 "aihelp_form_hint"="Wypełnij formularz; aby skontaktować się z obsługą ręczną";
+"aihelp_send"="Wysłać";
+"aihelp_albums"="Albumy";
+"aihelp_file"="Plik";
+"aihelp_save_seccessfully"="Zapisano";
+"aihelp_save_failed"="Nie udało się zapisać";
+"aihelp_select_photo"="Wybierz zdjęcie";
+"aihelp_select"="Wybierać";
+"aihelp_image_format_unsupport"="Ten format obrazu nie jest obsługiwany";
+"aihelp_video_format_unsupport"="Format wideo nie jest obsługiwany";
+"aihelp_click_copy"="Kliknij; aby skopiować";
+"aihelp_open_browser"="Otwórz w przeglądarce; aby pobrać";

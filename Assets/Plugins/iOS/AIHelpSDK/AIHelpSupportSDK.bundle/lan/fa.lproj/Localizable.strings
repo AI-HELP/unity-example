@@ -1,4 +1,3 @@
-"aihelp_send"="ارسال";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="تعیین کردن";
 "aihelp_no"="لغو کردن";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="مفید";
 "aihelp_faq_unhelpful"="بی فایده";
 "aihelp_form_hint"="برای تماس با خدمات دستی فرم را پر کنید";
+"aihelp_send"="ارسال";
+"aihelp_albums"="آلبوم ها";
+"aihelp_file"="فایل";
+"aihelp_save_seccessfully"="با موفقیت ذخیره شد";
+"aihelp_save_failed"="ذخیره نشد";
+"aihelp_select_photo"="عکس را انتخاب کنید";
+"aihelp_select"="انتخاب کنید";
+"aihelp_image_format_unsupport"="این فرمت تصویر پشتیبانی نمی شود";
+"aihelp_video_format_unsupport"="فرمت ویدیو پشتیبانی نمی شود";
+"aihelp_click_copy"="برای کپی کلیک کنید";
+"aihelp_open_browser"="برای دانلود در مرورگر خود باز کنید";

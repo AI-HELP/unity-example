@@ -23,13 +23,13 @@ namespace AIHelp
         [DllImport("__Internal")]
         private static extern void unity_initLan(string apiKey, string domainName, string appId, string language);
 
-        public delegate void iOSOnAIHelpInitialized();
+        public delegate void iOSOnAIHelpInitialized(bool isSuccess, string message);
         [MonoPInvokeCallback(typeof(iOSOnAIHelpInitialized))]
-        private static void iOSInitCallback()
+        private static void iOSInitCallback(bool isSuccess, string message)
         {
             if (_iOSInitCallback != null)
             {
-                _iOSInitCallback();
+                _iOSInitCallback(isSuccess, message);
 
             }
         }
@@ -38,6 +38,9 @@ namespace AIHelp
 
         [DllImport("__Internal")]
         private static extern bool unity_show(string entranceId, string welcomeMessage);
+
+        [DllImport("__Internal")]
+        private static extern void unity_showSingleFAQ(string faqId, int conversationMoment);
 
         [DllImport("__Internal")]
         private static extern void unity_updateUserInfo(string userId, string userName, string serverId, string userTags, string customData, bool isSyncCrmInfo);
@@ -178,6 +181,11 @@ namespace AIHelp
         public bool Show(ApiConfig apiConfig) 
         {
             return unity_show(apiConfig.GetEntranceId(), apiConfig.GetWelcomeMessage());
+        }
+
+        public void ShowSingleFAQ(string faqId, ConversationMoment moment)
+        {
+            unity_showSingleFAQ(faqId, (int)moment);
         }
 
         public void UpdateUserInfo(UserConfig userConfig)

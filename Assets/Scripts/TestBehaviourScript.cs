@@ -12,15 +12,15 @@ using AIHelp;
 
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "";
-    private string domain = "";
-    private string appId = "";
+    private string appKey = "THIS IS YOUR APP KEY";
+    private string domain = "THIS IS YOUR DOMAIN";
+    private string appId = "THIS IS YOUR APP ID";
 
 
     private void Awake()
     {
         AIHelpSupport.enableLogging(true);
-        AIHelpSupport.Init(appKey, domain, appId,"en");
+        AIHelpSupport.Init(appKey, domain, appId);
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnSpecificFormSubmittedCallback(OnSpecificFormSubmittedCallback);
     }
@@ -28,10 +28,9 @@ public class TestBehaviourScript : MonoBehaviour
     private void Start()
     {
         Dictionary<string, Action> dic = new Dictionary<string, Action>() {
-            { "Canvas/robot",robotClick },
-            { "Canvas/manual",manualClick },
-            { "Canvas/allSection",allSectionClick },
-            { "Canvas/singleSection",singleSectionClick },
+            { "Canvas/customer", customerServiceClick },
+            { "Canvas/helpcenter",helpCenterClick },
+            { "Canvas/custom",customEntranceClick },
             { "Canvas/singleFAQ",singleFAQClick },
             { "Canvas/updateUserInfo",updateUserInfoClick },
             { "Canvas/updateSDKLanguage",updateSDKLanguageClick },
@@ -59,38 +58,29 @@ public class TestBehaviourScript : MonoBehaviour
 
     }
 
-    public void OnAIHelpInitializedCallback() {  
-        Console.Write("AIHelp init success");
+    public void OnAIHelpInitializedCallback(bool isSuccess, string message) {  
+        Console.Write("AIHelp init isSuccess " + isSuccess);
+        Console.Write("AIHelp init message " + message);
     }
 
-    void robotClick()
+    void customerServiceClick()
     {
-        // ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
-        // conversationBuilder.SetAlwaysShowHumanSupportButtonInBotPage(true);
-        // AIHelpSupport.ShowConversation(conversationBuilder.build());
         AIHelpSupport.Show("test004");
     }
 
-    void manualClick()
+    void helpCenterClick()
     {
-        // ConversationConfig.Builder conversationBuilder = new ConversationConfig.Builder();
-        // conversationBuilder.SetConversationIntent(ConversationIntent.HUMAN_SUPPORT);
-        // AIHelpSupport.ShowConversation(conversationBuilder.build());
         AIHelpSupport.Show("test001");
     }
 
-    void allSectionClick()
+    void customEntranceClick()
     {
-        // AIHelpSupport.ShowAllFAQSections();
-    }
-    void singleSectionClick()
-    {
-        // AIHelpSupport.ShowFAQSection("SECTION ID");
+        AIHelpSupport.Show("THIS IS YOUR ENTRANCE ID");
     }
 
     void singleFAQClick()
     {
-        // AIHelpSupport.ShowSingleFAQ("FAQ ID");
+        AIHelpSupport.ShowSingleFAQ("THIS IS YOUR FAQ ID", ConversationMoment.AFTER_MARKING_UNHELPFUL);
     }
 
     void updateUserInfoClick()

@@ -1,4 +1,3 @@
-"aihelp_send"="στείλετε";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="καθορίσει";
 "aihelp_no"="Ματαίωση";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Χρήσιμο";
 "aihelp_faq_unhelpful"="Ανεπιθύμητο";
 "aihelp_form_hint"="Συμπληρώστε τη φόρμα για να επικοινωνήσετε με το manual service";
+"aihelp_send"="Στείλετε";
+"aihelp_albums"="Άλμπουμ";
+"aihelp_file"="Αρχείο";
+"aihelp_save_seccessfully"="Αποθηκεύτηκε με επιτυχία";
+"aihelp_save_failed"="Αποτυχία αποθήκευσης";
+"aihelp_select_photo"="Επιλέξτε φωτογραφία";
+"aihelp_select"="Επιλέγω";
+"aihelp_image_format_unsupport"="Αυτή η μορφή εικόνας δεν υποστηρίζεται";
+"aihelp_video_format_unsupport"="Η μορφή βίντεο δεν υποστηρίζεται";
+"aihelp_click_copy"="Κάντε κλικ για αντιγραφή";
+"aihelp_open_browser"="Ανοίξτε στο πρόγραμμα περιήγησής σας για λήψη";

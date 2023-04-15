@@ -9,7 +9,7 @@
 #import <AIHelpSupportSDK/AIHelpSDKConfig.h>
 #import <UIKit/UIKit.h>
 
-typedef void (*AISupportInitCallBack)(void);
+typedef void (*AISupportInitCallBack)(const bool isSuccess, const char * message);
 typedef void (*AISupportMessageCallBack)(const int unreadCount);
 typedef void (*AISupportPingCallBack)(const char * log);
 typedef void (*AISupportIsSpecificFormCallBack)(void);
@@ -52,6 +52,8 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
  Show the AIHelp conversation screen.
  */
 + (BOOL)showWithApiConfig:(AIHelpApiConfig *)apiConfig;
+
++ (void)showSingleFAQ:(NSString *)faqId showConversationMoment:(AIHelpFAQShowConversationMoment)showConversationMoment;
 
 /**
  * Update a user's profile via UserConfig.

@@ -1,6 +1,4 @@
-"aihelp_send"="发送";
 "aihelp_op_cs"="HELP";
-"aihelp_enter_number"="请输入数字";
 "aihelp_yes"="确定";
 "aihelp_no"="取消";
 "aihelp_view_details"="查看详情";
@@ -51,7 +49,19 @@
 "aihelp_is_Answer_helpful"="下方的答案是否有帮助";
 "aihelp_new_conversation"="新对话";
 "aihelp_enter_email_address"="请输入邮箱";
+"aihelp_enter_number"="请输入数字";
 "aihelp_upload_attachment"="上传附件";
 "aihelp_faq_helpful"="有帮助";
 "aihelp_faq_unhelpful"="没有帮助";
 "aihelp_form_hint"="填写表单联系人工客服";
+"aihelp_send"="发送";
+"aihelp_albums"="相册";
+"aihelp_file"="文件";
+"aihelp_save_seccessfully"="保存成功";
+"aihelp_save_failed"="保存失败";
+"aihelp_select_photo"="选取照片";
+"aihelp_select"="选取";
+"aihelp_image_format_unsupport"="不支持该图片格式";
+"aihelp_video_format_unsupport"="不支持该视频格式";
+"aihelp_click_copy"="点击复制";
+"aihelp_open_browser"="在浏览器打开下载";

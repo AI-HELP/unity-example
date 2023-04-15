@@ -1,6 +1,5 @@
-"aihelp_send"="poslat";
 "aihelp_op_cs"="HELP";
-"aihelp_yes"="určit";
+"aihelp_yes"="Potvrdit";
 "aihelp_no"="zrušení";
 "aihelp_view_details"="Zobrazit podrobnosti";
 "aihelp_chat_hint"="Zadejte svůj vzkaz";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Ochotný";
 "aihelp_faq_unhelpful"="Neužitečné";
 "aihelp_form_hint"="Pro kontaktování manuálního servisu vyplňte formulář";
+"aihelp_send"="Poslat";
+"aihelp_albums"="alba";
+"aihelp_file"="Soubor";
+"aihelp_save_seccessfully"="Úspěšně uloženo";
+"aihelp_save_failed"="Uložení se nezdařilo";
+"aihelp_select_photo"="Vyberte fotografii";
+"aihelp_select"="Vybrat";
+"aihelp_image_format_unsupport"="Tento formát obrázku není podporován";
+"aihelp_video_format_unsupport"="Formát videa není podporován";
+"aihelp_click_copy"="Kliknutím zkopírujete";
+"aihelp_open_browser"="Otevřete v prohlížeči a stáhněte si";

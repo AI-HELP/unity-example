@@ -58,6 +58,27 @@ extern "C" {
         return [AIHelpSupportSDK showWithApiConfig:configBuilder.build];
     }
 
+    void unity_showSingleFAQ(const char* faqId, int conversationMoment) {
+        AIHelpFAQShowConversationMoment moment = AIHelpFAQShowConversationMomentNever;
+        switch(conversationMoment){
+            case 1:
+                moment = AIHelpFAQShowConversationMomentNever;
+                break;
+            case 2:
+                moment = AIHelpFAQShowConversationMomentAlways;
+                break;
+            case 3:
+                moment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
+                break;
+            case 4:
+                moment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
+                break;
+            default:
+                break;    
+        }
+        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) showConversationMoment:moment];
+    }
+
     void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo) {
         
         NSString *_userTags = charToNSString(userTags);

@@ -1,4 +1,3 @@
-"aihelp_send"="보내다";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="확인";
 "aihelp_no"="취소";
@@ -52,6 +51,17 @@
 "aihelp_enter_email_address"="이메일을 입력해 주세요.";
 "aihelp_enter_number"="숫자를 입력해 주세요.";
 "aihelp_upload_attachment"="첨파일 업로드";
-"aihelp_faq_helpful"="도움이 되는";
-"aihelp_faq_unhelpful"="도움이되지 않는";
+"aihelp_faq_helpful"="만족";
+"aihelp_faq_unhelpful"="불만";
 "aihelp_form_hint"="수동 서비스에 문의하려면 양식을 작성하십시오.";
+"aihelp_send"="보내다";
+"aihelp_albums"="앨범";
+"aihelp_file"="파일";
+"aihelp_save_seccessfully"="성공적으로 저장되었습니다";
+"aihelp_save_failed"="저장 실패";
+"aihelp_select_photo"="사진 선택";
+"aihelp_select"="선택하다";
+"aihelp_image_format_unsupport"="이 이미지 형식은 지원되지 않습니다.";
+"aihelp_video_format_unsupport"="비디오 형식이 지원되지 않습니다";
+"aihelp_click_copy"="클릭하여 복사";
+"aihelp_open_browser"="브라우저에서 열어 다운로드";

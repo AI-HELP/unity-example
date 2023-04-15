@@ -1,4 +1,3 @@
-"aihelp_send"="भेजना";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="निर्धारित";
 "aihelp_no"="रद्द करना";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="मददगार";
 "aihelp_faq_unhelpful"="अनुपयोगी";
 "aihelp_form_hint"="मैन्युअल सेवा से संपर्क करने के लिए फ़ॉर्म भरें";
+"aihelp_send"="भेजना";
+"aihelp_albums"="एलबम";
+"aihelp_file"="फ़ाइल";
+"aihelp_save_seccessfully"="सफलतापूर्वक संचित कर लिया गया है";
+"aihelp_save_failed"="सहेजने में विफल";
+"aihelp_select_photo"="फोटो चुनें";
+"aihelp_select"="चुनना";
+"aihelp_image_format_unsupport"="यह छवि प्रारूप समर्थित नहीं है";
+"aihelp_video_format_unsupport"="वीडियो प्रारूप समर्थित नहीं है";
+"aihelp_click_copy"="कॉपी करने के लिए क्लिक करें";
+"aihelp_open_browser"="डाउनलोड करने के लिए अपने ब्राउज़र में खोलें";

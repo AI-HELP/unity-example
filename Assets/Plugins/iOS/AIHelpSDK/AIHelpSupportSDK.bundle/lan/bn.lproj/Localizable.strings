@@ -1,4 +1,3 @@
-"aihelp_send"="পাঠান";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="নির্ধারণ";
 "aihelp_no"="বাতিল করুন";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="সহায়ক";
 "aihelp_faq_unhelpful"="অসহায়";
 "aihelp_form_hint"="ম্যানুয়াল পরিষেবার সাথে যোগাযোগ করতে ফর্মটি পূরণ করুন";
+"aihelp_send"="পাঠান";
+"aihelp_albums"="অ্যালবাম";
+"aihelp_file"="ফাইল";
+"aihelp_save_seccessfully"="সফলভাবে সংরক্ষিত";
+"aihelp_save_failed"="সংরক্ষণ করতে ব্যর্থ হয়েছে";
+"aihelp_select_photo"="ছবি নির্বাচন করুন";
+"aihelp_select"="নির্বাচন করুন";
+"aihelp_image_format_unsupport"="এই চিত্র বিন্যাস সমর্থিত নয়";
+"aihelp_video_format_unsupport"="ভিডিও বিন্যাস সমর্থিত নয়";
+"aihelp_click_copy"="অনুলিপি করতে ক্লিক করুন";
+"aihelp_open_browser"="ডাউনলোড করতে আপনার ব্রাউজারে খুলুন";

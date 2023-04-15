@@ -30,6 +30,11 @@ namespace AIHelp
             return AIHelpCore.getInstance().Show(apiConfig);
         }
 
+        public static void ShowSingleFAQ(string faqId, ConversationMoment moment)
+        {
+            AIHelpCore.getInstance().ShowSingleFAQ(faqId, moment);
+        }
+
         public static void UpdateUserInfo(UserConfig userConfig)
         {
             AIHelpCore.getInstance().UpdateUserInfo(userConfig);

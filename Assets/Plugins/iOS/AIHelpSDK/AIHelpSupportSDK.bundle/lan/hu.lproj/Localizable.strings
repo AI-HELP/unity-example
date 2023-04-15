@@ -1,4 +1,3 @@
-"aihelp_send"="Küld";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="IGEN";
 "aihelp_no"="megszünteti";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Hasznos";
 "aihelp_faq_unhelpful"="Nem segítőkész";
 "aihelp_form_hint"="Töltse ki az űrlapot a kézi szervizzel való kapcsolatfelvételhez";
+"aihelp_send"="Küld";
+"aihelp_albums"="Albumok";
+"aihelp_file"="Fájl";
+"aihelp_save_seccessfully"="Sikeresen mentve";
+"aihelp_save_failed"="Nem sikerült menteni";
+"aihelp_select_photo"="Válassza ki a fényképet";
+"aihelp_select"="Válassza ki";
+"aihelp_image_format_unsupport"="Ez a képformátum nem támogatott";
+"aihelp_video_format_unsupport"="A videó formátum nem támogatott";
+"aihelp_click_copy"="Kattintson a másoláshoz";
+"aihelp_open_browser"="Nyissa meg a böngészőben a letöltéshez";

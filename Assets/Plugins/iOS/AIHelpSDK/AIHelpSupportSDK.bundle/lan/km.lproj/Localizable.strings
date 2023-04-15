@@ -1,4 +1,3 @@
-"aihelp_send"="ផ្ញើ";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="កំណត់";
 "aihelp_no"="បោះបង់";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="មានប្រយោជន៍";
 "aihelp_faq_unhelpful"="គ្មានប្រយោជន៍";
 "aihelp_form_hint"="បំពេញទម្រង់ដើម្បីទាក់ទងសេវាដោយដៃ";
+"aihelp_send"="ផ្ញើ";
+"aihelp_albums"="អាល់ប៊ុម";
+"aihelp_file"="ឯកសារ";
+"aihelp_save_seccessfully"="បានរក្សាទុកដោយជោគជ័យ";
+"aihelp_save_failed"="បរាជ័យក្នុងការរក្សាទុក";
+"aihelp_select_photo"="ជ្រើសរើសរូបថត";
+"aihelp_select"="ជ្រើសរើស";
+"aihelp_image_format_unsupport"="ទម្រង់រូបភាពនេះមិនត្រូវបានគាំទ្រទេ។";
+"aihelp_video_format_unsupport"="ទម្រង់វីដេអូមិនត្រូវបានគាំទ្រទេ។";
+"aihelp_click_copy"="ចុចដើម្បីចម្លង";
+"aihelp_open_browser"="បើកនៅក្នុងកម្មវិធីរុករករបស់អ្នកដើម្បីទាញយក";

@@ -1,5 +1,4 @@
-"aihelp_send"="ပို့ပါ";
-"aihelp_op_cs"="HELP";
+"aihelp_op_cs"="ကူညီပါ";
 "aihelp_yes"="ဆုံးဖြတ်ရန်";
 "aihelp_no"="ပယ်ဖျက်";
 "aihelp_view_details"="အသေးစိတ်ကြည့်ရှုပါ";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="အထောက်အကူဖြစ်စေသည်။";
 "aihelp_faq_unhelpful"="အကူအညီမဖြစ်ပါ။";
 "aihelp_form_hint"="လူကိုယ်တိုင် ဝန်ဆောင်မှုကို ဆက်သွယ်ရန် ဖောင်ဖြည့်ပါ။";
+"aihelp_send"="ပို့ပါ။";
+"aihelp_albums"="အယ်လ်ဘမ်များ";
+"aihelp_file"="ဖို";
+"aihelp_save_seccessfully"="အောင်မြင်စွာ သိမ်းဆည်းခဲ့သည်။";
+"aihelp_save_failed"="သိမ်းဆည်းရန် မအောင်မြင်ပါ။";
+"aihelp_select_photo"="ဓာတ်ပုံကို ရွေးပါ။";
+"aihelp_select"="ရွေးချယ်ပါ။";
+"aihelp_image_format_unsupport"="ဤပုံဖော်မတ်ကို မပံ့ပိုးပါ။";
+"aihelp_video_format_unsupport"="ဗီဒီယိုဖော်မတ်ကို မပံ့ပိုးပါ။";
+"aihelp_click_copy"="ကူးယူရန် နှိပ်ပါ။";
+"aihelp_open_browser"="ဒေါင်းလုဒ်လုပ်ရန် သင့်ဘရောက်ဆာတွင် ဖွင့်ပါ။";

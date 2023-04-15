@@ -1,4 +1,3 @@
-"aihelp_send"="發送";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="確認";
 "aihelp_no"="取消";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="有幫助";
 "aihelp_faq_unhelpful"="沒有幫助";
 "aihelp_form_hint"="填寫表單聯繫人工客服";
+"aihelp_send"="發送";
+"aihelp_albums"="相冊";
+"aihelp_file"="文件";
+"aihelp_save_seccessfully"="保存成功";
+"aihelp_save_failed"="保存失敗";
+"aihelp_select_photo"="選取照片";
+"aihelp_select"="選取";
+"aihelp_image_format_unsupport"="不支持該圖片格式";
+"aihelp_video_format_unsupport"="不支持該視頻格式";
+"aihelp_click_copy"="點擊複製";
+"aihelp_open_browser"="在瀏覽器打開下載";

@@ -1,4 +1,3 @@
-"aihelp_send"="அனுப்பு";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="ஆம்";
 "aihelp_no"="ரத்துசெய்";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="உதவிகரமானது";
 "aihelp_faq_unhelpful"="உதவாதது";
 "aihelp_form_hint"="கையேடு சேவையைத் தொடர்புகொள்ள படிவத்தை நிரப்பவும்";
+"aihelp_send"="அனுப்பு";
+"aihelp_albums"="ஆல்பங்கள்";
+"aihelp_file"="கோப்பு";
+"aihelp_save_seccessfully"="வெற்றிகரமாக சேமிக்கப்பட்டது";
+"aihelp_save_failed"="சேமிக்க முடியவில்லை";
+"aihelp_select_photo"="புகைப்படத்தைத் தேர்ந்தெடுக்கவும்";
+"aihelp_select"="தேர்ந்தெடு";
+"aihelp_image_format_unsupport"="இந்த பட வடிவம் ஆதரிக்கப்படவில்லை";
+"aihelp_video_format_unsupport"="வீடியோ வடிவம் ஆதரிக்கப்படவில்லை";
+"aihelp_click_copy"="நகலெடுக்க கிளிக் செய்யவும்";
+"aihelp_open_browser"="பதிவிறக்க உங்கள் உலாவியில் திறக்கவும்";

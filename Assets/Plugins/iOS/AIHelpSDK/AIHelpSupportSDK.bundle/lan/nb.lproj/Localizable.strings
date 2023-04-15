@@ -1,4 +1,3 @@
-"aihelp_send"="sende";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="fastslå";
 "aihelp_no"="Avbryt";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Hjelpsom";
 "aihelp_faq_unhelpful"="Unyttig";
 "aihelp_form_hint"="Fyll ut skjemaet for å kontakte manuell service";
+"aihelp_send"="Sende";
+"aihelp_albums"="Album";
+"aihelp_file"="Fil";
+"aihelp_save_seccessfully"="Lagret";
+"aihelp_save_failed"="Kunne ikke lagre";
+"aihelp_select_photo"="Velg bilde";
+"aihelp_select"="Plukke ut";
+"aihelp_image_format_unsupport"="Dette bildeformatet støttes ikke";
+"aihelp_video_format_unsupport"="Videoformatet støttes ikke";
+"aihelp_click_copy"="Klikk for å kopiere";
+"aihelp_open_browser"="Åpne i nettleseren for å laste ned";

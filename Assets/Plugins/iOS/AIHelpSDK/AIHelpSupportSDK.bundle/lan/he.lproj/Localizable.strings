@@ -1,4 +1,3 @@
-"aihelp_send"="לִשְׁלוֹחַ";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="לְאַשֵׁר";
 "aihelp_no"="לְבַטֵל";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="מוֹעִיל";
 "aihelp_faq_unhelpful"="לא עוזר";
 "aihelp_form_hint"="מלא את הטופס כדי ליצור קשר עם שירות ידני";
+"aihelp_send"="לִשְׁלוֹחַ";
+"aihelp_albums"="אלבומים";
+"aihelp_file"="קוֹבֶץ";
+"aihelp_save_seccessfully"="נשמר בהצלחה";
+"aihelp_save_failed"="השמירה נכשלה";
+"aihelp_select_photo"="בחר תמונה";
+"aihelp_select"="בחר";
+"aihelp_image_format_unsupport"="פורמט תמונה זה אינו נתמך";
+"aihelp_video_format_unsupport"="פורמט הווידאו אינו נתמך";
+"aihelp_click_copy"="לחץ כדי להעתיק";
+"aihelp_open_browser"="פתח בדפדפן שלך כדי להוריד";

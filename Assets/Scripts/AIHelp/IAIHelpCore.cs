@@ -4,7 +4,7 @@ namespace AIHelp
     public class AIHelpDefine
     {
 
-        public delegate void OnAIHelpInitializedCallback();
+        public delegate void OnAIHelpInitializedCallback(bool isSuccess, string message);
 
         public delegate void OnNetworkCheckResultCallback(string netLog);
 
@@ -25,6 +25,7 @@ namespace AIHelp
         
         bool Show(string entranceId);
         bool Show(ApiConfig apiConfig);
+        void ShowSingleFAQ(string faqId, ConversationMoment moment);
 
         void UpdateUserInfo(UserConfig userConfig);
         void ResetUserInfo();

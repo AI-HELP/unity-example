@@ -1,4 +1,3 @@
-"aihelp_send"="పంపండి";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="YES";
 "aihelp_no"="రద్దు చేయండి";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="సహాయకారిగా";
 "aihelp_faq_unhelpful"="పనికిరానిది";
 "aihelp_form_hint"="మాన్యువల్ సేవను సంప్రదించడానికి ఫారమ్‌ను పూరించండి";
+"aihelp_send"="పంపండి";
+"aihelp_albums"="ఆల్బమ్‌లు";
+"aihelp_file"="ఫైల్";
+"aihelp_save_seccessfully"="విజయవంతంగా సేవ్ చేయబడింది";
+"aihelp_save_failed"="సేవ్ చేయడంలో విఫలమైంది";
+"aihelp_select_photo"="ఫోటోను ఎంచుకోండి";
+"aihelp_select"="ఎంచుకోండి";
+"aihelp_image_format_unsupport"="ఈ చిత్ర ఆకృతికి మద్దతు లేదు";
+"aihelp_video_format_unsupport"="వీడియో ఆకృతికి మద్దతు లేదు";
+"aihelp_click_copy"="కాపీ చేయడానికి క్లిక్ చేయండి";
+"aihelp_open_browser"="డౌన్‌లోడ్ చేయడానికి మీ బ్రౌజర్‌లో తెరవండి";

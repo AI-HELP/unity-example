@@ -1,4 +1,3 @@
-"aihelp_send"="lähettää";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="Vahvistaa";
 "aihelp_no"="Peruuta";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Avulias";
 "aihelp_faq_unhelpful"="Epäedullinen";
 "aihelp_form_hint"="Täytä lomake ottaaksesi yhteyttä manuaaliseen palveluun";
+"aihelp_send"="Lähettää";
+"aihelp_albums"="Albumit";
+"aihelp_file"="Tiedosto";
+"aihelp_save_seccessfully"="Tallennettu onnistuneesti";
+"aihelp_save_failed"="Tallentaminen epäonnistui";
+"aihelp_select_photo"="Valitse valokuva";
+"aihelp_select"="Valitse";
+"aihelp_image_format_unsupport"="Tätä kuvamuotoa ei tueta";
+"aihelp_video_format_unsupport"="Videomuotoa ei tueta";
+"aihelp_click_copy"="Napsauta kopioidaksesi";
+"aihelp_open_browser"="Avaa selaimessasi ladataksesi";

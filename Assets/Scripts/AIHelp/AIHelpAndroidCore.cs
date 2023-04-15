@@ -54,6 +54,12 @@ namespace AIHelp
             return clz.CallStatic<AndroidJavaObject>("fromValue", (int)platform);
         }
 
+        private AndroidJavaObject getShowConversationMoment(ConversationMoment conversationMoment)
+        {
+            AndroidJavaClass clz = new AndroidJavaClass("net.aihelp.config.enums.ShowConversationMoment");
+            return clz.CallStatic<AndroidJavaObject>("fromValue", (int)conversationMoment);
+        }
+
         public bool Show(string entranceId)
         {
             if (javaSupport != null && currentActivity != null)
@@ -70,6 +76,14 @@ namespace AIHelp
                 return javaSupport.CallStatic<bool>("show", getApiConfig(apiConfig));
             }
             return false;
+        }
+
+        public void ShowSingleFAQ(string faqId, ConversationMoment conversationMoment) 
+        {
+            if (javaSupport != null && currentActivity != null)
+            {
+                javaSupport.CallStatic("showSingleFAQ", faqId, getShowConversationMoment(conversationMoment));
+            }
         }
 
         public void UpdateUserInfo(UserConfig config)
@@ -153,9 +167,9 @@ namespace AIHelp
                 this.sessionCloseCallback = callback;
             }
 
-            void onAIHelpInitialized()
+            void onAIHelpInitialized(bool isSuccess, string message)
             {
-                initCallback();
+                initCallback(isSuccess, message);
             }
 
             void onMessageCountArrived(int msgCount)

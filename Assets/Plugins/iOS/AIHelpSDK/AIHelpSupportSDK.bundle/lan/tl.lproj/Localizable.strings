@@ -1,4 +1,3 @@
-"aihelp_send"="magpadala";
 "aihelp_op_cs"="HELP";
 "aihelp_yes"="matukoy";
 "aihelp_no"="kanselahin";
@@ -55,3 +54,14 @@
 "aihelp_faq_helpful"="Matulungin";
 "aihelp_faq_unhelpful"="Hindi nakakatulong";
 "aihelp_form_hint"="Punan ang form para makipag-ugnayan sa manu-manong serbisyo";
+"aihelp_send"="Ipadala";
+"aihelp_albums"="Mga album";
+"aihelp_file"="file";
+"aihelp_save_seccessfully"="Matagumpay na na-save";
+"aihelp_save_failed"="Nabigong i-save";
+"aihelp_select_photo"="Pumili ng larawan";
+"aihelp_select"="Pumili";
+"aihelp_image_format_unsupport"="Hindi sinusuportahan ang format ng larawang ito";
+"aihelp_video_format_unsupport"="Hindi sinusuportahan ang format ng video";
+"aihelp_click_copy"="I-click para kopyahin";
+"aihelp_open_browser"="Buksan sa iyong browser upang i-download";
