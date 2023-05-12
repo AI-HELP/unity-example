@@ -35,7 +35,6 @@ public class TestBehaviourScript : MonoBehaviour
             { "Canvas/updateSDKLanguage",updateSDKLanguageClick },
             { "Canvas/isHelpShow",isHelpShowClick },
             { "Canvas/unreadMeassage",unreadMeassageClick },
-            { "Canvas/Push",pushClick },
             { "Canvas/netWorkCheck",netWorkCheckClick },
             { "Canvas/uploadLog",upLoadLogClick },
             { "Canvas/enableLogging",enableLoggingClick },
@@ -112,11 +111,6 @@ public class TestBehaviourScript : MonoBehaviour
     void unreadMeassageClick()
     {
         AIHelpSupport.StartUnreadMessageCountPolling(OnMessageCountArrivedCallback);
-    }
-
-    void pushClick()
-    {
-        AIHelpSupport.SetPushTokenAndPlatform("TOKEN", PushPlatform.FIREBASE);
     }
 
     void netWorkCheckClick()

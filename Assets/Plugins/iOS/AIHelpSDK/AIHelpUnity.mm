@@ -142,6 +142,9 @@ extern "C" {
             case 6:
                 ePlatform = AIHelpTokenPlatformHUAWEI;
                 break;
+            case 7:
+                ePlatform = AIHelpTokenPlatformOneSignal;
+                break;
             default:
                 ePlatform = AIHelpTokenPlatformAPNS;
                 break;

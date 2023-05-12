@@ -331,6 +331,14 @@ namespace AIHelp
             {
                 tempPlatform = 4;
             }
+            else if (platform == PushPlatform.HUAWEI)
+            {
+                tempPlatform = 6;
+            }
+            else if (platform == PushPlatform.ONE_SIGNAL)
+            {
+                tempPlatform = 7;
+            }
             return tempPlatform;
         }
 
