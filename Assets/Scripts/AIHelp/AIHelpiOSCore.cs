@@ -136,6 +136,9 @@ namespace AIHelp
         private static extern void unity_showUrl(string url);
 
         [DllImport("__Internal")]
+        private static extern void unity_uninstall();
+
+        [DllImport("__Internal")]
         private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);
 
         public delegate void iOSOnAIHelpSpecificFormSubmit();
@@ -369,6 +372,11 @@ namespace AIHelp
         public void ShowUrl(string url)
         {
             unity_showUrl(url);
+        }
+
+        public void Uninstall()
+        {
+            unity_uninstall();
         }
 
         public void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)

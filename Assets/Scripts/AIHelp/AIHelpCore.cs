@@ -181,6 +181,12 @@ namespace AIHelp
             if (!IsHelpCorePrepared()) return;
             helpCore.EnableLogging(enable);
         }
+        
+        public void Uninstall()
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.Uninstall();
+        }
 
         public void ShowUrl(string url)
         {

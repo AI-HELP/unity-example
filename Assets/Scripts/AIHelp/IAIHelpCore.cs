@@ -54,6 +54,7 @@ namespace AIHelp
         string GetSDKVersion();
         bool IsAIHelpShowing();
         void EnableLogging(bool enable);
+        void Uninstall();
         void ShowUrl(string url);
         void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion);
         void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback);

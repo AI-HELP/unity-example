@@ -44,6 +44,7 @@ extern "C" void unity_setSDKAppearanceMode (int mode);
 extern "C" void unity_setSDKEdgeInsets (float top, float bottom, bool enable);
 extern "C" void unity_setSDKEdgeColor (float red, float green, float blue, float alpha);
 extern "C" void unity_showUrl (const char* url);
+extern "C" void unity_uninstall ();
 extern "C" void unity_additionalSupportFor(int countryOrRegion);
 extern "C" void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack);
 extern "C" void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack);

@@ -271,6 +271,10 @@ extern "C" {
     void unity_showUrl (const char* url) {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
     }
+   
+    void unity_uninstall () {
+        [AIHelpSupportSDK uninstall];
+    }
 
     void unity_additionalSupportFor(int countryOrRegion) {
         AIHelpPublishCountryOrRegion tmpCountryOrRegion = AIHelpCN;

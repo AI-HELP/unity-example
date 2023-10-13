@@ -109,7 +109,8 @@ public class TestBehaviourScript : MonoBehaviour
 
     void isHelpShowClick()
     {
-        AIHelpSupport.IsAIHelpShowing();
+        // AIHelpSupport.IsAIHelpShowing();
+        AIHelpSupport.Uninstall();
     }
 
     void OnMessageCountArrivedCallback(int msgCount)

@@ -126,6 +126,11 @@ namespace AIHelp
             AIHelpCore.getInstance().EnableLogging(enable);
         }
 
+        public static void Uninstall()
+        {
+            AIHelpCore.getInstance().Uninstall();
+        }
+
         public static void ShowUrl(string url)
         {
             AIHelpCore.getInstance().ShowUrl(url);
