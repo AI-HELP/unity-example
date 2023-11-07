@@ -13,7 +13,6 @@ typedef NS_ENUM(int,AIHelpTokenPlatform) {                    /* PushTokenPlatfo
     AIHelpTokenPlatformJpush              = 3,                // Jpush
     AIHelpTokenPlatformGeTui              = 4,                // GeTui
     AIHelpTokenPlatformHUAWEI             = 6,                // HUAWEI
-    AIHelpTokenPlatformOneSignal          = 7,                // OneSignal
 };
 
 typedef NS_ENUM(int,AIHelpConversationIntent) {                    /* ConversationIntent enum */
