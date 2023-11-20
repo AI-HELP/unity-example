@@ -59,6 +59,7 @@ public class TestBehaviourScript : MonoBehaviour
     public void OnAIHelpInitializedCallback(bool isSuccess, string message) {  
         Console.Write("AIHelp init isSuccess " + isSuccess);
         Console.Write("AIHelp init message " + message);
+        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
     }
 
     void customerServiceClick()
