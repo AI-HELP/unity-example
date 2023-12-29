@@ -23,6 +23,7 @@ extern "C" void unity_resetUserInfo ();
 
 extern "C" void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack);
 extern "C" void unity_startUnreadMessageCountPolling (AISupportMessageCallBack callBack);
+extern "C" void unity_fetchUnreadMessageCount (AISupportMessageCallBack callBack);
 extern "C" void unity_updateSDKLanguage (const char* language);
 extern "C" void unity_setUploadLogPath (const char* path);
 extern "C" void unity_setPushTokenAndPlatform (const char* pushToken, int pushPlatform);

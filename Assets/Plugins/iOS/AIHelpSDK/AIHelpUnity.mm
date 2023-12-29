@@ -116,6 +116,10 @@ extern "C" {
         [AIHelpSupportSDK startUnreadMessageCountPolling:callBack];
     }
 
+    void unity_fetchUnreadMessageCount (AISupportMessageCallBack callBack) {
+        [AIHelpSupportSDK fetchUnreadMessageCount:callBack];
+    }
+
     void unity_updateSDKLanguage (const char* language) {
         [AIHelpSupportSDK updateSDKLanguage:charToNSString(language)];
     }

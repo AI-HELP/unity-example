@@ -156,6 +156,11 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
 + (void)startUnreadMessageCountPolling:(AISupportMessageCallBack)callback;
 
 /**
+ * Fetch unread message count proactively
+ * @param  callback for unread message fetching
+ */
++ (void)fetchUnreadMessageCount:(AISupportMessageCallBack)callback;
+/**
  * Set the SDK display mode
  *
  * Default following system

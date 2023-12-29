@@ -121,6 +121,12 @@ namespace AIHelp
             helpCore.StartUnreadMessageCountPolling(callback);
         }
 
+        public void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.FetchUnreadMessageCount(callback);
+        }
+        
         public string GetSDKVersion()
         {
             if (!IsHelpCorePrepared()) return "";

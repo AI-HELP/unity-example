@@ -225,6 +225,11 @@ namespace AIHelp
             javaSupport.CallStatic("startUnreadMessageCountPolling", listener == null ? null : new ListenerAdapter(listener));
         }
 
+        public void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback listener)
+        {
+            javaSupport.CallStatic("fetchUnreadMessageCount", listener == null ? null : new ListenerAdapter(listener));
+        }
+
         public void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback listener)
         {
             javaSupport.CallStatic("setOnSpecificFormSubmittedCallback", listener == null ? null : new ListenerAdapter(listener));

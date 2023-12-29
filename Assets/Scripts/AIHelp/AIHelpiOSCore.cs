@@ -12,7 +12,8 @@ namespace AIHelp
 
         static event AIHelpDefine.OnAIHelpInitializedCallback _iOSInitCallback;
         static event AIHelpDefine.OnNetworkCheckResultCallback _iOSNetworkCheckCallback;
-        static event AIHelpDefine.OnMessageCountArrivedCallback _iOSMessageCountCallback;
+        static event AIHelpDefine.OnMessageCountArrivedCallback _iOSPollingMessageCountCallback;
+        static event AIHelpDefine.OnMessageCountArrivedCallback _iOSFetchMessageCountCallback;
         static event AIHelpDefine.OnSpecificFormSubmittedCallback _iOSSpecificFormCallback;
         static event AIHelpDefine.OnAIHelpSessionOpenCallback _iOSSessionOpenCallback;
         static event AIHelpDefine.OnAIHelpSessionCloseCallback _iOSSessionCloseCallback;
@@ -97,18 +98,31 @@ namespace AIHelp
         private static extern void unity_setNetworkCheckHostAddress(string address, iOSOnNetworkCheckResult callback);
 
 
-        public delegate void iOSOnMessageCountArrived(int msgCount);
-        [MonoPInvokeCallback(typeof(iOSOnMessageCountArrived))]
-        private static void iOSOnMessageCountArrivedMethod(int msgCount)
+        public delegate void iOSOnPollingMessageCountArrived(int msgCount);
+        [MonoPInvokeCallback(typeof(iOSOnPollingMessageCountArrived))]
+        private static void iOSOnPollingMessageCountArrivedMethod(int msgCount)
         {
-            if (_iOSMessageCountCallback != null)
+            if (_iOSPollingMessageCountCallback != null)
             {
-                _iOSMessageCountCallback(msgCount);
-
+                _iOSPollingMessageCountCallback(msgCount);
             }
         }
+
+        public delegate void iOSOnFetchMessageCountArrived(int msgCount);
+        [MonoPInvokeCallback(typeof(iOSOnFetchMessageCountArrived))]
+        private static void iOSOnFetchMessageCountArrivedMethod(int msgCount)
+        {
+            if (_iOSFetchMessageCountCallback != null)
+            {
+                _iOSFetchMessageCountCallback(msgCount);
+            }
+        }
+
         [DllImport("__Internal")]
-        private static extern void unity_startUnreadMessageCountPolling(iOSOnMessageCountArrived callback);
+        private static extern void unity_startUnreadMessageCountPolling(iOSOnPollingMessageCountArrived callback);
+
+        [DllImport("__Internal")]
+        private static extern void unity_fetchUnreadMessageCount(iOSOnFetchMessageCountArrived callback);
 
         [DllImport("__Internal")]
         private static extern void unity_showUrl(string url);
@@ -241,8 +255,14 @@ namespace AIHelp
 
         public void StartUnreadMessageCountPolling(AIHelpDefine.OnMessageCountArrivedCallback callback)
         {
-            _iOSMessageCountCallback = callback;
-            unity_startUnreadMessageCountPolling(iOSOnMessageCountArrivedMethod);
+            _iOSPollingMessageCountCallback = callback;
+            unity_startUnreadMessageCountPolling(iOSOnPollingMessageCountArrivedMethod);
+        }
+
+        public void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        {
+            _iOSFetchMessageCountCallback = callback;
+            unity_fetchUnreadMessageCount(iOSOnFetchMessageCountArrivedMethod);
         }
 
         public string GetSDKVersion()

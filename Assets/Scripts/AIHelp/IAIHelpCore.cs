@@ -38,6 +38,7 @@ namespace AIHelp
 
         void SetNetworkCheckHostAddress(string address, AIHelpDefine.OnNetworkCheckResultCallback callback);
         void StartUnreadMessageCountPolling(AIHelpDefine.OnMessageCountArrivedCallback callback);
+        void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback callback);
 
         string GetSDKVersion();
         bool IsAIHelpShowing();

@@ -37,7 +37,8 @@ typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
     AIHelpFAQSupportEntranceHomePage = 1,
     AIHelpFAQSupportEntranceQuestionList = 2,
     AIHelpFAQSupportEntranceAnswerPage = 3,
-    AIHelpFAQSupportEntranceAfterMarkingUnhelpful = 4
+    AIHelpFAQSupportEntranceAfterMarkingUnhelpful = 4,
+    AIHelpFAQSupportEntranceFAQNotFound = 5,
 };
 
 #pragma mark - ECServiceUserConfig

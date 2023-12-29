@@ -20,46 +20,46 @@ public class TestBehaviourScript : MonoBehaviour
     private void Awake()
     {
         AIHelpSupport.enableLogging(true);
+        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
         AIHelpSupport.Init(appKey, domain, appId);
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
     }
 
     private void Start()
     {
-        Dictionary<string, Action> dic = new Dictionary<string, Action>() {
-            { "Canvas/customer", customerServiceClick },
-            { "Canvas/helpcenter",helpCenterClick },
-            { "Canvas/custom",customEntranceClick },
-            { "Canvas/singleFAQ",singleFAQClick },
-            { "Canvas/updateUserInfo",updateUserInfoClick },
-            { "Canvas/updateSDKLanguage",updateSDKLanguageClick },
-            { "Canvas/isHelpShow",isHelpShowClick },
-            { "Canvas/unreadMeassage",unreadMeassageClick },
-            { "Canvas/netWorkCheck",netWorkCheckClick },
-            { "Canvas/uploadLog",upLoadLogClick },
-            { "Canvas/enableLogging",enableLoggingClick },
-            { "Canvas/SDKVersion",SDKVersionClick },
-            { "Canvas/showUrl",showUrlClick },
-            { "Canvas/runAcceleration",runAccelerationClick }
+        Dictionary<string, Action> dic = new Dictionary<string, Action>()
+        {
+            {"Canvas/customer", customerServiceClick},
+            {"Canvas/helpcenter", helpCenterClick},
+            {"Canvas/custom", customEntranceClick},
+            {"Canvas/singleFAQ", singleFAQClick},
+            {"Canvas/updateUserInfo", updateUserInfoClick},
+            {"Canvas/updateSDKLanguage", updateSDKLanguageClick},
+            {"Canvas/isHelpShow", isHelpShowClick},
+            {"Canvas/unreadMeassage", unreadMeassageClick},
+            {"Canvas/netWorkCheck", netWorkCheckClick},
+            {"Canvas/uploadLog", upLoadLogClick},
+            {"Canvas/enableLogging", enableLoggingClick},
+            {"Canvas/SDKVersion", SDKVersionClick},
+            {"Canvas/showUrl", showUrlClick},
+            {"Canvas/runAcceleration", runAccelerationClick},
         };
 
-        dic.All(keyval=> {
-
+        dic.All(keyval =>
+        {
             GameObject robotObj = GameObject.Find(keyval.Key);
 
-            Button robotBtn = (Button)robotObj.GetComponent<Button>();
+            Button robotBtn = (Button) robotObj.GetComponent<Button>();
 
-            robotBtn.onClick.AddListener(()=> { keyval.Value(); });
+            robotBtn.onClick.AddListener(() => { keyval.Value(); });
 
             return true;
         });
-
     }
 
-    public void OnAIHelpInitializedCallback(bool isSuccess, string message) {  
-        Console.Write("AIHelp init isSuccess " + isSuccess);
-        Console.Write("AIHelp init message " + message);
-        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
+    public void OnAIHelpInitializedCallback(bool isSuccess, string message)
+    {
+        printOnScreen("init isSuccess " + isSuccess + ", " + message);
     }
 
     void customerServiceClick()
@@ -102,11 +102,23 @@ public class TestBehaviourScript : MonoBehaviour
     void isHelpShowClick()
     {
         AIHelpSupport.IsAIHelpShowing();
+        AIHelpSupport.FetchUnreadMessageCount(OnFetchedMessageCountArrivedCallback);
+    }
+
+    void OnFetchedMessageCountArrivedCallback(int msgCount)
+    {
+        printOnScreen("You have " + msgCount + " unread messages obtained by fetching");
     }
 
     void OnMessageCountArrivedCallback(int msgCount)
     {
-        Console.Write("AIHelp you have " + msgCount + " unread messages");
+        printOnScreen("You have " + msgCount + " unread messages obtained by polling");
+    }
+
+    private void printOnScreen(string message)
+    {
+        Text notifyMessage = GameObject.Find("Canvas/notifyMessage").GetComponent<Text>();
+        notifyMessage.text = message;
     }
 
     void unreadMeassageClick()
@@ -128,10 +140,10 @@ public class TestBehaviourScript : MonoBehaviour
     {
         AIHelpSupport.enableLogging(true);
     }
-    
+
     void SDKVersionClick()
     {
-        Console.Write("SDKVersionClick");
+        printOnScreen(AIHelpSupport.GetSDKVersion());
     }
 
     void showUrlClick()
@@ -146,22 +158,21 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnSpecificFormSubmittedCallback()
     {
-        Console.Write("OnSpecificFormSubmittedCallback");
+        printOnScreen("OnSpecificFormSubmittedCallback");
     }
 
     public void OnOpenCallBack()
     {
-        Console.Write("AIHelp OnOpenCallBack");
+        printOnScreen("AIHelp OnOpenCallBack");
     }
 
     public void OnCloseCallBack()
     {
-        Console.Write("AIHelp OnCloseCallBack");
+        printOnScreen("AIHelp OnCloseCallBack");
     }
 
     public void OnSpecialUrlClickedCallBack(string url)
     {
-        Console.Write("AIHelp OnSpecialUrlClickedCallBack: " + url);
+        printOnScreen("AIHelp OnSpecialUrlClickedCallBack: " + url);
     }
-
 }

@@ -75,6 +75,11 @@ namespace AIHelp
             AIHelpCore.getInstance().StartUnreadMessageCountPolling(callback);
         }
 
+        public static void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        {
+            AIHelpCore.getInstance().FetchUnreadMessageCount(callback);
+        }
+
         public static string GetSDKVersion()
         {
             return AIHelpCore.getInstance().GetSDKVersion();
