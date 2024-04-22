@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="اجازه دسترسی به همه عکس‌ها را در تنظیمات بدهید";
 "aihelp_no_photo_access"="بدون دسترسی، به 「تنظیمات」-「Privacy」برای دادن دسترسی بروید";
 "aihelp_icloud_sync_failed"="همگام سازی iCloud ناموفق بود";
+"aihelp_pending_additional_info"="اطلاعات تکمیلی در انتظار";
+"aihelp_submit"="ارسال";
+"aihelp_submit_ticket"="شما بلیط را ارسال کرده اید، لطفاً برای بررسی پیشرفت به My Tickets بروید.";
+"unconfirmed"="تایید نشده";
+"aihelp_check_appid"="لطفا AppID را بررسی کنید.";
+" enterCorrectContent "="لطفاً محتوای صحیح را برای مرحله بعدی وارد کنید";
+"aihelp_select_max_options_android"="حداکثر %s گزینه را انتخاب کنید";
+"aihelp_select_max_options_ios"="حداکثر %@ گزینه را انتخاب کنید";

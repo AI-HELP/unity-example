@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Geef toegang tot alle foto's in Instellingen";
 "aihelp_no_photo_access"="Geen toegang, ga naar 「Instellingen」-「Privacy」Om toegang te geven";
 "aihelp_icloud_sync_failed"="iCloud-synchronisatie mislukt";
+"aihelp_pending_additional_info"="In afwachting van aanvullende informatie";
+"aihelp_submit"="Indienen";
+"aihelp_submit_ticket"="U heeft het ticket ingediend. Ga naar Mijn Tickets om de voortgang te controleren.";
+"unconfirmed"="Niet bevestigd";
+"aihelp_check_appid"="Controleer de AppID.";
+" enterCorrectContent "="Voer de juiste inhoud in voor de volgende stap";
+"aihelp_select_max_options_android"="Selecteer maximaal %s opties";
+"aihelp_select_max_options_ios"="Selecteer maximaal %@ opties";

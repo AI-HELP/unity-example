@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="ဆက်တင်များတွင် ဓာတ်ပုံအားလုံးကို ဝင်သုံးခွင့်ပြုပါ။";
 "aihelp_no_photo_access"="ဝင်ရောက်ခွင့်မရှိပါ၊ ဝင်ရောက်ခွင့်ပေးရန် 「ဆက်တင်များ」- 'ကိုယ်ရေးကိုယ်တာ' သို့သွားပါ။";
 "aihelp_icloud_sync_failed"="iCloud စင့်ခ်လုပ်ခြင်း မအောင်မြင်ပါ။";
+"aihelp_pending_additional_info"="ဆိုင်းငံ့ထားသော နောက်ထပ်အချက်အလက်များ";
+"aihelp_submit"="တင်ပြပါ။";
+"aihelp_submit_ticket"="သင်သည် လက်မှတ်ကို တင်သွင်းထားပြီး၊ တိုးတက်မှုကို စစ်ဆေးရန် My Tickets သို့ သွားပါ။";
+"unconfirmed"="အတည်မပြုနိုင်ပါ။";
+"aihelp_check_appid"="AppID ကိုစစ်ဆေးပါ။";
+" enterCorrectContent "="နောက်တစ်ဆင့်အတွက် မှန်ကန်သော အကြောင်းအရာကို ထည့်သွင်းပါ။";
+"aihelp_select_max_options_android"="ရွေးစရာ %s အထိ ရွေးပါ။";
+"aihelp_select_max_options_ios"="%@ ရွေးစရာများအထိ ရွေးပါ။";

@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Salli kaikkien kuvien käyttö Asetuksissa";
 "aihelp_no_photo_access"="Ei pääsyä, siirry kohtaan 「Asetukset」-「Tietosuoja」Anna käyttöoikeus";
 "aihelp_icloud_sync_failed"="iCloud-synkronointi epäonnistui";
+"aihelp_pending_additional_info"="Odottaa lisätietoja";
+"aihelp_submit"="Lähetä";
+"aihelp_submit_ticket"="Olet lähettänyt lipun. Siirry My Tickets -sivulle ja tarkista edistyminen.";
+"unconfirmed"="Vahvistamaton";
+"aihelp_check_appid"="Tarkista AppID.";
+" enterCorrectContent "="Anna oikea sisältö seuraavaa vaihetta varten";
+"aihelp_select_max_options_android"="Valitse enintään %s vaihtoehtoa";
+"aihelp_select_max_options_ios"="Valitse enintään %@ vaihtoehtoa";

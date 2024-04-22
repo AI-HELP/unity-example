@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Engedélyezze a hozzáférést az összes fotóhoz a Beállításokban";
 "aihelp_no_photo_access"="Nincs hozzáférés, lépjen a 「Beállítások」-「Adatvédelem」a hozzáférés megadásához";
 "aihelp_icloud_sync_failed"="Az iCloud szinkronizálása nem sikerült";
+"aihelp_pending_additional_info"="Függőben További információ";
+"aihelp_submit"="Beküldés";
+"aihelp_submit_ticket"="Beküldte a jegyet, kérjük, lépjen a Saját jegyek oldalra, hogy ellenőrizze a folyamatot.";
+"unconfirmed"="Nem megerősített";
+"aihelp_check_appid"="Kérjük, ellenőrizze az AppID-t.";
+" enterCorrectContent "="Kérjük, adja meg a megfelelő tartalmat a következő lépéshez";
+"aihelp_select_max_options_android"="Válasszon legfeljebb %s lehetőséget";
+"aihelp_select_max_options_ios"="Válasszon legfeljebb %@ lehetőséget";

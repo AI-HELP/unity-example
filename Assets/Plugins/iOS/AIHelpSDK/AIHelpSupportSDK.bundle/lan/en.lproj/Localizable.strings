@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Successfully saved";
 "aihelp_select"="Select";
 "aihelp_select_date"="Select a date";
-"aihelp_select_option"="Please choose";
+"aihelp_select_option"="Please select options";
 "aihelp_select_photo"="Select photo";
 "aihelp_send"="Send";
 "aihelp_storage_permission"="Please enable storage permissions so that you can select images or videos to upload for feedback to customer service";
@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Allow access to all photos in Settings";
 "aihelp_no_photo_access"="No Access, Go To 「Settings」-「Privacy」To Give Access";
 "aihelp_icloud_sync_failed"="iCloud sync failed";
+"aihelp_pending_additional_info"="Pending Additional Info";
+"aihelp_submit"="Submit";
+"aihelp_submit_ticket"="You have submitted the ticket, please go to My Tickets to check the progress.";
+"unconfirmed"="Unconfirmed";
+"aihelp_check_appid"="Please check the AppID.";
+" enterCorrectContent "="Please enter the correct content for the next step";
+"aihelp_select_max_options_android"="Select up to %s options";
+"aihelp_select_max_options_ios"="Select up to %@ options";

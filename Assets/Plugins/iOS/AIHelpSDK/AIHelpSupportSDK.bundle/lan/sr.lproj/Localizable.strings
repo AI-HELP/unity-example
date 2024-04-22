@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Дозволите приступ свим фотографијама у подешавањима";
 "aihelp_no_photo_access"="Нема приступа, идите на 「Подешавања」-「Приватност」да бисте дали приступ";
 "aihelp_icloud_sync_failed"="иЦлоуд синхронизација није успела";
+"aihelp_pending_additional_info"="Додатне информације на чекању";
+"aihelp_submit"="прихвати";
+"aihelp_submit_ticket"="Послали сте карту, идите на Моје карте да проверите напредак.";
+"unconfirmed"="Непотврђено";
+"aihelp_check_appid"="Проверите ИД апликације.";
+" enterCorrectContent "="Унесите тачан садржај за следећи корак";
+"aihelp_select_max_options_android"="Изаберите највише %с опција";
+"aihelp_select_max_options_ios"="Изаберите највише %@ опција";

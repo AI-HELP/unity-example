@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="సెట్టింగ్‌లలో అన్ని ఫోటోలకు యాక్సెస్‌ను అనుమతించండి";
 "aihelp_no_photo_access"="యాక్సెస్ లేదు, యాక్సెస్ ఇవ్వడానికి "సెట్టింగ్‌లు"-"గోప్యత"కి వెళ్లండి";
 "aihelp_icloud_sync_failed"="iCloud సమకాలీకరణ విఫలమైంది";
+"aihelp_pending_additional_info"="అదనపు సమాచారం పెండింగ్‌లో ఉంది";
+"aihelp_submit"="సమర్పించండి";
+"aihelp_submit_ticket"="మీరు టిక్కెట్‌ను సమర్పించారు, దయచేసి పురోగతిని తనిఖీ చేయడానికి నా టిక్కెట్‌లకు వెళ్లండి.";
+"unconfirmed"="ధృవీకరించబడలేదు";
+"aihelp_check_appid"="దయచేసి AppIDని తనిఖీ చేయండి.";
+" enterCorrectContent "="దయచేసి తదుపరి దశ కోసం సరైన కంటెంట్‌ను నమోదు చేయండి";
+"aihelp_select_max_options_android"="గరిష్టంగా %s ఎంపికలను ఎంచుకోండి";
+"aihelp_select_max_options_ios"="గరిష్టంగా %@ ఎంపికలను ఎంచుకోండి";

@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Разрешить доступ ко всем фотографиям в настройках";
 "aihelp_no_photo_access"="Нет доступа, перейдите в 「Настройки」-「Конфиденциальность」, чтобы дать доступ";
 "aihelp_icloud_sync_failed"="Синхронизация iCloud не удалась";
+"aihelp_pending_additional_info"="Ожидается дополнительная информация";
+"aihelp_submit"="Представлять на рассмотрение";
+"aihelp_submit_ticket"="Вы отправили заявку, перейдите в раздел «Мои заявки», чтобы проверить ход выполнения.";
+"unconfirmed"="Неподтвержденный";
+"aihelp_check_appid"="Пожалуйста, проверьте AppID.";
+" enterCorrectContent "="Пожалуйста, введите правильный контент для следующего шага";
+"aihelp_select_max_options_android"="Выберите до %s вариантов";
+"aihelp_select_max_options_ios"="Выберите до %@ вариантов";

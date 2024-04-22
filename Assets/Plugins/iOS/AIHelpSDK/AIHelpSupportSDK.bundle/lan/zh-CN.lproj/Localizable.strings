@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="前往设置，允许%@访问所有照片";
 "aihelp_no_photo_access"="照片被禁用，请在设置-隐私中开启";
 "aihelp_icloud_sync_failed"="iCloud 同步失败";
+"aihelp_pending_additional_info"="待补充信息";
+"aihelp_submit"="提交";
+"aihelp_submit_ticket"="您已提交工单，请前往【我的工单】查看进度。";
+"unconfirmed"="未确认";
+"aihelp_check_appid"="请检查AppID";
+" enterCorrectContent "="请输入正确的内容进行下一步";
+"aihelp_select_max_options_android"="最多选择 %s 项";
+"aihelp_select_max_options_ios"="最多选择 %@ 项";

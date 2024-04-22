@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Erlauben Sie den Zugriff auf alle Fotos in den Einstellungen";
 "aihelp_no_photo_access"="Kein Zugriff, gehen Sie zu „Einstellungen“ – „Datenschutz“, um Zugriff zu gewähren";
 "aihelp_icloud_sync_failed"="Die iCloud-Synchronisierung ist fehlgeschlagen";
+"aihelp_pending_additional_info"="Weitere Informationen stehen noch aus";
+"aihelp_submit"="Einreichen";
+"aihelp_submit_ticket"="Sie haben das Ticket eingereicht. Gehen Sie bitte zu „Meine Tickets“, um den Fortschritt zu überprüfen.";
+"unconfirmed"="Unbestätigt";
+"aihelp_check_appid"="Bitte überprüfen Sie die AppID.";
+" enterCorrectContent "="Bitte geben Sie für den nächsten Schritt den korrekten Inhalt ein";
+"aihelp_select_max_options_android"="Wählen Sie bis zu %s Optionen aus";
+"aihelp_select_max_options_ios"="Wählen Sie bis zu %@ Optionen aus";

@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="אפשר גישה לכל התמונות בהגדרות";
 "aihelp_no_photo_access"="אין גישה, עבור אל 「הגדרות」-「פרטיות」כדי לתת גישה";
 "aihelp_icloud_sync_failed"="סנכרון iCloud נכשל";
+"aihelp_pending_additional_info"="בהמתנה למידע נוסף";
+"aihelp_submit"="שלח";
+"aihelp_submit_ticket"="הגשת את הכרטיס, אנא עבור אל הכרטיסים שלי כדי לבדוק את ההתקדמות.";
+"unconfirmed"="לא מאושר";
+"aihelp_check_appid"="אנא בדוק את AppID.";
+" enterCorrectContent "="נא להזין את התוכן הנכון לשלב הבא";
+"aihelp_select_max_options_android"="בחר עד %s אפשרויות";
+"aihelp_select_max_options_ios"="בחר עד %@ אפשרויות";

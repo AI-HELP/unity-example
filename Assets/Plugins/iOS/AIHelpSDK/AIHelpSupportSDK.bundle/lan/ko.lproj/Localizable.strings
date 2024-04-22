@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="설정에서 모든 사진에 대한 액세스 허용";
 "aihelp_no_photo_access"="액세스 권한이 없습니다. 「설정」-「개인 정보」로 이동하여 액세스 권한을 부여하십시오.";
 "aihelp_icloud_sync_failed"="iCloud 동기화 실패";
+"aihelp_pending_additional_info"="추가 정보 보류 중";
+"aihelp_submit"="제출";
+"aihelp_submit_ticket"="티켓을 제출하셨습니다. 내 티켓으로 이동하여 진행 상황을 확인하세요.";
+"unconfirmed"="미확인";
+"aihelp_check_appid"="AppID를 확인해주세요.";
+" enterCorrectContent "="다음 단계를 위해 올바른 내용을 입력해주세요";
+"aihelp_select_max_options_android"="최대 %s개의 옵션을 선택하세요.";
+"aihelp_select_max_options_ios"="최대 %@ 옵션을 선택하세요.";

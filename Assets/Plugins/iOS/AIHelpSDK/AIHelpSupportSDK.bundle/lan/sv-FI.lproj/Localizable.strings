@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Tillåt åtkomst till alla foton i Inställningar";
 "aihelp_no_photo_access"="Ingen åtkomst, gå till 「Inställningar」-「Sekretess」För att ge åtkomst";
 "aihelp_icloud_sync_failed"="iCloud-synkronisering misslyckades";
+"aihelp_pending_additional_info"="Väntar på ytterligare information";
+"aihelp_submit"="Skicka in";
+"aihelp_submit_ticket"="Du har skickat in biljetten, gå till Mina biljetter för att kontrollera framstegen.";
+"unconfirmed"="Obekräftad";
+"aihelp_check_appid"="Kontrollera AppID.";
+" enterCorrectContent "="Ange rätt innehåll för nästa steg";
+"aihelp_select_max_options_android"="Välj upp till %s alternativ";
+"aihelp_select_max_options_ios"="Välj upp till %@ alternativ";

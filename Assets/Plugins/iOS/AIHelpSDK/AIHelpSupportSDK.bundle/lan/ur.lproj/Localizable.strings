@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="ترتیبات میں تمام تصاویر تک رسائی کی اجازت دیں۔";
 "aihelp_no_photo_access"="رسائی نہیں، رسائی دینے کے لیے 「ترتیبات」-「رازداری」 پر جائیں";
 "aihelp_icloud_sync_failed"="iCloud مطابقت پذیری ناکام ہوگئی";
+"aihelp_pending_additional_info"="زیر التواء اضافی معلومات";
+"aihelp_submit"="جمع کرائیں";
+"aihelp_submit_ticket"="آپ نے ٹکٹ جمع کرایا ہے، براہ کرم پیش رفت چیک کرنے کے لیے مائی ٹکٹس پر جائیں۔";
+"unconfirmed"="غیر تصدیق شدہ";
+"aihelp_check_appid"="براہ کرم AppID چیک کریں۔";
+" enterCorrectContent "="براہ کرم اگلے مرحلے کے لیے صحیح مواد درج کریں۔";
+"aihelp_select_max_options_android"="%s تک کے اختیارات منتخب کریں۔";
+"aihelp_select_max_options_ios"="%@ تک کے اختیارات منتخب کریں۔";

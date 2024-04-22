@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Povolte přístup ke všem fotkám v Nastavení";
 "aihelp_no_photo_access"="Žádný přístup, přejděte na 「Nastavení」-「Ochrana soukromí」 a udělte přístup";
 "aihelp_icloud_sync_failed"="Synchronizace iCloud se nezdařila";
+"aihelp_pending_additional_info"="Další informace čekající na vyřízení";
+"aihelp_submit"="Předložit";
+"aihelp_submit_ticket"="Odeslali jste tiket, přejděte prosím na Moje vstupenky a zkontrolujte průběh.";
+"unconfirmed"="Nepotvrzený";
+"aihelp_check_appid"="Zkontrolujte AppID.";
+" enterCorrectContent "="Zadejte prosím správný obsah pro další krok";
+"aihelp_select_max_options_android"="Vyberte až %s možností";
+"aihelp_select_max_options_ios"="Vyberte až %@ možností";

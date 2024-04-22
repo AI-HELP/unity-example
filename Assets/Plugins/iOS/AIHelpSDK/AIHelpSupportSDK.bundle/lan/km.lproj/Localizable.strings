@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="អនុញ្ញាតឱ្យចូលប្រើរូបថតទាំងអស់នៅក្នុងការកំណត់";
 "aihelp_no_photo_access"="គ្មាន​ការ​ចូល​ដំណើរ​ការ សូម​ចូល​ទៅ​កាន់ 「ការ​កំណត់​」- 「 ឯកជនភាព 」 ដើម្បី​ផ្តល់​ការ​ចូល​ដំណើរការ";
 "aihelp_icloud_sync_failed"="ការធ្វើសមកាលកម្ម iCloud បានបរាជ័យ";
+"aihelp_pending_additional_info"="រង់ចាំព័ត៌មានបន្ថែម";
+"aihelp_submit"="ដាក់ស្នើ";
+"aihelp_submit_ticket"="អ្នកបានដាក់សំបុត្រហើយ សូមចូលទៅកាន់ My Tickets ដើម្បីពិនិត្យមើលដំណើរការ។";
+"unconfirmed"="មិនបានបញ្ជាក់";
+"aihelp_check_appid"="សូមពិនិត្យមើល AppID ។";
+" enterCorrectContent "="សូមបញ្ចូលខ្លឹមសារត្រឹមត្រូវសម្រាប់ជំហានបន្ទាប់";
+"aihelp_select_max_options_android"="ជ្រើសរើសជម្រើសរហូតដល់ %s";
+"aihelp_select_max_options_ios"="ជ្រើសរើសរហូតដល់ %@ ជម្រើស";

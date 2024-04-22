@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Permiteți accesul la toate fotografiile din Setări";
 "aihelp_no_photo_access"="Fără acces, accesați 「Setări」-「Confidențialitate」Pentru a oferi acces";
 "aihelp_icloud_sync_failed"="Sincronizarea iCloud a eșuat";
+"aihelp_pending_additional_info"="Informații suplimentare în așteptare";
+"aihelp_submit"="Trimite";
+"aihelp_submit_ticket"="Ați trimis biletul, vă rugăm să accesați Biletele mele pentru a verifica progresul.";
+"unconfirmed"="Neconfirmat";
+"aihelp_check_appid"="Vă rugăm să verificați AppID.";
+" enterCorrectContent "="Vă rugăm să introduceți conținutul corect pentru următorul pas";
+"aihelp_select_max_options_android"="Selectați până la %s opțiuni";
+"aihelp_select_max_options_ios"="Selectați până la %@ opțiuni";

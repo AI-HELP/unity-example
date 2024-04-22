@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Payagan ang access sa lahat ng larawan sa Mga Setting";
 "aihelp_no_photo_access"="Walang Access, Pumunta sa 「Mga Setting」-「Privacy」Upang Magbigay ng Access";
 "aihelp_icloud_sync_failed"="Nabigo ang pag-sync ng iCloud";
+"aihelp_pending_additional_info"="Nakabinbing Karagdagang Impormasyon";
+"aihelp_submit"="Ipasa";
+"aihelp_submit_ticket"="Naisumite mo na ang ticket, mangyaring pumunta sa My Tickets para tingnan ang progreso.";
+"unconfirmed"="Hindi kumpirmado";
+"aihelp_check_appid"="Pakisuri ang AppID.";
+" enterCorrectContent "="Pakipasok ang tamang nilalaman para sa susunod na hakbang";
+"aihelp_select_max_options_android"="Pumili ng hanggang %s na opsyon";
+"aihelp_select_max_options_ios"="Pumili ng hanggang %@ na mga opsyon";

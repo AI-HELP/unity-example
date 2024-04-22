@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="允許訪問“設置”中的所有照片";
 "aihelp_no_photo_access"="無訪問權限，請前往「設置」-「隱私」授予訪問權限";
 "aihelp_icloud_sync_failed"="iCloud 同步失敗";
+"aihelp_pending_additional_info"="待定附加信息";
+"aihelp_submit"="提交";
+"aihelp_submit_ticket"="您已提交工單，請前往【我的工單】查看進度。";
+"unconfirmed"="未確認";
+"aihelp_check_appid"="請檢查AppID";
+" enterCorrectContent "="請輸入正確的內容進行下一步";
+"aihelp_select_max_options_android"="最多選擇 %s 個選項";
+"aihelp_select_max_options_ios"="最多選擇 %@ 個選項";

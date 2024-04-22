@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Izinkan akses ke semua foto di Setelan";
 "aihelp_no_photo_access"="Tanpa Akses, Buka 「Pengaturan」 - 「Privasi」 Untuk Memberikan Akses";
 "aihelp_icloud_sync_failed"="Sinkronisasi iCloud gagal";
+"aihelp_pending_additional_info"="Menunggu Info Tambahan";
+"aihelp_submit"="Kirim";
+"aihelp_submit_ticket"="Anda telah mengirimkan tiket, silakan buka Tiket Saya untuk memeriksa perkembangannya.";
+"unconfirmed"="Belum dikonfirmasi";
+"aihelp_check_appid"="Silakan periksa AppID.";
+" enterCorrectContent "="Silakan masukkan konten yang benar untuk langkah berikutnya";
+"aihelp_select_max_options_android"="Pilih hingga %s opsi";
+"aihelp_select_max_options_ios"="Pilih hingga %@ opsi";

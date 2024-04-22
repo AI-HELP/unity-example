@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Permitir acesso a todas as fotos em Configurações";
 "aihelp_no_photo_access"="Sem acesso, vá para 「Configurações」-「Privacidade」Para conceder acesso";
 "aihelp_icloud_sync_failed"="Falha na sincronização do iCloud";
+"aihelp_pending_additional_info"="Informações adicionais pendentes";
+"aihelp_submit"="Enviar";
+"aihelp_submit_ticket"="Você enviou o tíquete, acesse Meus tíquetes para verificar o andamento.";
+"unconfirmed"="Não confirmado";
+"aihelp_check_appid"="Por favor, verifique o AppID.";
+" enterCorrectContent "="Insira o conteúdo correto para a próxima etapa";
+"aihelp_select_max_options_android"="Selecione até %s opções";
+"aihelp_select_max_options_ios"="Selecione até %@ opções";

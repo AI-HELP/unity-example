@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="อนุญาตให้เข้าถึงรูปภาพทั้งหมดในการตั้งค่า";
 "aihelp_no_photo_access"="ไม่มีการเข้าถึง ไปที่「การตั้งค่า」-「ความเป็นส่วนตัว」เพื่อให้การเข้าถึง";
 "aihelp_icloud_sync_failed"="การซิงค์ iCloud ล้มเหลว";
+"aihelp_pending_additional_info"="รอข้อมูลเพิ่มเติม";
+"aihelp_submit"="ส่ง";
+"aihelp_submit_ticket"="คุณได้ส่งตั๋วแล้ว โปรดไปที่ตั๋วของฉันเพื่อตรวจสอบความคืบหน้า";
+"unconfirmed"="ไม่ได้รับการยืนยัน";
+"aihelp_check_appid"="โปรดตรวจสอบ AppID";
+" enterCorrectContent "="กรุณากรอกเนื้อหาที่ถูกต้องสำหรับขั้นตอนต่อไป";
+"aihelp_select_max_options_android"="เลือกตัวเลือกมากถึง %s";
+"aihelp_select_max_options_ios"="เลือกมากถึง %@ ตัวเลือก";

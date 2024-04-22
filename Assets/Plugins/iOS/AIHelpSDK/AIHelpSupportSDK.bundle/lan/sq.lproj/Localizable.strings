@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Lejo qasjen te të gjitha fotot te "Cilësimet".";
 "aihelp_no_photo_access"="Nuk ka qasje, shkoni te 「Cilësimet」-「Privatësia」Për të dhënë qasje";
 "aihelp_icloud_sync_failed"="Sinkronizimi i iCloud dështoi";
+"aihelp_pending_additional_info"="Informacion shtesë në pritje";
+"aihelp_submit"="Paraqisni";
+"aihelp_submit_ticket"="Ju keni dorëzuar biletën, ju lutemi shkoni te Biletat e Mia për të kontrolluar progresin.";
+"unconfirmed"="E pakonfirmuar";
+"aihelp_check_appid"="Ju lutemi kontrolloni ID-në e aplikacionit.";
+" enterCorrectContent "="Ju lutemi shkruani përmbajtjen e saktë për hapin tjetër";
+"aihelp_select_max_options_android"="Zgjidh deri në %s opsione";
+"aihelp_select_max_options_ios"="Zgjidh deri në %@ opsione";

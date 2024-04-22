@@ -8,7 +8,7 @@
 "aihelp_enter_email_address"="vui lòng nhập email của bạn";
 "aihelp_enter_number"="Vui lòng nhập số";
 "aihelp_faq_feedback"="Vui lòng nhập phản hồi của bạn";
-"aihelp_faq_feedback_suggest"="Gợi ý";
+"aihelp_faq_feedback_suggest"="Phản hồi";
 "aihelp_faq_feedback_thanks"="Cảm ơn bạn đã phản hồi.";
 "aihelp_faq_fetching_faqs"="Nhận câu trả lời của bạn";
 "aihelp_faq_helpful"="Hữu ích";
@@ -32,7 +32,7 @@
 "aihelp_network_no_connect"="Vui lòng kiểm tra kết nối mạng của bạn.";
 "aihelp_network_upload_log_title"="Kết nối mạng kém";
 "aihelp_new_conversation"="cuộc trò chuyện mới";
-"aihelp_no"="hủy bỏ";
+"aihelp_no"="Hủy";
 "aihelp_op_cs"="HELP";
 "aihelp_open_browser"="Mở trong trình duyệt của bạn để tải xuống";
 "aihelp_permission_denied"="Tải lên hình ảnh yêu cầu quyền truy cập bộ nhớ.";
@@ -41,10 +41,10 @@
 "aihelp_rate_additional_feedback_message"="Bất kỳ phản hồi khác (tùy chọn)";
 "aihelp_rate_app_hint"="Bạn có muốn đánh giá ứng dụng này không?";
 "aihelp_rate_button"="Đi tới Đánh giá";
-"aihelp_rate_dissatisfied"="Không thích nó";
+"aihelp_rate_dissatisfied"="Không hài lòng";
 "aihelp_rate_finished"="Cảm ơn đã đánh giá chúng tôi.";
 "aihelp_rate_request"="Vui lòng đánh giá dịch vụ của chúng tôi.";
-"aihelp_rate_satisfied"="Thích nó";
+"aihelp_rate_satisfied"="Rất hài lòng";
 "aihelp_resolution_no"="Chưa giải quyết";
 "aihelp_resolution_request"="Vấn đề của bạn đã được giải quyết chưa?";
 "aihelp_resolution_yes"="Đã giải quyết";
@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Cho phép truy cập vào tất cả ảnh trong Cài đặt";
 "aihelp_no_photo_access"="Không có quyền truy cập, hãy chuyển đến 「Cài đặt」-「Quyền riêng tư」Để cấp quyền truy cập";
 "aihelp_icloud_sync_failed"="Đồng bộ hóa iCloud không thành công";
+"aihelp_pending_additional_info"="Đang chờ thông tin bổ sung";
+"aihelp_submit"="Nộp";
+"aihelp_submit_ticket"="Bạn đã gửi ticket, vui lòng vào My Tickets để kiểm tra tiến độ.";
+"unconfirmed"="Chưa được xác nhận";
+"aihelp_check_appid"="Vui lòng kiểm tra AppID.";
+" enterCorrectContent "="Vui lòng nhập đúng nội dung cho bước tiếp theo";
+"aihelp_select_max_options_android"="Chọn tối đa %s tùy chọn";
+"aihelp_select_max_options_ios"="Chọn tối đa %@ tùy chọn";

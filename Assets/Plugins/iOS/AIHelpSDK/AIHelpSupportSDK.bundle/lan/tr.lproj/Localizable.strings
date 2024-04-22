@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Ayarlar'da tüm fotoğraflara erişim izni verin";
 "aihelp_no_photo_access"="Erişim Yok, Erişim Vermek için 「Ayarlar」-「Gizlilik」Gitin";
 "aihelp_icloud_sync_failed"="iCloud senkronizasyonu başarısız oldu";
+"aihelp_pending_additional_info"="Ek Bilgi Bekleniyor";
+"aihelp_submit"="Göndermek";
+"aihelp_submit_ticket"="Biletinizi gönderdiniz, lütfen ilerlemeyi kontrol etmek için Biletlerim'e gidin.";
+"unconfirmed"="Onaylanmadı";
+"aihelp_check_appid"="Lütfen Uygulama Kimliğini kontrol edin.";
+" enterCorrectContent "="Lütfen bir sonraki adım için doğru içeriği girin";
+"aihelp_select_max_options_android"="En fazla %s seçeneği belirleyin";
+"aihelp_select_max_options_ios"="%@ seçeneğine kadar seçim yapın";

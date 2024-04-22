@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="सेटिंग्स में सभी फ़ोटो तक पहुंच की अनुमति दें";
 "aihelp_no_photo_access"="कोई एक्सेस नहीं, एक्सेस देने के लिए 「सेटिंग्स」-「प्राइवेसी」 पर जाएं";
 "aihelp_icloud_sync_failed"="iCloud सिंक विफल रहा";
+"aihelp_pending_additional_info"="अतिरिक्त जानकारी लंबित";
+"aihelp_submit"="जमा करना";
+"aihelp_submit_ticket"="आपने टिकट जमा कर दिया है, कृपया प्रगति जांचने के लिए माई टिकट्स पर जाएं।";
+"unconfirmed"="अपुष्ट";
+"aihelp_check_appid"="कृपया AppID जांचें.";
+" enterCorrectContent "="कृपया अगले चरण के लिए सही सामग्री दर्ज करें";
+"aihelp_select_max_options_android"="%s तक विकल्प चुनें";
+"aihelp_select_max_options_ios"="%@ तक विकल्प चुनें";

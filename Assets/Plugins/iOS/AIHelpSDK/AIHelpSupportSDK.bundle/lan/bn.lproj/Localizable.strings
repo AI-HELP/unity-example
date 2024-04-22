@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="সেটিংসে সমস্ত ফটোতে অ্যাক্সেসের অনুমতি দিন";
 "aihelp_no_photo_access"="কোনো অ্যাক্সেস নেই, অ্যাক্সেস দিতে 「সেটিংস」-「গোপনীয়তা」এ যান";
 "aihelp_icloud_sync_failed"="iCloud সিঙ্ক ব্যর্থ হয়েছে৷";
+"aihelp_pending_additional_info"="মুলতুবি অতিরিক্ত তথ্য";
+"aihelp_submit"="জমা দিন";
+"aihelp_submit_ticket"="আপনি টিকিট জমা দিয়েছেন, অগ্রগতি পরীক্ষা করতে অনুগ্রহ করে আমার টিকিট-এ যান।";
+"unconfirmed"="অনিশ্চিত";
+"aihelp_check_appid"="AppID চেক করুন.";
+" enterCorrectContent "="পরবর্তী ধাপের জন্য সঠিক বিষয়বস্তু লিখুন";
+"aihelp_select_max_options_android"="%s পর্যন্ত বিকল্প নির্বাচন করুন";
+"aihelp_select_max_options_ios"="%@ পর্যন্ত বিকল্প নির্বাচন করুন";

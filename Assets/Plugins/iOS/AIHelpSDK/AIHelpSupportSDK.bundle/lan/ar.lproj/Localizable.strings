@@ -78,5 +78,13 @@
 "aihelp_reply"="رد";
 "aihelp_allow_photo_access"="السماح بالوصول إلى الصور";
 "aihelp_allow_photo_access_set"="اسمح بالوصول إلى جميع الصور في الإعدادات";
-"aihelp_no_photo_access"="لا يوجد وصول ، انتقل إلى "الإعدادات" - "الخصوصية" لمنح حق الوصول";
+"aihelp_no_photo_access"="لا يوجد وصول ، انتقل إلى الإعدادات - الخصوصية لمنح حق الوصول";
 "aihelp_icloud_sync_failed"="فشل مزامنة iCloud";
+"aihelp_pending_additional_info"="في انتظار المعلومات الإضافية";
+"aihelp_submit"="يُقدِّم";
+"aihelp_submit_ticket"="لقد قمت بإرسال التذكرة، يرجى الذهاب إلى تذاكري للتحقق من التقدم.";
+"unconfirmed"="غير مؤكد";
+"aihelp_check_appid"="الرجاء التحقق من معرف التطبيق.";
+" enterCorrectContent "="الرجاء إدخال المحتوى الصحيح للخطوة التالية";
+"aihelp_select_max_options_android"="حدد ما يصل إلى %s من الخيارات";
+"aihelp_select_max_options_ios"="حدد ما يصل إلى %@ من الخيارات";

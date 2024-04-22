@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Επιτρέψτε την πρόσβαση σε όλες τις φωτογραφίες στις Ρυθμίσεις";
 "aihelp_no_photo_access"="Χωρίς πρόσβαση, μεταβείτε στις 「Ρυθμίσεις」-「Απόρρητο」Για να παραχωρήσετε πρόσβαση";
 "aihelp_icloud_sync_failed"="Ο συγχρονισμός iCloud απέτυχε";
+"aihelp_pending_additional_info"="Εκκρεμείς πρόσθετες πληροφορίες";
+"aihelp_submit"="υποβάλλουν";
+"aihelp_submit_ticket"="Έχετε υποβάλει το εισιτήριο, μεταβείτε στο My Tickets για να ελέγξετε την πρόοδο.";
+"unconfirmed"="Αβεβαίωτος";
+"aihelp_check_appid"="Ελέγξτε το AppID.";
+" enterCorrectContent "="Εισαγάγετε το σωστό περιεχόμενο για το επόμενο βήμα";
+"aihelp_select_max_options_android"="Επιλέξτε έως και %s επιλογές";
+"aihelp_select_max_options_ios"="Επιλέξτε έως και %@ επιλογές";

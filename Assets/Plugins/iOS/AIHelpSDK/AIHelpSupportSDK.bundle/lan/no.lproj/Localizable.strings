@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Gi tilgang til alle bilder i Innstillinger";
 "aihelp_no_photo_access"="Ingen tilgang, gå til 「Innstillinger」-「Personvern」For å gi tilgang";
 "aihelp_icloud_sync_failed"="iCloud-synkronisering mislyktes";
+"aihelp_pending_additional_info"="Venter på tilleggsinformasjon";
+"aihelp_submit"="Sende inn";
+"aihelp_submit_ticket"="Du har sendt inn billetten, vennligst gå til Mine billetter for å sjekke fremdriften.";
+"unconfirmed"="Ubekreftet";
+"aihelp_check_appid"="Vennligst sjekk AppID.";
+" enterCorrectContent "="Vennligst skriv inn riktig innhold for neste trinn";
+"aihelp_select_max_options_android"="Velg opptil %s alternativer";
+"aihelp_select_max_options_ios"="Velg opptil %@ alternativer";

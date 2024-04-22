@@ -80,3 +80,11 @@
 "aihelp_allow_photo_access_set"="Tillad adgang til alle billeder i Indstillinger";
 "aihelp_no_photo_access"="Ingen adgang, gå til 「Indstillinger」-「Privatliv」For at give adgang";
 "aihelp_icloud_sync_failed"="iCloud-synkronisering mislykkedes";
+"aihelp_pending_additional_info"="Afventer yderligere oplysninger";
+"aihelp_submit"="Indsend";
+"aihelp_submit_ticket"="Du har indsendt billetten, gå venligst til Mine billetter for at tjekke status.";
+"unconfirmed"="Ubekræftet";
+"aihelp_check_appid"="Tjek venligst AppID.";
+" enterCorrectContent "="Indtast venligst det korrekte indhold til næste trin";
+"aihelp_select_max_options_android"="Vælg op til %s muligheder";
+"aihelp_select_max_options_ios"="Vælg op til %@ muligheder";
