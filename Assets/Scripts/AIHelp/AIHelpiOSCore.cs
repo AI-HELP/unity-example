@@ -11,6 +11,7 @@ namespace AIHelp
     {
 
         static event AIHelpDefine.OnAIHelpInitializedCallback _iOSInitCallback;
+        static event AIHelpDefine.OnAIHelpInitializedAsyncCallback _iOSInitAsyncCallback;
         static event AIHelpDefine.OnNetworkCheckResultCallback _iOSNetworkCheckCallback;
         static event AIHelpDefine.OnMessageCountArrivedCallback _iOSPollingMessageCountCallback;
         static event AIHelpDefine.OnMessageCountArrivedCallback _iOSFetchMessageCountCallback;
@@ -37,6 +38,19 @@ namespace AIHelp
         }
         [DllImport("__Internal")]
         private static extern void unity_setOnInitializedCallback(iOSOnAIHelpInitialized callBack);
+
+        public delegate void iOSOnAIHelpInitializedAsync(bool isSuccess, string message);
+        [MonoPInvokeCallback(typeof(iOSOnAIHelpInitializedAsync))]
+        private static void iOSInitCallbackAsync(bool isSuccess, string message)
+        {
+            if (_iOSInitAsyncCallback != null)
+            {
+                _iOSInitAsyncCallback(isSuccess, message);
+
+            }
+        }
+        [DllImport("__Internal")]
+        private static extern void unity_setOnInitializedAsyncCallback(iOSOnAIHelpInitializedAsync callBack);
 
         [DllImport("__Internal")]
         private static extern bool unity_show(string entranceId, string welcomeMessage);
@@ -198,6 +212,12 @@ namespace AIHelp
         {
             _iOSInitCallback = callback;
             unity_setOnInitializedCallback(iOSInitCallback);
+        }
+
+        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback)
+        {
+            _iOSInitAsyncCallback = callback;
+            unity_setOnInitializedAsyncCallback(iOSInitCallbackAsync);
         }
 
         public bool Show(string entranceId) 

@@ -88,3 +88,17 @@
 " enterCorrectContent "="กรุณากรอกเนื้อหาที่ถูกต้องสำหรับขั้นตอนต่อไป";
 "aihelp_select_max_options_android"="เลือกตัวเลือกมากถึง %s";
 "aihelp_select_max_options_ios"="เลือกมากถึง %@ ตัวเลือก";
+"aihelp_contact_us"="ติดต่อเรา";
+"aihelp_popular_questions"="คำถามยอดฮิต";
+"aihelp_faqs"="คำถามที่พบบ่อย";
+"aihelp_view_all_sections"="ดูหมวดหมู่ทั้งหมด {num}";
+"aihelp_view_all_questions"="ดูคำถามทั้งหมด {num} ข้อ";
+"aihelp_homepage"="หน้าแรก";
+"aihelp_no_page_no_browse"="ไม่มีเพจนี้ คุณไม่สามารถเรียกดูหน้านี้ได้";
+"aihelp_back_to_help_center"="กลับไปที่ศูนย์ช่วยเหลือ";
+"aihelp_no_requested_page"="ดูเหมือนเราจะไม่พบหน้าที่คุณร้องขอ";
+"aihelp_search_result"="ผลการค้นหาสำหรับ 「{val}」";
+"aihelp_view_all_results"="ดูผลการค้นหาทั้งหมด";
+"aihelp_related_articles"="บทความที่เกี่ยวข้อง";
+"aihelp_helpful_article"="บทความนี้เป็นประโยชน์หรือไม่?";
+"aihelp_more_help"="ต้องการความช่วยเหลือเพิ่มเติมหรือไม่?";

@@ -88,3 +88,17 @@
 " enterCorrectContent "="Lütfen bir sonraki adım için doğru içeriği girin";
 "aihelp_select_max_options_android"="En fazla %s seçeneği belirleyin";
 "aihelp_select_max_options_ios"="%@ seçeneğine kadar seçim yapın";
+"aihelp_contact_us"="Bize Ulaşın";
+"aihelp_popular_questions"="En Çok Sorulan Sorular";
+"aihelp_faqs"="SSS";
+"aihelp_view_all_sections"="{num} kategorinin tümünü görüntüle";
+"aihelp_view_all_questions"="{num} sorunun tümünü görüntüle";
+"aihelp_homepage"="Ana sayfa";
+"aihelp_no_page_no_browse"="Sayfa mevcut değil. Bu sayfaya göz atamazsınız.";
+"aihelp_back_to_help_center"="Yardım Merkezine Geri Dön";
+"aihelp_no_requested_page"="İstediğiniz sayfayı bulamıyoruz";
+"aihelp_search_result"="「{val}」 için arama sonuçları";
+"aihelp_view_all_results"="Tüm arama sonuçlarını görüntüle";
+"aihelp_related_articles"="İlgili Makaleler";
+"aihelp_helpful_article"="Bu makale yardımcı oldu mu?";
+"aihelp_more_help"="Daha fazla yardıma mı ihtiyacınız var?";

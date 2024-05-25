@@ -88,3 +88,17 @@
 " enterCorrectContent "="Ange rätt innehåll för nästa steg";
 "aihelp_select_max_options_android"="Välj upp till %s alternativ";
 "aihelp_select_max_options_ios"="Välj upp till %@ alternativ";
+"aihelp_contact_us"="Kontakta oss";
+"aihelp_popular_questions"="Toppfrågor";
+"aihelp_faqs"="Vanliga frågor";
+"aihelp_view_all_sections"="Visa alla {num} kategorier";
+"aihelp_view_all_questions"="Visa alla {num} frågor";
+"aihelp_homepage"="Hemsida";
+"aihelp_no_page_no_browse"="Sidan finns inte. Du kan inte bläddra på den här sidan.";
+"aihelp_back_to_help_center"="Tillbaka till hjälpcentret";
+"aihelp_no_requested_page"="Vi verkar inte hitta sidan som du begärde";
+"aihelp_search_result"="Sökresultat för 「{val}」";
+"aihelp_view_all_results"="Visa alla sökresultat";
+"aihelp_related_articles"="relaterade artiklar";
+"aihelp_helpful_article"="var den här artikeln hjälpsam?";
+"aihelp_more_help"="Behöver du mer hjälp?";

@@ -20,6 +20,11 @@ namespace AIHelp
             AIHelpCore.getInstance().SetOnAIHelpInitializedCallback(callback);
         }
 
+        public static void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnAIHelpInitializedAsyncCallback(callback);
+        }
+
         public static bool Show(string entranceId)
         {
             return AIHelpCore.getInstance().Show(entranceId);

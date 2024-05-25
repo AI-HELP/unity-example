@@ -88,3 +88,17 @@
 " enterCorrectContent "="Indtast venligst det korrekte indhold til næste trin";
 "aihelp_select_max_options_android"="Vælg op til %s muligheder";
 "aihelp_select_max_options_ios"="Vælg op til %@ muligheder";
+"aihelp_contact_us"="Kontakt os";
+"aihelp_popular_questions"="Top spørgsmål";
+"aihelp_faqs"="Ofte stillede spørgsmål";
+"aihelp_view_all_sections"="Se alle {num} kategorier";
+"aihelp_view_all_questions"="Se alle {num} spørgsmål";
+"aihelp_homepage"="Hjemmeside";
+"aihelp_no_page_no_browse"="Siden eksisterer ikke. Du kan ikke gennemse denne side.";
+"aihelp_back_to_help_center"="Tilbage til Hjælp";
+"aihelp_no_requested_page"="Vi kan tilsyneladende ikke finde den side, du anmodede om";
+"aihelp_search_result"="Søgeresultater for 「{val}」";
+"aihelp_view_all_results"="Se alle søgeresultater";
+"aihelp_related_articles"="relaterede artikler";
+"aihelp_helpful_article"="Var denne artikel til hjælp?";
+"aihelp_more_help"="Har du brug for mere hjælp?";

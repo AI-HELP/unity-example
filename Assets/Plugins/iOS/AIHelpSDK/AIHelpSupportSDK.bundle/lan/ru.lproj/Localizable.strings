@@ -88,3 +88,17 @@
 " enterCorrectContent "="Пожалуйста, введите правильный контент для следующего шага";
 "aihelp_select_max_options_android"="Выберите до %s вариантов";
 "aihelp_select_max_options_ios"="Выберите до %@ вариантов";
+"aihelp_contact_us"="Связаться с нами";
+"aihelp_popular_questions"="Популярные вопросы";
+"aihelp_faqs"="Часто задаваемые вопросы";
+"aihelp_view_all_sections"="Просмотреть все категории: {num}";
+"aihelp_view_all_questions"="Просмотреть все вопросы ({num})";
+"aihelp_homepage"="Домашняя страница";
+"aihelp_no_page_no_browse"="Страница не существует. Вы не можете просмотреть эту страницу.";
+"aihelp_back_to_help_center"="Вернуться в Справочный центр";
+"aihelp_no_requested_page"="Кажется, мы не можем найти запрошенную вами страницу";
+"aihelp_search_result"="Результаты поиска по запросу 「{val}」";
+"aihelp_view_all_results"="Посмотреть все результаты поиска";
+"aihelp_related_articles"="Статьи по Теме";
+"aihelp_helpful_article"="Была ли эта статья полезна?";
+"aihelp_more_help"="Нужна дополнительная помощь?";

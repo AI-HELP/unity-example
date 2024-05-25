@@ -88,3 +88,17 @@
 " enterCorrectContent "="Aby przejść do następnego kroku, wprowadź poprawną treść";
 "aihelp_select_max_options_android"="Wybierz maksymalnie %s opcji";
 "aihelp_select_max_options_ios"="Wybierz maksymalnie %@ opcji";
+"aihelp_contact_us"="Skontaktuj się z nami";
+"aihelp_popular_questions"="Najpopularniejsze pytania";
+"aihelp_faqs"="Często zadawane pytania";
+"aihelp_view_all_sections"="Wyświetl wszystkie kategorie ({num}).";
+"aihelp_view_all_questions"="Wyświetl wszystkie pytania ({num}).";
+"aihelp_homepage"="Strona główna";
+"aihelp_no_page_no_browse"="Strona nie istnieje. Nie możesz przeglądać tej strony.";
+"aihelp_back_to_help_center"="Powrót do Centrum pomocy";
+"aihelp_no_requested_page"="Wygląda na to, że nie możemy znaleźć żądanej strony";
+"aihelp_search_result"="Wyniki wyszukiwania dla 「{val}」";
+"aihelp_view_all_results"="Wyświetl wszystkie wyniki wyszukiwania";
+"aihelp_related_articles"="Powiązane artykuły";
+"aihelp_helpful_article"="Czy ten artykuł był pomocny?";
+"aihelp_more_help"="Potrzebujesz więcej pomocy?";

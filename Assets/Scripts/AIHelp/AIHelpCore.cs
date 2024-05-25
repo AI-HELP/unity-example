@@ -57,6 +57,12 @@ namespace AIHelp
             helpCore.SetOnAIHelpInitializedCallback(callback);
         }
 
+        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback)
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.SetOnAIHelpInitializedAsyncCallback(callback);
+        }
+
         public bool Show(string entranceId) {
             if (!IsHelpCorePrepared()) return false;
             return helpCore.Show(entranceId);

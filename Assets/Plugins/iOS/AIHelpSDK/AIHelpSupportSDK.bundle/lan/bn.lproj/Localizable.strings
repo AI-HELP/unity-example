@@ -88,3 +88,17 @@
 " enterCorrectContent "="পরবর্তী ধাপের জন্য সঠিক বিষয়বস্তু লিখুন";
 "aihelp_select_max_options_android"="%s পর্যন্ত বিকল্প নির্বাচন করুন";
 "aihelp_select_max_options_ios"="%@ পর্যন্ত বিকল্প নির্বাচন করুন";
+"aihelp_contact_us"="যোগাযোগ করুন";
+"aihelp_popular_questions"="শীর্ষ প্রশ্ন";
+"aihelp_faqs"="FAQs";
+"aihelp_view_all_sections"="সমস্ত {num} বিভাগগুলি দেখুন৷";
+"aihelp_view_all_questions"="সমস্ত {num}টি প্রশ্ন দেখুন";
+"aihelp_homepage"="হোমপেজ";
+"aihelp_no_page_no_browse"="পৃষ্ঠাটির অস্তিত্ব নেই। আপনি এই পৃষ্ঠা ব্রাউজ করতে পারবেন না.";
+"aihelp_back_to_help_center"="সহায়তা কেন্দ্রে ফিরে যান";
+"aihelp_no_requested_page"="আপনার অনুরোধ করা পৃষ্ঠাটি আমরা খুঁজে পাচ্ছি না";
+"aihelp_search_result"="「{val}」 এর জন্য অনুসন্ধান ফলাফল";
+"aihelp_view_all_results"="সমস্ত অনুসন্ধান ফলাফল দেখুন";
+"aihelp_related_articles"="সম্পরকিত প্রবন্ধ";
+"aihelp_helpful_article"="এই প্রবন্ধটা কি সাহায্যকর ছিল?";
+"aihelp_more_help"="আরো সাহায্য প্রয়োজন?";

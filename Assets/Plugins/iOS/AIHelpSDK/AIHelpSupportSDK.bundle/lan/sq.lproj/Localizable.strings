@@ -88,3 +88,17 @@
 " enterCorrectContent "="Ju lutemi shkruani përmbajtjen e saktë për hapin tjetër";
 "aihelp_select_max_options_android"="Zgjidh deri në %s opsione";
 "aihelp_select_max_options_ios"="Zgjidh deri në %@ opsione";
+"aihelp_contact_us"="Na kontaktoni";
+"aihelp_popular_questions"="Pyetjet kryesore";
+"aihelp_faqs"="Pyetjet e shpeshta";
+"aihelp_view_all_sections"="Shiko të gjitha {num} kategoritë";
+"aihelp_view_all_questions"="Shiko të gjitha {num} pyetjet";
+"aihelp_homepage"="Faqja kryesore";
+"aihelp_no_page_no_browse"="Faqja nuk ekziston. Ju nuk mund ta shfletoni këtë faqe.";
+"aihelp_back_to_help_center"="Kthehu te Qendra e Ndihmës";
+"aihelp_no_requested_page"="Duket se nuk mund ta gjejmë faqen që keni kërkuar";
+"aihelp_search_result"="Rezultatet e kërkimit për 「{val}」";
+"aihelp_view_all_results"="Shikoni të gjitha rezultatet e kërkimit";
+"aihelp_related_articles"="Artikuj të ngjashëm";
+"aihelp_helpful_article"="A ju ndihmoi ky artikull?";
+"aihelp_more_help"="Keni nevojë për më shumë ndihmë?";

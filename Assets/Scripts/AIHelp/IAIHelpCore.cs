@@ -5,6 +5,8 @@ namespace AIHelp
     {
 
         public delegate void OnAIHelpInitializedCallback(bool isSuccess, string message);
+        
+        public delegate void OnAIHelpInitializedAsyncCallback(bool isSuccess, string message);
 
         public delegate void OnNetworkCheckResultCallback(string netLog);
 
@@ -24,6 +26,7 @@ namespace AIHelp
     {
         void Init(string appKey, string domain, string appId, string language);
         void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback callback);
+        void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback);
         
         bool Show(string entranceId);
         bool Show(ApiConfig apiConfig);

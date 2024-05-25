@@ -131,6 +131,7 @@ namespace AIHelp
         {
 
             private readonly AIHelpDefine.OnAIHelpInitializedCallback initCallback;
+            private readonly AIHelpDefine.OnAIHelpInitializedAsyncCallback initAsyncCallback;
             private readonly AIHelpDefine.OnMessageCountArrivedCallback msgCountCallback;
             private readonly AIHelpDefine.OnNetworkCheckResultCallback netCheckCallback;
             private readonly AIHelpDefine.OnSpecificFormSubmittedCallback submittedCallback;
@@ -141,6 +142,11 @@ namespace AIHelp
             public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedCallback")
             {
                 this.initCallback = callback;
+            }
+
+            public ListenerAdapter(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback) : base("net.aihelp.ui.listener.OnAIHelpInitializedAsyncCallback")
+            {
+                this.initAsyncCallback = callback;
             }
 
             public ListenerAdapter(AIHelpDefine.OnMessageCountArrivedCallback callback) : base("net.aihelp.ui.listener.OnMessageCountArrivedCallback")
@@ -178,6 +184,11 @@ namespace AIHelp
                 initCallback(isSuccess, message);
             }
 
+            void onAIHelpInitializedAsync(bool isSuccess, string message)
+            {
+                initAsyncCallback(isSuccess, message);
+            }
+
             void onMessageCountArrived(int msgCount)
             {
                 msgCountCallback(msgCount);
@@ -213,6 +224,11 @@ namespace AIHelp
         public void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback listener)
         {
             javaSupport.CallStatic("setOnAIHelpInitializedCallback", listener == null ? null : new ListenerAdapter(listener));
+        }
+
+        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback listener)
+        {
+            javaSupport.CallStatic("setOnAIHelpInitializedAsyncCallback", listener == null ? null : new ListenerAdapter(listener));
         }
 
         public void SetNetworkCheckHostAddress(string address, AIHelpDefine.OnNetworkCheckResultCallback listener)

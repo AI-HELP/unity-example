@@ -88,3 +88,17 @@
 " enterCorrectContent "="次のステップに進むために正しい内容を入力してください";
 "aihelp_select_max_options_android"="最大 %s のオプションを選択してください";
 "aihelp_select_max_options_ios"="最大 %@ オプションを選択します";
+"aihelp_contact_us"="お問い合わせ";
+"aihelp_popular_questions"="上位の質問";
+"aihelp_faqs"="よくある質問";
+"aihelp_view_all_sections"="すべての {num} カテゴリを表示";
+"aihelp_view_all_questions"="{num} 個の質問をすべて表示";
+"aihelp_homepage"="ホームページ";
+"aihelp_no_page_no_browse"="ページは存在しません。このページは閲覧できません。";
+"aihelp_back_to_help_center"="ヘルプセンターに戻る";
+"aihelp_no_requested_page"="リクエストされたページが見つからないようです";
+"aihelp_search_result"="「{val}」の検索結果";
+"aihelp_view_all_results"="すべての検索結果を表示する";
+"aihelp_related_articles"="関連記事";
+"aihelp_helpful_article"="この記事は役に立ちましたか?";
+"aihelp_more_help"="もっと助けが必要ですか？";

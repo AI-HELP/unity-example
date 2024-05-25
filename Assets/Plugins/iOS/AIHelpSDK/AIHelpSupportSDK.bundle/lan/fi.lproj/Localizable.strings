@@ -88,3 +88,17 @@
 " enterCorrectContent "="Anna oikea sisältö seuraavaa vaihetta varten";
 "aihelp_select_max_options_android"="Valitse enintään %s vaihtoehtoa";
 "aihelp_select_max_options_ios"="Valitse enintään %@ vaihtoehtoa";
+"aihelp_contact_us"="Ota meihin yhteyttä";
+"aihelp_popular_questions"="Suosituimmat kysymykset";
+"aihelp_faqs"="UKK";
+"aihelp_view_all_sections"="Näytä kaikki {num} luokkaa";
+"aihelp_view_all_questions"="Näytä kaikki {num} kysymystä";
+"aihelp_homepage"="Kotisivu";
+"aihelp_no_page_no_browse"="Sivua ei ole olemassa. Et voi selata tätä sivua.";
+"aihelp_back_to_help_center"="Takaisin ohjekeskukseen";
+"aihelp_no_requested_page"="Emme näytä löytävän pyytämääsi sivua";
+"aihelp_search_result"="Hakutulokset haulle 「{val}」";
+"aihelp_view_all_results"="Näytä kaikki hakutulokset";
+"aihelp_related_articles"="Aiheeseen liittyvät artikkelit";
+"aihelp_helpful_article"="Oliko tästä artikkelista apua?";
+"aihelp_more_help"="Tarvitsetko lisää apua?";

@@ -88,3 +88,17 @@
 " enterCorrectContent "="Zadejte prosím správný obsah pro další krok";
 "aihelp_select_max_options_android"="Vyberte až %s možností";
 "aihelp_select_max_options_ios"="Vyberte až %@ možností";
+"aihelp_contact_us"="Kontaktujte nás";
+"aihelp_popular_questions"="Nejčastější otázky";
+"aihelp_faqs"="Nejčastější dotazy";
+"aihelp_view_all_sections"="Zobrazit všechny kategorie ({num}).";
+"aihelp_view_all_questions"="Zobrazit všechny otázky ({num}).";
+"aihelp_homepage"="Domovská stránka";
+"aihelp_no_page_no_browse"="Stránka neexistuje. Tuto stránku nemůžete procházet.";
+"aihelp_back_to_help_center"="Zpět do centra nápovědy";
+"aihelp_no_requested_page"="Zdá se, že nemůžeme najít stránku, kterou jste požadovali";
+"aihelp_search_result"="Výsledky hledání pro 「{val}」";
+"aihelp_view_all_results"="Zobrazit všechny výsledky vyhledávání";
+"aihelp_related_articles"="Související články";
+"aihelp_helpful_article"="Byl tento článek užitečný?";
+"aihelp_more_help"="Potřebujete další pomoc?";

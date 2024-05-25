@@ -88,3 +88,17 @@
 " enterCorrectContent "="Vă rugăm să introduceți conținutul corect pentru următorul pas";
 "aihelp_select_max_options_android"="Selectați până la %s opțiuni";
 "aihelp_select_max_options_ios"="Selectați până la %@ opțiuni";
+"aihelp_contact_us"="Contactează-ne";
+"aihelp_popular_questions"="Cele mai importante întrebări";
+"aihelp_faqs"="Întrebări frecvente";
+"aihelp_view_all_sections"="Vedeți toate cele {num} categorii";
+"aihelp_view_all_questions"="Vedeți toate cele {num} întrebări";
+"aihelp_homepage"="Pagina principala";
+"aihelp_no_page_no_browse"="Pagina nu există. Nu puteți naviga pe această pagină.";
+"aihelp_back_to_help_center"="Înapoi la Centrul de ajutor";
+"aihelp_no_requested_page"="Se pare că nu putem găsi pagina pe care ați solicitat-o";
+"aihelp_search_result"="Rezultatele căutării pentru 「{val}」";
+"aihelp_view_all_results"="Vedeți toate rezultatele căutării";
+"aihelp_related_articles"="Articole similare";
+"aihelp_helpful_article"="A fost de ajutor articolul?";
+"aihelp_more_help"="Ai nevoie de mai mult ajutor?";

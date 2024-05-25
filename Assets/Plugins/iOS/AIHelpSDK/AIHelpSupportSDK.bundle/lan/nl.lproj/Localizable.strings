@@ -88,3 +88,17 @@
 " enterCorrectContent "="Voer de juiste inhoud in voor de volgende stap";
 "aihelp_select_max_options_android"="Selecteer maximaal %s opties";
 "aihelp_select_max_options_ios"="Selecteer maximaal %@ opties";
+"aihelp_contact_us"="Neem contact op";
+"aihelp_popular_questions"="Meest gestelde vragen";
+"aihelp_faqs"="Veelgestelde vragen";
+"aihelp_view_all_sections"="Bekijk alle {num} categorieën";
+"aihelp_view_all_questions"="Bekijk alle {num} vragen";
+"aihelp_homepage"="Startpagina";
+"aihelp_no_page_no_browse"="De pagina bestaat niet. U kunt niet door deze pagina bladeren.";
+"aihelp_back_to_help_center"="Terug naar Helpcentrum";
+"aihelp_no_requested_page"="Het lijkt erop dat we de door u opgevraagde pagina niet kunnen vinden";
+"aihelp_search_result"="Zoekresultaten voor 「{val}」";
+"aihelp_view_all_results"="Bekijk alle zoekresultaten";
+"aihelp_related_articles"="gerelateerde artikelen";
+"aihelp_helpful_article"="Was dit artikel behulpzaam?";
+"aihelp_more_help"="Meer hulp nodig?";

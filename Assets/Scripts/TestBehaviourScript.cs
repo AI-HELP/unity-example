@@ -12,17 +12,18 @@ using AIHelp;
 
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "THIS IS YOUR APP KEY";
-    private string domain = "THIS IS YOUR DOMAIN";
-    private string appId = "THIS IS YOUR APP ID";
+    private string appKey = "AIHelp";
+    private string domain = "release.aihelp.net";
+    private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
 
 
     private void Awake()
     {
         AIHelpSupport.enableLogging(true);
-        AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
+        // AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
         AIHelpSupport.Init(appKey, domain, appId);
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
+        AIHelpSupport.SetOnAIHelpInitializedAsyncCallback(OnAIHelpInitializedAsyncCallback);
     }
 
     private void Start()
@@ -60,6 +61,11 @@ public class TestBehaviourScript : MonoBehaviour
     public void OnAIHelpInitializedCallback(bool isSuccess, string message)
     {
         printOnScreen("init isSuccess " + isSuccess + ", " + message);
+    }
+
+    public void OnAIHelpInitializedAsyncCallback(bool isSuccess, string message)
+    {
+        // printOnScreen("init isSuccess Async " + isSuccess + ", " + message);
     }
 
     void customerServiceClick()

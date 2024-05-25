@@ -88,3 +88,17 @@
 " enterCorrectContent "="Unesite tačan sadržaj za sljedeći korak";
 "aihelp_select_max_options_android"="Odaberite najviše %s opcija";
 "aihelp_select_max_options_ios"="Odaberite najviše %@ opcija";
+"aihelp_contact_us"="Kontaktiraj nas";
+"aihelp_popular_questions"="Najvažnija pitanja";
+"aihelp_faqs"="FAQs";
+"aihelp_view_all_sections"="Pogledajte svih {num} kategorija";
+"aihelp_view_all_questions"="Pogledajte svih {num} pitanja";
+"aihelp_homepage"="Početna stranica";
+"aihelp_no_page_no_browse"="Stranica ne postoji. Ne možete pretraživati ​​ovu stranicu.";
+"aihelp_back_to_help_center"="Povratak u centar za pomoć";
+"aihelp_no_requested_page"="Čini se da ne možemo pronaći stranicu koju ste tražili";
+"aihelp_search_result"="Rezultati pretraživanja za 「{val}」";
+"aihelp_view_all_results"="Pogledajte sve rezultate pretrage";
+"aihelp_related_articles"="povezani članci";
+"aihelp_helpful_article"="Je li ovaj članak bio od pomoći?";
+"aihelp_more_help"="Trebate još pomoći?";

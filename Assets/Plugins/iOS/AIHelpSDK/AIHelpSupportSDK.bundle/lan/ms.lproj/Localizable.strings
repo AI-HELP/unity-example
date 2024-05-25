@@ -88,3 +88,17 @@
 " enterCorrectContent "="Sila masukkan kandungan yang betul untuk langkah seterusnya";
 "aihelp_select_max_options_android"="Pilih sehingga %s pilihan";
 "aihelp_select_max_options_ios"="Pilih sehingga %@ pilihan";
+"aihelp_contact_us"="Hubungi Kami";
+"aihelp_popular_questions"="Soalan Teratas";
+"aihelp_faqs"="Soalan Lazim";
+"aihelp_view_all_sections"="Lihat semua {num} kategori";
+"aihelp_view_all_questions"="Lihat semua {num} soalan";
+"aihelp_homepage"="Laman utama";
+"aihelp_no_page_no_browse"="Halaman itu tidak wujud. Anda tidak boleh menyemak imbas halaman ini.";
+"aihelp_back_to_help_center"="Kembali ke Pusat Bantuan";
+"aihelp_no_requested_page"="Kami nampaknya tidak dapat mencari halaman yang anda minta";
+"aihelp_search_result"="Hasil carian untuk 「{val}」";
+"aihelp_view_all_results"="Lihat semua hasil carian";
+"aihelp_related_articles"="artikel berkaitan";
+"aihelp_helpful_article"="Adakah artikel ini membantu?";
+"aihelp_more_help"="Perlukan bantuan lagi?";

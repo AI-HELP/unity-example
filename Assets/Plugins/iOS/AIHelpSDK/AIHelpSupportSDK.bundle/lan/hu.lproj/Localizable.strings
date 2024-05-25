@@ -88,3 +88,17 @@
 " enterCorrectContent "="Kérjük, adja meg a megfelelő tartalmat a következő lépéshez";
 "aihelp_select_max_options_android"="Válasszon legfeljebb %s lehetőséget";
 "aihelp_select_max_options_ios"="Válasszon legfeljebb %@ lehetőséget";
+"aihelp_contact_us"="Lépjen kapcsolatba velünk";
+"aihelp_popular_questions"="Legnépszerűbb kérdések";
+"aihelp_faqs"="GYIK";
+"aihelp_view_all_sections"="Mind a(z) {num} kategória megtekintése";
+"aihelp_view_all_questions"="Tekintse meg az összes {num} kérdést";
+"aihelp_homepage"="Kezdőlap";
+"aihelp_no_page_no_browse"="Az oldal nem létezik. Ezen az oldalon nem böngészhet.";
+"aihelp_back_to_help_center"="Vissza a Súgóhoz";
+"aihelp_no_requested_page"="Nem találjuk a keresett oldalt";
+"aihelp_search_result"="Keresési eredmények a következőre: 「{val}」";
+"aihelp_view_all_results"="Az összes keresési eredmény megtekintése";
+"aihelp_related_articles"="kapcsolódó cikkek";
+"aihelp_helpful_article"="Hasznos volt ez a cikk?";
+"aihelp_more_help"="További segítségre van szüksége?";

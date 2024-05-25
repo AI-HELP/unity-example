@@ -88,3 +88,17 @@
 " enterCorrectContent "="Pakipasok ang tamang nilalaman para sa susunod na hakbang";
 "aihelp_select_max_options_android"="Pumili ng hanggang %s na opsyon";
 "aihelp_select_max_options_ios"="Pumili ng hanggang %@ na mga opsyon";
+"aihelp_contact_us"="Makipag-ugnayan sa amin";
+"aihelp_popular_questions"="Mga Nangungunang Tanong";
+"aihelp_faqs"="Mga FAQ";
+"aihelp_view_all_sections"="Tingnan ang lahat ng {num} na kategorya";
+"aihelp_view_all_questions"="Tingnan ang lahat ng {num} tanong";
+"aihelp_homepage"="Homepage";
+"aihelp_no_page_no_browse"="Ang pahina ay wala. Hindi mo maaaring i-browse ang pahinang ito.";
+"aihelp_back_to_help_center"="Bumalik sa Help Center";
+"aihelp_no_requested_page"="Mukhang hindi namin mahanap ang page na hiniling mo";
+"aihelp_search_result"="Mga resulta ng paghahanap para sa 「{val}」";
+"aihelp_view_all_results"="Tingnan ang lahat ng resulta ng paghahanap";
+"aihelp_related_articles"="Mga Kaugnay na Artikulo";
+"aihelp_helpful_article"="Nakatulong ba ang artikulong ito?";
+"aihelp_more_help"="Kailangan ng karagdagang tulong?";

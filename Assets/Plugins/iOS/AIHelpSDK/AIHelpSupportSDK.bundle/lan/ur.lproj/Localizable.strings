@@ -88,3 +88,17 @@
 " enterCorrectContent "="براہ کرم اگلے مرحلے کے لیے صحیح مواد درج کریں۔";
 "aihelp_select_max_options_android"="%s تک کے اختیارات منتخب کریں۔";
 "aihelp_select_max_options_ios"="%@ تک کے اختیارات منتخب کریں۔";
+"aihelp_contact_us"="ہم سے رابطہ کریں۔";
+"aihelp_popular_questions"="سرفہرست سوالات";
+"aihelp_faqs"="اکثر پوچھے گئے سوالات";
+"aihelp_view_all_sections"="تمام {num} زمرے دیکھیں";
+"aihelp_view_all_questions"="تمام {num} سوالات دیکھیں";
+"aihelp_homepage"="ہوم پیج";
+"aihelp_no_page_no_browse"="صفحہ موجود نہیں ہے۔ آپ اس صفحہ کو براؤز نہیں کر سکتے۔";
+"aihelp_back_to_help_center"="امدادی مرکز پر واپس جائیں۔";
+"aihelp_no_requested_page"="ایسا لگتا ہے کہ ہم وہ صفحہ تلاش نہیں کر سکتے جس کی آپ نے درخواست کی ہے۔";
+"aihelp_search_result"="「{val}」 کے لیے تلاش کے نتائج";
+"aihelp_view_all_results"="تمام تلاش کے نتائج دیکھیں";
+"aihelp_related_articles"="متعلقہ مضامین";
+"aihelp_helpful_article"="کیا یہ مضمون مددگار تھا؟";
+"aihelp_more_help"="مزید مدد کی ضرورت ہے؟";

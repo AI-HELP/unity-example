@@ -88,3 +88,17 @@
 " enterCorrectContent "="Vennligst skriv inn riktig innhold for neste trinn";
 "aihelp_select_max_options_android"="Velg opptil %s alternativer";
 "aihelp_select_max_options_ios"="Velg opptil %@ alternativer";
+"aihelp_contact_us"="Kontakt oss";
+"aihelp_popular_questions"="Toppspørsmål";
+"aihelp_faqs"="Vanlige spørsmål";
+"aihelp_view_all_sections"="Se alle {num} kategorier";
+"aihelp_view_all_questions"="Se alle {num} spørsmål";
+"aihelp_homepage"="Hjemmeside";
+"aihelp_no_page_no_browse"="Siden eksisterer ikke. Du kan ikke bla gjennom denne siden.";
+"aihelp_back_to_help_center"="Tilbake til brukerstøtten";
+"aihelp_no_requested_page"="Vi kan ikke finne siden du ba om";
+"aihelp_search_result"="Søkeresultater for 「{val}」";
+"aihelp_view_all_results"="Se alle søkeresultater";
+"aihelp_related_articles"="relaterte artikler";
+"aihelp_helpful_article"="Var denne artikkelen til hjelp?";
+"aihelp_more_help"="Trenger du mer hjelp?";

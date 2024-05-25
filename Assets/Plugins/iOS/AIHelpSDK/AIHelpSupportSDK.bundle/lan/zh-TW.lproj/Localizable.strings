@@ -88,3 +88,17 @@
 " enterCorrectContent "="請輸入正確的內容進行下一步";
 "aihelp_select_max_options_android"="最多選擇 %s 個選項";
 "aihelp_select_max_options_ios"="最多選擇 %@ 個選項";
+"aihelp_contact_us"="聯繫我們";
+"aihelp_popular_questions"="熱門問題";
+"aihelp_faqs"="常見問題";
+"aihelp_view_all_sections"="查看所有 {num} 個類別";
+"aihelp_view_all_questions"="看全部 {num} 個問題";
+"aihelp_homepage"="首頁";
+"aihelp_no_page_no_browse"="該頁面不存在。您無法瀏覽此頁面。";
+"aihelp_back_to_help_center"="返回幫助中心";
+"aihelp_no_requested_page"="我們似乎找不到您要求的頁面";
+"aihelp_search_result"="「“{val}”」的搜索結果";
+"aihelp_view_all_results"="查看所有搜索結果";
+"aihelp_related_articles"="相關文章";
+"aihelp_helpful_article"="本文是否有幫助？";
+"aihelp_more_help"="需要更多幫助？";

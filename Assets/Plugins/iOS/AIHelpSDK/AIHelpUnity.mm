@@ -51,6 +51,10 @@ extern "C" {
         [AIHelpSupportSDK setOnInitializedCallback:callBack];
     }
 
+    void unity_setOnInitializedAsyncCallback (AISupportInitCallBack callBack) {
+        [AIHelpSupportSDK setOnInitializedAsyncCallback:callBack];
+    }
+
     bool unity_show(const char* entranceId, const char* welcomeMessage) {
         AIHelpApiConfigBuilder *configBuilder = [[AIHelpApiConfigBuilder alloc] init];
         configBuilder.entranceId = charToNSString(entranceId);

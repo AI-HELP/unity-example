@@ -14,6 +14,7 @@
 extern "C" void unity_init (const char* apiKey, const char* domainName, const char* appId);
 extern "C" void unity_initLan (const char* apiKey, const char* domainName, const char* appId, const char* language);
 extern "C" void unity_setOnInitializedCallback (AISupportInitCallBack callBack);
+extern "C" void unity_setOnInitializedAsyncCallback (AISupportInitCallBack callBack);
 
 extern "C" bool unity_show(const char* entranceId, const char* welcomeMessage);
 extern "C" void unity_showSingleFAQ(const char* faqId, int conversationMoment);

@@ -88,3 +88,17 @@
 " enterCorrectContent "="దయచేసి తదుపరి దశ కోసం సరైన కంటెంట్‌ను నమోదు చేయండి";
 "aihelp_select_max_options_android"="గరిష్టంగా %s ఎంపికలను ఎంచుకోండి";
 "aihelp_select_max_options_ios"="గరిష్టంగా %@ ఎంపికలను ఎంచుకోండి";
+"aihelp_contact_us"="మమ్మల్ని సంప్రదించండి";
+"aihelp_popular_questions"="అగ్ర ప్రశ్నలు";
+"aihelp_faqs"="తరచుగా అడిగే ప్రశ్నలు";
+"aihelp_view_all_sections"="అన్ని {num} వర్గాలను వీక్షించండి";
+"aihelp_view_all_questions"="అన్ని {num} ప్రశ్నలను వీక్షించండి";
+"aihelp_homepage"="హోమ్‌పేజీ";
+"aihelp_no_page_no_browse"="పేజీ ఉనికిలో లేదు. మీరు ఈ పేజీని బ్రౌజ్ చేయలేరు.";
+"aihelp_back_to_help_center"="సహాయ కేంద్రానికి తిరిగి వెళ్ళు";
+"aihelp_no_requested_page"="మీరు అభ్యర్థించిన పేజీని మేము కనుగొనలేకపోయాము";
+"aihelp_search_result"="「{val}'' కోసం శోధన ఫలితాలు";
+"aihelp_view_all_results"="అన్ని శోధన ఫలితాలను వీక్షించండి";
+"aihelp_related_articles"="సంబంధిత కథనాలు";
+"aihelp_helpful_article"="ఈ కథనం ఉపయోగకరంగా ఉందా?";
+"aihelp_more_help"="మరింత సహాయం కావాలా?";

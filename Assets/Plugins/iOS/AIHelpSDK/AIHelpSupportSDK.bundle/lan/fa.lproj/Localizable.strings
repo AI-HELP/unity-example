@@ -88,3 +88,17 @@
 " enterCorrectContent "="لطفاً محتوای صحیح را برای مرحله بعدی وارد کنید";
 "aihelp_select_max_options_android"="حداکثر %s گزینه را انتخاب کنید";
 "aihelp_select_max_options_ios"="حداکثر %@ گزینه را انتخاب کنید";
+"aihelp_contact_us"="با ما تماس بگیرید";
+"aihelp_popular_questions"="سوالات برتر";
+"aihelp_faqs"="سوالات متداول";
+"aihelp_view_all_sections"="مشاهده همه {num} دسته‌ها";
+"aihelp_view_all_questions"="مشاهده همه {num} سؤالات";
+"aihelp_homepage"="صفحه نخست";
+"aihelp_no_page_no_browse"="صفحه وجود ندارد. شما نمی توانید این صفحه را مرور کنید.";
+"aihelp_back_to_help_center"="بازگشت به مرکز راهنمایی";
+"aihelp_no_requested_page"="به نظر نمی رسد صفحه مورد نظر شما را پیدا کنیم";
+"aihelp_search_result"="نتایج جستجو برای 「{val}」";
+"aihelp_view_all_results"="مشاهده تمام نتایج جستجو";
+"aihelp_related_articles"="مقالات مرتبط";
+"aihelp_helpful_article"="این مقاله به شما کمک کرد؟";
+"aihelp_more_help"="به کمک بیشتری نیاز دارید؟";
