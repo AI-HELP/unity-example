@@ -12,16 +12,30 @@ using AIHelp;
 
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string appKey = "AIHelp";
-    private string domain = "release.aihelp.net";
-    private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+    private string domain = "local.aihelp.net";
+    // private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+    private string appId = "";
 
 
     private void Awake()
     {
+        UnityMainThreadDispatcher.Initialize();
         AIHelpSupport.enableLogging(true);
         // AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
-        AIHelpSupport.Init(appKey, domain, appId);
+
+        #if UNITY_ANDROID
+            if (Application.platform == RuntimePlatform.Android) {
+                appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+            }
+        #endif
+        #if UNITY_IOS
+            if (Application.platform == RuntimePlatform.IPhonePlayer)
+            {
+                appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0";
+            }
+        #endif
+
+        AIHelpSupport.Initialize(domain, appId);
         AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
         AIHelpSupport.SetOnAIHelpInitializedAsyncCallback(OnAIHelpInitializedAsyncCallback);
     }
@@ -65,7 +79,7 @@ public class TestBehaviourScript : MonoBehaviour
 
     public void OnAIHelpInitializedAsyncCallback(bool isSuccess, string message)
     {
-        // printOnScreen("init isSuccess Async " + isSuccess + ", " + message);
+        printOnScreen("init isSuccess Async " + isSuccess + ", " + message);
     }
 
     void customerServiceClick()
@@ -91,13 +105,33 @@ public class TestBehaviourScript : MonoBehaviour
     void updateUserInfoClick()
     {
         UserConfig config = new UserConfig.Builder()
-            .SetUserId("123456789")
             .SetUserName("AIHelp")
             .SetUserTags("VIP1")
-            .SetCustomData("{''}")
-            .SetSyncCrmInfo(true)
-            .build();
-        AIHelpSupport.UpdateUserInfo(config);
+            .SetCustomData("{}")
+            .Build();
+
+       AIHelpDelegate.OnEnterpriseAuthCallback authCallback = async (completion) =>
+        {
+            await Task.Delay(3000);
+            System.Random random = new System.Random();
+            completion("your_async_token " + random.NextDouble());
+        };
+
+        AIHelpDelegate.OnLoginResultCallback loginCallback = (code, message) =>
+        {
+           printOnScreen("You have loggin with code: " + code + ", and message: " + message); 
+        };
+
+        // Create LoginConfig instance
+        LoginConfig loginConfig = new LoginConfig.Builder()
+            .SetUserId("this")
+            .SetUserConfig(config)
+            // .SetOnEnterpriseAuthCallback(authCallback)
+            .SetOnLoginResultCallback(loginCallback)
+            .Build();
+
+        AIHelpSupport.Login(loginConfig);
+
     }
 
     void updateSDKLanguageClick()
@@ -123,8 +157,11 @@ public class TestBehaviourScript : MonoBehaviour
 
     private void printOnScreen(string message)
     {
-        Text notifyMessage = GameObject.Find("Canvas/notifyMessage").GetComponent<Text>();
-        notifyMessage.text = message;
+        UnityMainThreadDispatcher.Instance().Enqueue(() =>
+        {
+            Text notifyMessage = GameObject.Find("Canvas/notifyMessage").GetComponent<Text>();
+            notifyMessage.text = message;
+        });
     }
 
     void unreadMeassageClick()
@@ -134,7 +171,6 @@ public class TestBehaviourScript : MonoBehaviour
 
     void netWorkCheckClick()
     {
-        AIHelpSupport.SetNetworkCheckHostAddress("aihelp.net");
     }
 
     void upLoadLogClick()

@@ -32,6 +32,7 @@ allprojects {
 	ext {
 		it.setProperty("android.useAndroidX", true)
 		it.setProperty("android.enableJetifier", true)
+		it.setProperty("android.jetifier.blacklist", "net.aihelp:android-aihelp-aar")
 	}
 }
 
@@ -61,6 +62,8 @@ android {
       exclude ('/lib/x86/*' + '*')
       exclude ('/lib/x86_64/*' + '*')
       */
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/*.kotlin_module'
   }
 }
 // Android Resolver Exclusions End
@@ -108,13 +111,16 @@ android {
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'**USER_PROGUARD****SIGNCONFIG**
         }
+        
     }**PACKAGING_OPTIONS****SPLITS**
 **BUILT_APK_LOCATION**
     dependencies {
         implementation 'com.android.support:multidex:1.0.3'
         implementation 'androidx.appcompat:appcompat:1.1.0'
-        implementation 'net.aihelp:android-aihelp-aar:4.7.+'
+        // implementation 'net.aihelp:android-aihelp-aar:4.8.1-SNAPSHOT'
+        implementation 'net.aihelp:android-aihelp-aar:4.7.2'
     }
+
 
     dexOptions {
         javaMaxHeapSize "4g"

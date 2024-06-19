@@ -41,6 +41,9 @@ typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
     AIHelpFAQSupportEntranceFAQNotFound = 5,
 };
 
+typedef void (*AISupportEnterpriseAuthCallBack)(void (*completion)(const char *token));
+typedef void (*AISupportLoginResultCallBack)(int code, const char *token);
+
 #pragma mark - ECServiceUserConfig
 
 @interface AIHelpUserConfig : NSObject
@@ -48,7 +51,6 @@ typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
 @end
 
 @interface AIHelpUserConfigBuilder : NSObject
-@property (nonatomic, copy)NSString       *userId;        // default is unique deviceId
 @property (nonatomic, copy)NSString       *userName;      // default is "anonymous"
 @property (nonatomic, copy)NSString       *serverId;      // default is nil
 @property (nonatomic, strong)NSArray        *userTags;      // If you assign this field with existing tags from aihelp admin dashboard, the tickets created by current user will take these tags by default.
@@ -67,4 +69,21 @@ typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
 @property (nonatomic, copy)NSString *entranceId;
 @property (nonatomic, copy)NSString *welcomeMessage;
 - (AIHelpApiConfig *)build;
+@end
+
+#pragma mark - AIHelpLoginConfig
+
+@interface AIHelpLoginConfig : NSObject
+- (id) init NS_UNAVAILABLE;
+@end
+
+@interface AIHelpLoginConfigBuilder : NSObject
+
+@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, strong) AIHelpUserConfig *userConfig;
+@property (nonatomic, assign) AISupportEnterpriseAuthCallBack enterpriseAuthCallback;
+@property (nonatomic, assign) AISupportLoginResultCallBack loginResultCallback;
+
+- (AIHelpLoginConfig *)build;
+
 @end

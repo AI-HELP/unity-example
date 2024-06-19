@@ -1,26 +1,24 @@
 ﻿using System;
 namespace AIHelp
 {
-
     public class AIHelpSupport
     {
-
-        public static void Init(string appKey, string domain, string appId, string language)
+        public static void Initialize(string domain, string appId, string language)
         {
-            AIHelpCore.getInstance().Init(appKey, domain, appId, language);
+            AIHelpCore.getInstance().Initialize(domain, appId, language);
         }
 
-        public static void Init(string appKey, string domain, string appId)
+        public static void Initialize(string domain, string appId)
         {
-            Init(appKey, domain, appId, "");
+            Initialize(domain, appId, "");
         }
 
-        public static void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback callback)
+        public static void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callback)
         {
             AIHelpCore.getInstance().SetOnAIHelpInitializedCallback(callback);
         }
 
-        public static void SetOnAIHelpInitializedAsyncCallback(AIHelpDefine.OnAIHelpInitializedAsyncCallback callback)
+        public static void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callback)
         {
             AIHelpCore.getInstance().SetOnAIHelpInitializedAsyncCallback(callback);
         }
@@ -38,6 +36,16 @@ namespace AIHelp
         public static void ShowSingleFAQ(string faqId, ConversationMoment moment)
         {
             AIHelpCore.getInstance().ShowSingleFAQ(faqId, moment);
+        }
+
+        public static void Login(string userId)
+        {
+            Login(new LoginConfig.Builder().SetUserId(userId).Build());
+        }
+
+        public static void Login(LoginConfig loginConfig)
+        {
+            AIHelpCore.getInstance().Login(loginConfig);
         }
 
         public static void UpdateUserInfo(UserConfig userConfig)
@@ -65,22 +73,12 @@ namespace AIHelp
             AIHelpCore.getInstance().SetPushTokenAndPlatform(pushToken, platform);
         }
 
-        public static void SetNetworkCheckHostAddress(string address)
-        {
-            SetNetworkCheckHostAddress(address, null);
-        }
-
-        public static void SetNetworkCheckHostAddress(string address, AIHelpDefine.OnNetworkCheckResultCallback callback)
-        {
-            AIHelpCore.getInstance().SetNetworkCheckHostAddress(address, callback);
-        }
-
-        public static void StartUnreadMessageCountPolling(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        public static void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback)
         {
             AIHelpCore.getInstance().StartUnreadMessageCountPolling(callback);
         }
 
-        public static void FetchUnreadMessageCount(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        public static void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback)
         {
             AIHelpCore.getInstance().FetchUnreadMessageCount(callback);
         }
@@ -110,22 +108,22 @@ namespace AIHelp
             AIHelpCore.getInstance().AdditionalSupportFor(countryOrRegion);
         }
 
-        public static void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback)
+        public static void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callback)
         {
             AIHelpCore.getInstance().SetOnSpecificFormSubmittedCallback(callback);
         }
 
-        public static void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback)
+        public static void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callback)
         {
             AIHelpCore.getInstance().SetOnAIHelpSessionOpenCallback(callback);
         }
 
-        public static void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback)
+        public static void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callback)
         {
             AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
         }
 
-        public static void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        public static void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback)
         {
             AIHelpCore.getInstance().SetOnSpecificUrlClickedCallback(callback);
         }
@@ -146,18 +144,6 @@ namespace AIHelp
             AIHelpCore.getInstance().SetSDKAppearanceMode(mode);
         }
 
-        public static void SetSDKEdgeInsets(float top, float bottom, bool enable)
-        {
-            AIHelpCore.getInstance().SetSDKEdgeInsets(top, bottom, enable);
-        }
-
-        public static void SetSDKEdgeColor(float red, float green, float blue, float alpha)
-        {
-            AIHelpCore.getInstance().SetSDKEdgeColor(red, green, blue, alpha);
-        }
-
 #endif
-
     }
-
 }

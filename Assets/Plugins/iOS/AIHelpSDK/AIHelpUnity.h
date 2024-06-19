@@ -11,15 +11,17 @@
 #ifndef AIHelpUnity_h
 #define AIHelpUnity_h
 
-extern "C" void unity_init (const char* apiKey, const char* domainName, const char* appId);
-extern "C" void unity_initLan (const char* apiKey, const char* domainName, const char* appId, const char* language);
+extern "C" void unity_initiailize (const char* domainName, const char* appId, const char* language);
 extern "C" void unity_setOnInitializedCallback (AISupportInitCallBack callBack);
 extern "C" void unity_setOnInitializedAsyncCallback (AISupportInitCallBack callBack);
 
 extern "C" bool unity_show(const char* entranceId, const char* welcomeMessage);
 extern "C" void unity_showSingleFAQ(const char* faqId, int conversationMoment);
 
-extern "C" void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo);
+extern "C" void unity_login (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData,
+     AISupportEnterpriseAuthCallBack authCallback, AISupportLoginResultCallBack loginCallback);
+extern "C" void unity_logout ();
+extern "C" void unity_updateUserInfo (const char* userName, const char* serverId, const char* userTags, const char* customData);
 extern "C" void unity_resetUserInfo ();
 
 extern "C" void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack);

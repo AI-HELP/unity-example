@@ -24,22 +24,36 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
  * Initialize AIHelp sdk
  *
  * When initializing AIHelp you must pass these three tokens. You initialize AIHelp by adding the following lines in the implementation file for your app delegate, ideally at the top of application:didFinishLaunchingWithOptions
- * @param apiKey This is your developer API Key
  * @param domainName This is your domain name without any http:// or forward slashes
  * @param appId  This is the unique ID assigned to your app
  */
-+ (void)initWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName appId:(NSString *)appId;
++ (void)initializeWithDomainName:(NSString *)domainName appId:(NSString *)appId;
 
 /**
  * Initialize AIHelp sdk
  *
  * When initializing AIHelp you must pass these three tokens. You initialize AIHelp by adding the following lines in the implementation file for your app delegate, ideally at the top of application:didFinishLaunchingWithOptions
- * @param apiKey This is your developer API Key
  * @param domainName This is your domain name without any http:// or forward slashes
  * @param appId  This is the unique ID assigned to your app
  * @param language  This is your expected init language
  */
-+ (void)initWithApiKey:(NSString *)apiKey domainName:(NSString *)domainName appId:(NSString *)appId language:(NSString *)language;
++ (void)initializeWithDomainName:(NSString *)domainName appId:(NSString *)appId language:(NSString *)language;
+
+/**
+ * Logs in a user using their user ID.
+ * * @param userId the unique identifier of the user to log in
+ */
++ (void)loginWithUserId:(NSString *)userId;
+
+/**
+ * Logs in a user using a LoginConfig object.
+ * <p>
+ * Checkout {@link LoginConfig} for more information.
+ *
+ * @param config the configuration object containing login details.
+ * @see LoginConfig
+ */
++ (void)login:(AIHelpLoginConfig *)config;
 
 /**
  * Show the AIHelp conversation screen.
@@ -205,5 +219,7 @@ typedef void (*AISupportSpecificUrlClickedCallBack)(const char * url);
 + (void)setSDKEdgeColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
 + (void)close;
+
++ (void)logout;
 
 @end
