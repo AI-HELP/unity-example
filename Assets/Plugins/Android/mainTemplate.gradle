@@ -2,7 +2,6 @@
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenCentral()
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots'
@@ -17,7 +16,6 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
         flatDir {
             dirs 'libs'
@@ -32,7 +30,6 @@ allprojects {
 	ext {
 		it.setProperty("android.useAndroidX", true)
 		it.setProperty("android.enableJetifier", true)
-		it.setProperty("android.jetifier.blacklist", "net.aihelp:android-aihelp-aar")
 	}
 }
 
@@ -118,9 +115,8 @@ android {
         implementation 'com.android.support:multidex:1.0.3'
         implementation 'androidx.appcompat:appcompat:1.1.0'
         // implementation 'net.aihelp:android-aihelp-aar:4.8.1-SNAPSHOT'
-        implementation 'net.aihelp:android-aihelp-aar:4.7.2'
+        implementation 'net.aihelp:android-aihelp-aar:5.1.+'
     }
-
 
     dexOptions {
         javaMaxHeapSize "4g"

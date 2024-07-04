@@ -12,10 +12,9 @@ using AIHelp;
 
 public class TestBehaviourScript : MonoBehaviour
 {
-    private string domain = "local.aihelp.net";
+    private string domain = "release.aihelp.net";
     // private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
     private string appId = "";
-
 
     private void Awake()
     {
@@ -23,21 +22,19 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.enableLogging(true);
         // AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
 
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
             if (Application.platform == RuntimePlatform.Android) {
                 appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
             }
-        #endif
-        #if UNITY_IOS
+#endif
+#if UNITY_IOS
             if (Application.platform == RuntimePlatform.IPhonePlayer)
             {
                 appId = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0";
             }
-        #endif
-
+#endif
         AIHelpSupport.Initialize(domain, appId);
-        AIHelpSupport.SetOnAIHelpInitializedCallback(OnAIHelpInitializedCallback);
-        AIHelpSupport.SetOnAIHelpInitializedAsyncCallback(OnAIHelpInitializedAsyncCallback);
+        RegisterAIHelpEventListener();
     }
 
     private void Start()
@@ -52,7 +49,6 @@ public class TestBehaviourScript : MonoBehaviour
             {"Canvas/updateSDKLanguage", updateSDKLanguageClick},
             {"Canvas/isHelpShow", isHelpShowClick},
             {"Canvas/unreadMeassage", unreadMeassageClick},
-            {"Canvas/netWorkCheck", netWorkCheckClick},
             {"Canvas/uploadLog", upLoadLogClick},
             {"Canvas/enableLogging", enableLoggingClick},
             {"Canvas/SDKVersion", SDKVersionClick},
@@ -64,22 +60,12 @@ public class TestBehaviourScript : MonoBehaviour
         {
             GameObject robotObj = GameObject.Find(keyval.Key);
 
-            Button robotBtn = (Button) robotObj.GetComponent<Button>();
+            Button robotBtn = (Button)robotObj.GetComponent<Button>();
 
             robotBtn.onClick.AddListener(() => { keyval.Value(); });
 
             return true;
         });
-    }
-
-    public void OnAIHelpInitializedCallback(bool isSuccess, string message)
-    {
-        printOnScreen("init isSuccess " + isSuccess + ", " + message);
-    }
-
-    public void OnAIHelpInitializedAsyncCallback(bool isSuccess, string message)
-    {
-        printOnScreen("init isSuccess Async " + isSuccess + ", " + message);
     }
 
     void customerServiceClick()
@@ -110,28 +96,13 @@ public class TestBehaviourScript : MonoBehaviour
             .SetCustomData("{}")
             .Build();
 
-       AIHelpDelegate.OnEnterpriseAuthCallback authCallback = async (completion) =>
-        {
-            await Task.Delay(3000);
-            System.Random random = new System.Random();
-            completion("your_async_token " + random.NextDouble());
-        };
-
-        AIHelpDelegate.OnLoginResultCallback loginCallback = (code, message) =>
-        {
-           printOnScreen("You have loggin with code: " + code + ", and message: " + message); 
-        };
-
-        // Create LoginConfig instance
         LoginConfig loginConfig = new LoginConfig.Builder()
-            .SetUserId("this")
-            .SetUserConfig(config)
-            // .SetOnEnterpriseAuthCallback(authCallback)
-            .SetOnLoginResultCallback(loginCallback)
+            .SetUserId(GetRandomNumber())
+            // .SetUserConfig(config)
+            // .SetEnterpriseAuth(true)
             .Build();
 
         AIHelpSupport.Login(loginConfig);
-
     }
 
     void updateSDKLanguageClick()
@@ -142,17 +113,7 @@ public class TestBehaviourScript : MonoBehaviour
     void isHelpShowClick()
     {
         AIHelpSupport.IsAIHelpShowing();
-        AIHelpSupport.FetchUnreadMessageCount(OnFetchedMessageCountArrivedCallback);
-    }
-
-    void OnFetchedMessageCountArrivedCallback(int msgCount)
-    {
-        printOnScreen("You have " + msgCount + " unread messages obtained by fetching");
-    }
-
-    void OnMessageCountArrivedCallback(int msgCount)
-    {
-        printOnScreen("You have " + msgCount + " unread messages obtained by polling");
+        AIHelpSupport.FetchUnreadMessageCount();
     }
 
     private void printOnScreen(string message)
@@ -162,15 +123,12 @@ public class TestBehaviourScript : MonoBehaviour
             Text notifyMessage = GameObject.Find("Canvas/notifyMessage").GetComponent<Text>();
             notifyMessage.text = message;
         });
+        Debug.LogError(message);
     }
 
     void unreadMeassageClick()
     {
-        AIHelpSupport.StartUnreadMessageCountPolling(OnMessageCountArrivedCallback);
-    }
-
-    void netWorkCheckClick()
-    {
+        AIHelpSupport.FetchUnreadMessageCount();
     }
 
     void upLoadLogClick()
@@ -198,23 +156,56 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.AdditionalSupportFor(PublishCountryOrRegion.CN);
     }
 
-    public void OnSpecificFormSubmittedCallback()
-    {
-        printOnScreen("OnSpecificFormSubmittedCallback");
+    void RegisterAIHelpEventListener() {
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.Initialization, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity Initialization " + jsonEventData);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UserLogin, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity Login " + jsonEventData);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.EnterpriseAuth, async (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity EnterpriseAuth " + jsonEventData);
+            await Task.Delay(2000);
+            ack("{\"token\":\"this is your async token\"}");
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.SessionOpen, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity SessionOpen " + jsonEventData);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.SessionClose, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity SessionClose " + jsonEventData);
+            AIHelpSupport.UnregisterAsyncEventListener(AIHelp.EventType.SessionOpen);
+            AIHelpSupport.UnregisterAsyncEventListener(AIHelp.EventType.SessionClose);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.MessageArrival, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity MessageArrival " + jsonEventData);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.LogUpload, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity LogUpload " + jsonEventData);
+            ack("{\"content\":\"this is your synchronous log\"}");
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UrlClick, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity UrlClick " + jsonEventData);
+        });
     }
 
-    public void OnOpenCallBack()
-    {
-        printOnScreen("AIHelp OnOpenCallBack");
+    string GetRandomNumber() {
+        System.Random random = new System.Random();
+        return random.NextDouble() + "";
     }
 
-    public void OnCloseCallBack()
-    {
-        printOnScreen("AIHelp OnCloseCallBack");
-    }
-
-    public void OnSpecialUrlClickedCallBack(string url)
-    {
-        printOnScreen("AIHelp OnSpecialUrlClickedCallBack: " + url);
-    }
 }

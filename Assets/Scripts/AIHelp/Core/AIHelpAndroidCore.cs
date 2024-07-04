@@ -31,8 +31,7 @@ namespace AIHelp
             AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.LoginConfig$Builder");
             builder.Call<AndroidJavaObject>("setUserId", config.UserId);
             builder.Call<AndroidJavaObject>("setUserConfig", getUserConfig(config.UserConfig));
-            builder.Call<AndroidJavaObject>("setOnEnterpriseAuthCallback", config.OnEnterpriseAuthCallback == null ? null : new AuthCallbackProxy(config.OnEnterpriseAuthCallback));
-            builder.Call<AndroidJavaObject>("setOnLoginResultCallback", config.OnLoginResultCallback == null ? null : new LoginCallbackProxy(config.OnLoginResultCallback));
+            builder.Call<AndroidJavaObject>("setEnterpriseAuth", config.EnterpriseAuth);
             return builder.Call<AndroidJavaObject>("build");
         }
 
@@ -44,6 +43,7 @@ namespace AIHelp
 
         private AndroidJavaObject getUserConfig(UserConfig config)
         {
+            if(config == null) return null;
             AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.UserConfig$Builder");
             builder.Call<AndroidJavaObject>("setUserName", config.UserName);
             builder.Call<AndroidJavaObject>("setServerId", config.ServerId);
@@ -68,6 +68,12 @@ namespace AIHelp
         {
             AndroidJavaClass clz = new AndroidJavaClass("net.aihelp.config.enums.ShowConversationMoment");
             return clz.CallStatic<AndroidJavaObject>("fromValue", (int)conversationMoment);
+        }
+
+        private AndroidJavaObject getEventType(EventType eventType)
+        {
+            AndroidJavaClass clz = new AndroidJavaClass("net.aihelp.event.EventType");
+            return clz.CallStatic<AndroidJavaObject>("fromValue", (int)eventType);
         }
 
         public bool Show(string entranceId)
@@ -152,44 +158,19 @@ namespace AIHelp
             }
         }
 
-        public void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback listener)
+        public void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
         {
-            javaSupport.CallStatic("setOnAIHelpInitializedCallback", listener == null ? null : new InitializeCallbackProxy(listener));
+            javaSupport.CallStatic("registerAsyncEventListener", getEventType(eventType), listener == null ? null : new AsyncEventListenerProxy(listener));
         }
 
-        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback listener)
+        public void UnregisterAsyncEventListener(AIHelp.EventType eventType)
         {
-            javaSupport.CallStatic("setOnAIHelpInitializedAsyncCallback", listener == null ? null : new InitializeCallbackProxy(listener));
+            javaSupport.CallStatic("unregisterAsyncEventListener", getEventType(eventType));
         }
 
-        public void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback listener)
+        public void FetchUnreadMessageCount()
         {
-            javaSupport.CallStatic("startUnreadMessageCountPolling", listener == null ? null : new UnreadMessageCallbackProxy(listener));
-        }
-
-        public void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback listener)
-        {
-            javaSupport.CallStatic("fetchUnreadMessageCount", listener == null ? null : new UnreadMessageCallbackProxy(listener));
-        }
-
-        public void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback listener)
-        {
-            javaSupport.CallStatic("setOnSpecificFormSubmittedCallback", listener == null ? null : new FormSubmittedCallbackProxy(listener));
-        }
-
-        public void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback listener)
-        {
-            javaSupport.CallStatic("setOnAIHelpSessionOpenCallback", listener == null ? null : new SessionChangeCallbackProxy(listener));
-        }
-
-        public void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback listener)
-        {
-            javaSupport.CallStatic("setOnAIHelpSessionCloseCallback", listener == null ? null : new SessionChangeCallbackProxy(listener));
-        }
-
-        public void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback listener)
-        {
-            javaSupport.CallStatic("setOnSpecificUrlClickedCallback", listener == null ? null : new UrlClickedCallbackProxy(listener));
+            javaSupport.CallStatic("fetchUnreadMessageCount");
         }
 
         public void ShowUrl(string url)

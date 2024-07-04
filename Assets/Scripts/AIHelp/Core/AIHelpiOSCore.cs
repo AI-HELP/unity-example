@@ -14,16 +14,15 @@ namespace AIHelp
             unity_initiailize(domain, appId, language);
         }
 
-        public void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callback)
+        public void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
         {
-            _iOSInitCallback = callback;
-            unity_setOnInitializedCallback(iOSInitCallback);
+            eventListeners[eventType] = listener;
+            unity_registerAsyncEventListener(eventType, OCAsyncEventListener);
         }
 
-        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callback)
+        public void UnregisterAsyncEventListener(AIHelp.EventType eventType)
         {
-            _iOSInitAsyncCallback = callback;
-            unity_setOnInitializedAsyncCallback(iOSInitCallbackAsync);
+            unity_unregisterAsyncEventListener(eventType);
         }
 
         public bool Show(string entranceId) 
@@ -42,20 +41,8 @@ namespace AIHelp
         }
 
         public void Login(LoginConfig loginConfig) {
-            _iOSEnterpriseAuthCallback = loginConfig.OnEnterpriseAuthCallback;
-            _iOSLoginCallback = loginConfig.OnLoginResultCallback;
             UserConfig userConfig = loginConfig.UserConfig;
-            
-            if (_iOSEnterpriseAuthCallback == null && _iOSLoginCallback == null) {
-                unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, null, null); 
-            } else if (_iOSEnterpriseAuthCallback == null) {
-                unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, null, iOSLoginCallback); 
-            } else if (_iOSLoginCallback == null) {
-                unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, iOSEnterpriseAuthCallback, null); 
-            } else {
-                unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, iOSEnterpriseAuthCallback, iOSLoginCallback);
-            }
-
+            unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, loginConfig.EnterpriseAuth); 
         }
 
         public void Logout() {
@@ -87,16 +74,9 @@ namespace AIHelp
             unity_setPushTokenAndPlatform(pushToken, getPushPlatform(platform));
         }
 
-        public void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback)
+        public void FetchUnreadMessageCount()
         {
-            _iOSPollingMessageCountCallback = callback;
-            unity_startUnreadMessageCountPolling(iOSOnPollingMessageCountArrivedMethod);
-        }
-
-        public void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback)
-        {
-            _iOSFetchMessageCountCallback = callback;
-            unity_fetchUnreadMessageCount(iOSOnFetchMessageCountArrivedMethod);
+            unity_fetchUnreadMessageCount();
         }
 
         public string GetSDKVersion()
@@ -122,30 +102,6 @@ namespace AIHelp
         public void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
             unity_additionalSupportFor(countryOrRegion);
-        }
-
-        public void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callback)
-        {
-            _iOSSpecificFormCallback = callback;
-            unity_setOnSpecificFormSubmittedCallback(iOSSpecificFormSubmit);
-        }
-
-        public void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callback)
-        {
-            _iOSSessionOpenCallback = callback;
-            unity_setOnSessionOpenCallback(iOSSessionOpenSubmit);
-        }
-
-        public void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callback)
-        {
-            _iOSSessionCloseCallback = callback;
-            unity_setOnSessionCloseCallback(iOSSessionCloseSubmit);
-        }
-
-        public void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback)
-        {
-            _iOSSpecificUrlClickedCallback = callback;
-            unity_setOnSpecificUrlClickedCallback(iOSSpecificUrlClicked);
         }
 
         public void Close() {

@@ -11,14 +11,13 @@ namespace AIHelp
         private static extern void unity_initiailize(string domainName, string appId, string language);
 
         [DllImport("__Internal")]
-        private static extern void unity_setOnInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callBack);
+        private static extern void unity_registerAsyncEventListener(AIHelp.EventType eventType, AIHelpAsyncEventListener listener);
 
         [DllImport("__Internal")]
-        private static extern void unity_setOnInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callBack);
+        private static extern void unity_unregisterAsyncEventListener(AIHelp.EventType eventType);
 
         [DllImport("__Internal")]
-        private static extern void unity_login(string userId, string userName, string serverId, string userTags, string customData, 
-            AIHelpEnterpriseTokenDelegate authCallBack, AIHelpDelegate.OnLoginResultCallback loginCallback);
+        private static extern void unity_login(string userId, string userName, string serverId, string userTags, string customData, bool isEnterpriseAuth);
 
         [DllImport("__Internal")]
         private static extern void unity_logout();
@@ -57,28 +56,13 @@ namespace AIHelp
         private static extern void unity_showSingleFAQ(string faqId, int conversationMoment);
 
         [DllImport("__Internal")]
-        private static extern void unity_startUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback);
-
-        [DllImport("__Internal")]
-        private static extern void unity_fetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback);
+        private static extern void unity_fetchUnreadMessageCount();
 
         [DllImport("__Internal")]
         private static extern void unity_showUrl(string url);
 
         [DllImport("__Internal")]
         private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callBack);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setOnSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callBack);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setOnSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callBack);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback);
 
         [DllImport("__Internal")]
         private static extern void unity_setSDKAppearanceMode(int mode);

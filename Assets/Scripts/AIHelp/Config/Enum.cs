@@ -18,4 +18,43 @@ namespace AIHelp
         CN = 1, IN = 2
     };
 
+    public enum EventType
+    {
+        /**
+         * Event for SDK initialization
+         */
+        Initialization,
+
+        /**
+         * Event for user login
+         */
+        UserLogin,
+
+        /**
+         * Event for enterprise authentication
+         */
+        EnterpriseAuth,
+
+        /**
+         * Event for opening or closing a session (window)
+         */
+        SessionOpen,
+        SessionClose,
+
+        /**
+         * Event for message arrival
+         */
+        MessageArrival,
+
+        /**
+         * Event for log upload
+         */
+        LogUpload,
+
+        /**
+         * Event for URL click
+         */
+        UrlClick,
+    }
+
 }

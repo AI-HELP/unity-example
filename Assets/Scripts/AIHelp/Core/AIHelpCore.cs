@@ -2,10 +2,8 @@
 using UnityEngine;
 namespace AIHelp
 {
-
     public class AIHelpCore
     {
-
         private IAIHelpCore helpCore;
         private static AIHelpCore sInstance;
 
@@ -44,18 +42,6 @@ namespace AIHelp
         public void Initialize(string domain, string appId)
         {
             Initialize(domain, appId, "");
-        }
-
-        public void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnAIHelpInitializedCallback(callback);
-        }
-
-        public void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnAIHelpInitializedAsyncCallback(callback);
         }
 
         public bool Show(string entranceId)
@@ -118,16 +104,10 @@ namespace AIHelp
             helpCore.SetPushTokenAndPlatform(pushToken, platform);
         }
 
-        public void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback)
+        public void FetchUnreadMessageCount()
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.StartUnreadMessageCountPolling(callback);
-        }
-
-        public void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.FetchUnreadMessageCount(callback);
+            helpCore.FetchUnreadMessageCount();
         }
 
         public string GetSDKVersion()
@@ -160,28 +140,16 @@ namespace AIHelp
             helpCore.AdditionalSupportFor(countryOrRegion);
         }
 
-        public void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callback)
+        public void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnSpecificFormSubmittedCallback(callback);
+            helpCore.RegisterAsyncEventListener(eventType, listener);
         }
 
-        public void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callback)
+        public void UnregisterAsyncEventListener(AIHelp.EventType eventType)
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnAIHelpSessionOpenCallback(callback);
-        }
-
-        public void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnAIHelpSessionCloseCallback(callback);
-        }
-
-        public void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback)
-        {
-            if (!IsHelpCorePrepared()) return;
-            helpCore.SetOnSpecificUrlClickedCallback(callback);
+            helpCore.UnregisterAsyncEventListener(eventType);
         }
 
         public void Close()

@@ -60,12 +60,12 @@ extern "C" {
         [AIHelpSupportSDK initializeWithDomainName:_domainName appId:_appId language:_language];
     }
     
-    void unity_setOnInitializedCallback (AISupportInitCallBack callBack) {
-        [AIHelpSupportSDK setOnInitializedCallback:callBack];
+    void unity_registerAsyncEventListener (int eventType, AISupportAsyncEventListener listener) {
+        [AIHelpSupportSDK registerAsyncListener:listener eventType:(AIHelpEventType)eventType];
     }
 
-    void unity_setOnInitializedAsyncCallback (AISupportInitCallBack callBack) {
-        [AIHelpSupportSDK setOnInitializedAsyncCallback:callBack];
+    void unity_unregisterAsyncEventListener (int eventType) {
+        [AIHelpSupportSDK unregisterAsyncListenerWithEvent:(AIHelpEventType)eventType];
     }
 
     bool unity_show(const char* entranceId, const char* welcomeMessage) {
@@ -96,15 +96,13 @@ extern "C" {
         [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) showConversationMoment:moment];
     }
 
-    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData,
-        AISupportEnterpriseAuthCallBack enterpriseAuthCallback, AISupportLoginResultCallBack loginResultCallback) {
+    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isEnterpriseAuth) {
        NSString *_userId = charToNSString(userId); 
        AIHelpUserConfig *_userConfig = createUserConfig(userName, serverId, userTags, customData);
        AIHelpLoginConfigBuilder *builder = [[AIHelpLoginConfigBuilder alloc] init];
        builder.userId = _userId;
        builder.userConfig = _userConfig;
-       builder.enterpriseAuthCallback = enterpriseAuthCallback;
-       builder.loginResultCallback = loginResultCallback;
+       builder.isEnterpriseAuth = isEnterpriseAuth;
        [AIHelpSupportSDK login:builder.build];
     }
 
@@ -121,16 +119,8 @@ extern "C" {
         [AIHelpSupportSDK resetUserInfo];
     }
 
-    void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack) {
-        [AIHelpSupportSDK setNetworkCheckHostAddress:charToNSString(address) callback:callBack];
-    }
-
-    void unity_startUnreadMessageCountPolling (AISupportMessageCallBack callBack) {
-        [AIHelpSupportSDK startUnreadMessageCountPolling:callBack];
-    }
-
-    void unity_fetchUnreadMessageCount (AISupportMessageCallBack callBack) {
-        [AIHelpSupportSDK fetchUnreadMessageCount:callBack];
+    void unity_fetchUnreadMessageCount () {
+        [AIHelpSupportSDK fetchUnreadMessageCount];
     }
 
     void unity_updateSDKLanguage (const char* language) {
@@ -182,14 +172,6 @@ extern "C" {
         [AIHelpSupportSDK enableLogging:enable];
     }
 
-    void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
-        [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
-    }
-    
-    void unity_setSDKAppearanceMode (int mode) {
-        [AIHelpSupportSDK setSDKAppearanceMode:mode];
-    }
-    
     void unity_showUrl (const char* url) {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
     }
@@ -205,24 +187,16 @@ extern "C" {
         [AIHelpSupportSDK additionalSupportFor:tmpCountryOrRegion];
     }
 
-    void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack) {
-        [AIHelpSupportSDK setOnSpecificFormSubmittedCallback:callBack];
-    }
-
-    void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack) {
-        [AIHelpSupportSDK setOnAIHelpSessionOpenCallback:callBack];
-    }
-    void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
-        [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
-    }
-
-    void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack)
-    {
-        [AIHelpSupportSDK setOnSpecificUrlClickedCallback:callBack];
-    }
-
     void unity_close() {
         [AIHelpSupportSDK close];
+    }
+    
+    void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
+        [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
+    }
+    
+    void unity_setSDKAppearanceMode (int mode) {
+        [AIHelpSupportSDK setSDKAppearanceMode:mode];
     }
     
 #if defined(__cplusplus)

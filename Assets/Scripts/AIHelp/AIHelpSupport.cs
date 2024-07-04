@@ -13,14 +13,14 @@ namespace AIHelp
             Initialize(domain, appId, "");
         }
 
-        public static void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callback)
+        public static void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
         {
-            AIHelpCore.getInstance().SetOnAIHelpInitializedCallback(callback);
+            AIHelpCore.getInstance().RegisterAsyncEventListener(eventType, listener);
         }
 
-        public static void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callback)
+        public static void UnregisterAsyncEventListener(AIHelp.EventType eventType)
         {
-            AIHelpCore.getInstance().SetOnAIHelpInitializedAsyncCallback(callback);
+            AIHelpCore.getInstance().UnregisterAsyncEventListener(eventType);
         }
 
         public static bool Show(string entranceId)
@@ -73,14 +73,9 @@ namespace AIHelp
             AIHelpCore.getInstance().SetPushTokenAndPlatform(pushToken, platform);
         }
 
-        public static void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback)
+        public static void FetchUnreadMessageCount()
         {
-            AIHelpCore.getInstance().StartUnreadMessageCountPolling(callback);
-        }
-
-        public static void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback)
-        {
-            AIHelpCore.getInstance().FetchUnreadMessageCount(callback);
+            AIHelpCore.getInstance().FetchUnreadMessageCount();
         }
 
         public static string GetSDKVersion()
@@ -106,26 +101,6 @@ namespace AIHelp
         public static void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion)
         {
             AIHelpCore.getInstance().AdditionalSupportFor(countryOrRegion);
-        }
-
-        public static void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callback)
-        {
-            AIHelpCore.getInstance().SetOnSpecificFormSubmittedCallback(callback);
-        }
-
-        public static void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callback)
-        {
-            AIHelpCore.getInstance().SetOnAIHelpSessionOpenCallback(callback);
-        }
-
-        public static void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callback)
-        {
-            AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
-        }
-
-        public static void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback)
-        {
-            AIHelpCore.getInstance().SetOnSpecificUrlClickedCallback(callback);
         }
 
         public static void Close() {

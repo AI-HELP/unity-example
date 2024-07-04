@@ -5,8 +5,6 @@ namespace AIHelp
     public interface IAIHelpCore
     {
         void Initialize(string domain, string appId, string language);
-        void SetOnAIHelpInitializedCallback(AIHelpDelegate.OnAIHelpInitializedCallback callback);
-        void SetOnAIHelpInitializedAsyncCallback(AIHelpDelegate.OnAIHelpInitializedAsyncCallback callback);
 
         bool Show(string entranceId);
         bool Show(ApiConfig apiConfig);
@@ -21,18 +19,16 @@ namespace AIHelp
         void SetUploadLogPath(string path);
         void SetPushTokenAndPlatform(string pushToken, PushPlatform platform);
 
-        void StartUnreadMessageCountPolling(AIHelpDelegate.OnMessageCountArrivedCallback callback);
-        void FetchUnreadMessageCount(AIHelpDelegate.OnMessageCountArrivedCallback callback);
+        void FetchUnreadMessageCount();
 
         string GetSDKVersion();
         bool IsAIHelpShowing();
         void EnableLogging(bool enable);
         void ShowUrl(string url);
         void AdditionalSupportFor(PublishCountryOrRegion countryOrRegion);
-        void SetOnSpecificFormSubmittedCallback(AIHelpDelegate.OnSpecificFormSubmittedCallback callback);
-        void SetOnAIHelpSessionOpenCallback(AIHelpDelegate.OnAIHelpSessionOpenCallback callback);
-        void SetOnAIHelpSessionCloseCallback(AIHelpDelegate.OnAIHelpSessionCloseCallback callback);
-        void SetOnSpecificUrlClickedCallback(AIHelpDelegate.OnSpecificUrlClickedCallback callback);
+
+        void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener);
+        void UnregisterAsyncEventListener(AIHelp.EventType eventType);
 
         void Close();
 

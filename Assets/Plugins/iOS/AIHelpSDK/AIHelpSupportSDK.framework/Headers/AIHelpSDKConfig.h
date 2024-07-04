@@ -41,8 +41,24 @@ typedef NS_ENUM(int, AIHelpFAQSupportEntrance) {
     AIHelpFAQSupportEntranceFAQNotFound = 5,
 };
 
-typedef void (*AISupportEnterpriseAuthCallBack)(void (*completion)(const char *token));
-typedef void (*AISupportLoginResultCallBack)(int code, const char *token);
+typedef NS_ENUM(int, AIHelpLoginStatus) {
+    AIHelpLoginSuccess = 1,
+    AIHelpInvalidUID = -1,
+    AIHelpAuthError = -2,
+};
+
+typedef NS_ENUM(int, AIHelpEventType) {
+    AIHelpEventInitialization,                      // Event for SDK initialization
+    AIHelpEventUserLogin,                           // Event for user login
+    AIHelpEventEnterpriseAuth,                      // Event for enterprise authentication
+    AIHelpEventSessionOpen,                         // Event for opening a session (window)
+    AIHelpEventSessionClose,                        // Event for closing a session (window)
+    AIHelpEventMessageArrival,                      // Event for message arrival
+    AIHelpEventLogUpload,                           // Event for log upload
+    AIHelpEventUrlClick,                            // Event for URL click
+};
+
+typedef void (*AISupportAsyncEventListener)(const char *jsonEventData, void (*acknowledge)(const char *jsonAckData));
 
 #pragma mark - ECServiceUserConfig
 
@@ -80,9 +96,9 @@ typedef void (*AISupportLoginResultCallBack)(int code, const char *token);
 @interface AIHelpLoginConfigBuilder : NSObject
 
 @property (nonatomic, copy) NSString *userId;
+@property (nonatomic, assign) BOOL isEnterpriseAuth;
+
 @property (nonatomic, strong) AIHelpUserConfig *userConfig;
-@property (nonatomic, assign) AISupportEnterpriseAuthCallBack enterpriseAuthCallback;
-@property (nonatomic, assign) AISupportLoginResultCallBack loginResultCallback;
 
 - (AIHelpLoginConfig *)build;
 

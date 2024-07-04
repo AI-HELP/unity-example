@@ -6,23 +6,20 @@ namespace AIHelp
     {
         public string UserId { get; }
         public UserConfig UserConfig { get; }
-        public AIHelpDelegate.OnEnterpriseAuthCallback OnEnterpriseAuthCallback { get; }
-        public AIHelpDelegate.OnLoginResultCallback OnLoginResultCallback { get; }
+        public bool EnterpriseAuth { get; }
 
         private LoginConfig(Builder builder)
         {
             UserId = builder.UserId;
             UserConfig = builder.UserConfig;
-            OnEnterpriseAuthCallback = builder.OnEnterpriseAuthCallback;
-            OnLoginResultCallback = builder.OnLoginResultCallback;
+            EnterpriseAuth = builder.EnterpriseAuth;
         }
 
         public class Builder
         {
             public string UserId { get; private set; }
             public UserConfig UserConfig { get; private set; }
-            public AIHelpDelegate.OnEnterpriseAuthCallback OnEnterpriseAuthCallback { get; private set; }
-            public AIHelpDelegate.OnLoginResultCallback OnLoginResultCallback { get; private set; }
+            public bool EnterpriseAuth { get; private set; }
 
             public Builder SetUserId(string userId)
             {
@@ -36,15 +33,9 @@ namespace AIHelp
                 return this;
             }
 
-            public Builder SetOnEnterpriseAuthCallback(AIHelpDelegate.OnEnterpriseAuthCallback authCallback)
+            public Builder SetEnterpriseAuth(bool enterpriseAuth)
             {
-                OnEnterpriseAuthCallback = authCallback;
-                return this;
-            }
-
-            public Builder SetOnLoginResultCallback(AIHelpDelegate.OnLoginResultCallback loginCallback)
-            {
-                OnLoginResultCallback = loginCallback;
+                EnterpriseAuth = enterpriseAuth;
                 return this;
             }
 
