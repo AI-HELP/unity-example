@@ -41,7 +41,10 @@ namespace AIHelp
         }
 
         public void Login(LoginConfig loginConfig) {
-            UserConfig userConfig = loginConfig.UserConfig;
+            var userConfig = loginConfig.UserConfig;
+            if (userConfig == null) {
+                userConfig = new UserConfig.Builder().Build();
+            }
             unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, loginConfig.EnterpriseAuth); 
         }
 

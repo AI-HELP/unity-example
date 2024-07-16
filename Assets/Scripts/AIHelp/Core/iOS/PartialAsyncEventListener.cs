@@ -28,15 +28,23 @@ namespace AIHelp
         [MonoPInvokeCallback(typeof(AIHelpAsyncEventListener))] 
         private static void OCAsyncEventListener(string jsonEventData, IntPtr acknowledgePtr)
         {
-            AIHelp.EventType eventType = (AIHelp.EventType)SimpleJsonParser.ExtractEventTypeFromJson(jsonEventData);
-            if (eventListeners.TryGetValue(eventType, out var listener))
-            {
-                Action<string> acknowledge = jsonAckData => {
-                    AckDelegate = Marshal.GetDelegateForFunctionPointer<Acknowledgement>(acknowledgePtr);
-                    AckDelegate?.Invoke(jsonAckData);
-                };
-
-                listener?.Invoke(jsonEventData, acknowledge);
+            var intEventType = SimpleJsonParser.ExtractEventTypeFromJson(jsonEventData);
+            if (intEventType != -1) {
+                AIHelp.EventType eventType = (AIHelp.EventType)SimpleJsonParser.ExtractEventTypeFromJson(jsonEventData);
+                if (eventListeners.TryGetValue(eventType, out var listener))
+                {
+                    Action<string> acknowledge = jsonAckData => {
+                        if (acknowledgePtr != IntPtr.Zero) {
+                            AckDelegate = Marshal.GetDelegateForFunctionPointer<Acknowledgement>(acknowledgePtr);
+                            AckDelegate?.Invoke(jsonAckData);
+                        }
+                    };
+                    listener?.Invoke(jsonEventData, acknowledge);
+                } else {
+                    Debug.LogError($"[AIHelp] Unable to find any listener for event type: {eventType}. Have you declared it?");
+                }
+            } else {
+                Debug.LogError($"[AIHelp] Unable to retrieve eventType from eventData: {jsonEventData}");
             }
         }
     }

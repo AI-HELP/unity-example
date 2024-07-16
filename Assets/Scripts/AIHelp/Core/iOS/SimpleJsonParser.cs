@@ -5,6 +5,10 @@ public static class SimpleJsonParser
     public static int ExtractEventTypeFromJson(string json)
     {
         string fieldValue = ExtractFieldFromJson(json, "eventType");
+        if (string.IsNullOrEmpty(fieldValue))
+        {
+            return -1;
+        }
         return int.Parse(fieldValue);
     }
 
