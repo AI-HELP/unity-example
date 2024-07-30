@@ -45,7 +45,7 @@
 "aihelp_rate_finished"="ကျွန်တော်တို့ကိုအဆင့်သတ်မှတ်ချက်အတွက်ကျေးဇူးတင်ပါတယ်။";
 "aihelp_rate_request"="ကျေးဇူးပြု၍ ကျွန်ုပ်တို့၏ဝန်ဆောင်မှုကို";
 "aihelp_rate_satisfied"="ကြိုက်တယ်";
-"aihelp_resolution_no"="မဖြေရှင်းနိုင်";
+"aihelp_resolution_no"="မဖြေရှင်းနိုင်ပါ။";
 "aihelp_resolution_request"="သင့်ပြဿနာကို ဖြေရှင်းပြီးပြီလား။";
 "aihelp_resolution_yes"="ဖြေရှင်း";
 "aihelp_resource_not_support"="စနစ်သည် ဤဖော်မတ်ရှိ အရင်းအမြစ်များကို မပံ့ပိုးပါ။";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="ဆက်စပ်ဆောင်းပါးများ";
 "aihelp_helpful_article"="ဤဆောင်းပါးသည် အထောက်အကူဖြစ်ပါသလား။";
 "aihelp_more_help"="နောက်ထပ်အကူအညီလိုပါသလား။";
+"aihelp_select_max_options_web"="ရွေးချယ်စရာ {count} ခုအထိ ရွေးပါ။";
+"aihelp_media_upload_err_size_web"="ဖိုင်အရွယ်အစားသည် ကန့်သတ်ချက်ထက်ကျော်လွန်သည်၊ ကျေးဇူးပြု၍ {size}M ထက်သေးငယ်သော ဖိုင်ကို အပ်လုဒ်လုပ်ပါ။";
+"aihelp_media_upload_err_format_web"="ဖိုင်ဖော်မတ်ကို မပံ့ပိုးပါ။";
+"noMoreData"="ဒေတာမရှိတော့ပါ။";
+"tapOrPullUpToLoadMore"="နောက်ထပ်တင်ရန် တို့ပါ သို့မဟုတ် ဆွဲထုတ်ပါ။";

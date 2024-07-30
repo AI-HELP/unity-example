@@ -20,6 +20,7 @@ namespace AIHelp
         void SetPushTokenAndPlatform(string pushToken, PushPlatform platform);
 
         void FetchUnreadMessageCount();
+        void FetchUnreadTaskCount();
 
         string GetSDKVersion();
         bool IsAIHelpShowing();

@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Artikuj të ngjashëm";
 "aihelp_helpful_article"="A ju ndihmoi ky artikull?";
 "aihelp_more_help"="Keni nevojë për më shumë ndihmë?";
+"aihelp_select_max_options_web"="Zgjidh deri në {count} opsione";
+"aihelp_media_upload_err_size_web"="Madhësia e skedarit e kalon kufirin, ju lutemi ngarkoni skedarin më të vogël se {size}M";
+"aihelp_media_upload_err_format_web"="Formati i skedarit nuk mbështetet.";
+"noMoreData"="Nuk ka më të dhëna";
+"tapOrPullUpToLoadMore"="Trokit ose tërhiqe lart për të ngarkuar më shumë";

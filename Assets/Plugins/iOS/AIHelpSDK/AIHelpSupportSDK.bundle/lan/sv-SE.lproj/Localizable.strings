@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Har sparats";
 "aihelp_select"="Välj";
 "aihelp_select_date"="Välj ett datum";
-"aihelp_select_option"="Välj ett alternativ";
+"aihelp_select_option"="Var god välj ett alternativ";
 "aihelp_select_photo"="Välj foto";
 "aihelp_send"="Ange e-postadressen";
 "aihelp_storage_permission"="Aktivera lagringsbehörigheter så att du kan välja bilder eller videor att ladda upp för feedback till kundtjänst";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="relaterade artiklar";
 "aihelp_helpful_article"="var den här artikeln hjälpsam?";
 "aihelp_more_help"="Behöver du mer hjälp?";
+"aihelp_select_max_options_web"="Välj upp till {count} alternativ";
+"aihelp_media_upload_err_size_web"="Filstorleken överskrider gränsen, ladda upp filen som är mindre än {size}M";
+"aihelp_media_upload_err_format_web"="Filformatet stöds inte.";
+"noMoreData"="Inga mer data";
+"tapOrPullUpToLoadMore"="Tryck eller dra uppåt för att ladda mer";

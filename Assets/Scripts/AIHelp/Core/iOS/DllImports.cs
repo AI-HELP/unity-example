@@ -59,6 +59,9 @@ namespace AIHelp
         private static extern void unity_fetchUnreadMessageCount();
 
         [DllImport("__Internal")]
+        private static extern void unity_fetchUnreadTaskCount();
+
+        [DllImport("__Internal")]
         private static extern void unity_showUrl(string url);
 
         [DllImport("__Internal")]

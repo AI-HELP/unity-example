@@ -173,6 +173,11 @@ namespace AIHelp
             javaSupport.CallStatic("fetchUnreadMessageCount");
         }
 
+        public void FetchUnreadTaskCount()
+        {
+            javaSupport.CallStatic("fetchUnreadTaskCount");
+        }
+
         public void ShowUrl(string url)
         {
             if (javaSupport != null)

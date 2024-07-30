@@ -82,6 +82,11 @@ namespace AIHelp
             unity_fetchUnreadMessageCount();
         }
 
+        public void FetchUnreadTaskCount()
+        {
+            unity_fetchUnreadTaskCount();
+        }
+
         public string GetSDKVersion()
         {
             return unity_getSDKVersion();

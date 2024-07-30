@@ -45,7 +45,7 @@
 "aihelp_rate_finished"="Děkujeme za hodnocení!";
 "aihelp_rate_request"="Ohodnoťte prosím naši službu";
 "aihelp_rate_satisfied"="Oblíbené to";
-"aihelp_resolution_no"="Nevyřešeno";
+"aihelp_resolution_no"="Nevyřešený";
 "aihelp_resolution_request"="Byl váš problém vyřešen?";
 "aihelp_resolution_yes"="Vyřešeno";
 "aihelp_resource_not_support"="Systém nepodporuje zdroje v tomto formátu";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Související články";
 "aihelp_helpful_article"="Byl tento článek užitečný?";
 "aihelp_more_help"="Potřebujete další pomoc?";
+"aihelp_select_max_options_web"="Vyberte až {count} možností";
+"aihelp_media_upload_err_size_web"="Velikost souboru překračuje limit, nahrajte soubor menší než {size} M";
+"aihelp_media_upload_err_format_web"="Formát souboru není podporován.";
+"noMoreData"="Žádné další údaje";
+"tapOrPullUpToLoadMore"="Klepnutím nebo vytažením nahoru načtete další";

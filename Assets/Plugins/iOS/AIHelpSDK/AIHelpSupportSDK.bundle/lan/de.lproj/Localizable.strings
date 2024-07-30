@@ -7,7 +7,7 @@
 "aihelp_enter_content"="Bitte hier eingeben";
 "aihelp_enter_email_address"="Geben Sie bitte Ihre E-Mail Adresse ein";
 "aihelp_enter_number"="Geben Sie die  Zahlen ein";
-"aihelp_faq_feedback"="Sagen Sie uns bitte , wie wir besser machen können";
+"aihelp_faq_feedback"="Bitte geben Sie Ihre Vorschläge";
 "aihelp_faq_feedback_suggest"="Vorschlag";
 "aihelp_faq_feedback_thanks"="Danke für Ihre Rückmeldung.";
 "aihelp_faq_fetching_faqs"="Erhalten Sie Ihne Antwort";
@@ -45,16 +45,16 @@
 "aihelp_rate_finished"="Vielen Dank für die Bewertung";
 "aihelp_rate_request"="Bewerten Sie bitte unseren Service";
 "aihelp_rate_satisfied"="Prima";
-"aihelp_resolution_no"="Nein";
+"aihelp_resolution_no"="Ungelöst";
 "aihelp_resolution_request"="Wurde Ihr Problem schon  gelöst?";
-"aihelp_resolution_yes"="Ja";
+"aihelp_resolution_yes"="Gelöst";
 "aihelp_resource_not_support"="Das System unterstützt keine Ressourcen in diesem Format";
 "aihelp_saturday"="Samstag";
 "aihelp_save_failed"="Speichern fehlgeschlagen";
 "aihelp_save_seccessfully"="Erfolgreich gespeichert";
 "aihelp_select"="Wählen";
 "aihelp_select_date"="Wählen Sie ein Datum aus";
-"aihelp_select_option"="Bitte auswählen";
+"aihelp_select_option"="Bitte wähle eine Option";
 "aihelp_select_photo"="Foto auswählen";
 "aihelp_send"="Senden";
 "aihelp_storage_permission"="Bitte aktivieren Sie die Speicherberechtigungen, damit Sie Bilder oder Videos zum Hochladen für Feedback an den Kundenservice auswählen können";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="In Verbindung stehende Artikel";
 "aihelp_helpful_article"="War dieser Artikel hilfreich?";
 "aihelp_more_help"="Benötigen Sie weitere Hilfe?";
+"aihelp_select_max_options_web"="Wählen Sie bis zu {count} Optionen aus";
+"aihelp_media_upload_err_size_web"="Die Dateigröße überschreitet das Limit. Bitte laden Sie die Datei kleiner als {size}M hoch.";
+"aihelp_media_upload_err_format_web"="Das Dateiformat wird nicht unterstützt.";
+"noMoreData"="Keine weiteren Daten";
+"tapOrPullUpToLoadMore"="Tippen oder nach oben ziehen, um mehr zu laden";

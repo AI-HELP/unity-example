@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Những bài viết liên quan";
 "aihelp_helpful_article"="Bài viết này hữu ích không?";
 "aihelp_more_help"="Cần sự giúp đỡ nhiều hơn?";
+"aihelp_select_max_options_web"="Chọn tối đa {count} tùy chọn";
+"aihelp_media_upload_err_size_web"="Kích thước tệp vượt quá giới hạn, vui lòng tải tệp nhỏ hơn {size}M lên";
+"aihelp_media_upload_err_format_web"="Định dạng tập tin không được hỗ trợ.";
+"noMoreData"="Không còn dữ liệu";
+"tapOrPullUpToLoadMore"="Nhấn hoặc kéo lên để tải thêm";

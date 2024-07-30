@@ -45,7 +45,7 @@
 "aihelp_rate_finished"="Tak for din vurdering af os.";
 "aihelp_rate_request"="Bedøm venligst vores service";
 "aihelp_rate_satisfied"="Elskede det";
-"aihelp_resolution_no"="Uopklaret";
+"aihelp_resolution_no"="Uløst";
 "aihelp_resolution_request"="Er dit problem blevet løst?";
 "aihelp_resolution_yes"="Løst";
 "aihelp_resource_not_support"="Systemet understøtter ikke ressourcer i dette format";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="relaterede artikler";
 "aihelp_helpful_article"="Var denne artikel til hjælp?";
 "aihelp_more_help"="Har du brug for mere hjælp?";
+"aihelp_select_max_options_web"="Vælg op til {count} muligheder";
+"aihelp_media_upload_err_size_web"="Filstørrelsen overskrider grænsen. Upload venligst filen, der er mindre end {size}M";
+"aihelp_media_upload_err_format_web"="Filformatet understøttes ikke.";
+"noMoreData"="Ikke flere data";
+"tapOrPullUpToLoadMore"="Tryk eller træk op for at indlæse mere";

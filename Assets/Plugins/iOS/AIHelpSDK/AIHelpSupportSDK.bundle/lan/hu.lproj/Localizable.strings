@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Sikeresen mentve";
 "aihelp_select"="Válassza ki";
 "aihelp_select_date"="Kérjük, válasszon egy dátumot";
-"aihelp_select_option"="Kérjük, válasszon ki egy opciót";
+"aihelp_select_option"="kérem válasszon egy opciót";
 "aihelp_select_photo"="Válassza ki a fényképet";
 "aihelp_send"="Küld";
 "aihelp_storage_permission"="Kérjük, engedélyezze a tárolási engedélyeket, hogy kiválaszthassa a képeket vagy videókat, amelyeket feltölteni szeretne, és visszajelzést szeretne küldeni az ügyfélszolgálatnak";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="kapcsolódó cikkek";
 "aihelp_helpful_article"="Hasznos volt ez a cikk?";
 "aihelp_more_help"="További segítségre van szüksége?";
+"aihelp_select_max_options_web"="Válasszon legfeljebb {count} lehetőséget";
+"aihelp_media_upload_err_size_web"="A fájl mérete meghaladja a korlátot. Kérjük, töltsön fel {size}M-nél kisebb fájlt";
+"aihelp_media_upload_err_format_web"="A fájlformátum nem támogatott.";
+"noMoreData"="Nincs több adat";
+"tapOrPullUpToLoadMore"="Továbbiak betöltéséhez koppintson vagy húzza felfelé";

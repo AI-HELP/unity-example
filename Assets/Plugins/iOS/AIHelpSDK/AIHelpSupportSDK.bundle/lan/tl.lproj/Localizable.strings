@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Mga Kaugnay na Artikulo";
 "aihelp_helpful_article"="Nakatulong ba ang artikulong ito?";
 "aihelp_more_help"="Kailangan ng karagdagang tulong?";
+"aihelp_select_max_options_web"="Pumili ng hanggang {count} na mga opsyon";
+"aihelp_media_upload_err_size_web"="Ang laki ng file ay lumampas sa limitasyon, mangyaring i-upload ang file na mas maliit sa {size}M";
+"aihelp_media_upload_err_format_web"="Hindi sinusuportahan ang format ng file.";
+"noMoreData"="Wala nang data";
+"tapOrPullUpToLoadMore"="I-tap o hilahin pataas para mag-load pa";

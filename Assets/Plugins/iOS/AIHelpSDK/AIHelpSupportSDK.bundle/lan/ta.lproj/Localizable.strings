@@ -102,3 +102,8 @@
 "aihelp_related_articles"="தொடர்புடைய கட்டுரைகள்";
 "aihelp_helpful_article"="இந்த கட்டுரை பயனுள்ளதாக இருந்ததா?";
 "aihelp_more_help"="மேலும் உதவி வேண்டுமா?";
+"aihelp_select_max_options_web"="{count} விருப்பங்கள் வரை தேர்ந்தெடுக்கவும்";
+"aihelp_media_upload_err_size_web"="கோப்பின் அளவு வரம்பை மீறுகிறது, {size}M ஐ விட சிறிய கோப்பை பதிவேற்றவும்";
+"aihelp_media_upload_err_format_web"="கோப்பு வடிவம் ஆதரிக்கப்படவில்லை.";
+"noMoreData"="மேலும் தரவு இல்லை";
+"tapOrPullUpToLoadMore"="மேலும் ஏற்றுவதற்கு தட்டவும் அல்லது மேலே இழுக்கவும்";

@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Tallennettu onnistuneesti";
 "aihelp_select"="Valitse";
 "aihelp_select_date"="Valitse päivämäärä";
-"aihelp_select_option"="Valitse vaihtoehto";
+"aihelp_select_option"="ole hyvä ja valitse vaihtoehto";
 "aihelp_select_photo"="Valitse valokuva";
 "aihelp_send"="Lähettää";
 "aihelp_storage_permission"="Ota tallennusluvat käyttöön, jotta voit valita kuvia tai videoita lähettääksesi palautetta asiakaspalveluun";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Aiheeseen liittyvät artikkelit";
 "aihelp_helpful_article"="Oliko tästä artikkelista apua?";
 "aihelp_more_help"="Tarvitsetko lisää apua?";
+"aihelp_select_max_options_web"="Valitse enintään {count} vaihtoehtoa";
+"aihelp_media_upload_err_size_web"="Tiedoston koko ylittää rajan. Lataa tiedosto, joka on pienempi kuin {size}M";
+"aihelp_media_upload_err_format_web"="Tiedostomuotoa ei tueta.";
+"noMoreData"="Ei enempää dataa";
+"tapOrPullUpToLoadMore"="Napauta tai vedä ylös ladataksesi lisää";

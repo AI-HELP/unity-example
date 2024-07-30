@@ -45,9 +45,9 @@
 "aihelp_rate_finished"="Ευχαριστούμε που μας αξιολογήσατε.";
 "aihelp_rate_request"="Παρακαλώ αξιολογήστε την υπηρεσία μας.";
 "aihelp_rate_satisfied"="Μου άρεσε";
-"aihelp_resolution_no"="Άλυτο";
+"aihelp_resolution_no"="Αλυτος";
 "aihelp_resolution_request"="Έχει λυθεί το πρόβλημά σας;";
-"aihelp_resolution_yes"="Λυμένο";
+"aihelp_resolution_yes"="Λύθηκε";
 "aihelp_resource_not_support"="Το σύστημα δεν υποστηρίζει πόρους σε αυτήν τη μορφή";
 "aihelp_saturday"="Σάββατο";
 "aihelp_save_failed"="Αποτυχία αποθήκευσης";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Σχετικά Άρθρα";
 "aihelp_helpful_article"="'Ηταν αυτό το άρθρο χρήσιμο?";
 "aihelp_more_help"="Χρειάζεστε περισσότερη βοήθεια;";
+"aihelp_select_max_options_web"="Επιλέξτε έως και {count} επιλογές";
+"aihelp_media_upload_err_size_web"="Το μέγεθος του αρχείου υπερβαίνει το όριο, μεταφορτώστε το αρχείο μικρότερο από {size}M";
+"aihelp_media_upload_err_format_web"="Η μορφή αρχείου δεν υποστηρίζεται.";
+"noMoreData"="Όχι άλλα δεδομένα";
+"tapOrPullUpToLoadMore"="Πατήστε ή τραβήξτε προς τα πάνω για να φορτώσετε περισσότερα";

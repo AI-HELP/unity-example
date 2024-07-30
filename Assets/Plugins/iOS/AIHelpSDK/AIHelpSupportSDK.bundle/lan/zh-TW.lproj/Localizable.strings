@@ -47,7 +47,7 @@
 "aihelp_rate_satisfied"="非常滿意";
 "aihelp_resolution_no"="未解決";
 "aihelp_resolution_request"="您的問題解決了嗎？";
-"aihelp_resolution_yes"="已解決";
+"aihelp_resolution_yes"="解決了";
 "aihelp_resource_not_support"="系統不支持該格式的資源";
 "aihelp_saturday"="週六";
 "aihelp_save_failed"="保存失敗";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="相關文章";
 "aihelp_helpful_article"="本文是否有幫助？";
 "aihelp_more_help"="需要更多幫助？";
+"aihelp_select_max_options_web"="最多選擇 {count} 個選項";
+"aihelp_media_upload_err_size_web"="檔案大小超出限制，請上傳小於{size}M的文件";
+"aihelp_media_upload_err_format_web"="不支援該文件格式。";
+"noMoreData"="沒有更多數據";
+"tapOrPullUpToLoadMore"="點擊或向上拉以加載更多";

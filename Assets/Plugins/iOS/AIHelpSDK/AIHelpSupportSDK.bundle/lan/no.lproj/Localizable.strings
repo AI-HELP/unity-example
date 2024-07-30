@@ -102,3 +102,8 @@
 "aihelp_related_articles"="relaterte artikler";
 "aihelp_helpful_article"="Var denne artikkelen til hjelp?";
 "aihelp_more_help"="Trenger du mer hjelp?";
+"aihelp_select_max_options_web"="Velg opptil {count} alternativer";
+"aihelp_media_upload_err_size_web"="Filstørrelsen overskrider grensen. Last opp filen som er mindre enn {size}M";
+"aihelp_media_upload_err_format_web"="Filformatet støttes ikke.";
+"noMoreData"="Ingen flere data";
+"tapOrPullUpToLoadMore"="Trykk eller trekk opp for å laste inn mer";

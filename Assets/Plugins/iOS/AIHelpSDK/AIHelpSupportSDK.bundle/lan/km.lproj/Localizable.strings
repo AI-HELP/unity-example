@@ -102,3 +102,8 @@
 "aihelp_related_articles"="អត្ថបទ​ដែល​ទាក់ទង";
 "aihelp_helpful_article"="តើអត្ថបទនេះមានប្រយោជន៍ទេ?";
 "aihelp_more_help"="ត្រូវការជំនួយបន្ថែមទេ?";
+"aihelp_select_max_options_web"="ជ្រើសរើសជម្រើសរហូតដល់ {count}";
+"aihelp_media_upload_err_size_web"="ទំហំឯកសារលើសពីដែនកំណត់ សូមបង្ហោះឯកសារតូចជាង {size}M";
+"aihelp_media_upload_err_format_web"="ទម្រង់ឯកសារមិនត្រូវបានគាំទ្រទេ។";
+"noMoreData"="មិនមានទិន្នន័យទៀតទេ";
+"tapOrPullUpToLoadMore"="ប៉ះ ឬទាញឡើងដើម្បីផ្ទុកបន្ថែមទៀត";

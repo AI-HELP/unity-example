@@ -123,6 +123,10 @@ extern "C" {
         [AIHelpSupportSDK fetchUnreadMessageCount];
     }
 
+    void unity_fetchUnreadTaskCount () {
+        [AIHelpSupportSDK fetchUnreadTaskCount];
+    }
+
     void unity_updateSDKLanguage (const char* language) {
         [AIHelpSupportSDK updateSDKLanguage:charToNSString(language)];
     }

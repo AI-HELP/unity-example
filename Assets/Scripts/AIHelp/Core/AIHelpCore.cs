@@ -110,6 +110,12 @@ namespace AIHelp
             helpCore.FetchUnreadMessageCount();
         }
 
+        public void FetchUnreadTaskCount()
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.FetchUnreadTaskCount();
+        }
+
         public string GetSDKVersion()
         {
             if (!IsHelpCorePrepared()) return "";

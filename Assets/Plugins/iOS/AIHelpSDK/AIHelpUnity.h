@@ -24,6 +24,8 @@ extern "C" void unity_updateUserInfo (const char* userName, const char* serverId
 extern "C" void unity_resetUserInfo ();
 
 extern "C" void unity_fetchUnreadMessageCount ();
+extern "C" void unity_fetchUnreadTaskCount ();
+
 extern "C" void unity_updateSDKLanguage (const char* language);
 extern "C" void unity_setUploadLogPath (const char* path);
 extern "C" void unity_setPushTokenAndPlatform (const char* pushToken, int pushPlatform);

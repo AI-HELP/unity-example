@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Salvato con successo";
 "aihelp_select"="Selezionare";
 "aihelp_select_date"="Selezionare una data";
-"aihelp_select_option"="Selezionare un'opzione";
+"aihelp_select_option"="per favore selezionate un'opzione";
 "aihelp_select_photo"="Seleziona foto";
 "aihelp_send"="Inviare";
 "aihelp_storage_permission"="Abilita le autorizzazioni di archiviazione in modo da poter selezionare immagini o video da caricare per il feedback al servizio clienti";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="articoli Correlati";
 "aihelp_helpful_article"="questo articolo è stato utile?";
 "aihelp_more_help"="Serve ancora aiuto?";
+"aihelp_select_max_options_web"="Seleziona fino a {count} opzioni";
+"aihelp_media_upload_err_size_web"="La dimensione del file supera il limite, carica il file più piccolo di {size}M";
+"aihelp_media_upload_err_format_web"="Il formato del file non è supportato.";
+"noMoreData"="Niente più dati";
+"tapOrPullUpToLoadMore"="Tocca o trascina verso l'alto per caricarne altri";

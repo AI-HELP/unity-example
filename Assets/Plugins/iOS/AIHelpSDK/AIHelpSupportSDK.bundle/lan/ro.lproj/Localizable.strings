@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Salvat cu succes";
 "aihelp_select"="Selectați";
 "aihelp_select_date"="Vă rugăm să selectați o dată";
-"aihelp_select_option"="Vă rugăm să selectați o opțiune";
+"aihelp_select_option"="va rugam selectati o optiune";
 "aihelp_select_photo"="Selectați fotografia";
 "aihelp_send"="Trimiteți";
 "aihelp_storage_permission"="Vă rugăm să activați permisiunile de stocare, astfel încât să puteți selecta imagini sau videoclipuri de încărcat pentru feedback la serviciul pentru clienți";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="Articole similare";
 "aihelp_helpful_article"="A fost de ajutor articolul?";
 "aihelp_more_help"="Ai nevoie de mai mult ajutor?";
+"aihelp_select_max_options_web"="Selectați până la {count} opțiuni";
+"aihelp_media_upload_err_size_web"="Dimensiunea fișierului depășește limita, vă rugăm să încărcați fișierul mai mic de {size}M";
+"aihelp_media_upload_err_format_web"="Formatul de fișier nu este acceptat.";
+"noMoreData"="Nu mai sunt date";
+"tapOrPullUpToLoadMore"="Atingeți sau trageți în sus pentru a încărca mai multe";

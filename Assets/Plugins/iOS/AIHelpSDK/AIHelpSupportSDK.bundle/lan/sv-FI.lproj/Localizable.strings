@@ -45,9 +45,9 @@
 "aihelp_rate_finished"="Kiitos luokittelustamme.";
 "aihelp_rate_request"="Arvioi palvelumme";
 "aihelp_rate_satisfied"="Piti siitä";
-"aihelp_resolution_no"="Olösta";
+"aihelp_resolution_no"="Olöst";
 "aihelp_resolution_request"="Onko ongelmasi ratkaistu?";
-"aihelp_resolution_yes"="Ratkaistu";
+"aihelp_resolution_yes"="Löst";
 "aihelp_resource_not_support"="Systemet stöder inte resurser i detta format";
 "aihelp_saturday"="Lauantai";
 "aihelp_save_failed"="Det gick inte att spara";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="relaterade artiklar";
 "aihelp_helpful_article"="var den här artikeln hjälpsam?";
 "aihelp_more_help"="Behöver du mer hjälp?";
+"aihelp_select_max_options_web"="Välj upp till {count} alternativ";
+"aihelp_media_upload_err_size_web"="Filstorleken överskrider gränsen, ladda upp filen som är mindre än {size}M";
+"aihelp_media_upload_err_format_web"="Filformatet stöds inte.";
+"noMoreData"="Inga mer data";
+"tapOrPullUpToLoadMore"="Tryck eller dra uppåt för att ladda mer";

@@ -102,3 +102,8 @@
 "aihelp_related_articles"="povezani članci";
 "aihelp_helpful_article"="Je li ovaj članak bio od pomoći?";
 "aihelp_more_help"="Trebate još pomoći?";
+"aihelp_select_max_options_web"="Odaberite najviše {count} opcija";
+"aihelp_media_upload_err_size_web"="Veličina fajla premašuje ograničenje, pošaljite fajl manji od {size}M";
+"aihelp_media_upload_err_format_web"="Format datoteke nije podržan.";
+"noMoreData"="Nema više podataka";
+"tapOrPullUpToLoadMore"="Dodirnite ili povucite prema gore da učitate više";

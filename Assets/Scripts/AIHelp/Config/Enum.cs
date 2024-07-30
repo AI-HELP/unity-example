@@ -55,6 +55,11 @@ namespace AIHelp
          * Event for URL click
          */
         UrlClick,
+
+        /**
+         * Event for unread task count 
+         */
+        UnreadTaskCount,
     }
 
 }

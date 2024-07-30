@@ -102,3 +102,8 @@
 "aihelp_related_articles"="সম্পরকিত প্রবন্ধ";
 "aihelp_helpful_article"="এই প্রবন্ধটা কি সাহায্যকর ছিল?";
 "aihelp_more_help"="আরো সাহায্য প্রয়োজন?";
+"aihelp_select_max_options_web"="{count} পর্যন্ত বিকল্প বেছে নিন";
+"aihelp_media_upload_err_size_web"="ফাইলের আকার সীমা ছাড়িয়ে গেছে, দয়া করে {size}M এর চেয়ে ছোট ফাইল আপলোড করুন৷";
+"aihelp_media_upload_err_format_web"="ফাইল বিন্যাস সমর্থিত নয়.";
+"noMoreData"="কোন তথ্য নেই";
+"tapOrPullUpToLoadMore"="আরও লোড করতে ট্যাপ করুন বা টানুন";

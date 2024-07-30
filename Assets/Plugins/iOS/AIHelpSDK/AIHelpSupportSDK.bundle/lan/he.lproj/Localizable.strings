@@ -102,3 +102,8 @@
 "aihelp_related_articles"="מאמרים קשורים";
 "aihelp_helpful_article"="האם המאמר הזה היה מועיל?";
 "aihelp_more_help"="צריך עוד עזרה?";
+"aihelp_select_max_options_web"="בחר עד {count} אפשרויות";
+"aihelp_media_upload_err_size_web"="גודל הקובץ חורג מהמגבלה, אנא העלה את הקובץ קטן מ-{size}M";
+"aihelp_media_upload_err_format_web"="פורמט הקובץ אינו נתמך.";
+"noMoreData"="אין יותר נתונים";
+"tapOrPullUpToLoadMore"="הקש או משוך למעלה כדי לטעון עוד";

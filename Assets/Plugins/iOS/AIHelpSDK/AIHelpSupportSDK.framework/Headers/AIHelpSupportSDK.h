@@ -145,6 +145,9 @@
  * Fetch unread message count proactively
  */
 + (void)fetchUnreadMessageCount;
+
++ (void)fetchUnreadTaskCount;
+
 /**
  * Set the SDK display mode
  *

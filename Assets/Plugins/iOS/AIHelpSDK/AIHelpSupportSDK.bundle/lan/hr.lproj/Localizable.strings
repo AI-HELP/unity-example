@@ -54,7 +54,7 @@
 "aihelp_save_seccessfully"="Uspješno spremljeno";
 "aihelp_select"="Izaberi";
 "aihelp_select_date"="Molimo odaberite datum";
-"aihelp_select_option"="Molimo odaberite opciju";
+"aihelp_select_option"="Odaberite opciju";
 "aihelp_select_photo"="Odaberite fotografiju";
 "aihelp_send"="Poslati";
 "aihelp_storage_permission"="Omogućite dozvole za pohranu kako biste mogli odabrati slike ili videozapise za prijenos za povratne informacije korisničkoj službi";
@@ -102,3 +102,8 @@
 "aihelp_related_articles"="povezani članci";
 "aihelp_helpful_article"="Je li ovaj članak bio koristan?";
 "aihelp_more_help"="Trebate još pomoći?";
+"aihelp_select_max_options_web"="Odaberite do {count} opcija";
+"aihelp_media_upload_err_size_web"="Veličina datoteke premašuje ograničenje, prenesite datoteku manju od {size}M";
+"aihelp_media_upload_err_format_web"="Format datoteke nije podržan.";
+"noMoreData"="Nema više podataka";
+"tapOrPullUpToLoadMore"="Dodirnite ili povucite prema gore za učitavanje više";

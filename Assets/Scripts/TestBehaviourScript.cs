@@ -129,6 +129,7 @@ public class TestBehaviourScript : MonoBehaviour
     void unreadMeassageClick()
     {
         AIHelpSupport.FetchUnreadMessageCount();
+        AIHelpSupport.FetchUnreadTaskCount();
     }
 
     void upLoadLogClick()
@@ -200,6 +201,11 @@ public class TestBehaviourScript : MonoBehaviour
         AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UrlClick, (jsonEventData, ack) =>
         {
             printOnScreen("Unity UrlClick " + jsonEventData);
+        });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UnreadTaskCount, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity UnreadTaskCount " + jsonEventData);
         });
     }
 
