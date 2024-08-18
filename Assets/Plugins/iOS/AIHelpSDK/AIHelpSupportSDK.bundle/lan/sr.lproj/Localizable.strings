@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Формат датотеке није подржан.";
 "noMoreData"="Нема више података";
 "tapOrPullUpToLoadMore"="Додирните или повуците нагоре да бисте учитали још";
+"messageWithdrawn"="Порука повучена";
+"selectAll"="Изабери све";
+"details"="Детаљи";
+"download"="Преузимање";
+"image"="Слика";
+"video"="Видео";
+"you"="ти";
+"link"="Линк";
+"copy"="Копирај";
+"translate"="превести";

@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Das Dateiformat wird nicht unterstützt.";
 "noMoreData"="Keine weiteren Daten";
 "tapOrPullUpToLoadMore"="Tippen oder nach oben ziehen, um mehr zu laden";
+"messageWithdrawn"="Nachricht zurückgezogen";
+"selectAll"="Wählen Sie Alle";
+"details"="Einzelheiten";
+"download"="Herunterladen";
+"image"="Bild";
+"video"="Video";
+"you"="Du";
+"link"="Verknüpfung";
+"copy"="Kopieren";
+"translate"="Übersetzen";

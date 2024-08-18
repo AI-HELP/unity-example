@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="ফাইল বিন্যাস সমর্থিত নয়.";
 "noMoreData"="কোন তথ্য নেই";
 "tapOrPullUpToLoadMore"="আরও লোড করতে ট্যাপ করুন বা টানুন";
+"messageWithdrawn"="বার্তা প্রত্যাহার করা হয়েছে";
+"selectAll"="সব নির্বাচন করুন";
+"details"="বিস্তারিত";
+"download"="ডাউনলোড করুন";
+"image"="ছবি";
+"video"="ভিডিও";
+"you"="আপনি";
+"link"="লিঙ্ক";
+"copy"="কপি";
+"translate"="অনুবাদ করা";

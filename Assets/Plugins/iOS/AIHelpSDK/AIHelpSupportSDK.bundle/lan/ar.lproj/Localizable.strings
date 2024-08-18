@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="تنسيق الملف غير مدعوم.";
 "noMoreData"="لا مزيد من البيانات";
 "tapOrPullUpToLoadMore"="انقر أو اسحب لأعلى لتحميل المزيد";
+"messageWithdrawn"="الرسالة تم سحبها";
+"selectAll"="اختر الكل";
+"details"="تفاصيل";
+"download"="تحميل";
+"image"="صورة";
+"video"="فيديو";
+"you"="أنت";
+"link"="وصلة";
+"copy"="ينسخ";
+"translate"="يترجم";

@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="El formato de archivo no es compatible.";
 "noMoreData"="No más datos";
 "tapOrPullUpToLoadMore"="Toca o tira hacia arriba para cargar más";
+"messageWithdrawn"="Mensaje retirado";
+"selectAll"="Seleccionar todo";
+"details"="Detalles";
+"download"="Descargar";
+"image"="Imagen";
+"video"="Video";
+"you"="Tú";
+"link"="Enlace";
+"copy"="Copiar";
+"translate"="Traducir";

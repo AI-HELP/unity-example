@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="A fájlformátum nem támogatott.";
 "noMoreData"="Nincs több adat";
 "tapOrPullUpToLoadMore"="Továbbiak betöltéséhez koppintson vagy húzza felfelé";
+"messageWithdrawn"="Üzenet visszavonva";
+"selectAll"="Mindet kiválaszt";
+"details"="Részletek";
+"download"="Letöltés";
+"image"="Kép";
+"video"="Videó";
+"you"="te";
+"link"="Link";
+"copy"="Másolat";
+"translate"="fordít";

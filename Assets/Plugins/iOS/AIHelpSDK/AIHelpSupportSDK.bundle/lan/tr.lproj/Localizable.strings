@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Dosya formatı desteklenmiyor.";
 "noMoreData"="Daha fazla veri yok";
 "tapOrPullUpToLoadMore"="Daha fazlasını yüklemek için dokunun veya yukarı çekin";
+"messageWithdrawn"="Mesaj Geri Çekildi";
+"selectAll"="Hepsini seç";
+"details"="Detaylar";
+"download"="İndirmek";
+"image"="Resim";
+"video"="Video";
+"you"="Sen";
+"link"="Bağlantı";
+"copy"="Kopyala";
+"translate"="Çevirmek";

@@ -60,6 +60,11 @@ namespace AIHelp
          * Event for unread task count 
          */
         UnreadTaskCount,
+
+        /**
+         * Event for conversation start, along with the user's first message 
+         */
+        ConversationStart,
     }
 
 }

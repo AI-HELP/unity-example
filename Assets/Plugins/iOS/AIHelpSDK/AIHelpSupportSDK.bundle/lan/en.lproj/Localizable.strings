@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="The file format is not supported.";
 "noMoreData"="No more data";
 "tapOrPullUpToLoadMore"="Tap or pull up to load more";
+"messageWithdrawn"="Message Withdrawn";
+"selectAll"="Select All";
+"details"="Details";
+"download"="Download";
+"image"="Image";
+"video"="Video";
+"you"="You";
+"link"="Link";
+"copy"="Copy";
+"translate"="Translate";

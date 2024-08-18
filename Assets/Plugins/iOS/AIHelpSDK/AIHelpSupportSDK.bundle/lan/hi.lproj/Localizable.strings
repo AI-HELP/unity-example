@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="फ़ाइल स्वरूप समर्थित नहीं है.";
 "noMoreData"="अब और डेटा नहीं";
 "tapOrPullUpToLoadMore"="अधिक लोड करने के लिए टैप करें या ऊपर खींचें";
+"messageWithdrawn"="संदेश वापस ले लिया गया";
+"selectAll"="सबका चयन करें";
+"details"="विवरण";
+"download"="डाउनलोड करना";
+"image"="छवि";
+"video"="वीडियो";
+"you"="आप";
+"link"="जोड़ना";
+"copy"="प्रतिलिपि";
+"translate"="अनुवाद";

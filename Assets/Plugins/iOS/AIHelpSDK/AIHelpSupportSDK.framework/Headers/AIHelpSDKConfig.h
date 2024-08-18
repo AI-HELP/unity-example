@@ -56,7 +56,8 @@ typedef NS_ENUM(int, AIHelpEventType) {
     AIHelpEventMessageArrival,                      // Event for message arrival
     AIHelpEventLogUpload,                           // Event for log upload
     AIHelpEventUrlClick,                            // Event for URL click
-    AIHelpEventUnreadTaskCount,                           // Event for Task unread count
+    AIHelpEventUnreadTaskCount,                     // Event for Task unread count
+    AIHelpEventConversationStart,                   // Event for conversation start
 };
 
 typedef void (*AISupportAsyncEventListener)(const char *jsonEventData, void (*acknowledge)(const char *jsonAckData));

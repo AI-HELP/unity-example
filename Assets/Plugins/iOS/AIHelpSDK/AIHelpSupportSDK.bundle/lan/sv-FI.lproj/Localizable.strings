@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Filformatet stöds inte.";
 "noMoreData"="Inga mer data";
 "tapOrPullUpToLoadMore"="Tryck eller dra uppåt för att ladda mer";
+"messageWithdrawn"="Meddelande återkallat";
+"selectAll"="Välj alla";
+"details"="Detaljer";
+"download"="Ladda ner";
+"image"="Bild";
+"video"="Video";
+"you"="Du";
+"link"="Länk";
+"copy"="Kopiera";
+"translate"="Översätt";

@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Format datoteke nije podržan.";
 "noMoreData"="Nema više podataka";
 "tapOrPullUpToLoadMore"="Dodirnite ili povucite prema gore za učitavanje više";
+"messageWithdrawn"="Poruka povučena";
+"selectAll"="Odaberi sve";
+"details"="pojedinosti";
+"download"="preuzimanje datoteka";
+"image"="Slika";
+"video"="Video";
+"you"="Vas";
+"link"="Veza";
+"copy"="Kopirati";
+"translate"="Prevedi";

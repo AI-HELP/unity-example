@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Le format de fichier n'est pas pris en charge.";
 "noMoreData"="Plus de données";
 "tapOrPullUpToLoadMore"="Appuyez ou tirez vers le haut pour en charger davantage";
+"messageWithdrawn"="Message retiré";
+"selectAll"="Tout sélectionner";
+"details"="Détails";
+"download"="Télécharger";
+"image"="Image";
+"video"="Vidéo";
+"you"="Toi";
+"link"="Lien";
+"copy"="Copie";
+"translate"="Traduire";

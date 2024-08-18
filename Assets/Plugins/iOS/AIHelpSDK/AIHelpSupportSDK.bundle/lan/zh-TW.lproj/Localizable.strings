@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="不支援該文件格式。";
 "noMoreData"="沒有更多數據";
 "tapOrPullUpToLoadMore"="點擊或向上拉以加載更多";
+"messageWithdrawn"="消息已撤回";
+"selectAll"="全選";
+"details"="細節";
+"download"="下載";
+"image"="影像";
+"video"="影片";
+"you"="你";
+"link"="關聯";
+"copy"="複製";
+"translate"="翻譯";

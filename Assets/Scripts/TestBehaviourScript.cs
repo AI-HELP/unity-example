@@ -207,6 +207,11 @@ public class TestBehaviourScript : MonoBehaviour
         {
             printOnScreen("Unity UnreadTaskCount " + jsonEventData);
         });
+
+        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.ConversationStart, (jsonEventData, ack) =>
+        {
+            printOnScreen("Unity ConversationStart " + jsonEventData);
+        });
     }
 
     string GetRandomNumber() {

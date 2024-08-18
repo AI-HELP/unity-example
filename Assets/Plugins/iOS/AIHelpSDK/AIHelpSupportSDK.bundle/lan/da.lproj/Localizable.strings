@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Filformatet understøttes ikke.";
 "noMoreData"="Ikke flere data";
 "tapOrPullUpToLoadMore"="Tryk eller træk op for at indlæse mere";
+"messageWithdrawn"="Besked trukket tilbage";
+"selectAll"="Vælg alle";
+"details"="detaljer";
+"download"="Hent";
+"image"="Billede";
+"video"="Video";
+"you"="Du";
+"link"="Link";
+"copy"="Kopi";
+"translate"="Oversætte";

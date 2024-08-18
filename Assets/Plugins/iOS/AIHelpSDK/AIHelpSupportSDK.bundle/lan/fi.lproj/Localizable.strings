@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Tiedostomuotoa ei tueta.";
 "noMoreData"="Ei enempää dataa";
 "tapOrPullUpToLoadMore"="Napauta tai vedä ylös ladataksesi lisää";
+"messageWithdrawn"="Viesti peruutettu";
+"selectAll"="Valitse kaikki";
+"details"="Yksityiskohdat";
+"download"="ladata";
+"image"="Kuva";
+"video"="Video";
+"you"="Sinä";
+"link"="Linkki";
+"copy"="Kopio";
+"translate"="Kääntää";

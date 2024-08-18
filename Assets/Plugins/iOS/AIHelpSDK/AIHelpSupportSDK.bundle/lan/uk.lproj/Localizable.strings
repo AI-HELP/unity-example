@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="Формат файлу не підтримується.";
 "noMoreData"="Більше немає даних";
 "tapOrPullUpToLoadMore"="Торкніться або потягніть вгору, щоб завантажити більше";
+"messageWithdrawn"="Повідомлення відкликано";
+"selectAll"="Вибрати все";
+"details"="Подробиці";
+"download"="Завантажити";
+"image"="Зображення";
+"video"="відео";
+"you"="ви";
+"link"="Посилання";
+"copy"="Копіювати";
+"translate"="Перекласти";

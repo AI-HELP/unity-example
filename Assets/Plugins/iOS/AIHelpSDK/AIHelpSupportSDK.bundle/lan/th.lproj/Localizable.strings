@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="ไม่รองรับรูปแบบไฟล์";
 "noMoreData"="ไม่มีข้อมูลอีกต่อไป";
 "tapOrPullUpToLoadMore"="แตะหรือดึงขึ้นเพื่อโหลดเพิ่มเติม";
+"messageWithdrawn"="ข้อความถูกถอนออก";
+"selectAll"="เลือกทั้งหมด";
+"details"="รายละเอียด";
+"download"="ดาวน์โหลด";
+"image"="ภาพ";
+"video"="วีดีโอ";
+"you"="คุณ";
+"link"="ลิงค์";
+"copy"="สำเนา";
+"translate"="แปลภาษา";

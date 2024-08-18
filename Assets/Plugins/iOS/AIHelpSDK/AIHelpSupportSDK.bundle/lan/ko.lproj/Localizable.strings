@@ -107,3 +107,13 @@
 "aihelp_media_upload_err_format_web"="파일 형식이 지원되지 않습니다.";
 "noMoreData"="더 이상 데이터가 없습니다";
 "tapOrPullUpToLoadMore"="더 로드하려면 탭하거나 위로 당겨주세요.";
+"messageWithdrawn"="메시지 철회됨";
+"selectAll"="모두 선택";
+"details"="세부";
+"download"="다운로드";
+"image"="영상";
+"video"="동영상";
+"you"="너";
+"link"="링크";
+"copy"="복사";
+"translate"="번역하다";
