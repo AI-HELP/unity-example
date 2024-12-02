@@ -111,7 +111,9 @@
 "selectAll"="انتخاب همه";
 "details"="جزئیات";
 "download"="دانلود";
+"aihelp_media_upload_err_size"="اندازه فایل بیش از حد مجاز است";
 "image"="تصویر";
+"aihelp_sticker"="استیکر";
 "video"="ویدئو";
 "you"="شما";
 "link"="ارتباط دادن";

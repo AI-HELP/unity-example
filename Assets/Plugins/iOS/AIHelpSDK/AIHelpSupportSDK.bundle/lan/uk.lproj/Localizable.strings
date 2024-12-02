@@ -111,7 +111,9 @@
 "selectAll"="Вибрати все";
 "details"="Подробиці";
 "download"="Завантажити";
+"aihelp_media_upload_err_size"="Розмір файлу перевищує ліміт";
 "image"="Зображення";
+"aihelp_sticker"="стікер";
 "video"="відео";
 "you"="ви";
 "link"="Посилання";

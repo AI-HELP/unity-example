@@ -111,7 +111,9 @@
 "selectAll"="Hepsini seç";
 "details"="Detaylar";
 "download"="İndirmek";
+"aihelp_media_upload_err_size"="Dosya boyutu sınırı aşıyor";
 "image"="Resim";
+"aihelp_sticker"="çıkartma";
 "video"="Video";
 "you"="Sen";
 "link"="Bağlantı";

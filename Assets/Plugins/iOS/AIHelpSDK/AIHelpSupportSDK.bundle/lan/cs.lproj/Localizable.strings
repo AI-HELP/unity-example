@@ -111,7 +111,9 @@
 "selectAll"="Vybrat vše";
 "details"="Podrobnosti";
 "download"="Stažení";
+"aihelp_media_upload_err_size"="Velikost souboru překračuje limit";
 "image"="obraz";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Vy";
 "link"="Odkaz";

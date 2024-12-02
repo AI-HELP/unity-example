@@ -111,7 +111,9 @@
 "selectAll"="Select All";
 "details"="Details";
 "download"="Download";
+"aihelp_media_upload_err_size"="The file size exceeds the limit";
 "image"="Image";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="You";
 "link"="Link";

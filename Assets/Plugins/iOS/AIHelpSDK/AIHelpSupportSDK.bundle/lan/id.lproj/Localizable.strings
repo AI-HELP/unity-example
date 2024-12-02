@@ -111,7 +111,9 @@
 "selectAll"="Pilih Semua";
 "details"="Detail";
 "download"="Unduh";
+"aihelp_media_upload_err_size"="Ukuran file melebihi batas";
 "image"="Gambar";
+"aihelp_sticker"="stiker";
 "video"="Video";
 "you"="Anda";
 "link"="Tautan";

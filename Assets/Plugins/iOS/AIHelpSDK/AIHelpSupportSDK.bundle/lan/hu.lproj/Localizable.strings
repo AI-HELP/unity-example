@@ -111,7 +111,9 @@
 "selectAll"="Mindet kiválaszt";
 "details"="Részletek";
 "download"="Letöltés";
+"aihelp_media_upload_err_size"="A fájl mérete meghaladja a korlátot";
 "image"="Kép";
+"aihelp_sticker"="matrica ";
 "video"="Videó";
 "you"="te";
 "link"="Link";

@@ -111,7 +111,9 @@
 "selectAll"="모두 선택";
 "details"="세부";
 "download"="다운로드";
+"aihelp_media_upload_err_size"="파일 크기가 제한을 초과했습니다.";
 "image"="영상";
+"aihelp_sticker"="스티커";
 "video"="동영상";
 "you"="너";
 "link"="링크";

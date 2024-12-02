@@ -111,7 +111,9 @@
 "selectAll"="Επιλογή όλων";
 "details"="Λεπτομέριες";
 "download"="Κατεβάστε";
+"aihelp_media_upload_err_size"="Το μέγεθος του αρχείου υπερβαίνει το όριο";
 "image"="Εικόνα";
+"aihelp_sticker"="αυτοκόλλητο";
 "video"="βίντεο";
 "you"="Εσείς";
 "link"="Σύνδεσμος";

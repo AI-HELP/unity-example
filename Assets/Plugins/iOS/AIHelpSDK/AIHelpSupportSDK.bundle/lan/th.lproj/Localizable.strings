@@ -111,7 +111,9 @@
 "selectAll"="เลือกทั้งหมด";
 "details"="รายละเอียด";
 "download"="ดาวน์โหลด";
+"aihelp_media_upload_err_size"="ขนาดไฟล์เกินขีดจำกัด";
 "image"="ภาพ";
+"aihelp_sticker"="สติกเกอร์";
 "video"="วีดีโอ";
 "you"="คุณ";
 "link"="ลิงค์";

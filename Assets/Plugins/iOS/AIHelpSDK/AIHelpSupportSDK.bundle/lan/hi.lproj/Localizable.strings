@@ -111,7 +111,9 @@
 "selectAll"="सबका चयन करें";
 "details"="विवरण";
 "download"="डाउनलोड करना";
+"aihelp_media_upload_err_size"="फ़ाइल का आकार सीमा से अधिक है";
 "image"="छवि";
+"aihelp_sticker"="स्टिकर";
 "video"="वीडियो";
 "you"="आप";
 "link"="जोड़ना";

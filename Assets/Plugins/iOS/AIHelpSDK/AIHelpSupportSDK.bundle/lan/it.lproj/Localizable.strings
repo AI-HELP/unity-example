@@ -111,7 +111,9 @@
 "selectAll"="Seleziona tutto";
 "details"="Dettagli";
 "download"="Scaricamento";
+"aihelp_media_upload_err_size"="La dimensione del file supera il limite";
 "image"="Immagine";
+"aihelp_sticker"="sticker";
 "video"="video";
 "you"="Voi";
 "link"="Collegamento";

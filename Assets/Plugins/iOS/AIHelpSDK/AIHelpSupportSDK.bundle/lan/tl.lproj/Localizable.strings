@@ -111,7 +111,9 @@
 "selectAll"="Piliin lahat";
 "details"="Mga Detalye";
 "download"="I-download";
+"aihelp_media_upload_err_size"="Ang laki ng file ay lumampas sa limitasyon";
 "image"="Imahe";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Ikaw";
 "link"="Link";

@@ -111,7 +111,9 @@
 "selectAll"="全選";
 "details"="細節";
 "download"="下載";
+"aihelp_media_upload_err_size"="檔案大小超出限制";
 "image"="影像";
+"aihelp_sticker"="sticker";
 "video"="影片";
 "you"="你";
 "link"="關聯";

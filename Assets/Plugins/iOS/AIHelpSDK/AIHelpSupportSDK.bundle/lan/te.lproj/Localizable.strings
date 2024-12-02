@@ -111,7 +111,9 @@
 "selectAll"="అన్ని ఎంచుకోండి";
 "details"="వివరాలు";
 "download"="డౌన్‌లోడ్ చేయండి";
+"aihelp_media_upload_err_size"="ఫైల్ పరిమాణం పరిమితిని మించిపోయింది";
 "image"="చిత్రం";
+"aihelp_sticker"="స్టిక్కర్ ";
 "video"="వీడియో";
 "you"="మీరు";
 "link"="లింక్";

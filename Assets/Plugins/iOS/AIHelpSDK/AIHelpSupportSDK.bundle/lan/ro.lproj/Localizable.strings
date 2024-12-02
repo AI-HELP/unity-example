@@ -111,7 +111,9 @@
 "selectAll"="Selectează tot";
 "details"="Detalii";
 "download"="Descarca";
+"aihelp_media_upload_err_size"="Dimensiunea fișierului depășește limita";
 "image"="Imagine";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Tu";
 "link"="Legătură";

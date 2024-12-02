@@ -111,7 +111,9 @@
 "selectAll"="সব নির্বাচন করুন";
 "details"="বিস্তারিত";
 "download"="ডাউনলোড করুন";
+"aihelp_media_upload_err_size"="ফাইলের আকার সীমা ছাড়িয়ে গেছে";
 "image"="ছবি";
+"aihelp_sticker"="স্টিকার";
 "video"="ভিডিও";
 "you"="আপনি";
 "link"="লিঙ্ক";

@@ -111,7 +111,9 @@
 "selectAll"="تمام منتخب کریں";
 "details"="تفصیلات";
 "download"="ڈاؤن لوڈ کریں";
+"aihelp_media_upload_err_size"="فائل کا سائز حد سے زیادہ ہے۔";
 "image"="تصویر";
+"aihelp_sticker"="sticker";
 "video"="ویڈیو";
 "you"="تم";
 "link"="لنک";

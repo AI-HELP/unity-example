@@ -111,7 +111,9 @@
 "selectAll"="அனைத்தையும் தெரிவுசெய்";
 "details"="விவரங்கள்";
 "download"="பதிவிறக்க Tamil";
+"aihelp_media_upload_err_size"="கோப்பின் அளவு வரம்பை மீறுகிறது";
 "image"="படம்";
+"aihelp_sticker"="ஸ்டிக்கர் ";
 "video"="காணொளி";
 "you"="நீங்கள்";
 "link"="இணைப்பு";

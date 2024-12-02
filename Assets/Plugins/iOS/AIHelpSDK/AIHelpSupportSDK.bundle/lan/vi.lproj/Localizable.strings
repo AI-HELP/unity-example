@@ -111,7 +111,9 @@
 "selectAll"="Chọn tất cả";
 "details"="Chi tiết";
 "download"="Tải xuống";
+"aihelp_media_upload_err_size"="Kích thước tập tin vượt quá giới hạn";
 "image"="Hình ảnh";
+"aihelp_sticker"="hình dán";
 "video"="Băng hình";
 "you"="Bạn";
 "link"="Liên kết";

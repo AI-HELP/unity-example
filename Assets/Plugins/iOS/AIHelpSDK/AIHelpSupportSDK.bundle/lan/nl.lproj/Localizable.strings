@@ -111,7 +111,9 @@
 "selectAll"="Selecteer alles";
 "details"="Details";
 "download"="Download";
+"aihelp_media_upload_err_size"="De bestandsgrootte overschrijdt de limiet";
 "image"="Afbeelding";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Jij";
 "link"="Koppeling";

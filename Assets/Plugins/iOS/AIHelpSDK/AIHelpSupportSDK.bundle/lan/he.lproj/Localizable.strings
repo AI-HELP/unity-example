@@ -111,7 +111,9 @@
 "selectAll"="בחר הכל";
 "details"="פרטים";
 "download"="הורד";
+"aihelp_media_upload_err_size"="גודל הקובץ חורג מהמגבלה";
 "image"="תמונה";
+"aihelp_sticker"="מדבקה";
 "video"="וִידֵאוֹ";
 "you"="אתה";
 "link"="קישור";

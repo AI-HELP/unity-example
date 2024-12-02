@@ -111,7 +111,9 @@
 "selectAll"="Выбрать все";
 "details"="Подробности";
 "download"="Скачать";
+"aihelp_media_upload_err_size"="Размер файла превышает лимит";
 "image"="Изображение";
+"aihelp_sticker"="стикер";
 "video"="видео";
 "you"="Ты";
 "link"="Связь";

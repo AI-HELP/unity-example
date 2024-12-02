@@ -111,7 +111,9 @@
 "selectAll"="اختر الكل";
 "details"="تفاصيل";
 "download"="تحميل";
+"aihelp_media_upload_err_size"="حجم الملف يتجاوز الحد الأقصى";
 "image"="صورة";
+"aihelp_sticker"="ملصق";
 "video"="فيديو";
 "you"="أنت";
 "link"="وصلة";

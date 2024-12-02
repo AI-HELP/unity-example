@@ -111,7 +111,9 @@
 "selectAll"="Välj alla";
 "details"="Detaljer";
 "download"="Ladda ner";
+"aihelp_media_upload_err_size"="Filstorleken överskrider gränsen";
 "image"="Bild";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Du";
 "link"="Länk";

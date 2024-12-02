@@ -125,13 +125,6 @@
 + (void)enableLogging:(BOOL)enable;
 
 /**
- * The preferred screen orientation sdk would like to run in.
- *
- * NOTE: The SDK direction must be included in the program direction Settings, otherwise the setting will fail
- * @param interfaceOrientationMask please refer to the UIInterfaceOrientationMask API
- */
-+ (void)setSDKInterfaceOrientationMask:(UIInterfaceOrientationMask)interfaceOrientationMask;
-/**
  * Unregisters an event listener for a specific event type.
  *
  * @param eventType The type of event to stop listening for.
@@ -149,17 +142,6 @@
 + (void)fetchUnreadTaskCount;
 
 /**
- * Set the SDK display mode
- *
- * Default following system
- * @param mode
-            0: follow the system
-            1: light mode
-            2: dark mode
- */
-+ (void)setSDKAppearanceMode:(int)mode;
-
-/**
  * AIHelp provide additional support for some country or regions.
  *
  * @param countryOrRegion ISO country code, please check https://www.iso.org/obp/ui/#search to learn more.
@@ -169,9 +151,6 @@
 + (void)showUrl:(NSString *)url;
 
 + (void)setKeyWindow:(UIWindow *)keyWin;
-
-+ (void)setSDKEdgeInsetsWithTop:(float)top bottom:(float)bottom enable:(BOOL)enable;
-+ (void)setSDKEdgeColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
 + (void)close;
 

@@ -111,7 +111,9 @@
 "selectAll"="Valitse kaikki";
 "details"="Yksityiskohdat";
 "download"="ladata";
+"aihelp_media_upload_err_size"="Tiedoston koko ylittää rajan";
 "image"="Kuva";
+"aihelp_sticker"="tarra";
 "video"="Video";
 "you"="Sinä";
 "link"="Linkki";

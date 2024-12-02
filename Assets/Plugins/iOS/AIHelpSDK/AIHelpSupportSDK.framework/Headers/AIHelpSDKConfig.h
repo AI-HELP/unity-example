@@ -16,11 +16,6 @@ typedef NS_ENUM(int,AIHelpTokenPlatform) {                    /* PushTokenPlatfo
     AIHelpTokenPlatformOneSignal          = 7,                // OneSignal
 };
 
-typedef NS_ENUM(int,AIHelpConversationIntent) {                    /* ConversationIntent enum */
-    AIHelpConversationIntentBotSupport         = 1,                // ShowBot
-    AIHelpConversationIntentHumanSupport       = 2,                // ShowHumanSupport
-};
-
 typedef NS_ENUM(int,AIHelpFAQShowConversationMoment) {             /* ConversationMoment enum, show ContactUs moment */
     AIHelpFAQShowConversationMomentNever            = 1,           // Never show
     AIHelpFAQShowConversationMomentAlways           = 2,           // Always show

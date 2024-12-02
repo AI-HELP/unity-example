@@ -111,7 +111,9 @@
 "selectAll"="Označi sve";
 "details"="Detalji";
 "download"="Skinuti";
+"aihelp_media_upload_err_size"="Veličina datoteke premašuje ograničenje";
 "image"="Slika";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="Vi";
 "link"="Veza";

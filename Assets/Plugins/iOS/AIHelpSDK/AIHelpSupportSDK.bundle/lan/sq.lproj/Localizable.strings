@@ -111,7 +111,9 @@
 "selectAll"="Selektoj të gjitha";
 "details"="Detajet";
 "download"="Shkarko";
+"aihelp_media_upload_err_size"="Madhësia e skedarit e kalon kufirin";
 "image"="Imazhi";
+"aihelp_sticker"="sticker ";
 "video"="Video";
 "you"="Ju";
 "link"="Lidhje";

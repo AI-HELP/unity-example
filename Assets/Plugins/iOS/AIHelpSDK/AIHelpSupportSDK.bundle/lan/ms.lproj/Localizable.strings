@@ -111,7 +111,9 @@
 "selectAll"="Pilih semua";
 "details"="Butiran";
 "download"="Muat turun";
+"aihelp_media_upload_err_size"="Saiz fail melebihi had";
 "image"="Gambar";
+"aihelp_sticker"="sticker";
 "video"="Video";
 "you"="awak";
 "link"="Pautan";
