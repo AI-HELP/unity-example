@@ -116,18 +116,9 @@ namespace AIHelp
             AIHelpCore.getInstance().Close();
         }
 
-#if UNITY_IOS
-
-        public static void SetRequestedOrientation(int requestedOrientation)
-        {
-            AIHelpCore.getInstance().SetRequestedOrientation(requestedOrientation);
+        public static void Uninstall() {
+            AIHelpCore.getInstance().Uninstall();
         }
 
-        public static void SetSDKAppearanceMode(int mode)
-        {
-            AIHelpCore.getInstance().SetSDKAppearanceMode(mode);
-        }
-
-#endif
     }
 }

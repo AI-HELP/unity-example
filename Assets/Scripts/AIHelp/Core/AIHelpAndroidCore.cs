@@ -228,6 +228,13 @@ namespace AIHelp
             }
         }
 
+        public void Uninstall()
+        {
+            if (javaSupport != null)
+            {
+                javaSupport.CallStatic("uninstall");
+            }
+        }
     }
 #endif
 }

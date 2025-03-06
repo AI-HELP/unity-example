@@ -8,7 +8,7 @@ namespace AIHelp
     public partial class AIHelpiOSCore
     {
         [DllImport("__Internal")]
-        private static extern void unity_initiailize(string domainName, string appId, string language);
+        private static extern void unity_initialize(string domainName, string appId, string language);
 
         [DllImport("__Internal")]
         private static extern void unity_registerAsyncEventListener(AIHelp.EventType eventType, AIHelpAsyncEventListener listener);
@@ -50,6 +50,9 @@ namespace AIHelp
         private static extern void unity_close();
 
         [DllImport("__Internal")]
+        private static extern void unity_uninstall();
+
+        [DllImport("__Internal")]
         private static extern bool unity_show(string entranceId, string welcomeMessage);
 
         [DllImport("__Internal")]
@@ -67,11 +70,6 @@ namespace AIHelp
         [DllImport("__Internal")]
         private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);
 
-        [DllImport("__Internal")]
-        private static extern void unity_setSDKAppearanceMode(int mode);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setSDKInterfaceOrientationMask(int interfaceOrientationMask);
     }
     #endif
 }

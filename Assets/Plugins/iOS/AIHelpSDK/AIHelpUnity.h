@@ -11,7 +11,7 @@
 #ifndef AIHelpUnity_h
 #define AIHelpUnity_h
 
-extern "C" void unity_initiailize (const char* domainName, const char* appId, const char* language);
+extern "C" void unity_initialize (const char* domainName, const char* appId, const char* language);
 extern "C" void unity_registerAsyncEventListener (int eventType, AISupportAsyncEventListener listener);
 extern "C" void unity_unregisterAsyncEventListener (int eventType);
 
@@ -35,9 +35,6 @@ extern "C" void unity_enableLogging (bool enable);
 extern "C" void unity_showUrl (const char* url);
 extern "C" void unity_additionalSupportFor(int countryOrRegion);
 
-extern "C" void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask);
-extern "C" void unity_setSDKAppearanceMode (int mode);
-
 extern "C" void unity_close();
-
+extern "C" void unity_uninstall();
 #endif

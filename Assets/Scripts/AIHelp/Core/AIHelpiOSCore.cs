@@ -11,7 +11,7 @@ namespace AIHelp
 
         public void Initialize(string domain, string appId, string language = "")
         {
-            unity_initiailize(domain, appId, language);
+            unity_initialize(domain, appId, language);
         }
 
         public void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
@@ -116,14 +116,8 @@ namespace AIHelp
             unity_close();
         }
 
-        public void SetRequestedOrientation(int requestedOrientation)
-        {
-            unity_setSDKInterfaceOrientationMask(requestedOrientation);
-        }
-
-        public void SetSDKAppearanceMode(int mode)
-        {
-            unity_setSDKInterfaceOrientationMask(mode);
+        public void Uninstall() {
+            unity_uninstall();
         }
 
         private int getPushPlatform(PushPlatform platform){

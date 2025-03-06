@@ -53,7 +53,7 @@ extern "C" {
         return [userBuilder build];
     }
     
-    void unity_initiailize (const char* domainName, const char* appId, const char* language) {
+    void unity_initialize (const char* domainName, const char* appId, const char* language) {
         NSString *_domainName = charToNSString(domainName);
         NSString *_appId = charToNSString(appId);
         NSString *_language = charToNSString(language);
@@ -194,13 +194,9 @@ extern "C" {
     void unity_close() {
         [AIHelpSupportSDK close];
     }
-    
-    void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
-        [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
-    }
-    
-    void unity_setSDKAppearanceMode (int mode) {
-        [AIHelpSupportSDK setSDKAppearanceMode:mode];
+
+    void unity_uninstall() {
+        [AIHelpSupportSDK uninstall];
     }
     
 #if defined(__cplusplus)

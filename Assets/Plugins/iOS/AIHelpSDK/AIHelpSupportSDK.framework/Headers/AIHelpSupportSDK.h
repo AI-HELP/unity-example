@@ -156,4 +156,6 @@
 
 + (void)logout;
 
++ (void)uninstall;
+
 @end
