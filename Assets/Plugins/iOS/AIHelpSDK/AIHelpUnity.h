@@ -11,14 +11,14 @@
 #ifndef AIHelpUnity_h
 #define AIHelpUnity_h
 
-extern "C" void unity_initialize (const char* domainName, const char* appId, const char* language);
+extern "C" void unity_initiailize (const char* domainName, const char* appId, const char* language);
 extern "C" void unity_registerAsyncEventListener (int eventType, AISupportAsyncEventListener listener);
 extern "C" void unity_unregisterAsyncEventListener (int eventType);
 
 extern "C" bool unity_show(const char* entranceId, const char* welcomeMessage);
 extern "C" void unity_showSingleFAQ(const char* faqId, int conversationMoment);
 
-extern "C" void unity_login (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isEnterpriseAuth);
+extern "C" void unity_login (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData);
 extern "C" void unity_logout ();
 extern "C" void unity_updateUserInfo (const char* userName, const char* serverId, const char* userTags, const char* customData);
 extern "C" void unity_resetUserInfo ();
@@ -36,5 +36,5 @@ extern "C" void unity_showUrl (const char* url);
 extern "C" void unity_additionalSupportFor(int countryOrRegion);
 
 extern "C" void unity_close();
-extern "C" void unity_uninstall();
+
 #endif

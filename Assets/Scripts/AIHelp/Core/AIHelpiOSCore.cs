@@ -11,7 +11,7 @@ namespace AIHelp
 
         public void Initialize(string domain, string appId, string language = "")
         {
-            unity_initialize(domain, appId, language);
+            unity_initiailize(domain, appId, language);
         }
 
         public void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
@@ -45,7 +45,7 @@ namespace AIHelp
             if (userConfig == null) {
                 userConfig = new UserConfig.Builder().Build();
             }
-            unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData, loginConfig.EnterpriseAuth); 
+            unity_login(loginConfig.UserId, userConfig.UserName, userConfig.ServerId, userConfig.UserTags, userConfig.CustomData); 
         }
 
         public void Logout() {
@@ -116,8 +116,14 @@ namespace AIHelp
             unity_close();
         }
 
-        public void Uninstall() {
-            unity_uninstall();
+        public void SetRequestedOrientation(int requestedOrientation)
+        {
+            unity_setSDKInterfaceOrientationMask(requestedOrientation);
+        }
+
+        public void SetSDKAppearanceMode(int mode)
+        {
+            unity_setSDKInterfaceOrientationMask(mode);
         }
 
         private int getPushPlatform(PushPlatform platform){

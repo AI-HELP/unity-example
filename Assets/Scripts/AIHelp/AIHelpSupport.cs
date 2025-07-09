@@ -48,10 +48,6 @@ namespace AIHelp
             AIHelpCore.getInstance().Login(loginConfig);
         }
 
-        public static void Logout() {
-            AIHelpCore.getInstance().Logout();
-        }
-
         public static void UpdateUserInfo(UserConfig userConfig)
         {
             AIHelpCore.getInstance().UpdateUserInfo(userConfig);
@@ -116,9 +112,18 @@ namespace AIHelp
             AIHelpCore.getInstance().Close();
         }
 
-        public static void Uninstall() {
-            AIHelpCore.getInstance().Uninstall();
+#if UNITY_IOS
+
+        public static void SetRequestedOrientation(int requestedOrientation)
+        {
+            AIHelpCore.getInstance().SetRequestedOrientation(requestedOrientation);
         }
 
+        public static void SetSDKAppearanceMode(int mode)
+        {
+            AIHelpCore.getInstance().SetSDKAppearanceMode(mode);
+        }
+
+#endif
     }
 }

@@ -93,7 +93,6 @@ typedef void (*AISupportAsyncEventListener)(const char *jsonEventData, void (*ac
 @interface AIHelpLoginConfigBuilder : NSObject
 
 @property (nonatomic, copy) NSString *userId;
-@property (nonatomic, assign) BOOL isEnterpriseAuth;
 
 @property (nonatomic, strong) AIHelpUserConfig *userConfig;
 

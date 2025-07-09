@@ -31,7 +31,6 @@ namespace AIHelp
             AndroidJavaObject builder = new AndroidJavaObject("net.aihelp.config.LoginConfig$Builder");
             builder.Call<AndroidJavaObject>("setUserId", config.UserId);
             builder.Call<AndroidJavaObject>("setUserConfig", getUserConfig(config.UserConfig));
-            builder.Call<AndroidJavaObject>("setEnterpriseAuth", config.EnterpriseAuth);
             return builder.Call<AndroidJavaObject>("build");
         }
 
@@ -228,13 +227,6 @@ namespace AIHelp
             }
         }
 
-        public void Uninstall()
-        {
-            if (javaSupport != null)
-            {
-                javaSupport.CallStatic("uninstall");
-            }
-        }
     }
 #endif
 }

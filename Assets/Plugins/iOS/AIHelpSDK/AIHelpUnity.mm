@@ -53,7 +53,7 @@ extern "C" {
         return [userBuilder build];
     }
     
-    void unity_initialize (const char* domainName, const char* appId, const char* language) {
+    void unity_initiailize (const char* domainName, const char* appId, const char* language) {
         NSString *_domainName = charToNSString(domainName);
         NSString *_appId = charToNSString(appId);
         NSString *_language = charToNSString(language);
@@ -96,13 +96,12 @@ extern "C" {
         [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) showConversationMoment:moment];
     }
 
-    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isEnterpriseAuth) {
+    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData) {
        NSString *_userId = charToNSString(userId); 
        AIHelpUserConfig *_userConfig = createUserConfig(userName, serverId, userTags, customData);
        AIHelpLoginConfigBuilder *builder = [[AIHelpLoginConfigBuilder alloc] init];
        builder.userId = _userId;
        builder.userConfig = _userConfig;
-       builder.isEnterpriseAuth = isEnterpriseAuth;
        [AIHelpSupportSDK login:builder.build];
     }
 
@@ -193,10 +192,6 @@ extern "C" {
 
     void unity_close() {
         [AIHelpSupportSDK close];
-    }
-
-    void unity_uninstall() {
-        [AIHelpSupportSDK uninstall];
     }
     
 #if defined(__cplusplus)

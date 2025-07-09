@@ -164,11 +164,21 @@ namespace AIHelp
             helpCore.Close();
         }
 
-        public void Uninstall()
+#if UNITY_IOS
+
+        public void SetRequestedOrientation(int requestedOrientation)
         {
             if (!IsHelpCorePrepared()) return;
-            helpCore.Uninstall();
+            helpCore.SetRequestedOrientation(requestedOrientation);
         }
+
+        public void SetSDKAppearanceMode(int mode)
+        {
+            if (!IsHelpCorePrepared()) return;
+            helpCore.SetSDKAppearanceMode(mode);
+        }
+
+#endif
 
         private bool IsHelpCorePrepared()
         {

@@ -13,6 +13,7 @@ using AIHelp;
 public class TestBehaviourScript : MonoBehaviour
 {
     private string domain = "release.aihelp.net";
+    // private string appId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
     private string appId = "";
 
     private void Awake()
@@ -98,7 +99,6 @@ public class TestBehaviourScript : MonoBehaviour
         LoginConfig loginConfig = new LoginConfig.Builder()
             .SetUserId(GetRandomNumber())
             // .SetUserConfig(config)
-            // .SetEnterpriseAuth(true)
             .Build();
 
         AIHelpSupport.Login(loginConfig);

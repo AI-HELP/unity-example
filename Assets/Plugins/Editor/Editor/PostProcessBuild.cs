@@ -10,27 +10,18 @@ public class PostProcessBuild
     {
         if (target == BuildTarget.iOS)
         {
-            // Path to the Xcode project
             string projPath = PBXProject.GetPBXProjectPath(pathToBuiltProject);
-            
-            // Read the Xcode project
+
             PBXProject proj = new PBXProject();
             proj.ReadFromFile(projPath);
 
-            // Get the main target GUID
-            string mainTargetName = PBXProject.GetUnityTargetName();
-            string mainTargetGuid = proj.TargetGuidByName(mainTargetName);
-            if (string.IsNullOrEmpty(mainTargetGuid))
-            {
-                UnityEngine.Debug.LogError("Main target GUID is null or empty");
-                return;
-            }
+            // 获取 Main Target (Unity-iPhone)
+            string mainTargetGuid = proj.GetUnityMainTargetGuid();
 
-            // Add -ObjC to Other Linker Flags for the main target
-            proj.AddBuildProperty(mainTargetGuid, "OTHER_LDFLAGS", "-ObjC");
+            // 获取 UnityFramework Target
+            string frameworkTargetGuid = proj.GetUnityFrameworkTargetGuid();
 
-            // Optional: Get the framework target GUID and add -ObjC to its Other Linker Flags
-            string frameworkTargetGuid = proj.TargetGuidByName("UnityFramework");
+            // 给 UnityFramework 添加 -ObjC
             if (!string.IsNullOrEmpty(frameworkTargetGuid))
             {
                 proj.AddBuildProperty(frameworkTargetGuid, "OTHER_LDFLAGS", "-ObjC");
@@ -40,7 +31,9 @@ public class PostProcessBuild
                 UnityEngine.Debug.LogWarning("UnityFramework target GUID is null or empty");
             }
 
-            // Write the Xcode project file back
+            // （可选）如果需要给主 Target 也加：
+            proj.AddBuildProperty(mainTargetGuid, "OTHER_LDFLAGS", "-ObjC");
+
             proj.WriteToFile(projPath);
         }
     }

@@ -1,75 +1,16 @@
-
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots'
-        }
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
-**BUILD_SCRIPT_DEPS**}
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        flatDir {
-            dirs 'libs'
-        }
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots'
-        }
-    }
-}
-
-([rootProject] + (rootProject.subprojects as List)).each {
-	ext {
-		it.setProperty("android.useAndroidX", true)
-		it.setProperty("android.enableJetifier", true)
-	}
-}
-
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 **APPLY_PLUGINS**
 
 dependencies {
-	implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'net.aihelp:android-aihelp-aar:5.6.+'
+**DEPS**}
 
-// Android Resolver Dependencies End
-**DEPS**
-}
-
-configurations {
-   //all*.exclude group:"com.google.android.gms" // avaoid facebook sdk and firebase sdk error
-}
-
-// Android Resolver Exclusions Start
 android {
-
-  packagingOptions {
-      /*
-      exclude ('/lib/arm64-v8a/*' + '*')
-      exclude ('/lib/armeabi/*' + '*')
-      exclude ('/lib/mips/*' + '*')
-      exclude ('/lib/mips64/*' + '*')
-      exclude ('/lib/x86/*' + '*')
-      exclude ('/lib/x86_64/*' + '*')
-      */
-        exclude 'META-INF/proguard/androidx-annotations.pro'
-        exclude 'META-INF/*.kotlin_module'
-  }
-}
-// Android Resolver Exclusions End
-android {
-	compileSdkVersion **APIVERSION**
-	buildToolsVersion '**BUILDTOOLS**'
-	compileSdkVersion **APIVERSION**
-	buildToolsVersion '**BUILDTOOLS**'
-
+    compileSdkVersion **APIVERSION**
+    buildToolsVersion '**BUILDTOOLS**'
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -77,15 +18,14 @@ android {
     }
 
     defaultConfig {
-	multiDexEnabled true
-    	minSdkVersion **MINSDKVERSION**
+        minSdkVersion **MINSDKVERSION**
         targetSdkVersion **TARGETSDKVERSION**
-        applicationId '**APPLICATIONID**'
         ndk {
             abiFilters **ABIFILTERS**
         }
         versionCode **VERSIONCODE**
         versionName '**VERSIONNAME**'
+        consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
     }
 
     lintOptions {
@@ -93,34 +33,10 @@ android {
     }
 
     aaptOptions {
-        noCompress '.unity3d', '.ress', '.resource', '.obb', '.bytes', '.meta', '.mp4'
-    }**SIGN**
-
-    buildTypes {
-        debug {
-            minifyEnabled false
-            useProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'**USER_PROGUARD**
-            jniDebuggable true
-        }
-        release {
-            minifyEnabled false
-            useProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-unity.txt'**USER_PROGUARD****SIGNCONFIG**
-        }
-        
-    }**PACKAGING_OPTIONS****SPLITS**
-**BUILT_APK_LOCATION**
-    dependencies {
-        implementation 'com.android.support:multidex:1.0.3'
-        implementation 'androidx.appcompat:appcompat:1.1.0'
-        implementation 'net.aihelp:android-aihelp-aar:5.4.+'
-    }
-
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
-**PACKAGING_OPTIONS**
-}**SPLITS_VERSION_CODE****REPOSITORIES****SOURCE_BUILD_SETUP**
-
-
+        noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }**PACKAGING_OPTIONS**
+}**REPOSITORIES**
+**IL_CPP_BUILD_SETUP**
+**SOURCE_BUILD_SETUP**
+**EXTERNAL_SOURCES**
