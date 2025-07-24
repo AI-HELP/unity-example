@@ -116,16 +116,6 @@ namespace AIHelp
             unity_close();
         }
 
-        public void SetRequestedOrientation(int requestedOrientation)
-        {
-            unity_setSDKInterfaceOrientationMask(requestedOrientation);
-        }
-
-        public void SetSDKAppearanceMode(int mode)
-        {
-            unity_setSDKInterfaceOrientationMask(mode);
-        }
-
         private int getPushPlatform(PushPlatform platform){
             int tempPlatform = 2;
             if (platform == PushPlatform.APNS)

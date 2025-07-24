@@ -65,13 +65,7 @@ namespace AIHelp
         private static extern void unity_showUrl(string url);
 
         [DllImport("__Internal")]
-        private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setSDKAppearanceMode(int mode);
-
-        [DllImport("__Internal")]
-        private static extern void unity_setSDKInterfaceOrientationMask(int interfaceOrientationMask);
+        private static extern void unity_additionalSupportFor(PublishCountryOrRegion countryOrRegion);  
     }
     #endif
 }
