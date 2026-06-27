@@ -2,25 +2,27 @@ allprojects {
     buildscript {
         repositories {**ARTIFACTORYREPOSITORY**
             google()
-            jcenter()
-			maven {
-				url 'https://oss.sonatype.org/content/repositories/snapshots'
-			}
+            mavenCentral()
+            maven {
+                url 'https://oss.sonatype.org/content/repositories/snapshots'
+            }
         }
 
         dependencies {
+            // Unity 6.5 (6000.5.1f1) 配置：
+            //   AGP 8.7.3 + Gradle 8.9 是官方兼容组合 (AGP 8.7 要求 Gradle >= 8.9)
+            //   distributionUrl 在 gradle/wrapper/gradle-wrapper.properties
             // If you are changing the Android Gradle Plugin version, make sure it is compatible with the Gradle version preinstalled with Unity
             // See which Gradle version is preinstalled with Unity here https://docs.unity3d.com/Manual/android-gradle-overview.html
             // See official Gradle and Android Gradle Plugin compatibility table here https://developer.android.com/studio/releases/gradle-plugin#updating-gradle
-            // To specify a custom Gradle version in Unity, go do "Preferences > External Tools", uncheck "Gradle Installed with Unity (recommended)" and specify a path to a custom Gradle version
-            classpath 'com.android.tools.build:gradle:4.0.1'
+            classpath 'com.android.tools.build:gradle:8.7.3'
             **BUILD_SCRIPT_DEPS**
         }
     }
 
     repositories {**ARTIFACTORYREPOSITORY**
         google()
-        jcenter()
+        mavenCentral()
         flatDir {
             dirs "${project(':unityLibrary').projectDir}/libs"
         }
