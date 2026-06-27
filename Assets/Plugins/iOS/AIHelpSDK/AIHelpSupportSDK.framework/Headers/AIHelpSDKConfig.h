@@ -65,6 +65,7 @@ typedef void (*AISupportAsyncEventListener)(const char *jsonEventData, void (*ac
 
 @interface AIHelpUserConfigBuilder : NSObject
 @property (nonatomic, copy)NSString       *userName;      // default is "anonymous"
+@property (nonatomic, copy)NSString       *avatarUrl;     // default is nil
 @property (nonatomic, copy)NSString       *serverId;      // default is nil
 @property (nonatomic, strong)NSArray        *userTags;      // If you assign this field with existing tags from aihelp admin dashboard, the tickets created by current user will take these tags by default.
 @property (nonatomic, strong)NSDictionary   *customData;    // Set custom meta data you want to see in the aihelp admin dashboard.
