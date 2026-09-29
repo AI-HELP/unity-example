@@ -4,6 +4,7 @@
 #
 
 .DS_Store
+**/.DS_Store
 
 /[Ll]ibrary/
 /[Tt]emp/
@@ -12,6 +13,15 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+
+# Local Unity Editor preferences / search cache / window layouts
+/[Uu]ser[Ss]ettings/Search.index
+/[Uu]ser[Ss]ettings/Search.settings
+/[Uu]ser[Ss]ettings/Layouts/
+/[Uu]ser[Ss]ettings/EditorUserSettings.asset
+
+# Accidental package dumps at repo root (keep UnityPackages/ intentional releases if desired)
+/*.unitypackage
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

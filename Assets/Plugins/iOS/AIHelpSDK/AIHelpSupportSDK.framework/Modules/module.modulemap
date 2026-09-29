@@ -1,6 +1,0 @@
-framework module AIHelpSupportSDK {
-  umbrella header "AIHelpSupportSDK.h"
-
-  export *
-  module * { export * }
-}
