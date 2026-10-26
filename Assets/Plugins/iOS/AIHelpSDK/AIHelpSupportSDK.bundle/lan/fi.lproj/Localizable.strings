@@ -18,6 +18,7 @@
 "aihelp_file"="Tiedosto";
 "aihelp_fill_in"="Täytä";
 "aihelp_form_hint"="Täytä lomake ottaaksesi yhteyttä manuaaliseen palveluun";
+"aihelp_form_submitted"="Lähetetty onnistuneesti.";
 "aihelp_friday"="Perjantai";
 "aihelp_image_format_unsupport"="Tätä kuvamuotoa ei tueta";
 "aihelp_is_Answer_helpful"="Onko näistä vastauksista apua?";

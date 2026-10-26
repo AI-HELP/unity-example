@@ -18,6 +18,7 @@
 "aihelp_file"="파일";
 "aihelp_fill_in"="입력";
 "aihelp_form_hint"="수동 서비스에 문의하려면 양식을 작성하십시오.";
+"aihelp_form_submitted"="제출되었습니다.";
 "aihelp_friday"="금요일";
 "aihelp_image_format_unsupport"="이 이미지 형식은 지원되지 않습니다.";
 "aihelp_is_Answer_helpful"="아래 답변이 도움 되었습니까?";

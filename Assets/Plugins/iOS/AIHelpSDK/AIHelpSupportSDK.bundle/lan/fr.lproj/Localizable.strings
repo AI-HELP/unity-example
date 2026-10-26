@@ -18,6 +18,7 @@
 "aihelp_file"="Déposer";
 "aihelp_fill_in"="Remplir";
 "aihelp_form_hint"="Remplir le formulaire et notre équipe de service client vous recontacte";
+"aihelp_form_submitted"="Envoyé avec succès.";
 "aihelp_friday"="Vendredi";
 "aihelp_image_format_unsupport"="Ce format d'image n'est pas pris en charge";
 "aihelp_is_Answer_helpful"="Ces réponses sont-elles utiles ?";

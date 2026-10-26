@@ -18,6 +18,7 @@
 "aihelp_file"="Dosya";
 "aihelp_fill_in"="Form Doldur";
 "aihelp_form_hint"="Müşteri hizmetleri ekibimizin size geri dönüş yapması için formu doldurun";
+"aihelp_form_submitted"="Başarıyla gönderildi.";
 "aihelp_friday"="Cuma";
 "aihelp_image_format_unsupport"="Bu resim formatı desteklenmiyor";
 "aihelp_is_Answer_helpful"="Bu cevaplar yardımcı oluyor mu?";

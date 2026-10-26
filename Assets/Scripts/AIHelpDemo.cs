@@ -9,7 +9,7 @@ public class AIHelpDemo : MonoBehaviour
 {
     // ============ 在这里填入你自己的 AIHelp 配置 ============
     private string domain = "release.aihelp.net";
-    private string androidAppId = "TryElva_platform_79453658-02b7-42fb-9384-8e8712539777";
+    private string androidAppId = "cn_platform_4ff25de3adc8757b4c21936ce476a0d0";
     private string iosAppId     = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0";
 
     private const string ENTRANCE_CUSTOMER_SERVICE = "test004";
