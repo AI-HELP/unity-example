@@ -74,12 +74,16 @@ namespace AIHelp.Editor
                 throw new FileNotFoundException("Missing package assets:\n" + string.Join("\n", missing));
             }
 
-            // Prefer xcframework; fail loudly if old framework is still present (avoid shipping both)
-            if (Directory.Exists("Assets/Plugins/iOS/AIHelpSDK/AIHelpSupportSDK.framework")
-                || AssetDatabase.IsValidFolder("Assets/Plugins/iOS/AIHelpSDK/AIHelpSupportSDK.framework"))
+            string vendored = new[]
+            {
+                "Assets/Plugins/iOS/AIHelpSDK/AIHelpSupportSDK.xcframework",
+                "Assets/Plugins/iOS/AIHelpSDK/AIHelpSupportSDK.bundle",
+                "Assets/Plugins/iOS/AIHelpSDK/AIHelpSupportSDK.framework",
+            }.FirstOrDefault(p => Directory.Exists(p) || AssetDatabase.IsValidFolder(p));
+            if (vendored != null)
             {
                 throw new InvalidOperationException(
-                    "Found legacy AIHelpSupportSDK.framework — remove it and keep only AIHelpSupportSDK.xcframework before exporting.");
+                    "iOS SDK comes from Swift Package Manager. Remove " + vendored + " before exporting.");
             }
 
             string safeVersion = string.Join("_", version.Split(Path.GetInvalidFileNameChars()));
