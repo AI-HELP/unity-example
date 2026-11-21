@@ -22,6 +22,8 @@ public class AIHelpDemo : MonoBehaviour
     private Vector2 _scrollPos = Vector2.zero;
     private float _scale = 1f;
     private float _contentHeight = 0f;
+    // Screen.safeArea → GUI top-left insets (notch / Dynamic Island / home indicator)
+    private float _safeTop, _safeBottom, _safeLeft, _safeRight;
 
     // 触摸 / 拖动 / 按下态
     private bool _isDragging = false;
@@ -114,6 +116,7 @@ public class AIHelpDemo : MonoBehaviour
         EnsureStyles();
         ComputeScale();
         ApplyScaleToStyles();
+        RefreshSafeInsets();
 
         Event e = Event.current;
         UpdateDragState(e);
@@ -123,6 +126,16 @@ public class AIHelpDemo : MonoBehaviour
         DrawScrollableArea();
         DrawStatusBar();
         DrawToast();
+    }
+
+    private void RefreshSafeInsets()
+    {
+        // Screen.safeArea is bottom-left origin; OnGUI is top-left.
+        Rect sa = Screen.safeArea;
+        _safeTop = Mathf.Max(0f, Screen.height - (sa.y + sa.height));
+        _safeBottom = Mathf.Max(0f, sa.y);
+        _safeLeft = Mathf.Max(0f, sa.x);
+        _safeRight = Mathf.Max(0f, Screen.width - (sa.x + sa.width));
     }
 
     // ---------- 触摸 / 滚动 ----------
@@ -167,7 +180,9 @@ public class AIHelpDemo : MonoBehaviour
 
     private void DrawTitle()
     {
-        var titleRect = new Rect(0, BASE_PAD * _scale, Screen.width, BASE_TITLE_H * _scale);
+        float pad = BASE_PAD * _scale;
+        float titleH = BASE_TITLE_H * _scale;
+        var titleRect = new Rect(_safeLeft, _safeTop + pad, Screen.width - _safeLeft - _safeRight, titleH);
         GUI.Label(titleRect, "AIHelp Unity Demo", _titleStyle);
     }
 
@@ -176,14 +191,15 @@ public class AIHelpDemo : MonoBehaviour
         float pad         = BASE_PAD     * _scale;
         float titleH      = BASE_TITLE_H * _scale;
         float statusH     = BASE_STATUS_H * _scale;
-        float topY        = pad + titleH + 12f * _scale;
-        float bottomY     = Screen.height - statusH;
+        float topY        = _safeTop + pad + titleH + 12f * _scale;
+        float bottomY     = Screen.height - _safeBottom - statusH;
 
         // 按钮宽度封顶 + 居中
+        float usableW = Screen.width - _safeLeft - _safeRight;
         float maxW   = MAX_BUTTON_WIDTH_DP * _scale;
-        float btnW   = Mathf.Min(Screen.width - pad * 2, maxW);
-        float btnLeft = (Screen.width - btnW) / 2f;
-        float areaH  = bottomY - topY;
+        float btnW   = Mathf.Min(usableW - pad * 2, maxW);
+        float btnLeft = _safeLeft + (usableW - btnW) / 2f;
+        float areaH  = Mathf.Max(0f, bottomY - topY);
 
         // ScrollView, 显式传 GUIStyle.none 给两个滚动条, 完全禁用视觉上的滚动条;
 // 触摸拖拽还是能用 (scrollRect/viewRect 内部的 hit-test 不受影响)
@@ -273,10 +289,13 @@ public class AIHelpDemo : MonoBehaviour
     {
         float pad      = BASE_PAD      * _scale;
         float statusH  = BASE_STATUS_H * _scale;
-        float y        = Screen.height - statusH;
-        var statusRect = new Rect(0, y, Screen.width, statusH);
+        float barH     = statusH + _safeBottom;
+        float y        = Screen.height - barH;
+        var statusRect = new Rect(0, y, Screen.width, barH);
         GUI.DrawTexture(statusRect, _statusBgTex);
-        GUI.Label(new Rect(pad, y + 8f * _scale, Screen.width - pad * 2, statusH - 16f * _scale),
+        GUI.Label(new Rect(_safeLeft + pad, y + 8f * _scale,
+                           Screen.width - _safeLeft - _safeRight - pad * 2,
+                           statusH - 16f * _scale),
                   "Notify: " + _notifyMessage, _statusStyle);
     }
 
@@ -290,9 +309,11 @@ public class AIHelpDemo : MonoBehaviour
         // toast 浮在上面, 淡出后 status bar 的内容自然露出来
         float pad     = BASE_PAD      * _scale;
         float statusH = BASE_STATUS_H * _scale;
-        float y       = Screen.height - statusH;
-        var bgRect   = new Rect(0, y, Screen.width, statusH);
-        var textRect = new Rect(pad, y, Screen.width - pad * 2, statusH);
+        float barH    = statusH + _safeBottom;
+        float y       = Screen.height - barH;
+        var bgRect   = new Rect(0, y, Screen.width, barH);
+        var textRect = new Rect(_safeLeft + pad, y,
+                                Screen.width - _safeLeft - _safeRight - pad * 2, statusH);
 
         // 淡入 / 淡出
         float fadeIn  = Mathf.Clamp01((now - _toast.appearAt) / TOAST_FADE);
