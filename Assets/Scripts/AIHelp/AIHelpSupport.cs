@@ -1,51 +1,74 @@
-﻿using System;
+﻿
+using System;
 namespace AIHelp
 {
+
     public class AIHelpSupport
     {
-        public static void Initialize(string domain, string appId, string language)
+
+        public static void Init(string appKey, string domain, string appId, string language)
         {
-            AIHelpCore.getInstance().Initialize(domain, appId, language);
+            AIHelpCore.getInstance().Init(appKey, domain, appId, language);
         }
 
-        public static void Initialize(string domain, string appId)
+        public static void Init(string appKey, string domain, string appId)
         {
-            Initialize(domain, appId, "");
+            Init(appKey, domain, appId, "");
         }
 
-        public static void RegisterAsyncEventListener(AIHelp.EventType eventType, AIHelpDelegate.AsyncEventListener listener)
+        public static void SetOnAIHelpInitializedCallback(AIHelpDefine.OnAIHelpInitializedCallback callback)
         {
-            AIHelpCore.getInstance().RegisterAsyncEventListener(eventType, listener);
+            AIHelpCore.getInstance().SetOnAIHelpInitializedCallback(callback);
         }
 
-        public static void UnregisterAsyncEventListener(AIHelp.EventType eventType)
+        public static void ShowConversation()
         {
-            AIHelpCore.getInstance().UnregisterAsyncEventListener(eventType);
+            AIHelpCore.getInstance().ShowConversation();
         }
 
-        public static bool Show(string entranceId)
+        public static void ShowConversation(ConversationConfig config)
         {
-            return AIHelpCore.getInstance().Show(entranceId);
+            AIHelpCore.getInstance().ShowConversation(config);
         }
 
-        public static bool Show(ApiConfig apiConfig)
+        public static void ShowAllFAQSections()
         {
-            return AIHelpCore.getInstance().Show(apiConfig);
+            AIHelpCore.getInstance().ShowAllFAQSections();
         }
 
-        public static void ShowSingleFAQ(string faqId, ConversationMoment moment)
+        public static void ShowAllFAQSections(FaqConfig config)
         {
-            AIHelpCore.getInstance().ShowSingleFAQ(faqId, moment);
+            AIHelpCore.getInstance().ShowAllFAQSections(config);
         }
 
-        public static void Login(string userId)
+        public static void ShowFAQSection(string sectionId)
         {
-            Login(new LoginConfig.Builder().SetUserId(userId).Build());
+            AIHelpCore.getInstance().ShowFAQSection(sectionId);
         }
 
-        public static void Login(LoginConfig loginConfig)
+        public static void ShowFAQSection(string sectionId, FaqConfig config)
         {
-            AIHelpCore.getInstance().Login(loginConfig);
+            AIHelpCore.getInstance().ShowFAQSection(sectionId, config);
+        }
+
+        public static void ShowSingleFAQ(string faqId)
+        {
+            AIHelpCore.getInstance().ShowSingleFAQ(faqId);
+        }
+
+        public static void ShowSingleFAQ(string faqId, FaqConfig config)
+        {
+            AIHelpCore.getInstance().ShowSingleFAQ(faqId, config);
+        }
+
+        public static void ShowOperation()
+        {
+            AIHelpCore.getInstance().ShowOperation();
+        }
+
+        public static void ShowOperation(OperationConfig config)
+        {
+            AIHelpCore.getInstance().ShowOperation(config);
         }
 
         public static void UpdateUserInfo(UserConfig userConfig)
@@ -73,14 +96,19 @@ namespace AIHelp
             AIHelpCore.getInstance().SetPushTokenAndPlatform(pushToken, platform);
         }
 
-        public static void FetchUnreadMessageCount()
+        public static void SetNetworkCheckHostAddress(string address)
         {
-            AIHelpCore.getInstance().FetchUnreadMessageCount();
+            SetNetworkCheckHostAddress(address, null);
         }
 
-        public static void FetchUnreadTaskCount()
+        public static void SetNetworkCheckHostAddress(string address, AIHelpDefine.OnNetworkCheckResultCallback callback)
         {
-            AIHelpCore.getInstance().FetchUnreadTaskCount();
+            AIHelpCore.getInstance().SetNetworkCheckHostAddress(address, callback);
+        }
+
+        public static void StartUnreadMessageCountPolling(AIHelpDefine.OnMessageCountArrivedCallback callback)
+        {
+            AIHelpCore.getInstance().StartUnreadMessageCountPolling(callback);
         }
 
         public static string GetSDKVersion()
@@ -98,6 +126,11 @@ namespace AIHelp
             AIHelpCore.getInstance().EnableLogging(enable);
         }
 
+        public static void Uninstall()
+        {
+            AIHelpCore.getInstance().Uninstall();
+        }
+
         public static void ShowUrl(string url)
         {
             AIHelpCore.getInstance().ShowUrl(url);
@@ -108,8 +141,57 @@ namespace AIHelp
             AIHelpCore.getInstance().AdditionalSupportFor(countryOrRegion);
         }
 
-        public static void Close() {
-            AIHelpCore.getInstance().Close();
+        public static void SetOnSpecificFormSubmittedCallback(AIHelpDefine.OnSpecificFormSubmittedCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnSpecificFormSubmittedCallback(callback);
         }
+
+        public static void SetOnAIHelpSessionOpenCallback(AIHelpDefine.OnAIHelpSessionOpenCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnAIHelpSessionOpenCallback(callback);
+        }
+
+        public static void SetOnAIHelpSessionCloseCallback(AIHelpDefine.OnAIHelpSessionCloseCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnAIHelpSessionCloseCallback(callback);
+        }
+
+        public static void SetOnOperationUnreadChangedCallback(AIHelpDefine.OnOperationUnreadChangedCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnOperationUnreadChangedCallback(callback);
+        }
+
+        public static void SetOnSpecificUrlClickedCallback(AIHelpDefine.OnSpecificUrlClickedCallback callback)
+        {
+            AIHelpCore.getInstance().SetOnSpecificUrlClickedCallback(callback);
+        }
+
+
+
+#if UNITY_IOS
+
+        public static void SetRequestedOrientation(int requestedOrientation)
+        {
+            AIHelpCore.getInstance().SetRequestedOrientation(requestedOrientation);
+        }
+
+        public static void SetSDKAppearanceMode(int mode)
+        {
+            AIHelpCore.getInstance().SetSDKAppearanceMode(mode);
+        }
+
+        public static void SetSDKEdgeInsets(float top, float bottom, bool enable)
+        {
+            AIHelpCore.getInstance().SetSDKEdgeInsets(top, bottom, enable);
+        }
+
+        public static void SetSDKEdgeColor(float red, float green, float blue, float alpha)
+        {
+            AIHelpCore.getInstance().SetSDKEdgeColor(red, green, blue, alpha);
+        }
+
+#endif
+
     }
+
 }

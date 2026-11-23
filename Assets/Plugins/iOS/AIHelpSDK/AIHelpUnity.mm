@@ -12,7 +12,7 @@
 #if defined(__cplusplus)
 extern "C" {
 #endif
-    
+
     NSString* charToNSString (const char* string)
     {
         if (string){
@@ -31,14 +31,158 @@ extern "C" {
         }
     }
 
-    AIHelpUserConfig* createUserConfig(const char* userName, const char* serverId, const char* userTags, const char* customData) {
+
+    void unity_init (const char* apiKey, const char* domainName, const char* appId) {
+        NSString *_apiKey = charToNSString(apiKey);
+        NSString *_domainName = charToNSString(domainName);
+        NSString *_appId = charToNSString(appId);
+        [AIHelpSupportSDK initWithApiKey:_apiKey domainName:_domainName appId:_appId];
+    }
+
+    void unity_initLan (const char* apiKey, const char* domainName, const char* appId, const char* language) {
+        NSString *_apiKey = charToNSString(apiKey);
+        NSString *_domainName = charToNSString(domainName);
+        NSString *_appId = charToNSString(appId);
+        NSString *_language = charToNSString(language);
+        [AIHelpSupportSDK initWithApiKey:_apiKey domainName:_domainName appId:_appId language:_language];
+    }
+
+    void unity_setOnInitializedCallback (AISupportInitCallBack callBack) {
+        [AIHelpSupportSDK setOnInitializedCallback:callBack];
+    }
+
+    void unity_showConversation () {
+        [AIHelpSupportSDK showConversation];
+    }
+
+    void unity_showConversationConfig (int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* welcomeMessage, const char* storyNode) {
+        AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
+        conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
+        conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
+        conversationBuilder.storyNode = charToNSString(storyNode);
+        [AIHelpSupportSDK showConversation:conversationBuilder.build];
+    }
+
+    void unity_showAllFAQSections () {
+        [AIHelpSupportSDK showAllFAQSections];
+    }
+
+    void unity_showAllFAQSectionsConfig (int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage,const char* storyNode, const char* welcomeMessage) {
+        AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
+        if (conversationMoment == 1002) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAlways;
+        }else if (conversationMoment == 1004) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
+        } else if (conversationMoment == 1003) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
+        } else {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
+        }
+        AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
+        conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
+        conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
+        conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
+        faqBuilder.conversationConfig = conversationBuilder.build;
+        [AIHelpSupportSDK showAllFAQSections:faqBuilder.build];
+    }
+
+    void unity_showFAQSection (const char* sectionId) {
+        [AIHelpSupportSDK showFAQSection:charToNSString(sectionId)];
+    }
+
+    void unity_showFAQSectionConfig (const char* sectionId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
+        AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
+        if (conversationMoment == 1002) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAlways;
+        }else if (conversationMoment == 1004) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
+        } else if (conversationMoment == 1003) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
+        } else {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
+        }
+        AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
+        conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
+        conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
+        conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
+        faqBuilder.conversationConfig = conversationBuilder.build;
+        [AIHelpSupportSDK showFAQSection:charToNSString(sectionId) config:faqBuilder.build];
+    }
+
+    void unity_showSingleFAQ (const char* faqId) {
+        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId)];
+    }
+
+    void unity_showSingleFAQConfig (const char* faqId, int conversationMoment, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
+        AIHelpFAQConfigBuilder *faqBuilder = [[AIHelpFAQConfigBuilder alloc] init];
+        if (conversationMoment == 1002) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAlways;
+        }else if (conversationMoment == 1004) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
+        } else if (conversationMoment == 1003) {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
+        } else {
+            faqBuilder.showConversationMoment = AIHelpFAQShowConversationMomentNever;
+        }
+        AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
+        conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
+        conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
+        conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
+        faqBuilder.conversationConfig = conversationBuilder.build;
+        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) config:faqBuilder.build];
+    }
+
+    void unity_showOperation () {
+        [AIHelpSupportSDK showOperation];
+    }
+
+    void unity_showOperationConfig (int selectIndex, const char* conversationTitle, int conversationIntent, bool alwaysShowHumanSupportButtonInBotPage, const char* storyNode, const char* welcomeMessage) {
+        AIHelpOperationConfigBuilder *operationBuiler = [[AIHelpOperationConfigBuilder alloc] init];
+        operationBuiler.selectIndex = selectIndex;
+        operationBuiler.conversationTitle = charToNSString(conversationTitle);
+        AIHelpConversationConfigBuilder *conversationBuilder = [[AIHelpConversationConfigBuilder alloc] init];
+        conversationBuilder.conversationIntent = conversationIntent == 1 ? AIHelpConversationIntentBotSupport : AIHelpConversationIntentHumanSupport;
+        conversationBuilder.alwaysShowHumanSupportButtonInBotPage = alwaysShowHumanSupportButtonInBotPage;
+        conversationBuilder.storyNode = charToNSString(storyNode);
+        conversationBuilder.welcomeMessage = charToNSString(welcomeMessage);
+        operationBuiler.conversationConfig = conversationBuilder.build;
+        [AIHelpSupportSDK showOperation:operationBuiler.build];
+    }
+
+    void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo, const char* pushToken, int pushPlatform) {
+
         NSString *_userTags = charToNSString(userTags);
         NSString *_customData = charToNSString(customData);
-        
+
         AIHelpUserConfigBuilder *userBuilder = [[AIHelpUserConfigBuilder alloc] init];
+        userBuilder.userId = charToNSString(userId);
         userBuilder.userName = charToNSString(userName);
         userBuilder.serverId = charToNSString(serverId);
-                
+        userBuilder.isSyncCrmInfo = isSyncCrmInfo;
+        userBuilder.pushToken = charToNSString(pushToken);
+
+        switch (pushPlatform) {
+            case 1:
+                userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
+                break;
+            case 2:
+                userBuilder.pushPlatform = AIHelpTokenPlatformFirebase;
+                break;
+            case 3:
+                userBuilder.pushPlatform = AIHelpTokenPlatformJpush;
+                break;
+            case 4:
+                userBuilder.pushPlatform = AIHelpTokenPlatformGeTui;
+                break;
+            default:
+                userBuilder.pushPlatform = AIHelpTokenPlatformAPNS;
+                break;
+        }
+
         if ([_userTags componentsSeparatedByString:@","]) {
             userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
         }
@@ -50,80 +194,19 @@ extern "C" {
                 userBuilder.customData = dic;
             }
         }
-        return [userBuilder build];
-    }
-    
-    void unity_initiailize (const char* domainName, const char* appId, const char* language) {
-        NSString *_domainName = charToNSString(domainName);
-        NSString *_appId = charToNSString(appId);
-        NSString *_language = charToNSString(language);
-        [AIHelpSupportSDK initializeWithDomainName:_domainName appId:_appId language:_language];
-    }
-    
-    void unity_registerAsyncEventListener (int eventType, AISupportAsyncEventListener listener) {
-        [AIHelpSupportSDK registerAsyncListener:listener eventType:(AIHelpEventType)eventType];
-    }
-
-    void unity_unregisterAsyncEventListener (int eventType) {
-        [AIHelpSupportSDK unregisterAsyncListenerWithEvent:(AIHelpEventType)eventType];
-    }
-
-    bool unity_show(const char* entranceId, const char* welcomeMessage) {
-        AIHelpApiConfigBuilder *configBuilder = [[AIHelpApiConfigBuilder alloc] init];
-        configBuilder.entranceId = charToNSString(entranceId);
-        configBuilder.welcomeMessage = charToNSString(welcomeMessage);
-        return [AIHelpSupportSDK showWithApiConfig:configBuilder.build];
-    }
-
-    void unity_showSingleFAQ(const char* faqId, int conversationMoment) {
-        AIHelpFAQShowConversationMoment moment = AIHelpFAQShowConversationMomentNever;
-        switch(conversationMoment){
-            case 1:
-                moment = AIHelpFAQShowConversationMomentNever;
-                break;
-            case 2:
-                moment = AIHelpFAQShowConversationMomentAlways;
-                break;
-            case 3:
-                moment = AIHelpFAQShowConversationMomentOnlyInAnswerPage;
-                break;
-            case 4:
-                moment = AIHelpFAQShowConversationMomentAfterMarkingUnhelpful;
-                break;
-            default:
-                break;    
-        }
-        [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) showConversationMoment:moment];
-    }
-
-    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData) {
-       NSString *_userId = charToNSString(userId); 
-       AIHelpUserConfig *_userConfig = createUserConfig(userName, serverId, userTags, customData);
-       AIHelpLoginConfigBuilder *builder = [[AIHelpLoginConfigBuilder alloc] init];
-       builder.userId = _userId;
-       builder.userConfig = _userConfig;
-       [AIHelpSupportSDK login:builder.build];
-    }
-
-    void unity_logout() {
-       [AIHelpSupportSDK logout]; 
-    }
-
-    void unity_updateUserInfo(const char* userName, const char* serverId, const char* userTags, const char* customData) {
-        AIHelpUserConfig *userConfig = createUserConfig(userName, serverId, userTags, customData);
-        [AIHelpSupportSDK updateUserInfo:userConfig];
+        [AIHelpSupportSDK updateUserInfo:userBuilder.build];
     }
 
     void unity_resetUserInfo () {
         [AIHelpSupportSDK resetUserInfo];
     }
 
-    void unity_fetchUnreadMessageCount () {
-        [AIHelpSupportSDK fetchUnreadMessageCount];
+    void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack) {
+        [AIHelpSupportSDK setNetworkCheckHostAddress:charToNSString(address) callback:callBack];
     }
 
-    void unity_fetchUnreadTaskCount () {
-        [AIHelpSupportSDK fetchUnreadTaskCount];
+    void unity_startUnreadMessageCountPolling (AISupportMessageCallBack callBack) {
+        [AIHelpSupportSDK startUnreadMessageCountPolling:callBack];
     }
 
     void unity_updateSDKLanguage (const char* language) {
@@ -133,7 +216,7 @@ extern "C" {
     void unity_setUploadLogPath (const char* path) {
         [AIHelpSupportSDK setUploadLogPath:charToNSString(path)];
     }
-    
+
     void unity_setPushTokenAndPlatform (const char* pushToken, int pushPlatform) {
         AIHelpTokenPlatform ePlatform;
         switch (pushPlatform) {
@@ -148,12 +231,6 @@ extern "C" {
                 break;
             case 4:
                 ePlatform = AIHelpTokenPlatformGeTui;
-                break;
-            case 6:
-                ePlatform = AIHelpTokenPlatformHUAWEI;
-                break;
-            case 7:
-                ePlatform = AIHelpTokenPlatformOneSignal;
                 break;
             default:
                 ePlatform = AIHelpTokenPlatformAPNS;
@@ -170,13 +247,33 @@ extern "C" {
     bool unity_isAIHelpShowing () {
         return [AIHelpSupportSDK isAIHelpShowing];
     }
-    
+
     void unity_enableLogging (bool enable) {
         [AIHelpSupportSDK enableLogging:enable];
     }
 
+    void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
+        [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
+    }
+
+    void unity_setSDKAppearanceMode (int mode) {
+        [AIHelpSupportSDK setSDKAppearanceMode:mode];
+    }
+
+    void unity_setSDKEdgeInsets (float top, float bottom, bool enable) {
+        [AIHelpSupportSDK setSDKEdgeInsetsWithTop:top bottom:bottom enable:enable];
+    }
+
+    void unity_setSDKEdgeColor (float red, float green, float blue, float alpha) {
+        [AIHelpSupportSDK setSDKEdgeColorWithRed:red green:green blue:blue alpha:alpha];
+    }
+
     void unity_showUrl (const char* url) {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
+    }
+   
+    void unity_uninstall () {
+        [AIHelpSupportSDK uninstall];
     }
 
     void unity_additionalSupportFor(int countryOrRegion) {
@@ -190,10 +287,25 @@ extern "C" {
         [AIHelpSupportSDK additionalSupportFor:tmpCountryOrRegion];
     }
 
-    void unity_close() {
-        [AIHelpSupportSDK close];
+    void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack) {
+        [AIHelpSupportSDK setOnSpecificFormSubmittedCallback:callBack];
     }
-    
+
+    void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionOpenCallback:callBack];
+    }
+    void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
+    }
+    void unity_setOnOperationUnreadChangedCallback(AISupportOperationUnReadCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnOperationUnreadChangedCallback:callBack];
+    }
+    void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnSpecificUrlClickedCallback:callBack];
+    }
+
 #if defined(__cplusplus)
 }
 #endif
