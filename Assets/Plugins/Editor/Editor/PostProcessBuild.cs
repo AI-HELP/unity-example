@@ -6,12 +6,19 @@ using UnityEngine;
 
 /// <summary>
 /// After iOS export:
-/// 1) Add -ObjC for AIHelp ObjC categories
-/// 2) Force Device+Simulator destinations (Unity Simulator SDK export locks to
+/// 1) Pull AIHelp with Swift Package Manager: Core on UnityFramework, resources on the App
+/// 2) Add -ObjC for AIHelp ObjC categories
+/// 3) Force Device+Simulator destinations (Unity Simulator SDK export locks to
 ///    SDKROOT=iphonesimulator / ARCHS=x86_64, which breaks real devices and M-chip sims)
 /// </summary>
 public class PostProcessBuild
 {
+    // Tools/update-sdk.sh rewrites IosPackageVersion. Keep this declaration on one line.
+    private const string IosPackageUrl = "https://github.com/AI-HELP/aihelp-ios-sdk.git";
+    private const string IosPackageVersion = "0.0.0";
+    private const string IosPackageProductCore = "AIHelpSupportSDKCore";
+    private const string IosPackageProductResources = "AIHelpResources";
+
     [PostProcessBuild(999)]
     public static void OnPostProcessBuild(BuildTarget target, string pathToBuiltProject)
     {
@@ -36,11 +43,25 @@ public class PostProcessBuild
             FixPlatformAndArch(proj, guid);
         }
 
+        // UnityFramework runs the SDK binary. The App target links only the resource
+        // product, which is what makes Xcode copy the bundle into the .app.
+        if (string.IsNullOrEmpty(frameworkTargetGuid) || string.IsNullOrEmpty(mainTargetGuid))
+        {
+            Debug.LogError("[AIHelp] Unity target missing; Swift package was not added.");
+        }
+        else
+        {
+            string packageGuid = proj.AddRemotePackageReferenceAtVersion(IosPackageUrl, IosPackageVersion);
+            proj.AddRemotePackageFrameworkToProject(frameworkTargetGuid, IosPackageProductCore, packageGuid, false);
+            proj.AddRemotePackageFrameworkToProject(mainTargetGuid, IosPackageProductResources, packageGuid, false);
+        }
+
         proj.WriteToFile(projPath);
         // Must run after WriteToFile — Unity may still stamp Simulator-only into project-level configs
         FixAllProjectBuildConfigs(pathToBuiltProject);
 
-        Debug.Log("[AIHelp] PostProcessBuild: Device+Simulator platforms restored, -ObjC added.");
+        Debug.Log("[AIHelp] PostProcessBuild: SPM " + IosPackageProductCore + " + " + IosPackageProductResources
+            + " " + IosPackageVersion + ", Device+Simulator platforms restored, -ObjC added.");
     }
 
     private static void FixPlatformAndArch(PBXProject proj, string targetGuid)
