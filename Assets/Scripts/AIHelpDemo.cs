@@ -219,7 +219,7 @@ public class AIHelpDemo : MonoBehaviour
 
         y = DrawSection(y, btnW, "用户  /  User");
         y = DrawButton(y, btnW, "Login",                        SafeDoLogin);
-        y = DrawButton(y, btnW, "Logout (ResetUserInfo)",      SafeLogout);
+        y = DrawButton(y, btnW, "Logout",                        SafeLogout);
         y = DrawButton(y, btnW, "UpdateUserInfo (sample)",     SafeUpdateUserInfo);
 
         y = DrawSection(y, btnW, "调试  /  Debug");
@@ -448,7 +448,7 @@ public class AIHelpDemo : MonoBehaviour
     private void SafeShowCustomEntrance()  => ShowCustomEntrance();
     private void SafeShowSingleFAQ()       => ShowSingleFAQ();
     private void SafeDoLogin()             => DoLogin();
-    private void SafeLogout()              => AIHelpSupport.ResetUserInfo();
+    private void SafeLogout()              => AIHelpSupport.Logout();
     private void SafeUpdateLangEn()        => AIHelpSupport.UpdateSDKLanguage("en");
     private void SafeUpdateUserInfo()
     {

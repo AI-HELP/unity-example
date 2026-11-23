@@ -48,6 +48,11 @@ namespace AIHelp
             AIHelpCore.getInstance().Login(loginConfig);
         }
 
+        public static void Logout()
+        {
+            AIHelpCore.getInstance().Logout();
+        }
+
         public static void UpdateUserInfo(UserConfig userConfig)
         {
             AIHelpCore.getInstance().UpdateUserInfo(userConfig);
