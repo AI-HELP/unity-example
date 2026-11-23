@@ -31,41 +31,28 @@ extern "C" {
         }
     }
 
-    AIHelpUserConfig* createUserConfig(const char* userName, const char* serverId, const char* userTags, const char* customData) {
-        NSString *_userTags = charToNSString(userTags);
-        NSString *_customData = charToNSString(customData);
-        
-        AIHelpUserConfigBuilder *userBuilder = [[AIHelpUserConfigBuilder alloc] init];
-        userBuilder.userName = charToNSString(userName);
-        userBuilder.serverId = charToNSString(serverId);
-                
-        if ([_userTags componentsSeparatedByString:@","]) {
-            userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
-        }
-        if (_customData && _customData.length) {
-            NSData *jsonData = [_customData dataUsingEncoding:NSUTF8StringEncoding];
-            NSError *error;
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-            if (dic) {
-                userBuilder.customData = dic;
-            }
-        }
-        return [userBuilder build];
-    }
     
-    void unity_initiailize (const char* domainName, const char* appId, const char* language) {
+    void unity_init (const char* apiKey, const char* domainName, const char* appId) {
+        NSString *_apiKey = charToNSString(apiKey);
+        NSString *_domainName = charToNSString(domainName);
+        NSString *_appId = charToNSString(appId);
+        [AIHelpSupportSDK initWithApiKey:_apiKey domainName:_domainName appId:_appId];
+    }
+
+    void unity_initLan (const char* apiKey, const char* domainName, const char* appId, const char* language) {
+        NSString *_apiKey = charToNSString(apiKey);
         NSString *_domainName = charToNSString(domainName);
         NSString *_appId = charToNSString(appId);
         NSString *_language = charToNSString(language);
-        [AIHelpSupportSDK initializeWithDomainName:_domainName appId:_appId language:_language];
+        [AIHelpSupportSDK initWithApiKey:_apiKey domainName:_domainName appId:_appId language:_language];
     }
     
-    void unity_registerAsyncEventListener (int eventType, AISupportAsyncEventListener listener) {
-        [AIHelpSupportSDK registerAsyncListener:listener eventType:(AIHelpEventType)eventType];
+    void unity_setOnInitializedCallback (AISupportInitCallBack callBack) {
+        [AIHelpSupportSDK setOnInitializedCallback:callBack];
     }
 
-    void unity_unregisterAsyncEventListener (int eventType) {
-        [AIHelpSupportSDK unregisterAsyncListenerWithEvent:(AIHelpEventType)eventType];
+    void unity_setOnInitializedAsyncCallback (AISupportInitCallBack callBack) {
+        [AIHelpSupportSDK setOnInitializedAsyncCallback:callBack];
     }
 
     bool unity_show(const char* entranceId, const char* welcomeMessage) {
@@ -96,34 +83,45 @@ extern "C" {
         [AIHelpSupportSDK showSingleFAQ:charToNSString(faqId) showConversationMoment:moment];
     }
 
-    void unity_login(const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData) {
-       NSString *_userId = charToNSString(userId); 
-       AIHelpUserConfig *_userConfig = createUserConfig(userName, serverId, userTags, customData);
-       AIHelpLoginConfigBuilder *builder = [[AIHelpLoginConfigBuilder alloc] init];
-       builder.userId = _userId;
-       builder.userConfig = _userConfig;
-       [AIHelpSupportSDK login:builder.build];
-    }
-
-    void unity_logout() {
-       [AIHelpSupportSDK logout]; 
-    }
-
-    void unity_updateUserInfo(const char* userName, const char* serverId, const char* userTags, const char* customData) {
-        AIHelpUserConfig *userConfig = createUserConfig(userName, serverId, userTags, customData);
-        [AIHelpSupportSDK updateUserInfo:userConfig];
+    void unity_updateUserInfo (const char* userId, const char* userName, const char* serverId, const char* userTags, const char* customData, bool isSyncCrmInfo) {
+        
+        NSString *_userTags = charToNSString(userTags);
+        NSString *_customData = charToNSString(customData);
+        
+        AIHelpUserConfigBuilder *userBuilder = [[AIHelpUserConfigBuilder alloc] init];
+        userBuilder.userId = charToNSString(userId);
+        userBuilder.userName = charToNSString(userName);
+        userBuilder.serverId = charToNSString(serverId);
+        userBuilder.isSyncCrmInfo = isSyncCrmInfo;
+                
+        if ([_userTags componentsSeparatedByString:@","]) {
+            userBuilder.userTags = [_userTags componentsSeparatedByString:@","];
+        }
+        if (_customData && _customData.length) {
+            NSData *jsonData = [_customData dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *error;
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+            if (dic) {
+                userBuilder.customData = dic;
+            }
+        }
+        [AIHelpSupportSDK updateUserInfo:userBuilder.build];
     }
 
     void unity_resetUserInfo () {
         [AIHelpSupportSDK resetUserInfo];
     }
 
-    void unity_fetchUnreadMessageCount () {
-        [AIHelpSupportSDK fetchUnreadMessageCount];
+    void unity_setNetworkCheckHostAddress (const char*address,  AISupportPingCallBack callBack) {
+        [AIHelpSupportSDK setNetworkCheckHostAddress:charToNSString(address) callback:callBack];
     }
 
-    void unity_fetchUnreadTaskCount () {
-        [AIHelpSupportSDK fetchUnreadTaskCount];
+    void unity_startUnreadMessageCountPolling (AISupportMessageCallBack callBack) {
+        [AIHelpSupportSDK startUnreadMessageCountPolling:callBack];
+    }
+
+    void unity_fetchUnreadMessageCount (AISupportMessageCallBack callBack) {
+        [AIHelpSupportSDK fetchUnreadMessageCount:callBack];
     }
 
     void unity_updateSDKLanguage (const char* language) {
@@ -175,6 +173,22 @@ extern "C" {
         [AIHelpSupportSDK enableLogging:enable];
     }
 
+    void unity_setSDKInterfaceOrientationMask (int interfaceOrientationMask) {
+        [AIHelpSupportSDK setSDKInterfaceOrientationMask:interfaceOrientationMask];
+    }
+    
+    void unity_setSDKAppearanceMode (int mode) {
+        [AIHelpSupportSDK setSDKAppearanceMode:mode];
+    }
+
+    void unity_setSDKEdgeInsets (float top, float bottom, bool enable) {
+        [AIHelpSupportSDK setSDKEdgeInsetsWithTop:top bottom:bottom enable:enable];
+    }
+
+    void unity_setSDKEdgeColor (float red, float green, float blue, float alpha) {
+        [AIHelpSupportSDK setSDKEdgeColorWithRed:red green:green blue:blue alpha:alpha];
+    }
+    
     void unity_showUrl (const char* url) {
         [AIHelpSupportSDK showUrl:charToNSString(url)];
     }
@@ -188,6 +202,22 @@ extern "C" {
             tmpCountryOrRegion = AIHelpIN;
         }
         [AIHelpSupportSDK additionalSupportFor:tmpCountryOrRegion];
+    }
+
+    void unity_setOnSpecificFormSubmittedCallback (AISupportIsSpecificFormCallBack callBack) {
+        [AIHelpSupportSDK setOnSpecificFormSubmittedCallback:callBack];
+    }
+
+    void unity_setOnSessionOpenCallback(AISupportOpenSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionOpenCallback:callBack];
+    }
+    void unity_setOnSessionCloseCallback(AISupportCloseSDKCallBack callBack) {
+        [AIHelpSupportSDK setOnAIHelpSessionCloseCallback:callBack];
+    }
+
+    void unity_setOnSpecificUrlClickedCallback(AISupportSpecificUrlClickedCallBack callBack)
+    {
+        [AIHelpSupportSDK setOnSpecificUrlClickedCallback:callBack];
     }
 
     void unity_close() {

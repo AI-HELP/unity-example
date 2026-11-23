@@ -1,13 +1,15 @@
 using System;
-using System.Threading.Tasks;
 using UnityEngine;
 using AIHelp;
-// IMGUI 的 EventType 和 AIHelp SDK 的 EventType 同名, 用 alias 区分
 using EventType = UnityEngine.EventType;
 
+/// <summary>
+/// Unity 6 demo shell UI wired to the 4.x AIHelp API (SPM placeholder tag 0.0.0).
+/// </summary>
 public class AIHelpDemo : MonoBehaviour
 {
     // ============ 在这里填入你自己的 AIHelp 配置 ============
+    private string appKey = "AIHelp";
     private string domain = "release.aihelp.net";
     private string androidAppId = "cn_platform_4ff25de3adc8757b4c21936ce476a0d0";
     private string iosAppId     = "TryElva_platform_09ebf7fa-8d45-4843-bd59-cfda3d8a8dc0";
@@ -22,6 +24,8 @@ public class AIHelpDemo : MonoBehaviour
     private Vector2 _scrollPos = Vector2.zero;
     private float _scale = 1f;
     private float _contentHeight = 0f;
+    // Screen.safeArea → GUI top-left insets (notch / Dynamic Island / home indicator)
+    private float _safeTop, _safeBottom, _safeLeft, _safeRight;
 
     // 触摸 / 拖动 / 按下态
     private bool _isDragging = false;
@@ -98,9 +102,9 @@ public class AIHelpDemo : MonoBehaviour
         try
         {
             AIHelpSupport.enableLogging(true);
-            AIHelpSupport.Initialize(domain, appId);
-            RegisterAIHelpEventListener();
-            SetNotify("AIHelp SDK initialized");
+            AIHelpSupport.Init(appKey, domain, appId);
+            RegisterAIHelpCallbacks();
+            SetNotify("AIHelp SDK init requested");
         }
         catch (Exception e)
         {
@@ -114,6 +118,7 @@ public class AIHelpDemo : MonoBehaviour
         EnsureStyles();
         ComputeScale();
         ApplyScaleToStyles();
+        RefreshSafeInsets();
 
         Event e = Event.current;
         UpdateDragState(e);
@@ -123,6 +128,16 @@ public class AIHelpDemo : MonoBehaviour
         DrawScrollableArea();
         DrawStatusBar();
         DrawToast();
+    }
+
+    private void RefreshSafeInsets()
+    {
+        // Screen.safeArea is bottom-left origin; OnGUI is top-left.
+        Rect sa = Screen.safeArea;
+        _safeTop = Mathf.Max(0f, Screen.height - (sa.y + sa.height));
+        _safeBottom = Mathf.Max(0f, sa.y);
+        _safeLeft = Mathf.Max(0f, sa.x);
+        _safeRight = Mathf.Max(0f, Screen.width - (sa.x + sa.width));
     }
 
     // ---------- 触摸 / 滚动 ----------
@@ -167,8 +182,10 @@ public class AIHelpDemo : MonoBehaviour
 
     private void DrawTitle()
     {
-        var titleRect = new Rect(0, BASE_PAD * _scale, Screen.width, BASE_TITLE_H * _scale);
-        GUI.Label(titleRect, "AIHelp Unity Demo", _titleStyle);
+        float pad = BASE_PAD * _scale;
+        float titleH = BASE_TITLE_H * _scale;
+        var titleRect = new Rect(_safeLeft, _safeTop + pad, Screen.width - _safeLeft - _safeRight, titleH);
+        GUI.Label(titleRect, "AIHelp Unity Demo · 4.x", _titleStyle);
     }
 
     private void DrawScrollableArea()
@@ -176,14 +193,15 @@ public class AIHelpDemo : MonoBehaviour
         float pad         = BASE_PAD     * _scale;
         float titleH      = BASE_TITLE_H * _scale;
         float statusH     = BASE_STATUS_H * _scale;
-        float topY        = pad + titleH + 12f * _scale;
-        float bottomY     = Screen.height - statusH;
+        float topY        = _safeTop + pad + titleH + 12f * _scale;
+        float bottomY     = Screen.height - _safeBottom - statusH;
 
         // 按钮宽度封顶 + 居中
+        float usableW = Screen.width - _safeLeft - _safeRight;
         float maxW   = MAX_BUTTON_WIDTH_DP * _scale;
-        float btnW   = Mathf.Min(Screen.width - pad * 2, maxW);
-        float btnLeft = (Screen.width - btnW) / 2f;
-        float areaH  = bottomY - topY;
+        float btnW   = Mathf.Min(usableW - pad * 2, maxW);
+        float btnLeft = _safeLeft + (usableW - btnW) / 2f;
+        float areaH  = Mathf.Max(0f, bottomY - topY);
 
         // ScrollView, 显式传 GUIStyle.none 给两个滚动条, 完全禁用视觉上的滚动条;
 // 触摸拖拽还是能用 (scrollRect/viewRect 内部的 hit-test 不受影响)
@@ -202,14 +220,14 @@ public class AIHelpDemo : MonoBehaviour
         y = DrawButton(y, btnW, "打开 URL (ShowUrl)",           SafeShowUrl);
 
         y = DrawSection(y, btnW, "用户  /  User");
-        y = DrawButton(y, btnW, "Login",                        SafeDoLogin);
-        y = DrawButton(y, btnW, "Logout (ResetUserInfo)",      SafeLogout);
         y = DrawButton(y, btnW, "UpdateUserInfo (sample)",     SafeUpdateUserInfo);
+        y = DrawButton(y, btnW, "ResetUserInfo",               SafeLogout);
 
         y = DrawSection(y, btnW, "调试  /  Debug");
         y = DrawButton(y, btnW, "GetSDKVersion",                SafeGetSDKVersion);
         y = DrawButton(y, btnW, "IsAIHelpShowing + FetchUnread", SafeFetchUnread);
         y = DrawButton(y, btnW, "UpdateSDKLanguage (en)",      SafeUpdateLangEn);
+        y = DrawButton(y, btnW, "Close",                       SafeClose);
 
         _contentHeight = y;
         GUI.EndScrollView();
@@ -273,10 +291,13 @@ public class AIHelpDemo : MonoBehaviour
     {
         float pad      = BASE_PAD      * _scale;
         float statusH  = BASE_STATUS_H * _scale;
-        float y        = Screen.height - statusH;
-        var statusRect = new Rect(0, y, Screen.width, statusH);
+        float barH     = statusH + _safeBottom;
+        float y        = Screen.height - barH;
+        var statusRect = new Rect(0, y, Screen.width, barH);
         GUI.DrawTexture(statusRect, _statusBgTex);
-        GUI.Label(new Rect(pad, y + 8f * _scale, Screen.width - pad * 2, statusH - 16f * _scale),
+        GUI.Label(new Rect(_safeLeft + pad, y + 8f * _scale,
+                           Screen.width - _safeLeft - _safeRight - pad * 2,
+                           statusH - 16f * _scale),
                   "Notify: " + _notifyMessage, _statusStyle);
     }
 
@@ -290,9 +311,11 @@ public class AIHelpDemo : MonoBehaviour
         // toast 浮在上面, 淡出后 status bar 的内容自然露出来
         float pad     = BASE_PAD      * _scale;
         float statusH = BASE_STATUS_H * _scale;
-        float y       = Screen.height - statusH;
-        var bgRect   = new Rect(0, y, Screen.width, statusH);
-        var textRect = new Rect(pad, y, Screen.width - pad * 2, statusH);
+        float barH    = statusH + _safeBottom;
+        float y       = Screen.height - barH;
+        var bgRect   = new Rect(0, y, Screen.width, barH);
+        var textRect = new Rect(_safeLeft + pad, y,
+                                Screen.width - _safeLeft - _safeRight - pad * 2, statusH);
 
         // 淡入 / 淡出
         float fadeIn  = Mathf.Clamp01((now - _toast.appearAt) / TOAST_FADE);
@@ -422,80 +445,52 @@ public class AIHelpDemo : MonoBehaviour
         catch (Exception e) { Debug.LogError($"[AIHelpDemo] {label} failed: {e}"); SetNotify($"{label} failed: {e.Message}"); }
     }
 
-    private void SafeShowCustomerService() => ShowCustomerService();
-    private void SafeShowHelpCenter()      => ShowHelpCenter();
-    private void SafeShowCustomEntrance()  => ShowCustomEntrance();
-    private void SafeShowSingleFAQ()       => ShowSingleFAQ();
-    private void SafeDoLogin()             => DoLogin();
-    private void SafeLogout()              => AIHelpSupport.ResetUserInfo();
+    private void SafeShowCustomerService() => AIHelpSupport.Show(ENTRANCE_CUSTOMER_SERVICE);
+    private void SafeShowHelpCenter()      => AIHelpSupport.Show(ENTRANCE_HELP_CENTER);
+    private void SafeShowCustomEntrance()  => AIHelpSupport.Show(ENTRANCE_CUSTOM);
+    private void SafeShowSingleFAQ()       =>
+        AIHelpSupport.ShowSingleFAQ(FAQ_ID, ConversationMoment.AFTER_MARKING_UNHELPFUL);
+    private void SafeLogout()
+    {
+        AIHelpSupport.ResetUserInfo();
+        SetNotify("ResetUserInfo");
+    }
     private void SafeUpdateLangEn()        => AIHelpSupport.UpdateSDKLanguage("en");
     private void SafeUpdateUserInfo()
     {
         var cfg = new UserConfig.Builder()
+            .SetUserId(GetRandomNumber())
             .SetUserName("AIHelp")
             .SetUserTags("VIP1,beta")
             .SetCustomData("{\"level\":42}")
-            .Build();
+            .SetSyncCrmInfo(true)
+            .build();
         AIHelpSupport.UpdateUserInfo(cfg);
         SetNotify("UpdateUserInfo called");
     }
     private void SafeGetSDKVersion()       => SetNotify("SDK version: " + AIHelpSupport.GetSDKVersion());
     private void SafeFetchUnread()
     {
-        AIHelpSupport.IsAIHelpShowing();
-        AIHelpSupport.FetchUnreadMessageCount();
-        AIHelpSupport.FetchUnreadTaskCount();
-        SetNotify("IsAIHelpShowing + FetchUnread called");
+        SetNotify("IsAIHelpShowing: " + AIHelpSupport.IsAIHelpShowing());
+        AIHelpSupport.FetchUnreadMessageCount(count =>
+            SetNotify("Unread messages: " + count));
     }
     private void SafeShowUrl()             => AIHelpSupport.ShowUrl("https://www.aihelp.net");
-
-    // ---------- SDK 业务逻辑 ----------
-
-    private void ShowCustomerService() => AIHelpSupport.Show(ENTRANCE_CUSTOMER_SERVICE);
-    private void ShowHelpCenter()      => AIHelpSupport.Show(ENTRANCE_HELP_CENTER);
-    private void ShowCustomEntrance()  => AIHelpSupport.Show(ENTRANCE_CUSTOM);
-    private void ShowSingleFAQ()       => AIHelpSupport.ShowSingleFAQ(FAQ_ID, ConversationMoment.AFTER_MARKING_UNHELPFUL);
-
-    private void DoLogin()
+    private void SafeClose()
     {
-        var cfg = new LoginConfig.Builder()
-            .SetUserId(GetRandomNumber())
-            .SetUserConfig(new UserConfig.Builder()
-                .SetUserName("AIHelp")
-                .SetUserTags("VIP1")
-                .SetCustomData("{}")
-                .Build())
-            .Build();
-        AIHelpSupport.Login(cfg);
-        SetNotify("Login called");
+        AIHelpSupport.Close();
+        SetNotify("Close");
     }
 
-    private void RegisterAIHelpEventListener()
+    private void RegisterAIHelpCallbacks()
     {
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.Initialization, (json, ack) => SetNotify("Initialization " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UserLogin,     (json, ack) => SetNotify("UserLogin " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.EnterpriseAuth, async (json, ack) =>
-        {
-            SetNotify("EnterpriseAuth " + json);
-            await Task.Delay(2000);
-            ack("{\"token\":\"this is your async token\"}");
-        });
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.SessionOpen,    (json, ack) => SetNotify("SessionOpen " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.SessionClose,   (json, ack) =>
-        {
-            SetNotify("SessionClose " + json);
-            AIHelpSupport.UnregisterAsyncEventListener(AIHelp.EventType.SessionOpen);
-            AIHelpSupport.UnregisterAsyncEventListener(AIHelp.EventType.SessionClose);
-        });
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.MessageArrival,  (json, ack) => SetNotify("MessageArrival " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.LogUpload,       (json, ack) =>
-        {
-            SetNotify("LogUpload " + json);
-            ack("{\"content\":\"this is your synchronous log\"}");
-        });
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UrlClick,        (json, ack) => SetNotify("UrlClick " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.UnreadTaskCount, (json, ack) => SetNotify("UnreadTaskCount " + json));
-        AIHelpSupport.RegisterAsyncEventListener(AIHelp.EventType.ConversationStart, (json, ack) => SetNotify("ConversationStart " + json));
+        AIHelpSupport.SetOnAIHelpInitializedCallback((ok, msg) =>
+            SetNotify("Init " + (ok ? "ok" : "fail") + ": " + msg));
+        AIHelpSupport.SetOnAIHelpInitializedAsyncCallback((ok, msg) =>
+            SetNotify("Init async " + (ok ? "ok" : "fail") + ": " + msg));
+        AIHelpSupport.SetOnAIHelpSessionOpenCallback(() => SetNotify("Session open"));
+        AIHelpSupport.SetOnAIHelpSessionCloseCallback(() => SetNotify("Session close"));
+        AIHelpSupport.SetOnSpecificUrlClickedCallback(url => SetNotify("Url click: " + url));
     }
 
     private void SetNotify(string msg)
